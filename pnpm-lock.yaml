@@ -5,6 +5,12 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@chenfengyuan/vue-barcode':
+    specifier: ^2.0.2
+    version: 2.0.2(jsbarcode@3.11.6)(vue@3.3.4)
+  '@github/paste-markdown':
+    specifier: ^1.5.3
+    version: 1.5.3
   '@it-tools/bip39':
     specifier: ^0.0.4
     version: 0.0.4
@@ -50,12 +56,18 @@ dependencies:
   '@vueuse/router':
     specifier: ^10.0.0
     version: 10.0.0(vue-router@4.1.6)(vue@3.3.4)
+  '@zxing/library':
+    specifier: ^0.21.0
+    version: 0.21.3
   bcryptjs:
     specifier: ^2.4.3
     version: 2.4.3
   change-case:
     specifier: ^4.1.2
     version: 4.1.2
+  chatgpt-prompt-splitter:
+    specifier: ^1.0.5
+    version: 1.0.5
   colord:
     specifier: ^2.9.3
     version: 2.9.3
@@ -80,6 +92,9 @@ dependencies:
   dompurify:
     specifier: ^3.0.6
     version: 3.0.6
+  email-bounce-parser-browser:
+    specifier: ^1.1
+    version: 1.1.0
   email-normalizer:
     specifier: ^1.0.0
     version: 1.0.0
@@ -105,8 +120,11 @@ dependencies:
     specifier: ^4.3.3
     version: 4.3.3
   js-base64:
-    specifier: ^3.7.6
+    specifier: ^3.7.7
     version: 3.7.7
+  jsbarcode:
+    specifier: ^3.11.6
+    version: 3.11.6
   json5:
     specifier: ^2.2.3
     version: 2.2.3
@@ -1925,6 +1943,16 @@ packages:
       '@babel/helper-validator-identifier': 7.22.20
       to-fast-properties: 2.0.0
 
+  /@chenfengyuan/vue-barcode@2.0.2(jsbarcode@3.11.6)(vue@3.3.4):
+    resolution: {integrity: sha512-lHQhYfcqWeeA/UYoe4O+O6c8WD+t9WO8SiWohKOVVIiwPhcvC58YxhvlFvJme0/CPL7+Sh1XCpMaC9Mo2Dt5jQ==}
+    peerDependencies:
+      jsbarcode: ^3.11.0
+      vue: ^3.0.0
+    dependencies:
+      jsbarcode: 3.11.6
+      vue: 3.3.4
+    dev: false
+
   /@css-render/plugin-bem@0.15.12(css-render@0.15.12):
     resolution: {integrity: sha512-Lq2jSOZn+wYQtsyaFj6QRz2EzAnd3iW5fZeHO1WSXQdVYwvwGX0ZiH3X2JQgtgYLT1yeGtrwrqJdNdMEUD2xTw==}
     peerDependencies:
@@ -2179,6 +2207,10 @@ packages:
     resolution: {integrity: sha512-P6omY1zv5MItm93kLM8s2vr1HICJH8v0dvddDhysbIuZ+vcjOHg5Zbkf1mTkcmi2JA9oBG2anOkRnW8WJTS8Og==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
+
+  /@github/paste-markdown@1.5.3:
+    resolution: {integrity: sha512-PzZ1b3PaqBzYqbT4fwKEhiORf38h2OcGp2+JdXNNM7inZ7egaSmfmhyNkQILpqWfS0AYtRS3CDq6z03eZ8yOMQ==}
+    dev: false
 
   /@humanwhocodes/config-array@0.11.10:
     resolution: {integrity: sha512-KVVjQmNUepDVGXNuoRRdmmEjruj0KfiGSbS8LVc12LMsWDQzRXJ0qdhN8L8uUigKpfEHRhlaQFY0ib1tnUbNeQ==}
@@ -2666,9 +2698,11 @@ packages:
     dependencies:
       '@tabler/icons': 3.20.0
       vue: 3.3.4
+    dev: false
 
   /@tabler/icons@3.20.0:
     resolution: {integrity: sha512-nXSeUzsCOxX/Of+kdUVQfxL9bG+ck8XCWNf9dGSpE+nhVexRwk/4HiDQDxFDysfT7vfgSut6GXnrZsU5M5dSlA==}
+    dev: false
 
   /@tiptap/core@2.1.12(@tiptap/pm@2.1.6):
     resolution: {integrity: sha512-ZGc3xrBJA9KY8kln5AYTj8y+GDrKxi7u95xIl2eccrqTY5CQeRu6HRNM1yT4mAjuSaG9jmazyjGRlQuhyxCKxQ==}
@@ -3412,7 +3446,7 @@ packages:
     dependencies:
       '@unhead/dom': 0.5.1
       '@unhead/schema': 0.5.1
-      '@vueuse/shared': 11.0.3(vue@3.3.4)
+      '@vueuse/shared': 11.2.0(vue@3.3.4)
       unhead: 0.5.1
       vue: 3.3.4
     transitivePeerDependencies:
@@ -4054,8 +4088,8 @@ packages:
       - vue
     dev: false
 
-  /@vueuse/shared@11.0.3(vue@3.3.4):
-    resolution: {integrity: sha512-0rY2m6HS5t27n/Vp5cTDsKTlNnimCqsbh/fmT2LgE+aaU42EMfXo8+bNX91W9I7DDmxfuACXMmrd7d79JxkqWA==}
+  /@vueuse/shared@11.2.0(vue@3.3.4):
+    resolution: {integrity: sha512-VxFjie0EanOudYSgMErxXfq6fo8vhr5ICI+BuE3I9FnX7ePllEsVrRQ7O6Q1TLgApeLuPKcHQxAXpP+KnlrJsg==}
     dependencies:
       vue-demi: 0.14.10(vue@3.3.4)
     transitivePeerDependencies:
@@ -4066,6 +4100,21 @@ packages:
   /@zhead/schema@1.0.0-beta.13:
     resolution: {integrity: sha512-P1A1vRGFBhITco8Iw4/hvnDYoE/SoVrd71dW1pBFdXJb3vP+pBtoOuhbEKy0ROJGOyzQuqvFibcwzyLlWMqNiQ==}
     dev: false
+
+  /@zxing/library@0.21.3:
+    resolution: {integrity: sha512-hZHqFe2JyH/ZxviJZosZjV+2s6EDSY0O24R+FQmlWZBZXP9IqMo7S3nb3+2LBWxodJQkSurdQGnqE7KXqrYgow==}
+    engines: {node: '>= 10.4.0'}
+    dependencies:
+      ts-custom-error: 3.3.1
+    optionalDependencies:
+      '@zxing/text-encoding': 0.9.0
+    dev: false
+
+  /@zxing/text-encoding@0.9.0:
+    resolution: {integrity: sha512-U/4aVJ2mxI0aDNI8Uq0wEhMgY+u4CNtEb0om3+y3+niDAsoTCOB33UF0sxpzqzdqXLqmvc+vZyAt4O8pPdfkwA==}
+    requiresBuild: true
+    dev: false
+    optional: true
 
   /abab@2.0.6:
     resolution: {integrity: sha512-j2afSsaIENvHZN2B8GOpF566vZ5WVk5opAiMTvWgaQT8DkbOqsTfvNAvHoRGU2zzP8cPoqys+xHTRDWW8L+/BA==}
@@ -4500,6 +4549,10 @@ packages:
   /character-reference-invalid@1.1.4:
     resolution: {integrity: sha512-mKKUkUbhPpQlCOfIuZkvSEgktjPFIsZKRRbC6KWVEMvlzblj3i3asQv5ODsrwt0N3pHAEvjP8KTQPHkp0+6jOg==}
     dev: true
+
+  /chatgpt-prompt-splitter@1.0.5:
+    resolution: {integrity: sha512-8buXXnxZ5Y5BloPTMEhGTVld9vrVB8WVrUFrjgOpIJ4/VsT+rTnLszbaS1L1KAB0SDSCqj8GU472S2gMyhH8EA==}
+    dev: false
 
   /check-error@1.0.2:
     resolution: {integrity: sha512-BrgHpW9NURQgzoNyjfq0Wu6VFO6D7IZEmJNdtgNqpzGG8RuNFHt2jQxWlAs4HMe119chBnv+34syEZtc6IhLtA==}
@@ -5035,6 +5088,10 @@ packages:
 
   /electron-to-chromium@1.4.572:
     resolution: {integrity: sha512-RlFobl4D3ieetbnR+2EpxdzFl9h0RAJkPK3pfiwMug2nhBin2ZCsGIAJWdpNniLz43sgXam/CgipOmvTA+rUiA==}
+
+  /email-bounce-parser-browser@1.1.0:
+    resolution: {integrity: sha512-aPMJKpvAPTFTqDI3/bMxcEHK3Wk2yy/tNK/nVWHl5zqyoxJFFgO5a2jvVno4V3e+kyLjZx2M5KJNgNmYf0ZkuQ==}
+    dev: false
 
   /email-normalizer@1.0.0:
     resolution: {integrity: sha512-wZYuuMtL4kUOmg/TPtCrf9hAZjbFq+FcjWA85Z5nr2lGllRnWJPxCJw3gy4Cx+adMoyVw4VJfGGvt/OHgIW+qg==}
@@ -6578,6 +6635,10 @@ packages:
     dependencies:
       argparse: 2.0.1
     dev: true
+
+  /jsbarcode@3.11.6:
+    resolution: {integrity: sha512-G5TKGyKY1zJo0ZQKFM1IIMfy0nF2rs92BLlCz+cU4/TazIc4ZH+X1GYeDRt7TKjrYqmPfTjwTBkU/QnQlsYiuA==}
+    dev: false
 
   /jsbn@1.1.0:
     resolution: {integrity: sha512-4bYVV3aAMtDTTu4+xsDYa6sy9GyJ69/amsu9sYF2zqjiEoZA5xJi3BrfX3uY+/IekIu7MwdObdbDWpoZdBv3/A==}
@@ -8236,6 +8297,7 @@ packages:
 
   /sortablejs@1.14.0:
     resolution: {integrity: sha512-pBXvQCs5/33fdN1/39pPL0NZF20LeRbLQ5jtnheIPN9JQAaufGjKdWduZn4U7wCtVuzKhmRkI0DFYHYRbB2H1w==}
+    dev: false
 
   /source-map-js@1.0.2:
     resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}
@@ -8609,6 +8671,11 @@ packages:
     dependencies:
       typescript: 5.2.2
     dev: true
+
+  /ts-custom-error@3.3.1:
+    resolution: {integrity: sha512-5OX1tzOjxWEgsr/YEUWSuPrQ00deKLh6D7OTWcvNHm12/7QPyRh8SYpyWvA4IZv8H/+GQWQEh/kwo95Q9OVW1A==}
+    engines: {node: '>=14.0.0'}
+    dev: false
 
   /tslib@1.14.1:
     resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
@@ -9369,6 +9436,7 @@ packages:
     dependencies:
       sortablejs: 1.14.0
       vue: 3.3.4
+    dev: false
 
   /vueuc@0.4.51(vue@3.3.4):
     resolution: {integrity: sha512-pLiMChM4f+W8czlIClGvGBYo656lc2Y0/mXFSCydcSmnCR1izlKPGMgiYBGjbY9FDkFG8a2HEVz7t0DNzBWbDw==}
