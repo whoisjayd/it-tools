@@ -13,6 +13,7 @@ import { tool as regexTester } from './regex-tester';
 import { tool as regexMemo } from './regex-memo';
 import { tool as markdownToHtml } from './markdown-to-html';
 import { tool as pasteAsMarkdown } from './paste-as-markdown';
+import { tool as aiPromptSplitter } from './ai-prompt-splitter';
 import { tool as pdfSignatureChecker } from './pdf-signature-checker';
 import { tool as numeronymGenerator } from './numeronym-generator';
 import { tool as macAddressGenerator } from './mac-address-generator';
@@ -184,6 +185,7 @@ export const toolsByCategory: ToolCategory[] = [
       stringObfuscator,
       textDiff,
       numeronymGenerator,
+      aiPromptSplitter,
       asciiTextDrawer,
       pasteAsMarkdown,
     ],
