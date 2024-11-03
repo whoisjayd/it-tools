@@ -157,6 +157,7 @@
     "figlet": "^1.7.0",
     "figue": "^1.2.0",
     "flatten-anything": "^4.0.1",
+    "file-type": "^19.0.0",
     "fuse.js": "^6.6.2",
     "hash-wasm": "^4.11.0",
     "generate-schema": "^2.6.0",
