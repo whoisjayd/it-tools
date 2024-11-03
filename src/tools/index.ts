@@ -208,6 +208,7 @@ import { tool as htmlToMarkdown } from './html-to-markdown';
 import { tool as pdfUnlock } from './pdf-unlock';
 import { tool as ipCidrToRange } from './ip-cidr-to-range';
 import { tool as ipRangeToCidr } from './ip-range-to-cidr';
+import { tool as ipv6AddressConverter } from './ipv6-address-converter';
 
 export const toolsByCategory: ToolCategory[] = [
   {
@@ -407,6 +408,7 @@ export const toolsByCategory: ToolCategory[] = [
       ipv4AddressConverter,
       // ipv6AddressConverter,
       ipInRange,
+      ipv6AddressConverter,
       ipv4RangeExpander,
       macAddressLookup,
       macAddressGenerator,
