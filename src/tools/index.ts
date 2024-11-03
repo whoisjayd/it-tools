@@ -74,6 +74,7 @@ import { tool as qrCodeDecoder } from './qr-code-decoder';
 import { tool as markdownToHtml } from './markdown-to-html';
 import { tool as nginxFormatter } from './nginx-formatter';
 import { tool as potrace } from './potrace';
+import { tool as rmbNumbers } from './rmb-numbers';
 import { tool as pdfSignatureChecker } from './pdf-signature-checker';
 import { tool as numeronymGenerator } from './numeronym-generator';
 import { tool as macAddressGenerator } from './mac-address-generator';
@@ -223,6 +224,7 @@ export const toolsByCategory: ToolCategory[] = [
       jsonToCsharp,
       jsonToGo,
       markdownTocGenerator,
+      rmbNumbers,
     ],
   },
   {
