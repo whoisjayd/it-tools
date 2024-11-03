@@ -266,6 +266,7 @@
     "potrace": "^2.1.8",
     "qrcode": "^1.5.1",
     "rtf-stream-parser": "^3.8.0",
+    "slashes": "^3.0.12",
     "sql-formatter": "^13.0.0",
     "sshpk": "^1.18.0",
     "turndown": "^7.1.2",

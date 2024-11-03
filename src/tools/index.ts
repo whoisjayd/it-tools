@@ -118,6 +118,7 @@ import { tool as fileType } from './file-type';
 import { tool as htmlCleaner } from './html-cleaner';
 import { tool as imageToAsciiArt } from './image-to-ascii-art';
 import { tool as ipv6SubnetCalculator } from './ipv6-subnet-calculator';
+import { tool as jsonEscaper } from './json-escaper';
 import { tool as pdfSignatureChecker } from './pdf-signature-checker';
 import { tool as numeronymGenerator } from './numeronym-generator';
 import { tool as macAddressGenerator } from './mac-address-generator';
@@ -335,6 +336,7 @@ export const toolsByCategory: ToolCategory[] = [
       phpArrayToJson,
       torrentToMagnet,
       unicodeSearch,
+      jsonEscaper,
     ],
   },
   {
