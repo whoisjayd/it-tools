@@ -71,6 +71,7 @@ import { tool as ipGeoLocation } from './ip-geo-location';
 import { tool as ocrImage } from './ocr-image';
 import { tool as ansibleVaultCryptDecrypt } from './ansible-vault-crypt-decrypt';
 import { tool as gzipConverter } from './gzip-converter';
+import { tool as htpasswdGenerator } from './htpasswd-generator';
 import { tool as safelinkDecoder } from './safelink-decoder';
 import { tool as mongoObjectidConverter } from './mongo-objectid-converter';
 import { tool as removeExif } from './remove-exif';
@@ -304,6 +305,7 @@ export const toolsByCategory: ToolCategory[] = [
       urlParser,
       deviceInformation,
       basicAuthGenerator,
+      htpasswdGenerator,
       metaTagGenerator,
       otpCodeGeneratorAndValidator,
       mimeTypes,
