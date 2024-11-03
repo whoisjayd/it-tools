@@ -107,6 +107,7 @@ import { tool as asciiTextDrawer } from './ascii-text-drawer';
 
 import { tool as textToUnicode } from './text-to-unicode';
 import { tool as csrGenerator } from './csr-generator';
+import { tool as dockerRunToKubernetesConverter } from './docker-run-to-kubernetes';
 import { tool as pdfSignatureChecker } from './pdf-signature-checker';
 import { tool as numeronymGenerator } from './numeronym-generator';
 import { tool as macAddressGenerator } from './mac-address-generator';
@@ -345,6 +346,7 @@ export const toolsByCategory: ToolCategory[] = [
       dockerRunToDockerComposeConverter,
       dockerComposeToDockerRunConverter,
       dockerComposeToKubernetesConverter,
+      dockerRunToKubernetesConverter,
       xmlFormatter,
       xsltTester,
       yamlViewer,
