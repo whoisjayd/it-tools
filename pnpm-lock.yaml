@@ -407,6 +407,9 @@ dependencies:
   jsonar-mod:
     specifier: ^1.9.0
     version: 1.9.0
+  jsonlint-mod:
+    specifier: ^1.7.6
+    version: 1.7.6
   jsonpath:
     specifier: ^1.1.1
     version: 1.1.1
@@ -6477,6 +6480,10 @@ packages:
     dev: false
     optional: true
 
+  /JSV@4.0.2:
+    resolution: {integrity: sha512-ZJ6wx9xaKJ3yFUhq5/sk82PJMuUyLk277I8mQeyDgCTjGdjWJIvPfaU5LIXaMuaN2UO1X3kZH4+lgphublZUHw==}
+    dev: false
+
   /abab@2.0.6:
     resolution: {integrity: sha512-j2afSsaIENvHZN2B8GOpF566vZ5WVk5opAiMTvWgaQT8DkbOqsTfvNAvHoRGU2zzP8cPoqys+xHTRDWW8L+/BA==}
     dev: true
@@ -11036,6 +11043,16 @@ packages:
       graceful-fs: 4.2.11
     dev: true
 
+  /jsonlint-mod@1.7.6:
+    resolution: {integrity: sha512-oGuk6E1ehmIpw0w9ttgb2KsDQQgGXBzZczREW8OfxEm9eCQYL9/LCexSnh++0z3AiYGcXpBgqDSx9AAgzl/Bvg==}
+    engines: {node: '>= 0.6'}
+    hasBin: true
+    dependencies:
+      JSV: 4.0.2
+      chalk: 2.4.2
+      underscore: 1.13.7
+    dev: false
+
   /jsonpath@1.1.1:
     resolution: {integrity: sha512-l6Cg7jRpixfbgoWgkrl77dgEj8RPvND0wMH6TwQmi9Qs4TFfS9u5cUFnbeKTwj5ga5Y3BTGGNI28k117LJ009w==}
     dependencies:
@@ -14759,6 +14776,10 @@ packages:
     resolution: {integrity: sha512-hEQt0+ZLDVUMhebKxL4x1BTtDY7bavVofhZ9KZ4aI26X9SRaE+Y3m83XUL1UP2jn8ynjndwCCpEHdUG+9pP1Tw==}
     dev: false
 
+  /underscore@1.13.7:
+    resolution: {integrity: sha512-GMXzWtsc57XAtguZgaQViUOzs0KTkk8ojr3/xAxXLITqf/3EMwxC0inyETfDFjH/Krbhuep0HNbbjI9i/q3F3g==}
+    dev: false
+
   /undertaker-registry@2.0.0:
     resolution: {integrity: sha512-+hhVICbnp+rlzZMgxXenpvTxpuvA67Bfgtt+O9WOE5jo7w/dyiF1VmoZVIHvP2EkUjsyKyTwYKlLhA+j47m1Ew==}
     engines: {node: '>= 10.13.0'}
@@ -16233,7 +16254,6 @@ packages:
 
   /yamljs@0.3.0:
     resolution: {integrity: sha512-C/FsVVhht4iPQYXOInoxUM/1ELSf9EsgKH34FofQOp6hwCPrW4vG4w5++TED3xRUo8gD7l0P1J1dLlDYzODsTQ==}
-    hasBin: true
     dependencies:
       argparse: 1.0.10
       glob: 7.2.3

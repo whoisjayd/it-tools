@@ -223,6 +223,7 @@
     "jsonar-mod": "^1.9.0",
     "jsstack.js": "^2.0.0",
     "jsvat-next": "^3.0.4",
+    "jsonlint-mod": "^1.7.6",
     "jwt-decode": "^3.1.2",
     "korean-unpacker": "^1.0.3",
     "libphonenumber-js": "^1.10.28",
