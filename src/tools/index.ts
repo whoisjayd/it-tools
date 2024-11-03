@@ -117,6 +117,7 @@ import { tool as ed25519KeyPairGenerator } from './ed25519-key-pair-generator';
 import { tool as fileType } from './file-type';
 import { tool as htmlCleaner } from './html-cleaner';
 import { tool as imageToAsciiArt } from './image-to-ascii-art';
+import { tool as ipv6SubnetCalculator } from './ipv6-subnet-calculator';
 import { tool as pdfSignatureChecker } from './pdf-signature-checker';
 import { tool as numeronymGenerator } from './numeronym-generator';
 import { tool as macAddressGenerator } from './mac-address-generator';
@@ -409,6 +410,8 @@ export const toolsByCategory: ToolCategory[] = [
       // ipv6AddressConverter,
       ipInRange,
       ipv6AddressConverter,
+      ipv6SubnetCalculator,
+      ipv4AddressConverter,
       ipv4RangeExpander,
       macAddressLookup,
       macAddressGenerator,
