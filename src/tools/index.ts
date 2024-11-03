@@ -64,6 +64,7 @@ import { tool as daysCalculator } from './days-calculator';
 import { tool as dateDurationCalculator } from './date-duration-calculator';
 import { tool as macAddressConverter } from './mac-address-converter';
 import { tool as dockerComposeToKubernetesConverter } from './docker-compose-to-kubernetes';
+import { tool as asciiTextDrawer } from './ascii-text-drawer';
 import { tool as textToUnicode } from './text-to-unicode';
 import { tool as certificateKeyParser } from './certificate-key-parser';
 import { tool as crcCalculator } from './crc-calculator';
@@ -120,6 +121,7 @@ import { tool as imageToAsciiArt } from './image-to-ascii-art';
 import { tool as ipv6SubnetCalculator } from './ipv6-subnet-calculator';
 import { tool as jsonEscaper } from './json-escaper';
 import { tool as jsonLinter } from './json-linter';
+import { tool as markdownCheatsheet } from './markdown-cheatsheet';
 import { tool as pdfSignatureChecker } from './pdf-signature-checker';
 import { tool as numeronymGenerator } from './numeronym-generator';
 import { tool as macAddressGenerator } from './mac-address-generator';
@@ -338,6 +340,7 @@ export const toolsByCategory: ToolCategory[] = [
       torrentToMagnet,
       unicodeSearch,
       jsonEscaper,
+      asciiTextDrawer,
     ],
   },
   {
@@ -366,6 +369,7 @@ export const toolsByCategory: ToolCategory[] = [
     name: 'Development',
     components: [
       gitMemo,
+      markdownCheatsheet,
       randomPortGenerator,
       crontabGenerator,
       jsonViewer,
@@ -435,6 +439,7 @@ export const toolsByCategory: ToolCategory[] = [
       ipCidrToRange,
       ipv4RangeExpander,
       ipRangeToCidr,
+      ipv4RangeExpander,
       macAddressLookup,
       macAddressGenerator,
       ipv6UlaGenerator,
@@ -454,6 +459,7 @@ export const toolsByCategory: ToolCategory[] = [
       percentageCalculator,
       angleConverter,
     ],
+      percentageCalculator],
   },
   {
     name: 'Measurement',
@@ -479,6 +485,7 @@ export const toolsByCategory: ToolCategory[] = [
       benchmarkBuilder,
       benchmarkBuilder,
       energyComputer,
+      benchmarkBuilder,
     ],
   },
   {
