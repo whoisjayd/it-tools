@@ -149,6 +149,9 @@ dependencies:
   '@vueuse/router':
     specifier: ^10.0.0
     version: 10.0.0(vue-router@4.1.6)(vue@3.3.4)
+  '@xmldom/xmldom':
+    specifier: ^0.8.10
+    version: 0.8.10
   '@zxing/library':
     specifier: ^0.21.0
     version: 0.21.3
@@ -569,6 +572,9 @@ dependencies:
   xml-js:
     specifier: ^1.6.11
     version: 1.6.11
+  xpath:
+    specifier: ^0.0.34
+    version: 0.0.34
   xpath-to-css:
     specifier: ^1.2.0
     version: 1.2.0
@@ -6350,6 +6356,11 @@ packages:
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
+    dev: false
+
+  /@xmldom/xmldom@0.8.10:
+    resolution: {integrity: sha512-2WALfTl4xo2SkGCYRt6rDTFfk9R1czmBvUQy12gK2KuRKIpWEhcbbzy8EZXtz/jkRqHX8bFEc6FC1HjX4TUWYw==}
+    engines: {node: '>=10.0.0'}
     dev: false
 
   /@zhead/schema@1.0.0-beta.13:
@@ -15800,6 +15811,11 @@ packages:
     engines: {node: '>=4.0.0'}
     dev: false
 
+  /xpath@0.0.34:
+    resolution: {integrity: sha512-FxF6+rkr1rNSQrhUNYrAFJpRXNzlDoMxeXN5qI84939ylEv3qqPFKa85Oxr6tDaJKqwW6KKyo2v26TSv3k6LeA==}
+    engines: {node: '>=0.6.0'}
+    dev: false
+
   /xss@1.0.15:
     resolution: {integrity: sha512-FVdlVVC67WOIPvfOwhoMETV72f6GbW7aOabBC3WxN/oUdoEMDyLz4OgRv5/gck2ZeNqEQu+Tb0kloovXOfpYVg==}
     engines: {node: '>= 0.10.0'}
@@ -15858,7 +15874,6 @@ packages:
 
   /yamljs@0.3.0:
     resolution: {integrity: sha512-C/FsVVhht4iPQYXOInoxUM/1ELSf9EsgKH34FofQOp6hwCPrW4vG4w5++TED3xRUo8gD7l0P1J1dLlDYzODsTQ==}
-    hasBin: true
     dependencies:
       argparse: 1.0.10
       glob: 7.2.3

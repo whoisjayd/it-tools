@@ -102,6 +102,7 @@
     "@vueuse/router": "^10.0.0",
     "@zxing/library": "^0.21.0",
     "arr-diff": "^4.0.0",
+    "@xmldom/xmldom": "^0.8.10",
     "bcryptjs": "^2.4.3",
     "big.js": "^6.2.2",
     "change-case": "^4.1.2",
@@ -261,6 +262,7 @@
     "xml-formatter": "^3.3.2",
     "xml-js": "^1.6.11",
     "xpath-to-css": "^1.2.0",
+    "xpath": "^0.0.34",
     "yaml": "^2.2.1"
   },
   "devDependencies": {
