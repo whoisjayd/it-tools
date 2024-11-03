@@ -386,6 +386,9 @@ dependencies:
   potrace:
     specifier: ^2.1.8
     version: 2.1.8
+  pp-qr-code:
+    specifier: ^0.6.3
+    version: 0.6.4
   pretty-ms:
     specifier: ^9.1.0
     version: 9.1.0
@@ -398,6 +401,9 @@ dependencies:
   qrcode:
     specifier: ^1.5.1
     version: 1.5.1
+  qrcode-terminal-nooctal:
+    specifier: ^0.12.1
+    version: 0.12.1
   randexp:
     specifier: ^0.5.3
     version: 0.5.3
@@ -6219,7 +6225,7 @@ packages:
   /@vueuse/shared@10.0.0(vue@3.3.4):
     resolution: {integrity: sha512-Zh3LgJqvUBWVY3SiMvXanTcfAneGbt63QPczBRDNgQ6jd/ehodO9a1lCFzaA6SWJJoI+ugVTjHFYJdoR656DVQ==}
     dependencies:
-      vue-demi: 0.14.5(vue@3.3.4)
+      vue-demi: 0.14.10(vue@3.3.4)
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
@@ -10077,6 +10083,7 @@ packages:
   /jsesc@2.5.2:
     resolution: {integrity: sha512-OYu7XEzjkCQ3C5Ps3QIZsQfNpqoJyZZA99wd9aWd05NCtC5pWOkShK2mkL6HXQR6/Cy2lbNdPlZBpuQHXE63gA==}
     engines: {node: '>=4'}
+    hasBin: true
 
   /jsesc@3.0.2:
     resolution: {integrity: sha512-xKqzzWXDttJuOcawBt4KnKHHIf5oQ/Cxax+0PWFG+DFDgHNAdi+TXECADI+RYiFUMmx8792xsMbbgXj4CwnP4g==}
@@ -11665,6 +11672,12 @@ packages:
       - debug
     dev: false
 
+  /pp-qr-code@0.6.4:
+    resolution: {integrity: sha512-6OhfzsFgZClbBh3XzfwysSwH4injljeMreKaZyxWydthkhXAdjSbFfEtrvfHt1SN65PmAHEOux+dOVvJRiOaDw==}
+    dependencies:
+      qrcode-generator: 1.4.4
+    dev: false
+
   /prebuild-install@7.1.2:
     resolution: {integrity: sha512-UnNke3IQb6sgarcZIDU3gbMeTp/9SSU1DAIkil7PrqG1vZlBtY5msYccSKSHDqa3hNg436IXK+SNImReuA1wEQ==}
     engines: {node: '>=10'}
@@ -11974,6 +11987,15 @@ packages:
     resolution: {integrity: sha512-e6Pb8jRw+VflZQvsS+eOfYF9BqjubvTBnxJc44LhI1btg2WYNKE5/lGMmzWZ2gd9YrdWByf8IdNZw6S7+7t27w==}
     dependencies:
       '@types/emscripten': 1.39.13
+    dev: false
+
+  /qrcode-generator@1.4.4:
+    resolution: {integrity: sha512-HM7yY8O2ilqhmULxGMpcHSF1EhJJ9yBj8gvDEuZ6M+KGJ0YY2hKpnXvRD+hZPLrDVck3ExIGhmPtSdcjC+guuw==}
+    dev: false
+
+  /qrcode-terminal-nooctal@0.12.1:
+    resolution: {integrity: sha512-jy/kkD0iIMDjTucB+5T6KBsnirlhegDH47vHgrj5MejchSQmi/EAMM0xMFeePgV9CJkkAapNakpVUWYgHvtdKg==}
+    hasBin: true
     dev: false
 
   /qrcode@1.5.1:
@@ -14795,6 +14817,7 @@ packages:
 
   /yamljs@0.3.0:
     resolution: {integrity: sha512-C/FsVVhht4iPQYXOInoxUM/1ELSf9EsgKH34FofQOp6hwCPrW4vG4w5++TED3xRUo8gD7l0P1J1dLlDYzODsTQ==}
+    hasBin: true
     dependencies:
       argparse: 1.0.10
       glob: 7.2.3
