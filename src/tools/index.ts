@@ -19,6 +19,7 @@ import { tool as markdownToHtml } from './markdown-to-html';
 import { tool as pasteAsMarkdown } from './paste-as-markdown';
 import { tool as aiPromptSplitter } from './ai-prompt-splitter';
 import { tool as apiTester } from './api-tester';
+import { tool as commonRegexMemo } from './common-regex-memo';
 import { tool as pdfSignatureChecker } from './pdf-signature-checker';
 import { tool as numeronymGenerator } from './numeronym-generator';
 import { tool as macAddressGenerator } from './mac-address-generator';
@@ -193,6 +194,7 @@ export const toolsByCategory: ToolCategory[] = [
       codeHighlighter,
       regexTester,
       regexMemo,
+      commonRegexMemo,
     ],
   },
   {
