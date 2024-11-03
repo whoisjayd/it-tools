@@ -35,7 +35,6 @@ import { tool as phpArrayToJson } from './php-array-to-json';
 import { tool as jsonSizeAnalyzer } from './json-size-analyzer';
 import { tool as jsonToCsharp } from './json-to-csharp';
 import { tool as luhnValidator } from './luhn-validator';
-import { tool as maliciousLinksTester } from './malicious-links-tester';
 import { tool as mathFormatsConverter } from './math-formats-converter';
 import { tool as mathOcr } from './math-ocr';
 import { tool as markdownTocGenerator } from './markdown-toc-generator';
@@ -60,11 +59,9 @@ import { tool as cssXpathConverter } from './css-xpath-converter';
 import { tool as cssSelectorsMemo } from './css-selectors-memo';
 import { tool as xpathMemo } from './xpath-memo';
 import { tool as asciiTextDrawer } from './ascii-text-drawer';
-import { tool as asciiTextDrawer } from './ascii-text-drawer';
 import { tool as daysCalculator } from './days-calculator';
 import { tool as dateDurationCalculator } from './date-duration-calculator';
 import { tool as macAddressConverter } from './mac-address-converter';
-import { tool as asciiTextDrawer } from './ascii-text-drawer';
 import { tool as textToUnicode } from './text-to-unicode';
 import { tool as certificateKeyParser } from './certificate-key-parser';
 import { tool as crcCalculator } from './crc-calculator';
@@ -95,7 +92,6 @@ import { tool as jsonToGo } from './json-to-go';
 import { tool as jsonToSchema } from './json-to-schema';
 import { tool as qrCodeDecoder } from './qr-code-decoder';
 import { tool as timezoneConverter } from './timezone-converter';
-import { tool as markdownToHtml } from './markdown-to-html';
 import { tool as nginxFormatter } from './nginx-formatter';
 import { tool as potrace } from './potrace';
 import { tool as rmbNumbers } from './rmb-numbers';
@@ -104,8 +100,6 @@ import { tool as textToUnicodeNames } from './text-to-unicode-names';
 import { tool as torrentToMagnet } from './torrent-to-magnet';
 import { tool as ttlCalculator } from './ttl-calculator';
 import { tool as unicodeFormatter } from './unicode-formatter';
-import { tool as xmlToJson } from './xml-to-json';
-import { tool as jsonToXml } from './json-to-xml';
 import { tool as pdfSignatureChecker } from './pdf-signature-checker';
 import { tool as numeronymGenerator } from './numeronym-generator';
 import { tool as macAddressGenerator } from './mac-address-generator';
@@ -300,7 +294,6 @@ export const toolsByCategory: ToolCategory[] = [
       jsUnobfuscator,
       jsonToPhpArray,
       phpArrayToJson,
-      maliciousLinksTester,
       torrentToMagnet,
       unicodeSearch,
     ],
@@ -396,9 +389,8 @@ export const toolsByCategory: ToolCategory[] = [
       mathOcr,
       dataTransferRateConverter,
       dataStorageUnitConverter,
-    ],
       ttlCalculator,
-      percentageCalculator],
+      percentageCalculator,
       angleConverter,
     ],
   },

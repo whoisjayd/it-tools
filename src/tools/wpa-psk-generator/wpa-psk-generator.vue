@@ -47,7 +47,9 @@ const ssidValidation = useValidation({
       />
 
       <div flex justify-center>
-        <n-button @click="computeRawKey()">Compute</n-button>
+        <n-button @click="computeRawKey()">
+          Compute
+        </n-button>
       </div>
     </c-card>
 
