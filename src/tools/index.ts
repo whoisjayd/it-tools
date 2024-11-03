@@ -9,6 +9,7 @@ import { tool as colorWheel } from './color-wheel';
 import { tool as currencyConverter } from './currency-converter';
 import { tool as emailParser } from './email-parser';
 import { tool as outlookParser } from './outlook-parser';
+import { tool as fileHasher } from './file-hasher';
 
 import { tool as cssXpathConverter } from './css-xpath-converter';
 import { tool as cssSelectorsMemo } from './css-selectors-memo';
@@ -119,6 +120,7 @@ export const toolsByCategory: ToolCategory[] = [
       tokenGenerator,
       hashText,
       crcCalculator,
+      fileHasher,
       bcrypt,
       uuidGenerator,
       ulidGenerator,
