@@ -202,6 +202,7 @@ import { tool as powerConverter } from './power-converter';
 import { tool as dockerComposeConverter } from './docker-compose-converter';
 import { tool as imageExifReader } from './image-exif-reader';
 import { tool as ipInRange } from './ip-in-range';
+import { tool as isbnValidatorAndParser } from './isbn-validator-and-parser';
 import { tool as yamlViewer } from './yaml-viewer';
 import { tool as barcodeReader } from './barcode-reader';
 import { tool as barcodeGenerator } from './barcode-generator';
@@ -506,6 +507,7 @@ export const toolsByCategory: ToolCategory[] = [
       luhnValidator,
       vatValidator,
       airCodes,
+      isbnValidatorAndParser,
     ],
   },
 ];
