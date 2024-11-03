@@ -128,6 +128,11 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
-    include: ['re2-wasm-embedded', 'isolated-vm'], // optionally specify dependency name
+    include: ['re2-wasm-embedded', 'isolated-vm', 'pdfjs-dist'], // optionally specify dependency name
+    esbuildOptions: {
+      supported: {
+        'top-level-await': true,
+      },
+    },
   },
 });
