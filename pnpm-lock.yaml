@@ -128,6 +128,9 @@ dependencies:
   chatgpt-prompt-splitter:
     specifier: ^1.0.5
     version: 1.0.5
+  chinesegen:
+    specifier: ^0.3.3
+    version: 0.3.3
   colord:
     specifier: ^2.9.3
     version: 2.9.3
@@ -293,6 +296,9 @@ dependencies:
   lodash.last:
     specifier: ^3.0.0
     version: 3.0.0
+  lorem-ipsum-japanese:
+    specifier: ^1.0.1
+    version: 1.0.1
   luxon:
     specifier: ^3.5.0
     version: 3.5.0
@@ -5636,6 +5642,13 @@ packages:
     resolution: {integrity: sha512-BrgHpW9NURQgzoNyjfq0Wu6VFO6D7IZEmJNdtgNqpzGG8RuNFHt2jQxWlAs4HMe119chBnv+34syEZtc6IhLtA==}
     dev: true
 
+  /chinesegen@0.3.3:
+    resolution: {integrity: sha512-iwWTX4sPT8BwYaZr3SFr4D1tkToc1SXQ90AwnW8prCcGhv2nrOW38LStV27HtbHPUYTEhYbfG1KHoXRtqVBUFg==}
+    hasBin: true
+    dependencies:
+      minimist: 1.2.8
+    dev: false
+
   /chokidar@3.5.3:
     resolution: {integrity: sha512-Dr3sfKRP6oTcjf2JmUmFJfeVMvXBdegxB0iVQ5eb2V10uFJUCAS8OByZdVAyVb8xXNz3GjjTgj9kLWsZTqE6kw==}
     engines: {node: '>= 8.10.0'}
@@ -8867,6 +8880,13 @@ packages:
       js-tokens: 4.0.0
     dev: false
 
+  /lorem-ipsum-japanese@1.0.1:
+    resolution: {integrity: sha512-lL4XsigcYfSIsuUmHuoLB4wa71teS7XCx5tDgyZh6SoQmtwn0NTTMM54F69hy5aT8dkExH41hKmmOh1cET6I/w==}
+    hasBin: true
+    dependencies:
+      optimist: 0.3.7
+    dev: false
+
   /lossless-json@4.0.2:
     resolution: {integrity: sha512-+z0EaLi2UcWi8MZRxA5iTb6m4Ys4E80uftGY+yG5KNFJb5EceQXOhdW/pWJZ8m97s26u7yZZAYMcKWNztSZssA==}
     dev: false
@@ -9535,6 +9555,12 @@ packages:
     engines: {node: '>= 8.0.0'}
     dependencies:
       asn1.js: 5.4.1
+    dev: false
+
+  /optimist@0.3.7:
+    resolution: {integrity: sha512-TCx0dXQzVtSCg2OgY/bO9hjM9cV4XYx09TVK+s3+FhkjT6LovsLe+pPMzpWf+6yXK/hUizs2gUoTw3jHM0VaTQ==}
+    dependencies:
+      wordwrap: 0.0.3
     dev: false
 
   /optionator@0.8.3:
@@ -12537,6 +12563,11 @@ packages:
   /word-wrap@1.2.5:
     resolution: {integrity: sha512-BN22B5eaMMI9UMtjrGd5g5eCYPpCPDUy0FJXbYsaT5zYxjFOckS53SQDE3pWkVoWpHXVb3BrYcEN4Twa55B5cA==}
     engines: {node: '>=0.10.0'}
+    dev: false
+
+  /wordwrap@0.0.3:
+    resolution: {integrity: sha512-1tMA907+V4QmxV7dbRvb4/8MaRALK6q9Abid3ndMYnbyo8piisCmeONVqVSXqQA3KaP4SLt5b7ud6E2sqP8TFw==}
+    engines: {node: '>=0.4.0'}
     dev: false
 
   /workbox-background-sync@7.0.0:
