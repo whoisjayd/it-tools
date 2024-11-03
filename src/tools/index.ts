@@ -132,6 +132,7 @@ import { tool as pgpEncryption } from './pgp-encryption';
 import { tool as pgpKeygen } from './pgp-keygen';
 import { tool as portNumbers } from './port-numbers';
 import { tool as rsaEncryption } from './rsa-encryption';
+import { tool as urlCleaner } from './url-cleaner';
 import { tool as pdfSignatureChecker } from './pdf-signature-checker';
 import { tool as numeronymGenerator } from './numeronym-generator';
 import { tool as macAddressGenerator } from './mac-address-generator';
@@ -336,6 +337,7 @@ export const toolsByCategory: ToolCategory[] = [
       urlEncoder,
       htmlEntities,
       urlParser,
+      urlCleaner,
       deviceInformation,
       basicAuthGenerator,
       htpasswdGenerator,

@@ -296,6 +296,7 @@
     "svg-to-url": "^4.0.0",
     "tesseract.js": "^5.0.4",
     "sshpk": "^1.18.0",
+    "tidy-url": "^1.15.1",
     "ua-parser-js": "^1.0.35",
     "ulid": "^2.3.0",
     "unicode-emoji-json": "^0.4.0",

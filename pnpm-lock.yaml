@@ -602,6 +602,9 @@ dependencies:
   tesseract.js:
     specifier: ^5.0.4
     version: 5.1.1
+  tidy-url:
+    specifier: ^1.15.1
+    version: 1.18.3
   turndown:
     specifier: ^7.1.2
     version: 7.2.0
@@ -1054,7 +1057,7 @@ packages:
     dependencies:
       '@babel/types': 7.23.0
       '@jridgewell/gen-mapping': 0.3.3
-      '@jridgewell/trace-mapping': 0.3.18
+      '@jridgewell/trace-mapping': 0.3.20
       jsesc: 2.5.2
     dev: true
 
@@ -14924,6 +14927,10 @@ packages:
   /through@2.3.8:
     resolution: {integrity: sha512-w89qg7PI8wAdvX60bMDP+bFoD5Dvhm9oLheFp5O4a2QF0cSBGsBX4qZmadPMvVqlLJBBci+WqGGOAPvcDeNSVg==}
     dev: true
+
+  /tidy-url@1.18.3:
+    resolution: {integrity: sha512-NnbmullqE/3loiDoopNltfLb/v6EhX5GYNUVU4EuZjnDjh/NIBzy5dHnhvH3EfIAnZZZMf3cW0HgNw9E+easyg==}
+    dev: false
 
   /time-span@5.1.0:
     resolution: {integrity: sha512-75voc/9G4rDIJleOo4jPvN4/YC4GRZrY8yy1uU4lwrB3XEQbWve8zXoO5No4eFrGcTAMYyoY67p8jRQdtA1HbA==}
