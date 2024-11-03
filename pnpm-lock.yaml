@@ -299,6 +299,9 @@ dependencies:
   lorem-ipsum-japanese:
     specifier: ^1.0.1
     version: 1.0.1
+  luhn-js:
+    specifier: ^1.1.2
+    version: 1.1.2
   luxon:
     specifier: ^3.5.0
     version: 3.5.0
@@ -4973,7 +4976,7 @@ packages:
   /@vueuse/shared@10.0.0(vue@3.3.4):
     resolution: {integrity: sha512-Zh3LgJqvUBWVY3SiMvXanTcfAneGbt63QPczBRDNgQ6jd/ehodO9a1lCFzaA6SWJJoI+ugVTjHFYJdoR656DVQ==}
     dependencies:
-      vue-demi: 0.14.10(vue@3.3.4)
+      vue-demi: 0.14.5(vue@3.3.4)
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
@@ -8930,6 +8933,10 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       yallist: 4.0.0
+
+  /luhn-js@1.1.2:
+    resolution: {integrity: sha512-GdINoHY50s4Zkhvmt6Pss/8ZwVxIOLsMHuJCg6EDcT1heSt4hM2V+7aKCihemn8rI0n22+lxqomzgvWDzMyEuQ==}
+    dev: false
 
   /luxon@3.5.0:
     resolution: {integrity: sha512-rh+Zjr6DNfUYR3bPwJEnuwDdqMbxZW7LOQfUN4B54+Cl+0o5zaU9RJ6bcidfDtC1cWCZXQ+nvX8bf6bAji37QQ==}

@@ -24,6 +24,7 @@ import { tool as jsonToPhpArray } from './json-to-php-array';
 import { tool as phpArrayToJson } from './php-array-to-json';
 import { tool as jsonSizeAnalyzer } from './json-size-analyzer';
 import { tool as jsonToCsharp } from './json-to-csharp';
+import { tool as luhnValidator } from './luhn-validator';
 
 import { tool as cssXpathConverter } from './css-xpath-converter';
 import { tool as cssSelectorsMemo } from './css-selectors-memo';
@@ -316,7 +317,11 @@ export const toolsByCategory: ToolCategory[] = [
   },
   {
     name: 'Data',
-    components: [phoneParserAndFormatter, ibanValidatorAndParser],
+    components: [
+      phoneParserAndFormatter,
+      ibanValidatorAndParser,
+      luhnValidator,
+    ],
   },
 ];
 
