@@ -191,6 +191,9 @@ dependencies:
   composerize-ts:
     specifier: ^0.6.2
     version: 0.6.2
+  composeverter:
+    specifier: ^1.7.2
+    version: 1.7.2
   convert:
     specifier: ^5.4.1
     version: 5.5.1
