@@ -158,6 +158,9 @@ dependencies:
   '@zxing/library':
     specifier: ^0.21.0
     version: 0.21.3
+  aircodes:
+    specifier: ^1.3.16
+    version: 1.3.16
   arr-diff:
     specifier: ^4.0.0
     version: 4.0.0
@@ -6350,7 +6353,7 @@ packages:
   /@vueuse/shared@10.0.0(vue@3.3.4):
     resolution: {integrity: sha512-Zh3LgJqvUBWVY3SiMvXanTcfAneGbt63QPczBRDNgQ6jd/ehodO9a1lCFzaA6SWJJoI+ugVTjHFYJdoR656DVQ==}
     dependencies:
-      vue-demi: 0.14.5(vue@3.3.4)
+      vue-demi: 0.14.10(vue@3.3.4)
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
@@ -6454,6 +6457,10 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /aircodes@1.3.16:
+    resolution: {integrity: sha512-ysPgP4iifjazWJfnfkywqpJMS+wVGzd9Z1t9oEeMjjbktavlxaJsFgmLl2OLdZru44sefc9/cCRUeeB7xKjxxQ==}
+    dev: false
 
   /ajv-errors@3.0.0(ajv@8.12.0):
     resolution: {integrity: sha512-V3wD15YHfHz6y0KdhYFjyy9vWtEVALT9UrxfN3zqlI6dMioHnJrqOYfyPKol3oqrnCM9uwkcdCwkJ0WUcbLMTQ==}
@@ -15916,6 +15923,7 @@ packages:
 
   /yamljs@0.3.0:
     resolution: {integrity: sha512-C/FsVVhht4iPQYXOInoxUM/1ELSf9EsgKH34FofQOp6hwCPrW4vG4w5++TED3xRUo8gD7l0P1J1dLlDYzODsTQ==}
+    hasBin: true
     dependencies:
       argparse: 1.0.10
       glob: 7.2.3
