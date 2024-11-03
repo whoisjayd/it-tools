@@ -212,6 +212,12 @@ dependencies:
   ibantools:
     specifier: ^4.3.3
     version: 4.3.3
+  ical-generator:
+    specifier: ^8.0.0
+    version: 8.0.1(@types/luxon@3.4.2)(@types/node@18.15.11)(luxon@3.5.0)
+  ical.js:
+    specifier: ^2.1.0
+    version: 2.1.0
   iconv-lite:
     specifier: ^0.6.3
     version: 0.6.3
@@ -219,7 +225,7 @@ dependencies:
     specifier: ^3.1.3
     version: 3.1.3
   js-base64:
-    specifier: ^3.7.7
+    specifier: ^3.7.6
     version: 3.7.7
   jsbarcode:
     specifier: ^3.11.6
@@ -3612,7 +3618,6 @@ packages:
 
   /@types/node@18.15.11:
     resolution: {integrity: sha512-E5Kwq2n4SbMzQOn6wnmBjuK9ouqlURrcZDVfbo9ftDDTFt3nk7ZKK4GMOzoYgnpQJKcxwQw+lGaBvvlMo0qN/Q==}
-    dev: true
 
   /@types/node@18.18.8:
     resolution: {integrity: sha512-OLGBaaK5V3VRBS1bAkMVP2/W9B+H8meUfl866OrMNQqt7wDgdpWPp5o6gmIc9pB+lIQHSq4ZL8ypeH1vPxcPaQ==}
@@ -7392,6 +7397,49 @@ packages:
     resolution: {integrity: sha512-RUTlGuFj3cU/Qfu5YIrsIZjW34/VDgKOz5fDr64Mc4NWP9b2i48vQ39r5xCl1yyFQeyEG/lASstIQHAUX18rRA==}
     dev: false
 
+  /ical-generator@8.0.1(@types/luxon@3.4.2)(@types/node@18.15.11)(luxon@3.5.0):
+    resolution: {integrity: sha512-D7D0HPdjg8dEVTyN3QM95sioJj5/6TPj9wetrpt16tzszVgTIXHSSlreTsLuSSQpF61EdVxxTwYS9TVWr7vF0g==}
+    engines: {node: 18 || 20 || >=22.0.0}
+    peerDependencies:
+      '@touch4it/ical-timezones': '>=1.6.0'
+      '@types/luxon': '>= 1.26.0'
+      '@types/mocha': '>= 8.2.1'
+      '@types/node': '*'
+      dayjs: '>= 1.10.0'
+      luxon: '>= 1.26.0'
+      moment: '>= 2.29.0'
+      moment-timezone: '>= 0.5.33'
+      rrule: '>= 2.6.8'
+    peerDependenciesMeta:
+      '@touch4it/ical-timezones':
+        optional: true
+      '@types/luxon':
+        optional: true
+      '@types/mocha':
+        optional: true
+      '@types/node':
+        optional: true
+      dayjs:
+        optional: true
+      luxon:
+        optional: true
+      moment:
+        optional: true
+      moment-timezone:
+        optional: true
+      rrule:
+        optional: true
+    dependencies:
+      '@types/luxon': 3.4.2
+      '@types/node': 18.15.11
+      luxon: 3.5.0
+      uuid-random: 1.3.2
+    dev: false
+
+  /ical.js@2.1.0:
+    resolution: {integrity: sha512-BOVfrH55xQ6kpS3muGvIXIg2l7p+eoe12/oS7R5yrO3TL/j/bLsR0PR+tYQESFbyTbvGgPHn9zQ6tI4FWyuSaQ==}
+    dev: false
+
   /iconv-lite@0.6.3:
     resolution: {integrity: sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw==}
     engines: {node: '>=0.10.0'}
@@ -10936,6 +10984,10 @@ packages:
       is-typed-array: 1.1.12
       which-typed-array: 1.1.13
     dev: true
+
+  /uuid-random@1.3.2:
+    resolution: {integrity: sha512-UOzej0Le/UgkbWEO8flm+0y+G+ljUon1QWTEZOq1rnMAsxo2+SckbiZdKzAHHlVh6gJqI1TjC/xwgR50MuCrBQ==}
+    dev: false
 
   /uuid@10.0.0:
     resolution: {integrity: sha512-8XkAphELsDnEGrDxUOHB3RGvXz6TeuYSGEZBOjtTtPm2lwhGBjLgOzLHB63IUWfBpNucQjND6d3AOudO+H3RWQ==}

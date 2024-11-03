@@ -11,6 +11,7 @@ import { tool as emailParser } from './email-parser';
 import { tool as outlookParser } from './outlook-parser';
 import { tool as fileHasher } from './file-hasher';
 import { tool as hexFileConverter } from './hex-file-converter';
+import { tool as icalMerger } from './ical-merger';
 
 import { tool as cssXpathConverter } from './css-xpath-converter';
 import { tool as cssSelectorsMemo } from './css-selectors-memo';
@@ -38,6 +39,8 @@ import { tool as durationCalculator } from './duration-calculator';
 import { tool as folderStructureDiagram } from './folder-structure-diagram';
 import { tool as hddCalculator } from './hdd-calculator';
 import { tool as heicConverter } from './heic-converter';
+import { tool as icalParser } from './ical-parser';
+import { tool as icalGenerator } from './ical-generator';
 import { tool as pdfSignatureChecker } from './pdf-signature-checker';
 import { tool as numeronymGenerator } from './numeronym-generator';
 import { tool as macAddressGenerator } from './mac-address-generator';
@@ -272,6 +275,9 @@ export const toolsByCategory: ToolCategory[] = [
       asciiTextDrawer,
       pasteAsMarkdown,
       iso3166Searcher,
+      icalGenerator,
+      icalParser,
+      icalMerger,
     ],
   },
   {
