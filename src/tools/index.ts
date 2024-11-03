@@ -146,6 +146,7 @@ import { tool as macAddressLookup } from './mac-address-lookup';
 import { tool as xmlFormatter } from './xml-formatter';
 import { tool as dockerComposeToDockerRunConverter } from './docker-compose-to-docker-run-converter';
 import { tool as pdfEncrypt } from './pdf-encrypt';
+import { tool as pdfLinearize } from './pdf-linearize';
 import { tool as yamlViewer } from './yaml-viewer';
 import { tool as barcodeReader } from './barcode-reader';
 import { tool as barcodeGenerator } from './barcode-generator';
@@ -174,6 +175,9 @@ export const toolsByCategory: ToolCategory[] = [
       passwordStrengthAnalyser,
       pdfSignatureChecker,
       pdfEncrypt,
+      passwordStrengthAnalyser,
+      pdfSignatureChecker,
+      pdfLinearize,
     ],
   },
   {
