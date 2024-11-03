@@ -20,6 +20,7 @@ import { tool as pasteAsMarkdown } from './paste-as-markdown';
 import { tool as aiPromptSplitter } from './ai-prompt-splitter';
 import { tool as apiTester } from './api-tester';
 import { tool as commonRegexMemo } from './common-regex-memo';
+import { tool as iso3166Searcher } from './iso-3166-searcher';
 import { tool as pdfSignatureChecker } from './pdf-signature-checker';
 import { tool as numeronymGenerator } from './numeronym-generator';
 import { tool as macAddressGenerator } from './mac-address-generator';
@@ -221,6 +222,7 @@ export const toolsByCategory: ToolCategory[] = [
       aiPromptSplitter,
       asciiTextDrawer,
       pasteAsMarkdown,
+      iso3166Searcher,
     ],
   },
   {
