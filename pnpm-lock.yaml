@@ -179,6 +179,9 @@ dependencies:
   composerize-ts:
     specifier: ^0.6.2
     version: 0.6.2
+  convert:
+    specifier: ^5.4.1
+    version: 5.5.1
   countries-and-timezones:
     specifier: ^3.6.0
     version: 3.7.2
@@ -7425,6 +7428,10 @@ packages:
 
   /convert-source-map@2.0.0:
     resolution: {integrity: sha512-Kvp459HrV2FEJ1CAsi1Ku+MY3kasH19TFykTz2xWmMeq6bk2NU3XXvfJ+Q61m0xktWwt+1HSYf3JZsTms3aRJg==}
+
+  /convert@5.5.1:
+    resolution: {integrity: sha512-WwF2Lq0CAu28u3vQNPELlqtCqUeXAKNujgbkV4vtRDNAw+WojcjfK2gQEACI0k8HYnGQIRH4D3eNumdb9M5OlQ==}
+    dev: false
 
   /copy-anything@2.0.6:
     resolution: {integrity: sha512-1j20GZTsvKNkc4BY3NpMOM8tt///wY3FpIzozTOFO2ffuZcV61nojHXVKIy3WM+7ADCy5FVhdZYHYDdgTU0yJw==}

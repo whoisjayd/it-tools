@@ -6,6 +6,14 @@ import { tool as icoConverter } from './ico-converter';
 import { tool as jsonEditor } from './json-editor';
 import { tool as slaCalculator } from './sla-calculator';
 import { tool as smartTextReplacer } from './smart-text-replacer';
+import { tool as volumeConverter } from './volume-converter';
+import { tool as pressureConverter } from './pressure-converter';
+import { tool as massConverter } from './mass-converter';
+import { tool as lengthConverter } from './length-converter';
+import { tool as forceConverter } from './force-converter';
+import { tool as energyConverter } from './energy-converter';
+import { tool as areaConverter } from './area-converter';
+import { tool as angleConverter } from './angle-converter';
 import { tool as emailNormalizer } from './email-normalizer';
 import { tool as bounceParser } from './bounce-parser';
 import { tool as codeHighlighter } from './code-highlighter';
@@ -168,6 +176,8 @@ import { tool as xmlFormatter } from './xml-formatter';
 import { tool as dockerComposeToDockerRunConverter } from './docker-compose-to-docker-run-converter';
 import { tool as pdfEncrypt } from './pdf-encrypt';
 import { tool as pdfLinearize } from './pdf-linearize';
+import { tool as manyUnitsConverter } from './many-units-converter';
+import { tool as powerConverter } from './power-converter';
 import { tool as yamlViewer } from './yaml-viewer';
 import { tool as barcodeReader } from './barcode-reader';
 import { tool as barcodeGenerator } from './barcode-generator';
@@ -372,6 +382,8 @@ export const toolsByCategory: ToolCategory[] = [
     ],
       ttlCalculator,
       percentageCalculator],
+      angleConverter,
+    ],
   },
   {
     name: 'Measurement',
@@ -384,6 +396,17 @@ export const toolsByCategory: ToolCategory[] = [
       benchmarkBuilder,
       benchmarkBuilder,
       slaCalculator,
+      manyUnitsConverter,
+      temperatureConverter,
+      pressureConverter,
+      massConverter,
+      lengthConverter,
+      areaConverter,
+      volumeConverter,
+      forceConverter,
+      energyConverter,
+      powerConverter,
+      benchmarkBuilder,
     ],
   },
   {
