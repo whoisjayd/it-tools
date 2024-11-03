@@ -116,6 +116,7 @@ import { tool as dockerComposeToDockerRunConverter } from './docker-compose-to-d
 import { tool as yamlViewer } from './yaml-viewer';
 import { tool as barcodeReader } from './barcode-reader';
 import { tool as barcodeGenerator } from './barcode-generator';
+import { tool as htmlToMarkdown } from './html-to-markdown';
 
 export const toolsByCategory: ToolCategory[] = [
   {
@@ -158,6 +159,7 @@ export const toolsByCategory: ToolCategory[] = [
       listConverter,
       tomlToJson,
       tomlToYaml,
+      htmlToMarkdown,
       xmlToJson,
       jsonToXml,
       markdownToHtml,
