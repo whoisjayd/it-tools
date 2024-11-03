@@ -79,6 +79,7 @@ import { tool as imageToCss } from './image-to-css';
 import { tool as jsonToGo } from './json-to-go';
 import { tool as jsonToSchema } from './json-to-schema';
 import { tool as qrCodeDecoder } from './qr-code-decoder';
+import { tool as timezoneConverter } from './timezone-converter';
 import { tool as markdownToHtml } from './markdown-to-html';
 import { tool as nginxFormatter } from './nginx-formatter';
 import { tool as potrace } from './potrace';
@@ -211,6 +212,7 @@ export const toolsByCategory: ToolCategory[] = [
     name: 'Converter',
     components: [
       dateTimeConverter,
+      timezoneConverter,
       baseConverter,
       romanNumeralConverter,
       base64StringConverter,

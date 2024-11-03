@@ -177,7 +177,7 @@ dependencies:
     specifier: ^0.6.2
     version: 0.6.2
   countries-and-timezones:
-    specifier: ^3.7.2
+    specifier: ^3.6.0
     version: 3.7.2
   countries-db:
     specifier: ^1.2.0
@@ -263,6 +263,9 @@ dependencies:
   generate-schema:
     specifier: ^2.6.0
     version: 2.6.0
+  get-timezone-offset:
+    specifier: ^1.0.5
+    version: 1.0.5
   hash-wasm:
     specifier: ^4.11.0
     version: 4.11.0
@@ -6296,7 +6299,7 @@ packages:
   /@vueuse/shared@10.0.0(vue@3.3.4):
     resolution: {integrity: sha512-Zh3LgJqvUBWVY3SiMvXanTcfAneGbt63QPczBRDNgQ6jd/ehodO9a1lCFzaA6SWJJoI+ugVTjHFYJdoR656DVQ==}
     dependencies:
-      vue-demi: 0.14.10(vue@3.3.4)
+      vue-demi: 0.14.5(vue@3.3.4)
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
@@ -9234,6 +9237,11 @@ packages:
       call-bind: 1.0.5
       get-intrinsic: 1.2.2
     dev: true
+
+  /get-timezone-offset@1.0.5:
+    resolution: {integrity: sha512-+B+/vEJ9qJgZheDVNmuY+4il8sJhTFXRvSiiqyRfwiCEhTaZqn/yCoNToDzQL+Mv9DLKlyO1bSIP5nUCJQN9Aw==}
+    engines: {node: '>=4.0.0'}
+    dev: false
 
   /get-tsconfig@4.7.2:
     resolution: {integrity: sha512-wuMsz4leaj5hbGgg4IvDU0bqJagpftG5l5cXIAvo8uZrqn0NJqwtfupTN00VnkQJPcIRrxYrm1Ue24btpCha2A==}
@@ -15526,7 +15534,6 @@ packages:
 
   /yamljs@0.3.0:
     resolution: {integrity: sha512-C/FsVVhht4iPQYXOInoxUM/1ELSf9EsgKH34FofQOp6hwCPrW4vG4w5++TED3xRUo8gD7l0P1J1dLlDYzODsTQ==}
-    hasBin: true
     dependencies:
       argparse: 1.0.10
       glob: 7.2.3
