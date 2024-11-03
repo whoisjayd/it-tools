@@ -5,6 +5,7 @@ import { tool as dnsQueries } from './dns-queries';
 import { tool as icoConverter } from './ico-converter';
 import { tool as jsonEditor } from './json-editor';
 import { tool as slaCalculator } from './sla-calculator';
+import { tool as smartTextReplacer } from './smart-text-replacer';
 import { tool as emailNormalizer } from './email-normalizer';
 import { tool as bounceParser } from './bounce-parser';
 import { tool as codeHighlighter } from './code-highlighter';
@@ -375,6 +376,7 @@ export const toolsByCategory: ToolCategory[] = [
       textDiff,
       numeronymGenerator,
       aiPromptSplitter,
+      smartTextReplacer,
       asciiTextDrawer,
       pasteAsMarkdown,
       iso3166Searcher,
