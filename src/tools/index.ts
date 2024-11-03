@@ -139,6 +139,7 @@ import { tool as utmUrlGenerator } from './utm-url-generator';
 import { tool as javascriptPrettifier } from './javascript-prettifier';
 import { tool as cssPrettifier } from './css-prettifier';
 import { tool as htmlPrettifier } from './html-prettifier';
+import { tool as x509CertificateGenerator } from './x509-certificate-generator';
 import { tool as pdfSignatureChecker } from './pdf-signature-checker';
 import { tool as numeronymGenerator } from './numeronym-generator';
 import { tool as macAddressGenerator } from './mac-address-generator';
@@ -291,6 +292,9 @@ export const toolsByCategory: ToolCategory[] = [
       passwordStrengthAnalyser,
       pdfSignatureChecker,
       rsaEncryption,
+      x509CertificateGenerator,
+      passwordStrengthAnalyser,
+      pdfSignatureChecker,
     ],
   },
   {
