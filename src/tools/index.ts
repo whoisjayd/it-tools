@@ -125,6 +125,7 @@ import { tool as jsonEscaper } from './json-escaper';
 import { tool as jsonLinter } from './json-linter';
 import { tool as markdownCheatsheet } from './markdown-cheatsheet';
 import { tool as markdownEditor } from './markdown-editor';
+import { tool as nanoMemo } from './nano-memo';
 import { tool as pdfSignatureChecker } from './pdf-signature-checker';
 import { tool as numeronymGenerator } from './numeronym-generator';
 import { tool as macAddressGenerator } from './mac-address-generator';
@@ -414,6 +415,13 @@ export const toolsByCategory: ToolCategory[] = [
       stacktracePrettier,
       xpathTester,
       fileType,
+    ],
+  },
+  {
+    name: 'CheatSheets',
+    components: [
+      gitMemo,
+      nanoMemo,
     ],
   },
   {
