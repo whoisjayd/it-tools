@@ -86,6 +86,7 @@ import { tool as potrace } from './potrace';
 import { tool as rmbNumbers } from './rmb-numbers';
 import { tool as sensitiveDataMasker } from './sensitive-data-masker';
 import { tool as textToUnicodeNames } from './text-to-unicode-names';
+import { tool as torrentToMagnet } from './torrent-to-magnet';
 import { tool as pdfSignatureChecker } from './pdf-signature-checker';
 import { tool as numeronymGenerator } from './numeronym-generator';
 import { tool as macAddressGenerator } from './mac-address-generator';
@@ -273,6 +274,7 @@ export const toolsByCategory: ToolCategory[] = [
       jsonToPhpArray,
       phpArrayToJson,
       maliciousLinksTester,
+      torrentToMagnet,
     ],
   },
   {

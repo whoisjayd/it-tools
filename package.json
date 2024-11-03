@@ -195,6 +195,7 @@
     "oui-data": "^1.0.10",
     "parse-duration": "^1.1.0",
     "path2d-polyfill": "^3.0.1",
+    "parse-torrent": "^11.0.17",
     "pdf-signature-reader": "^1.4.2",
     "pdfjs-dist": "^4.0.379",
     "pinia": "^2.0.34",
