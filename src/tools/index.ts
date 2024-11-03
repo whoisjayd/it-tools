@@ -44,6 +44,7 @@ import { tool as certificateKeyParser } from './certificate-key-parser';
 import { tool as crcCalculator } from './crc-calculator';
 import { tool as ipGeoLocation } from './ip-geo-location';
 import { tool as safelinkDecoder } from './safelink-decoder';
+import { tool as mongoObjectidConverter } from './mongo-objectid-converter';
 import { tool as xmlToJson } from './xml-to-json';
 import { tool as jsonToXml } from './json-to-xml';
 import { tool as regexTester } from './regex-tester';
@@ -273,6 +274,7 @@ export const toolsByCategory: ToolCategory[] = [
       jqMemo,
       jsonpathMemo,
       jsonToSchema,
+      mongoObjectidConverter,
     ],
   },
   {
