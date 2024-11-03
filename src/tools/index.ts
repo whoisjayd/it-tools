@@ -12,6 +12,9 @@ import { tool as cssXpathConverter } from './css-xpath-converter';
 import { tool as cssSelectorsMemo } from './css-selectors-memo';
 import { tool as xpathMemo } from './xpath-memo';
 import { tool as asciiTextDrawer } from './ascii-text-drawer';
+import { tool as asciiTextDrawer } from './ascii-text-drawer';
+import { tool as daysCalculator } from './days-calculator';
+import { tool as dateDurationCalculator } from './date-duration-calculator';
 import { tool as textToUnicode } from './text-to-unicode';
 import { tool as certificateKeyParser } from './certificate-key-parser';
 import { tool as crcCalculator } from './crc-calculator';
@@ -27,6 +30,7 @@ import { tool as apiTester } from './api-tester';
 import { tool as commonRegexMemo } from './common-regex-memo';
 import { tool as iso3166Searcher } from './iso-3166-searcher';
 import { tool as curlConverter } from './curl-converter';
+import { tool as durationCalculator } from './duration-calculator';
 import { tool as pdfSignatureChecker } from './pdf-signature-checker';
 import { tool as numeronymGenerator } from './numeronym-generator';
 import { tool as macAddressGenerator } from './mac-address-generator';
@@ -230,7 +234,14 @@ export const toolsByCategory: ToolCategory[] = [
   },
   {
     name: 'Measurement',
-    components: [chronometer, temperatureConverter, benchmarkBuilder],
+    components: [
+      chronometer,
+      temperatureConverter,
+      daysCalculator,
+      durationCalculator,
+      dateDurationCalculator,
+      benchmarkBuilder,
+    ],
   },
   {
     name: 'Text',
