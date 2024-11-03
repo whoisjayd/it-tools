@@ -62,6 +62,7 @@ import { tool as asciiTextDrawer } from './ascii-text-drawer';
 import { tool as daysCalculator } from './days-calculator';
 import { tool as dateDurationCalculator } from './date-duration-calculator';
 import { tool as macAddressConverter } from './mac-address-converter';
+import { tool as dockerComposeToKubernetesConverter } from './docker-compose-to-kubernetes';
 import { tool as textToUnicode } from './text-to-unicode';
 import { tool as certificateKeyParser } from './certificate-key-parser';
 import { tool as crcCalculator } from './crc-calculator';
@@ -343,6 +344,7 @@ export const toolsByCategory: ToolCategory[] = [
       chmodCalculator,
       dockerRunToDockerComposeConverter,
       dockerComposeToDockerRunConverter,
+      dockerComposeToKubernetesConverter,
       xmlFormatter,
       xsltTester,
       yamlViewer,
