@@ -116,6 +116,7 @@ import { tool as ecdsaKeyPairGenerator } from './ecdsa-key-pair-generator';
 import { tool as ed25519KeyPairGenerator } from './ed25519-key-pair-generator';
 import { tool as fileType } from './file-type';
 import { tool as htmlCleaner } from './html-cleaner';
+import { tool as imageToAsciiArt } from './image-to-ascii-art';
 import { tool as pdfSignatureChecker } from './pdf-signature-checker';
 import { tool as numeronymGenerator } from './numeronym-generator';
 import { tool as macAddressGenerator } from './mac-address-generator';
@@ -347,6 +348,7 @@ export const toolsByCategory: ToolCategory[] = [
       svgPlaceholderGenerator,
       cameraRecorder,
       removeExif,
+      imageToAsciiArt,
     ],
   },
   {

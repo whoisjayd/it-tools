@@ -335,6 +335,9 @@ dependencies:
   image-in-browser:
     specifier: ^3.1.0
     version: 3.2.1
+  image-to-ascii-art:
+    specifier: ^0.0.4
+    version: 0.0.4
   ip-bigint:
     specifier: ^8.2.0
     version: 8.2.0
@@ -10109,6 +10112,10 @@ packages:
     engines: {node: '>=0.10.0'}
     requiresBuild: true
     optional: true
+
+  /image-to-ascii-art@0.0.4:
+    resolution: {integrity: sha512-MvY8f2zQv8oAMdxK7908Y+JMan7bsUaSQKS/lHRJwzATyQyvoE4MCJXeqFMNxmFUWcxPqpD1ioqOUvR1peZzuA==}
+    dev: false
 
   /immutable-json-patch@6.0.1:
     resolution: {integrity: sha512-BHL/cXMjwFZlTOffiWNdY8ZTvNyYLrutCnWxrcKPHr5FqpAb6vsO6WWSPnVSys3+DruFN6lhHJJPHi8uELQL5g==}
