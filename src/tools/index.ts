@@ -205,6 +205,7 @@ import { tool as barcodeReader } from './barcode-reader';
 import { tool as barcodeGenerator } from './barcode-generator';
 import { tool as htmlToMarkdown } from './html-to-markdown';
 import { tool as pdfUnlock } from './pdf-unlock';
+import { tool as ipCidrToRange } from './ip-cidr-to-range';
 
 export const toolsByCategory: ToolCategory[] = [
   {
@@ -417,6 +418,11 @@ export const toolsByCategory: ToolCategory[] = [
       punycodeConverter,
       sslCertConverter,
       websocketTester,
+      ipv4RangeExpander,
+      ipCidrToRange,
+      macAddressLookup,
+      macAddressGenerator,
+      ipv6UlaGenerator,
     ],
   },
   {
