@@ -119,6 +119,9 @@ dependencies:
   '@types/punycode':
     specifier: ^2.1.4
     version: 2.1.4
+  '@types/sshpk':
+    specifier: ^1.17.4
+    version: 1.17.4
   '@types/turndown':
     specifier: ^5.0.4
     version: 5.0.5
@@ -568,9 +571,6 @@ devDependencies:
   '@types/qrcode':
     specifier: ^1.5.0
     version: 1.5.0
-  '@types/sshpk':
-    specifier: ^1.17.4
-    version: 1.17.4
   '@types/ua-parser-js':
     specifier: ^0.7.36
     version: 0.7.36
@@ -5042,7 +5042,7 @@ packages:
     resolution: {integrity: sha512-V91DSJ2l0h0gRhVP4oBfBzRBN9lAbPUkGDMCnwedqPKX2d84aAMc9CulOvxdw1f7DfEYx99afab+Rsm3e52jhA==}
     dependencies:
       '@types/node': 18.18.8
-    dev: true
+    dev: false
 
   /@types/bcryptjs@2.4.2:
     resolution: {integrity: sha512-LiMQ6EOPob/4yUL66SZzu6Yh77cbzJFYll+ZfaPiPPFswtIlA/Fs1MzdKYA7JApHU49zQTbJGX3PDmCpIdDBRQ==}
@@ -5291,7 +5291,7 @@ packages:
     dependencies:
       '@types/asn1': 0.2.4
       '@types/node': 18.18.8
-    dev: true
+    dev: false
 
   /@types/throttle-debounce@2.1.0:
     resolution: {integrity: sha512-5eQEtSCoESnh2FsiLTxE121IiE60hnMqcb435fShf4bpLRjEu1Eoekht23y6zXS9Ts3l+Szu3TARnTsA0GkOkQ==}
@@ -10106,6 +10106,7 @@ packages:
   /jsesc@2.5.2:
     resolution: {integrity: sha512-OYu7XEzjkCQ3C5Ps3QIZsQfNpqoJyZZA99wd9aWd05NCtC5pWOkShK2mkL6HXQR6/Cy2lbNdPlZBpuQHXE63gA==}
     engines: {node: '>=4'}
+    hasBin: true
 
   /jsesc@3.0.2:
     resolution: {integrity: sha512-xKqzzWXDttJuOcawBt4KnKHHIf5oQ/Cxax+0PWFG+DFDgHNAdi+TXECADI+RYiFUMmx8792xsMbbgXj4CwnP4g==}
