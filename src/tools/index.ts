@@ -102,6 +102,8 @@ import { tool as textToUnicodeNames } from './text-to-unicode-names';
 import { tool as torrentToMagnet } from './torrent-to-magnet';
 import { tool as ttlCalculator } from './ttl-calculator';
 import { tool as unicodeFormatter } from './unicode-formatter';
+import { tool as xmlToJson } from './xml-to-json';
+import { tool as jsonToXml } from './json-to-xml';
 import { tool as pdfSignatureChecker } from './pdf-signature-checker';
 import { tool as numeronymGenerator } from './numeronym-generator';
 import { tool as macAddressGenerator } from './mac-address-generator';
@@ -265,6 +267,8 @@ export const toolsByCategory: ToolCategory[] = [
       rmbNumbers,
       smartRawConverter,
       weekNumberConverter,
+      xmlToJson,
+      jsonToXml,
     ],
   },
   {
