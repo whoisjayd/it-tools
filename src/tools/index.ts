@@ -135,6 +135,7 @@ import { tool as rsaEncryption } from './rsa-encryption';
 import { tool as urlCleaner } from './url-cleaner';
 import { tool as urlFanger } from './url-fanger';
 import { tool as urlTextFragmentMaker } from './url-text-fragment-maker';
+import { tool as utmUrlGenerator } from './utm-url-generator';
 import { tool as pdfSignatureChecker } from './pdf-signature-checker';
 import { tool as numeronymGenerator } from './numeronym-generator';
 import { tool as macAddressGenerator } from './mac-address-generator';
@@ -342,6 +343,7 @@ export const toolsByCategory: ToolCategory[] = [
       urlCleaner,
       urlFanger,
       urlTextFragmentMaker,
+      utmUrlGenerator,
       deviceInformation,
       basicAuthGenerator,
       htpasswdGenerator,
