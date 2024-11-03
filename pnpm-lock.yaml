@@ -107,6 +107,9 @@ dependencies:
   '@types/markdown-it':
     specifier: ^13.0.7
     version: 13.0.9
+  '@types/memorystream':
+    specifier: ^0.3.4
+    version: 0.3.4
   '@types/pdfjs-dist':
     specifier: ^2.10.378
     version: 2.10.378
@@ -221,6 +224,9 @@ dependencies:
   emojilib:
     specifier: ^3.0.10
     version: 3.0.10
+  exif-be-gone:
+    specifier: ^1.5.1
+    version: 1.5.1
   fast_array_intersect:
     specifier: ^1.1.0
     version: 1.1.0
@@ -338,6 +344,9 @@ dependencies:
   mathjs:
     specifier: ^11.9.1
     version: 11.9.1
+  memorystream:
+    specifier: ^0.3.1
+    version: 0.3.1
   mime-types:
     specifier: ^2.1.35
     version: 2.1.35
@@ -5185,6 +5194,12 @@ packages:
   /@types/mdurl@1.0.2:
     resolution: {integrity: sha512-eC4U9MlIcu2q0KQmXszyn5Akca/0jrQmwDRgpAMJai7qBWq4amIQhZyNau4VYGtCeALvW1/NtjzJJ567aZxfKA==}
 
+  /@types/memorystream@0.3.4:
+    resolution: {integrity: sha512-AVVe8unTnhTecg9GmRVddQFvi5K7+QcvLTfUstT+5dhQ633+JX4bK/sKaHTj8Z5RUOoVNS6u1gfby29ArDj4Gw==}
+    dependencies:
+      '@types/node': 18.18.8
+    dev: false
+
   /@types/mime-types@2.1.1:
     resolution: {integrity: sha512-vXOTGVSLR2jMw440moWTC7H19iUyLtP3Z1YTj7cSsubOICinjMxFeb/V57v9QdyyPGbbWolUFSSmSiRSn94tFw==}
     dev: true
@@ -8617,6 +8632,11 @@ packages:
       strip-final-newline: 3.0.0
     dev: false
 
+  /exif-be-gone@1.5.1:
+    resolution: {integrity: sha512-+fV9PoomNVR5Hmp0n1c0ZVl78/GaFrpnC0t7q4F9Aey8NcL+7Lutcez8KY2Ni30NWpvgLXawqiRFFwtdo4QgFg==}
+    hasBin: true
+    dev: false
+
   /exif-parser@0.1.12:
     resolution: {integrity: sha512-c2bQfLNbMzLPmzQuOr8fy0csy84WmwnER81W88DzTp9CYNPJ6yzOj2EZAh9pywYpqHnshVLHQJ8WzldAyfY+Iw==}
     dev: false
@@ -10606,6 +10626,11 @@ packages:
 
   /memoize-one@6.0.0:
     resolution: {integrity: sha512-rkpe71W0N0c0Xz6QD0eJETuWAJGnJ9afsl1srmwPrI+yBCkge5EycXXbYRyvL29zZVUWQCY7InPRCv3GDXuZNw==}
+    dev: false
+
+  /memorystream@0.3.1:
+    resolution: {integrity: sha512-S3UwM3yj5mtUSEfP41UZmt/0SCoVYUcU1rkXv+BQ5Ig8ndL4sPoJNBUJERafdPb5jjHJGuMgytgKvKIf58XNBw==}
+    engines: {node: '>= 0.10.0'}
     dev: false
 
   /merge-stream@2.0.0:
@@ -14830,6 +14855,7 @@ packages:
 
   /yamljs@0.3.0:
     resolution: {integrity: sha512-C/FsVVhht4iPQYXOInoxUM/1ELSf9EsgKH34FofQOp6hwCPrW4vG4w5++TED3xRUo8gD7l0P1J1dLlDYzODsTQ==}
+    hasBin: true
     dependencies:
       argparse: 1.0.10
       glob: 7.2.3
