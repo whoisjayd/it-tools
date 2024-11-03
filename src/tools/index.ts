@@ -59,14 +59,11 @@ import { tool as energyComputer } from './energy-computer';
 import { tool as cssXpathConverter } from './css-xpath-converter';
 import { tool as cssSelectorsMemo } from './css-selectors-memo';
 import { tool as xpathMemo } from './xpath-memo';
-import { tool as asciiTextDrawer } from './ascii-text-drawer';
 import { tool as daysCalculator } from './days-calculator';
 import { tool as dateDurationCalculator } from './date-duration-calculator';
 import { tool as macAddressConverter } from './mac-address-converter';
 import { tool as dockerComposeToKubernetesConverter } from './docker-compose-to-kubernetes';
 import { tool as morseConverter } from './morse-converter';
-import { tool as asciiTextDrawer } from './ascii-text-drawer';
-import { tool as textToUnicode } from './text-to-unicode';
 import { tool as certificateKeyParser } from './certificate-key-parser';
 import { tool as crcCalculator } from './crc-calculator';
 import { tool as ipGeoLocation } from './ip-geo-location';
@@ -148,7 +145,6 @@ import { tool as ulidGenerator } from './ulid-generator';
 import { tool as ibanValidatorAndParser } from './iban-validator-and-parser';
 import { tool as stringObfuscator } from './string-obfuscator';
 import { tool as textDiff } from './text-diff';
-import { tool as airCodes } from './air-codes';
 import { tool as emojiPicker } from './emoji-picker';
 import { tool as passwordStrengthAnalyser } from './password-strength-analyser';
 import { tool as yamlToToml } from './yaml-to-toml';
@@ -239,7 +235,6 @@ export const toolsByCategory: ToolCategory[] = [
     name: 'Crypto',
     components: [
       tokenGenerator,
-      hashText,
       crcCalculator,
       fileHasher,
       passphraseGenerator,
@@ -253,44 +248,17 @@ export const toolsByCategory: ToolCategory[] = [
       hmacGenerator,
       rsaKeyPairGenerator,
       certificateKeyParser,
-      passwordStrengthAnalyser,
-      pdfSignatureChecker,
-      passwordStrengthAnalyser,
-      pdfSignatureChecker,
       pdfEncrypt,
-      passwordStrengthAnalyser,
-      pdfSignatureChecker,
       pdfLinearize,
-      passwordStrengthAnalyser,
-      pdfSignatureChecker,
       pdfUnlock,
-      passwordStrengthAnalyser,
-      pdfSignatureChecker,
-      passwordStrengthAnalyser,
-      pdfSignatureChecker,
-      // pgpEncryption,
       rsaEcdsaSigning,
-      passwordStrengthAnalyser,
-      pdfSignatureChecker,
       wpaPskGenerator,
       ansibleVaultCryptDecrypt,
       csrGenerator,
-      passwordStrengthAnalyser,
-      pdfSignatureChecker,
-      passwordStrengthAnalyser,
-      pdfSignatureChecker,
       ecdsaKeyPairGenerator,
       ed25519KeyPairGenerator,
-      passwordStrengthAnalyser,
-      pdfSignatureChecker,
-      passwordStrengthAnalyser,
-      pdfSignatureChecker,
       pgpEncryption,
-      passwordStrengthAnalyser,
-      pdfSignatureChecker,
       pgpKeygen,
-      passwordStrengthAnalyser,
-      pdfSignatureChecker,
       rsaEncryption,
       x509CertificateGenerator,
       passwordStrengthAnalyser,
@@ -322,8 +290,6 @@ export const toolsByCategory: ToolCategory[] = [
       tomlToJson,
       tomlToYaml,
       htmlToMarkdown,
-      xmlToJson,
-      jsonToXml,
       markdownToHtml,
       currencyConverter,
       hddCalculator,
@@ -385,8 +351,6 @@ export const toolsByCategory: ToolCategory[] = [
     components: [
       qrCodeGenerator,
       wifiQrCodeGenerator,
-      svgPlaceholderGenerator,
-      cameraRecorder,
       barcodeReader,
       barcodeGenerator,
       heicConverter,
@@ -428,9 +392,6 @@ export const toolsByCategory: ToolCategory[] = [
       jsonEditor,
       emailNormalizer,
       codeHighlighter,
-      regexTester,
-      regexMemo,
-      commonRegexMemo,
       cssXpathConverter,
       cssSelectorsMemo,
       xpathMemo,
@@ -443,6 +404,7 @@ export const toolsByCategory: ToolCategory[] = [
       nginxFormatter,
       regexTester,
       regexMemo,
+      commonRegexMemo,
       stacktracePrettier,
       xpathTester,
       fileType,
@@ -462,8 +424,6 @@ export const toolsByCategory: ToolCategory[] = [
     name: 'Network',
     components: [
       ipv4SubnetCalculator,
-      ipv4AddressConverter,
-      // ipv6AddressConverter,
       ipInRange,
       ipv6AddressConverter,
       ipv6SubnetCalculator,
@@ -471,7 +431,6 @@ export const toolsByCategory: ToolCategory[] = [
       ipv4RangeExpander,
       macAddressLookup,
       macAddressGenerator,
-      ipv6UlaGenerator,
       dnsQueries,
       emailParser,
       outlookParser,
@@ -482,14 +441,8 @@ export const toolsByCategory: ToolCategory[] = [
       punycodeConverter,
       sslCertConverter,
       websocketTester,
-      ipv4RangeExpander,
       ipCidrToRange,
-      ipv4RangeExpander,
       ipRangeToCidr,
-      ipv4RangeExpander,
-      macAddressLookup,
-      macAddressGenerator,
-      ipv6UlaGenerator,
       option43Generator,
       portNumbers,
     ],
@@ -507,19 +460,15 @@ export const toolsByCategory: ToolCategory[] = [
       ttlCalculator,
       percentageCalculator,
       angleConverter,
-    ],
       percentageCalculator],
   },
   {
     name: 'Measurement',
     components: [
       chronometer,
-      temperatureConverter,
       daysCalculator,
       durationCalculator,
       dateDurationCalculator,
-      benchmarkBuilder,
-      benchmarkBuilder,
       slaCalculator,
       manyUnitsConverter,
       temperatureConverter,
@@ -531,8 +480,6 @@ export const toolsByCategory: ToolCategory[] = [
       forceConverter,
       energyConverter,
       powerConverter,
-      benchmarkBuilder,
-      benchmarkBuilder,
       energyComputer,
       benchmarkBuilder,
     ],
@@ -548,7 +495,6 @@ export const toolsByCategory: ToolCategory[] = [
       numeronymGenerator,
       aiPromptSplitter,
       smartTextReplacer,
-      asciiTextDrawer,
       pasteAsMarkdown,
       iso3166Searcher,
       icalGenerator,
@@ -567,7 +513,6 @@ export const toolsByCategory: ToolCategory[] = [
       ibanValidatorAndParser,
       luhnValidator,
       vatValidator,
-      airCodes,
       isbnValidatorAndParser,
     ],
   },
