@@ -43,6 +43,7 @@ import { tool as hddCalculator } from './hdd-calculator';
 import { tool as heicConverter } from './heic-converter';
 import { tool as icalParser } from './ical-parser';
 import { tool as icalGenerator } from './ical-generator';
+import { tool as imageToCss } from './image-to-css';
 import { tool as pdfSignatureChecker } from './pdf-signature-checker';
 import { tool as numeronymGenerator } from './numeronym-generator';
 import { tool as macAddressGenerator } from './mac-address-generator';
@@ -195,6 +196,7 @@ export const toolsByCategory: ToolCategory[] = [
       bounceParser,
       colorWheel,
       folderStructureDiagram,
+      imageToCss,
     ],
   },
   {

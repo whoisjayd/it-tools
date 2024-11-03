@@ -122,7 +122,7 @@ export default defineConfig({
   build: {
     target: 'esnext',
     rollupOptions: {
-      external: ['regex'],
+      external: ['node:fs/promises', 'fs', 'regex'],
     },
   },
   optimizeDeps: {
