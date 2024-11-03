@@ -25,6 +25,7 @@ import { tool as phpArrayToJson } from './php-array-to-json';
 import { tool as jsonSizeAnalyzer } from './json-size-analyzer';
 import { tool as jsonToCsharp } from './json-to-csharp';
 import { tool as luhnValidator } from './luhn-validator';
+import { tool as maliciousLinksTester } from './malicious-links-tester';
 
 import { tool as cssXpathConverter } from './css-xpath-converter';
 import { tool as cssSelectorsMemo } from './css-selectors-memo';
@@ -220,6 +221,7 @@ export const toolsByCategory: ToolCategory[] = [
       jsUnobfuscator,
       jsonToPhpArray,
       phpArrayToJson,
+      maliciousLinksTester,
     ],
   },
   {
