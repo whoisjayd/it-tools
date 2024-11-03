@@ -33,6 +33,8 @@ import { tool as asciiTextDrawer } from './ascii-text-drawer';
 import { tool as asciiTextDrawer } from './ascii-text-drawer';
 import { tool as daysCalculator } from './days-calculator';
 import { tool as dateDurationCalculator } from './date-duration-calculator';
+import { tool as macAddressConverter } from './mac-address-converter';
+import { tool as asciiTextDrawer } from './ascii-text-drawer';
 import { tool as textToUnicode } from './text-to-unicode';
 import { tool as certificateKeyParser } from './certificate-key-parser';
 import { tool as crcCalculator } from './crc-calculator';
@@ -280,6 +282,8 @@ export const toolsByCategory: ToolCategory[] = [
       outlookParser,
       integersToIp,
       ipGeoLocation,
+      macAddressConverter,
+      ipv6UlaGenerator,
     ],
   },
   {
