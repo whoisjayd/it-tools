@@ -266,6 +266,7 @@
     "parse-torrent": "^11.0.17",
     "pdf-signature-reader": "^1.4.2",
     "pdfjs-dist": "^4.0.379",
+    "pdf-signature-reader": "^1.4.3",
     "pinia": "^2.0.34",
     "plausible-tracker": "^0.3.8",
     "pretty-ms": "^9.1.0",

@@ -519,8 +519,8 @@ dependencies:
     specifier: ^3.0.1
     version: 3.1.2
   pdf-signature-reader:
-    specifier: ^1.4.2
-    version: 1.4.2
+    specifier: ^1.4.3
+    version: 1.4.3
   pdfjs-dist:
     specifier: ^4.0.379
     version: 4.8.69
@@ -13145,8 +13145,8 @@ packages:
       sha.js: 2.4.11
     dev: false
 
-  /pdf-signature-reader@1.4.2:
-    resolution: {integrity: sha512-qQbmFv6nv4SQt2gmaalaREhHu3x2XyLG2+zL4Gl4D2TL2Zfii1EKxlFhJDsduP8s06t26snDoSwEAQtJOtprmQ==}
+  /pdf-signature-reader@1.4.3:
+    resolution: {integrity: sha512-hBIeID5dxNKOpMdfVhrpczkNC56gTzWBOzAv7PXxxvxVDsqOOeP86M/Jiy96cA2FogXEIzJrXccKGhirJZ+6Gg==}
     dependencies:
       base64-js: 1.5.1
       ieee754: 1.2.1
