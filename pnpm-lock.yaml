@@ -74,6 +74,9 @@ dependencies:
   colord:
     specifier: ^2.9.3
     version: 2.9.3
+  composerize:
+    specifier: ^1.6.12
+    version: 1.6.12
   composerize-ts:
     specifier: ^0.6.2
     version: 0.6.2
@@ -5224,6 +5227,18 @@ packages:
       yamljs: 0.3.0
     dev: false
 
+  /composerize@1.6.12:
+    resolution: {integrity: sha512-kPIEgkU2TRT1t4ZrBPUmmRr7RGA0E5JYx0rAgpWBRWNjZRDr2FV/8ne8S8iLp7oaqEX1ubDqZPEQvHaDM9d7cg==}
+    hasBin: true
+    dependencies:
+      composeverter: 1.7.2
+      core-js: 2.6.12
+      deepmerge: 2.2.1
+      invariant: 2.2.4
+      yaml: 1.10.2
+      yargs-parser: 13.1.2
+    dev: false
+
   /composeverter@1.7.2:
     resolution: {integrity: sha512-gRSCkSU8wJQvmTHQ23wBd2gCdUsns95k3lL7YszZBu5EyA3eac46mI7nVgvk1pZTM0mOmj/E5yurtdYkuVNZRA==}
     dependencies:
@@ -7232,6 +7247,12 @@ packages:
       side-channel: 1.0.4
     dev: true
 
+  /invariant@2.2.4:
+    resolution: {integrity: sha512-phJfQVBuaJM5raOpJjSfkiD6BpbCE4Ns//LaXl6wGYtUBY83nWS6Rf9tXm2e8VaK60JEjYldbPif/A2B1C2gNA==}
+    dependencies:
+      loose-envify: 1.4.0
+    dev: false
+
   /ip-address@7.1.0:
     resolution: {integrity: sha512-V9pWC/VJf2lsXqP7IWJ+pe3P1/HCYGBMZrrnT62niLGjAfCbeiwXMUxaeHvnVlz19O27pvXP4azs+Pj/A0x+SQ==}
     engines: {node: '>= 10'}
@@ -7666,6 +7687,7 @@ packages:
   /jsesc@2.5.2:
     resolution: {integrity: sha512-OYu7XEzjkCQ3C5Ps3QIZsQfNpqoJyZZA99wd9aWd05NCtC5pWOkShK2mkL6HXQR6/Cy2lbNdPlZBpuQHXE63gA==}
     engines: {node: '>=4'}
+    hasBin: true
 
   /jsesc@3.0.2:
     resolution: {integrity: sha512-xKqzzWXDttJuOcawBt4KnKHHIf5oQ/Cxax+0PWFG+DFDgHNAdi+TXECADI+RYiFUMmx8792xsMbbgXj4CwnP4g==}
@@ -7841,6 +7863,13 @@ packages:
       chalk: 4.1.2
       is-unicode-supported: 0.1.0
     dev: true
+
+  /loose-envify@1.4.0:
+    resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==}
+    hasBin: true
+    dependencies:
+      js-tokens: 4.0.0
+    dev: false
 
   /lossless-json@4.0.2:
     resolution: {integrity: sha512-+z0EaLi2UcWi8MZRxA5iTb6m4Ys4E80uftGY+yG5KNFJb5EceQXOhdW/pWJZ8m97s26u7yZZAYMcKWNztSZssA==}
@@ -11411,6 +11440,13 @@ packages:
     dependencies:
       argparse: 1.0.10
       glob: 7.2.3
+    dev: false
+
+  /yargs-parser@13.1.2:
+    resolution: {integrity: sha512-3lbsNRf/j+A4QuSZfDRA7HRSfWrzO0YjqTJd5kjAq37Zep1CEgaYmrH9Q3GwPiB9cHyd1Y1UwggGhJGoxipbzg==}
+    dependencies:
+      camelcase: 5.3.1
+      decamelize: 1.2.0
     dev: false
 
   /yargs-parser@18.1.3:
