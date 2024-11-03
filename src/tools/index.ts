@@ -199,6 +199,7 @@ import { tool as pdfLinearize } from './pdf-linearize';
 import { tool as manyUnitsConverter } from './many-units-converter';
 import { tool as powerConverter } from './power-converter';
 import { tool as dockerComposeConverter } from './docker-compose-converter';
+import { tool as imageExifReader } from './image-exif-reader';
 import { tool as yamlViewer } from './yaml-viewer';
 import { tool as barcodeReader } from './barcode-reader';
 import { tool as barcodeGenerator } from './barcode-generator';
@@ -349,6 +350,7 @@ export const toolsByCategory: ToolCategory[] = [
       cameraRecorder,
       removeExif,
       imageToAsciiArt,
+      imageExifReader,
     ],
   },
   {
