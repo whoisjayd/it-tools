@@ -25,7 +25,9 @@ export const useToolStore = defineStore('tools', () => {
     return _.chain(tools.value)
       .groupBy('category')
       .map((components, name, path) => ({
+      .map((components, name, path) => ({
         name,
+        path,
         path,
         components,
       }))
@@ -34,6 +36,7 @@ export const useToolStore = defineStore('tools', () => {
 
   const favoriteTools = computed(() => {
     return favoriteToolsName.value
+      .map(favoriteName => tools.value.find(({ name, path }) => name === favoriteName || path === favoriteName))
       .map(favoriteName => tools.value.find(({ name, path }) => name === favoriteName || path === favoriteName))
       .filter(Boolean) as ToolWithCategory[]; // cast because .filter(Boolean) does not remove undefined from type
   });
@@ -52,6 +55,7 @@ export const useToolStore = defineStore('tools', () => {
     },
 
     removeToolFromFavorites({ tool }: { tool: MaybeRef<Tool> }) {
+      favoriteToolsName.value = favoriteToolsName.value.filter(name => get(tool).name !== name && get(tool).path !== name);
       favoriteToolsName.value = favoriteToolsName.value.filter(name => get(tool).name !== name && get(tool).path !== name);
     },
 
