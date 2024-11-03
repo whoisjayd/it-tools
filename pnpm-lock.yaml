@@ -128,8 +128,11 @@ dependencies:
   '@types/turndown':
     specifier: ^5.0.4
     version: 5.0.5
+  '@types/utf8':
+    specifier: ^3.0.3
+    version: 3.0.3
   '@unicode/unicode-15.1.0':
-    specifier: ^1.5.2
+    specifier: ^1.6.0
     version: 1.6.0
   '@vicons/material':
     specifier: ^0.12.0
@@ -506,6 +509,9 @@ dependencies:
   unplugin-auto-import:
     specifier: ^0.16.4
     version: 0.16.4(@vueuse/core@10.11.1)(rollup@2.79.1)
+  utf8:
+    specifier: ^3.0.0
+    version: 3.0.0
   uuid:
     specifier: ^9.0.0
     version: 9.0.0
@@ -5380,6 +5386,10 @@ packages:
 
   /@types/unist@3.0.3:
     resolution: {integrity: sha512-ko/gIFJRv177XgZsZcBwnqJN5x/Gien8qNOn0D5bQU/zAzVf9Zt3BlcUiLqhV9y4ARk0GbT3tnUiPNgnTXzc/Q==}
+    dev: false
+
+  /@types/utf8@3.0.3:
+    resolution: {integrity: sha512-+lqLGxWZsEe4Z6OrzBI7Ym4SMUTaMS5yOrHZ0/IL0bpIye1Qbs4PpobJL2mLDbftUXlPFZR7fu6d1yM+bHLX1w==}
     dev: false
 
   /@types/uuid@9.0.0:
@@ -10547,6 +10557,7 @@ packages:
   /jsesc@2.5.2:
     resolution: {integrity: sha512-OYu7XEzjkCQ3C5Ps3QIZsQfNpqoJyZZA99wd9aWd05NCtC5pWOkShK2mkL6HXQR6/Cy2lbNdPlZBpuQHXE63gA==}
     engines: {node: '>=4'}
+    hasBin: true
 
   /jsesc@3.0.2:
     resolution: {integrity: sha512-xKqzzWXDttJuOcawBt4KnKHHIf5oQ/Cxax+0PWFG+DFDgHNAdi+TXECADI+RYiFUMmx8792xsMbbgXj4CwnP4g==}
@@ -14613,6 +14624,10 @@ packages:
 
   /utf8-string-bytes@1.0.3:
     resolution: {integrity: sha512-i/I1Omf6lADjVBlwJpQifZOePV15snHny9w04+lc71+3t8PyWuLC/7clyoOSHOBNGXFe2PAGxmTiZ+Z4HWsPyw==}
+    dev: false
+
+  /utf8@3.0.0:
+    resolution: {integrity: sha512-E8VjFIQ/TyQgp+TZfS6l8yp/xWppSAHzidGiRrqe4bK4XP9pTRyKFgGJpO3SN7zdX4DeomTrwaseCHovfpFcqQ==}
     dev: false
 
   /utif@2.0.1:
