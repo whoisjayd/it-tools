@@ -122,6 +122,9 @@ dependencies:
   '@types/memorystream':
     specifier: ^0.3.4
     version: 0.3.4
+  '@types/morsee':
+    specifier: ^1.0.2
+    version: 1.0.2
   '@types/pdfjs-dist':
     specifier: ^2.10.378
     version: 2.10.378
@@ -476,6 +479,9 @@ dependencies:
   monaco-editor:
     specifier: ^0.43.0
     version: 0.43.0
+  morsee:
+    specifier: ^1.0.9
+    version: 1.0.9
   naive-ui:
     specifier: ^2.35.0
     version: 2.35.0(vue@3.3.4)
@@ -5759,6 +5765,10 @@ packages:
   /@types/minimist@1.2.2:
     resolution: {integrity: sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==}
     dev: true
+
+  /@types/morsee@1.0.2:
+    resolution: {integrity: sha512-WANv1kCyQtmGZTiov9FzFdt1X4wRtXYZA6B4YR3CghKgx4ychU7d1gkOx7oD+ddVGI+SWmWOPccco7pAc6wXeA==}
+    dev: false
 
   /@types/netmask@2.0.0:
     resolution: {integrity: sha512-6LjGn0BPF0gOHGuRuJ0hGfdBJLz/9K8Ikz+oRThTNc2w7CGLvwqdjAP7/CydsUeL4cxBBXAHLFfC9bMs74757Q==}
@@ -11350,7 +11360,6 @@ packages:
   /jsesc@2.5.2:
     resolution: {integrity: sha512-OYu7XEzjkCQ3C5Ps3QIZsQfNpqoJyZZA99wd9aWd05NCtC5pWOkShK2mkL6HXQR6/Cy2lbNdPlZBpuQHXE63gA==}
     engines: {node: '>=4'}
-    hasBin: true
 
   /jsesc@3.0.2:
     resolution: {integrity: sha512-xKqzzWXDttJuOcawBt4KnKHHIf5oQ/Cxax+0PWFG+DFDgHNAdi+TXECADI+RYiFUMmx8792xsMbbgXj4CwnP4g==}
@@ -12200,6 +12209,10 @@ packages:
 
   /moo@0.5.2:
     resolution: {integrity: sha512-iSAJLHYKnX41mKcJKjqvnAN9sf0LMDTXDEvFv+ffuRR9a1MIuXLjMNL6EsnDHSkKLTWNqQQ5uo61P4EbU4NU+Q==}
+    dev: false
+
+  /morsee@1.0.9:
+    resolution: {integrity: sha512-8X8jKVUmZBHKpET9Ap6FPiwlAAASvv60M1K25/YwCU7veuj5MfYgaWX3oEPHtMGgC44IIkIKzyD73fduEKB/9g==}
     dev: false
 
   /moveable@0.53.0:
@@ -16727,7 +16740,6 @@ packages:
 
   /yamljs@0.3.0:
     resolution: {integrity: sha512-C/FsVVhht4iPQYXOInoxUM/1ELSf9EsgKH34FofQOp6hwCPrW4vG4w5++TED3xRUo8gD7l0P1J1dLlDYzODsTQ==}
-    hasBin: true
     dependencies:
       argparse: 1.0.10
       glob: 7.2.3
