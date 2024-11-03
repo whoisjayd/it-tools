@@ -50,6 +50,7 @@ import { tool as dataTransferRateConverter } from './data-transfer-rate-converte
 import { tool as dataStorageUnitConverter } from './data-storage-unit-converter';
 import { tool as unicodeSearch } from './unicode-search';
 import { tool as vatValidator } from './vat-validator';
+import { tool as websocketTester } from './websocket-tester';
 
 import { tool as cssXpathConverter } from './css-xpath-converter';
 import { tool as cssSelectorsMemo } from './css-selectors-memo';
@@ -368,6 +369,7 @@ export const toolsByCategory: ToolCategory[] = [
       ipv6UlaGenerator,
       punycodeConverter,
       sslCertConverter,
+      websocketTester,
     ],
   },
   {
