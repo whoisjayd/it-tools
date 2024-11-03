@@ -151,6 +151,7 @@ import { tool as yamlViewer } from './yaml-viewer';
 import { tool as barcodeReader } from './barcode-reader';
 import { tool as barcodeGenerator } from './barcode-generator';
 import { tool as htmlToMarkdown } from './html-to-markdown';
+import { tool as pdfUnlock } from './pdf-unlock';
 
 export const toolsByCategory: ToolCategory[] = [
   {
@@ -178,6 +179,9 @@ export const toolsByCategory: ToolCategory[] = [
       passwordStrengthAnalyser,
       pdfSignatureChecker,
       pdfLinearize,
+      passwordStrengthAnalyser,
+      pdfSignatureChecker,
+      pdfUnlock,
     ],
   },
   {
