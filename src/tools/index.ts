@@ -6,8 +6,10 @@ import { tool as bounceParser } from './bounce-parser';
 import { tool as codeHighlighter } from './code-highlighter';
 import { tool as colorWheel } from './color-wheel';
 
+import { tool as cssXpathConverter } from './css-xpath-converter';
+import { tool as cssSelectorsMemo } from './css-selectors-memo';
+import { tool as xpathMemo } from './xpath-memo';
 import { tool as asciiTextDrawer } from './ascii-text-drawer';
-
 import { tool as textToUnicode } from './text-to-unicode';
 import { tool as certificateKeyParser } from './certificate-key-parser';
 import { tool as crcCalculator } from './crc-calculator';
@@ -198,6 +200,9 @@ export const toolsByCategory: ToolCategory[] = [
       regexTester,
       regexMemo,
       commonRegexMemo,
+      cssXpathConverter,
+      cssSelectorsMemo,
+      xpathMemo,
     ],
   },
   {
