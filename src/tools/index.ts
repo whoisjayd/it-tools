@@ -26,6 +26,7 @@ import { tool as dateDurationCalculator } from './date-duration-calculator';
 import { tool as textToUnicode } from './text-to-unicode';
 import { tool as certificateKeyParser } from './certificate-key-parser';
 import { tool as crcCalculator } from './crc-calculator';
+import { tool as ipGeoLocation } from './ip-geo-location';
 import { tool as safelinkDecoder } from './safelink-decoder';
 import { tool as xmlToJson } from './xml-to-json';
 import { tool as jsonToXml } from './json-to-xml';
@@ -253,6 +254,7 @@ export const toolsByCategory: ToolCategory[] = [
       emailParser,
       outlookParser,
       integersToIp,
+      ipGeoLocation,
     ],
   },
   {
