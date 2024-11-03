@@ -25,16 +25,8 @@ const props = withDefaults(
     copyPlacement?: 'top-right' | 'bottom-right' | 'outside' | 'none'
     copyMessage?: string
     wordWrap?: boolean
-<<<<<<< HEAD
-<<<<<<< HEAD
     downloadFileName?: string
     downloadButtonText?: string
-=======
->>>>>>> feat/cert-key-parser
-=======
-    downloadFileName?: string
-    downloadButtonText?: string
->>>>>>> feat/email-parser
   }>(),
   {
     followHeightOf: null,
