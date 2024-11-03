@@ -22,6 +22,7 @@ import { tool as jqMemo } from './jq-memo';
 import { tool as jsUnobfuscator } from './js-unobfuscator';
 import { tool as jsonToPhpArray } from './json-to-php-array';
 import { tool as phpArrayToJson } from './php-array-to-json';
+import { tool as jsonSizeAnalyzer } from './json-size-analyzer';
 
 import { tool as cssXpathConverter } from './css-xpath-converter';
 import { tool as cssSelectorsMemo } from './css-selectors-memo';
@@ -233,6 +234,7 @@ export const toolsByCategory: ToolCategory[] = [
       crontabGenerator,
       jsonViewer,
       jsonMinify,
+      jsonSizeAnalyzer,
       jsonToCsv,
       sqlPrettify,
       chmodCalculator,

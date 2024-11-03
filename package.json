@@ -130,6 +130,7 @@
     "image-in-browser": "^3.1.0",
     "js-base64": "^3.7.7",
     "json-editor-vue": "^0.16.0",
+    "json-analyzer": "^1.2.2",
     "json5": "^2.2.3",
     "jsonpath": "^1.1.1",
     "jsonar-mod": "^1.9.0",

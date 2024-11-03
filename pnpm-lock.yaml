@@ -245,6 +245,9 @@ dependencies:
   jsbarcode:
     specifier: ^3.11.6
     version: 3.11.6
+  json-analyzer:
+    specifier: ^1.2.2
+    version: 1.2.2
   json-editor-vue:
     specifier: ^0.16.0
     version: 0.16.0(@lezer/common@1.2.3)(vue@3.3.4)
@@ -5734,6 +5737,11 @@ packages:
     resolution: {integrity: sha512-IfEDxwoWIjkeXL1eXcDiow4UbKjhLdq6/EuSVR9GMN7KVH3r9gQ83e73hsz1Nd1T3ijd5xv1wcWRYO+D6kCI2w==}
     dev: true
 
+  /colors@1.4.0:
+    resolution: {integrity: sha512-a+UqTh4kgZg/SlGvfbzDHpgRu7AAQOmmqRHJnxhRZICKFUT91brVhNNt58CMWU9PsBbv3PDCZUHbVxuDiH2mtA==}
+    engines: {node: '>=0.1.90'}
+    dev: false
+
   /combined-stream@1.0.8:
     resolution: {integrity: sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg==}
     engines: {node: '>= 0.8'}
@@ -8536,6 +8544,21 @@ packages:
     engines: {node: '>=6'}
     hasBin: true
 
+  /json-analyzer@1.2.2:
+    resolution: {integrity: sha512-3xWTxyIggxOYIPT9NkucQPxlOBPJY14/ifely3eCtifE5pAxJXl/jUmSDwq+fLVhHIIj9MIJ6Bv7u3ItChG8vQ==}
+    engines: {node: '>=8.0.0'}
+    hasBin: true
+    dependencies:
+      commander: 2.20.3
+      lodash.flowright: 3.5.0
+      lodash.get: 4.4.2
+      lodash.isobject: 3.0.2
+      pako: 1.0.11
+      pretty-bytes: 5.6.0
+      prettyjson: 1.2.5
+      utf8-length: 0.0.1
+    dev: false
+
   /json-editor-vue@0.16.0(@lezer/common@1.2.3)(vue@3.3.4):
     resolution: {integrity: sha512-8axbIR1DD6cf/AAXDkEYkPHDbWzEQDP762j2GiX3fFnHmE5+RzkcCFV2J/TGr6Mlw9sdZpQVMPHtt+7qYJ8Xyg==}
     requiresBuild: true
@@ -8754,8 +8777,20 @@ packages:
     resolution: {integrity: sha512-uHaJFihxmJcEX3kT4I23ABqKKalJ/zDrDg0lsFtc1h+3uw49SIJ5beyhx5ExVRti3AvKoOJngIj7xz3oylPdWQ==}
     dev: false
 
+  /lodash.flowright@3.5.0:
+    resolution: {integrity: sha512-YxTYuodkvyINbDInmFcGGvkQwoAuoGUYosqstRTr5eq63GQt7WQ2xFU0wG1UfdbKYPwevd3zWDd6ybEE2g6qvA==}
+    dev: false
+
+  /lodash.get@4.4.2:
+    resolution: {integrity: sha512-z+Uw/vLuy6gQe8cfaFWD7p0wVv8fJl3mbzXh33RS+0oW2wvUqiRXiQ69gLWSLpgB5/6sU+r6BlQR0MBILadqTQ==}
+    dev: false
+
   /lodash.isempty@4.4.0:
     resolution: {integrity: sha512-oKMuF3xEeqDltrGMfDxAPGIVMSSRv8tbRSODbrs4KGsRRLEhrW8N8Rd4DRgB2+621hY8A8XwwrTVhXWpxFvMzg==}
+    dev: false
+
+  /lodash.isobject@3.0.2:
+    resolution: {integrity: sha512-3/Qptq2vr7WeJbB4KHUSKlq8Pl7ASXi3UG6CMbBm8WRtXi8+GHm7mKaU3urfpSEzWe2wCIChs6/sdocUsTKJiA==}
     dev: false
 
   /lodash.isplainobject@4.0.6:
@@ -9884,7 +9919,6 @@ packages:
   /pretty-bytes@5.6.0:
     resolution: {integrity: sha512-FFw039TmrBqFK8ma/7OL3sDz/VytdtJr044/QUJtH0wK9lb9jLq9tJyIxUwtQJHwar2BqtiA4iCWSwo9JLkzFg==}
     engines: {node: '>=6'}
-    dev: true
 
   /pretty-bytes@6.1.0:
     resolution: {integrity: sha512-Rk753HI8f4uivXi4ZCIYdhmG1V+WKzvRMg/X+M42a6t7D07RcmopXJMDNk6N++7Bl75URRGsb40ruvg7Hcp2wQ==}
@@ -9905,6 +9939,14 @@ packages:
     engines: {node: '>=18'}
     dependencies:
       parse-ms: 4.0.0
+    dev: false
+
+  /prettyjson@1.2.5:
+    resolution: {integrity: sha512-rksPWtoZb2ZpT5OVgtmy0KHVM+Dca3iVwWY9ifwhcexfjebtgjg3wmrUt9PvJ59XIYBcknQeYHD8IAnVlh9lAw==}
+    hasBin: true
+    dependencies:
+      colors: 1.4.0
+      minimist: 1.2.8
     dev: false
 
   /process-nextick-args@2.0.1:
