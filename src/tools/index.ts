@@ -34,6 +34,7 @@ import { tool as commonRegexMemo } from './common-regex-memo';
 import { tool as iso3166Searcher } from './iso-3166-searcher';
 import { tool as curlConverter } from './curl-converter';
 import { tool as durationCalculator } from './duration-calculator';
+import { tool as folderStructureDiagram } from './folder-structure-diagram';
 import { tool as pdfSignatureChecker } from './pdf-signature-checker';
 import { tool as numeronymGenerator } from './numeronym-generator';
 import { tool as macAddressGenerator } from './mac-address-generator';
@@ -181,6 +182,7 @@ export const toolsByCategory: ToolCategory[] = [
       apiTester,
       bounceParser,
       colorWheel,
+      folderStructureDiagram,
     ],
   },
   {
