@@ -99,7 +99,9 @@ export default defineConfig({
       resolvers: [NaiveUiResolver(), IconsResolver({ prefix: 'icon' })],
     }),
     Unocss(),
-    nodePolyfills(),
+    nodePolyfills({
+      exclude: ['fs'],
+    }),
     topLevelAwait({
       // The export name of top-level await promise for each chunk module
       promiseExportName: '__tla',
@@ -122,10 +124,10 @@ export default defineConfig({
   build: {
     target: 'esnext',
     rollupOptions: {
-      external: ['node:fs/promises', 'fs', 'regex'],
+      external: ['node:fs/promises', 'fs', 'regex', './out/isolated_vm'],
     },
   },
   optimizeDeps: {
-    include: ['re2-wasm-embedded'], // optionally specify dependency name
+    include: ['re2-wasm-embedded', 'isolated-vm'], // optionally specify dependency name
   },
 });
