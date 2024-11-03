@@ -251,6 +251,9 @@ dependencies:
   json-editor-vue:
     specifier: ^0.16.0
     version: 0.16.0(@lezer/common@1.2.3)(vue@3.3.4)
+  json2csharp:
+    specifier: ^1.0.3
+    version: 1.0.3
   json5:
     specifier: ^2.2.3
     version: 2.2.3
@@ -8598,6 +8601,10 @@ packages:
   /json-stable-stringify-without-jsonify@1.0.1:
     resolution: {integrity: sha512-Bdboy+l7tA3OGW6FjyFHWkP5LuByj1Tk33Ljyq0axyzdk9//JSi2u3fP1QSmd1KNwq6VOKYGlAu87CisVir6Pw==}
     dev: true
+
+  /json2csharp@1.0.3:
+    resolution: {integrity: sha512-hbe5csNMtvYf4neEDvYRWkJf8fgxeheuMAfhG80f2HIpeUMunPvv+4F2fS1PLpXbdzBp6EMQjZiocRvKhtahgg==}
+    dev: false
 
   /json5@2.2.3:
     resolution: {integrity: sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==}
