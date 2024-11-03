@@ -251,6 +251,9 @@ dependencies:
   json5:
     specifier: ^2.2.3
     version: 2.2.3
+  jsonar-mod:
+    specifier: ^1.9.0
+    version: 1.9.0
   jsonpath:
     specifier: ^1.1.1
     version: 1.1.1
@@ -6724,6 +6727,12 @@ packages:
     resolution: {integrity: sha512-nV5aVWW1K0wEiUIEdZ4erkGGH8mDxGyxSeqPzRNtWP7ataw+/olFObw7hujFWlVjNsaDFw5VZ5NzVSIqRgfTiw==}
     dev: false
 
+  /escape-quotes@1.0.2:
+    resolution: {integrity: sha512-JpLFzklNReeakCpyj59s78P5F72q0ZUpDnp2BuIk9TtTjj2HMsgiWBChw17BlZT8dRhMtmSb1jE2+pTP1iFYyw==}
+    dependencies:
+      escape-string-regexp: 1.0.5
+    dev: false
+
   /escape-string-regexp@1.0.5:
     resolution: {integrity: sha512-vbRorB5FUQWvla16U8R/qgaFIya2qGzwDrNmCZuYKrbdSUMG6I1ZCGQRefkRVhuOkIGVne7BQ35DSfo1qvJqFg==}
     engines: {node: '>=0.8.0'}
@@ -8571,6 +8580,15 @@ packages:
     resolution: {integrity: sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==}
     engines: {node: '>=6'}
 
+  /jsonar-mod@1.9.0:
+    resolution: {integrity: sha512-mCJ05fyYoGO0YbNo/Vr/2eppzqgktwqIl8aNI2lAEubCViGmbpphNldX68pHI/WpG6FGiacslKiJjcTme7b3PQ==}
+    dependencies:
+      escape-quotes: 1.0.2
+      lodash.isempty: 4.4.0
+      lodash.isplainobject: 4.0.6
+      php-parser: 3.1.5
+    dev: false
+
   /jsonc-eslint-parser@2.3.0:
     resolution: {integrity: sha512-9xZPKVYp9DxnM3sd1yAsh/d59iIaswDkai8oTxbursfKYbg/ibjX0IzFt35+VZ8iEW453TVTXztnRvYUQlAfUQ==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
@@ -8734,6 +8752,14 @@ packages:
 
   /lodash.flattendeep@4.4.0:
     resolution: {integrity: sha512-uHaJFihxmJcEX3kT4I23ABqKKalJ/zDrDg0lsFtc1h+3uw49SIJ5beyhx5ExVRti3AvKoOJngIj7xz3oylPdWQ==}
+    dev: false
+
+  /lodash.isempty@4.4.0:
+    resolution: {integrity: sha512-oKMuF3xEeqDltrGMfDxAPGIVMSSRv8tbRSODbrs4KGsRRLEhrW8N8Rd4DRgB2+621hY8A8XwwrTVhXWpxFvMzg==}
+    dev: false
+
+  /lodash.isplainobject@4.0.6:
+    resolution: {integrity: sha512-oSXzaWypCMHkPC3NvBEaPHf0KsA5mvPrOPgQWDsbg8n7orZ290M0BmC/jgRZ4vcJ6DTAhjrsSYgdsW/F+MFOBA==}
     dev: false
 
   /lodash.last@3.0.0:
@@ -9702,6 +9728,10 @@ packages:
       '@types/estree': 1.0.6
       estree-walker: 3.0.3
       is-reference: 3.0.2
+    dev: false
+
+  /php-parser@3.1.5:
+    resolution: {integrity: sha512-jEY2DcbgCm5aclzBdfW86GM6VEIWcSlhTBSHN1qhJguVePlYe28GhwS0yoeLYXpM2K8y6wzLwrbq814n2PHSoQ==}
     dev: false
 
   /picocolors@1.0.0:
