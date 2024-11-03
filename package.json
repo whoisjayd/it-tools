@@ -96,6 +96,7 @@
     "@unicode/unicode-15.1.0": "^1.6.0",
     "@types/figlet": "^1.5.8",
     "@types/markdown-it": "^13.0.7",
+    "@types/figlet": "^1.5.8",
     "@vicons/material": "^0.12.0",
     "@vicons/tabler": "^0.12.0",
     "@vueuse/core": "^10.11.1",

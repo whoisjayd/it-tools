@@ -101,6 +101,11 @@ import { tool as textToUnicodeNames } from './text-to-unicode-names';
 import { tool as torrentToMagnet } from './torrent-to-magnet';
 import { tool as ttlCalculator } from './ttl-calculator';
 import { tool as unicodeFormatter } from './unicode-formatter';
+
+import { tool as asciiTextDrawer } from './ascii-text-drawer';
+
+import { tool as textToUnicode } from './text-to-unicode';
+
 import { tool as pdfSignatureChecker } from './pdf-signature-checker';
 import { tool as numeronymGenerator } from './numeronym-generator';
 import { tool as macAddressGenerator } from './mac-address-generator';
@@ -442,6 +447,7 @@ export const toolsByCategory: ToolCategory[] = [
       icalMerger,
       sensitiveDataMasker,
       unicodeFormatter,
+      asciiTextDrawer,
     ],
   },
   {
