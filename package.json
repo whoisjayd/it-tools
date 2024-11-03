@@ -38,6 +38,7 @@
   "dependencies": {
     "@github/paste-markdown": "^1.5.3",
     "@chenfengyuan/vue-barcode": "^2.0.2",
+    "@guolao/vue-monaco-editor": "^1.4.1",
     "@it-tools/bip39": "^0.0.4",
     "@it-tools/oggen": "^1.3.0",
     "@regexper/render": "^1.0.0",
@@ -71,6 +72,7 @@
     "currency-exchanger-js": "^1.0.4",
     "date-fns": "^2.29.3",
     "dns-query": "^0.11.2",
+    "decomposerize": "^1.4.1",
     "dompurify": "^3.0.6",
     "email-bounce-parser-browser": "^1.1",
     "email-normalizer": "^1.0.0",
