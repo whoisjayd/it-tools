@@ -578,6 +578,9 @@ dependencies:
   xpath-to-css:
     specifier: ^1.2.0
     version: 1.2.0
+  xslt-processor:
+    specifier: ^3.0.1
+    version: 3.2.2
   yaml:
     specifier: ^2.2.1
     version: 2.2.1
@@ -15814,6 +15817,15 @@ packages:
   /xpath@0.0.34:
     resolution: {integrity: sha512-FxF6+rkr1rNSQrhUNYrAFJpRXNzlDoMxeXN5qI84939ylEv3qqPFKa85Oxr6tDaJKqwW6KKyo2v26TSv3k6LeA==}
     engines: {node: '>=0.6.0'}
+    dev: false
+
+  /xslt-processor@3.2.2:
+    resolution: {integrity: sha512-stgNu1l6goN5rH1mvd0R+WRCBOrypIF0qPB8wpW4ciFzExoaVlE1o/vuZ7N5yVtH6Rl917yRb773o59SaOgPTA==}
+    dependencies:
+      he: 1.2.0
+      node-fetch: 2.7.0
+    transitivePeerDependencies:
+      - encoding
     dev: false
 
   /xss@1.0.15:

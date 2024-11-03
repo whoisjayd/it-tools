@@ -54,6 +54,7 @@ import { tool as websocketTester } from './websocket-tester';
 import { tool as weekNumberConverter } from './week-number-converter';
 import { tool as wpaPskGenerator } from './wpa-psk-generator';
 import { tool as xpathTester } from './xpath-tester';
+import { tool as xsltTester } from './xslt-tester';
 
 import { tool as cssXpathConverter } from './css-xpath-converter';
 import { tool as cssSelectorsMemo } from './css-selectors-memo';
@@ -339,6 +340,7 @@ export const toolsByCategory: ToolCategory[] = [
       dockerRunToDockerComposeConverter,
       dockerComposeToDockerRunConverter,
       xmlFormatter,
+      xsltTester,
       yamlViewer,
       jsonEditor,
       emailNormalizer,
