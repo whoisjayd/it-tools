@@ -5,6 +5,7 @@ import { tool as emailNormalizer } from './email-normalizer';
 import { tool as bounceParser } from './bounce-parser';
 import { tool as codeHighlighter } from './code-highlighter';
 import { tool as colorWheel } from './color-wheel';
+import { tool as currencyConverter } from './currency-converter';
 
 import { tool as cssXpathConverter } from './css-xpath-converter';
 import { tool as cssSelectorsMemo } from './css-selectors-memo';
@@ -145,6 +146,7 @@ export const toolsByCategory: ToolCategory[] = [
       xmlToJson,
       jsonToXml,
       markdownToHtml,
+      currencyConverter,
     ],
   },
   {

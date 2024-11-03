@@ -67,6 +67,8 @@
     "crypto-js": "^4.1.1",
     "csstoxpath": "^2.0.0",
     "curlconverter": "^4.10.1",
+    "currency-codes-ts": "^3.0.0",
+    "currency-exchanger-js": "^1.0.4",
     "date-fns": "^2.29.3",
     "dompurify": "^3.0.6",
     "email-bounce-parser-browser": "^1.1",
