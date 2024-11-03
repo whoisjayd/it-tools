@@ -114,6 +114,9 @@ export default defineConfig({
   },
   build: {
     target: 'esnext',
+    rollupOptions: {
+      external: ['regex'],
+    },
   },
   optimizeDeps: {
     include: ['re2-wasm-embedded'], // optionally specify dependency name
