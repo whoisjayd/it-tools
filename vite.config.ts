@@ -35,6 +35,8 @@ export default defineConfig({
       compositionOnly: true,
       fullInstall: true,
       include: [resolve(__dirname, 'locales/**')],
+      strictMessage: false,
+      escapeHtml: true,
     }),
     AutoImport({
       imports: [
