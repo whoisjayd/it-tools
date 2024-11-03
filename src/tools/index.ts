@@ -305,6 +305,8 @@ export const toolsByCategory: ToolCategory[] = [
       jsonToSchema,
       mongoObjectidConverter,
       nginxFormatter,
+      regexTester,
+      regexMemo,
     ],
   },
   {
