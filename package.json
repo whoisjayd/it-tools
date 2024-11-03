@@ -205,6 +205,7 @@
     "ip-matching": "^2.1.2",
     "is-cidr": "^5.0.3",
     "is-ip": "^5.0.1",
+    "ip-matching": "^2.1.2",
     "json5": "^2.2.3",
     "jsonpath": "^1.1.1",
     "jsonar-mod": "^1.9.0",
