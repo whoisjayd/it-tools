@@ -38,6 +38,8 @@ import { tool as rsaEcdsaSigning } from './rsa-ecdsa-signing';
 import { tool as smartRawConverter } from './smart-raw-converter';
 import { tool as sslCertConverter } from './ssl-cert-converter';
 import { tool as stacktracePrettier } from './stacktrace-prettier';
+import { tool as dataTransferRateConverter } from './data-transfer-rate-converter';
+import { tool as dataStorageUnitConverter } from './data-storage-unit-converter';
 
 import { tool as cssXpathConverter } from './css-xpath-converter';
 import { tool as cssSelectorsMemo } from './css-selectors-memo';
@@ -355,6 +357,8 @@ export const toolsByCategory: ToolCategory[] = [
       percentageCalculator,
       mathFormatsConverter,
       mathOcr,
+      dataTransferRateConverter,
+      dataStorageUnitConverter,
     ],
   },
   {
