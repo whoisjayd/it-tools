@@ -129,6 +129,7 @@ import { tool as nanoMemo } from './nano-memo';
 import { tool as option43Generator } from './option43-generator';
 import { tool as pgpEncryption } from './pgp-encryption';
 import { tool as pgpKeygen } from './pgp-keygen';
+import { tool as portNumbers } from './port-numbers';
 import { tool as pdfSignatureChecker } from './pdf-signature-checker';
 import { tool as numeronymGenerator } from './numeronym-generator';
 import { tool as macAddressGenerator } from './mac-address-generator';
@@ -466,6 +467,7 @@ export const toolsByCategory: ToolCategory[] = [
       macAddressGenerator,
       ipv6UlaGenerator,
       option43Generator,
+      portNumbers,
     ],
   },
   {

@@ -271,6 +271,7 @@
     "postal-mime": "^2.2.7",
     "qpdf-wasm-esm-embedded": "^1.1.1",
     "potrace": "^2.1.8",
+    "port-numbers": "^8.0.11",
     "qrcode": "^1.5.1",
     "rtf-stream-parser": "^3.8.0",
     "slashes": "^3.0.12",

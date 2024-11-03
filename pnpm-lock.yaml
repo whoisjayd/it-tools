@@ -524,6 +524,9 @@ dependencies:
   plausible-tracker:
     specifier: ^0.3.8
     version: 0.3.8
+  port-numbers:
+    specifier: ^8.0.11
+    version: 8.0.17
   postal-mime:
     specifier: ^2.2.7
     version: 2.3.2
@@ -11360,7 +11363,6 @@ packages:
   /jsesc@2.5.2:
     resolution: {integrity: sha512-OYu7XEzjkCQ3C5Ps3QIZsQfNpqoJyZZA99wd9aWd05NCtC5pWOkShK2mkL6HXQR6/Cy2lbNdPlZBpuQHXE63gA==}
     engines: {node: '>=4'}
-    hasBin: true
 
   /jsesc@3.0.2:
     resolution: {integrity: sha512-xKqzzWXDttJuOcawBt4KnKHHIf5oQ/Cxax+0PWFG+DFDgHNAdi+TXECADI+RYiFUMmx8792xsMbbgXj4CwnP4g==}
@@ -13134,6 +13136,10 @@ packages:
   /pngjs@6.0.0:
     resolution: {integrity: sha512-TRzzuFRRmEoSW/p1KVAmiOgPco2Irlah+bGFCeNfJXxxYGwSw7YwAOAcd7X28K/m5bjBWKsC29KyoMfHbypayg==}
     engines: {node: '>=12.13.0'}
+    dev: false
+
+  /port-numbers@8.0.17:
+    resolution: {integrity: sha512-Eqkk3e3QS8PSKlsaXjZnDDBi8RItEOXp9BAVbq/7ilN7TNZLQAPcPxT88iPQpz8DIoyqsia7J+k6/acjV/tLaA==}
     dev: false
 
   /postal-mime@2.3.2:
