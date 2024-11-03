@@ -184,6 +184,7 @@
     "sshpk": "^1.18.0",
     "turndown": "^7.1.2",
     "roboto-base64": "^0.1.2",
+    "silly-password-generator": "^1.0.28",
     "sql-formatter": "^13.0.0",
     "svg2png-wasm": "^1.4.1",
     "svg-to-url": "^4.0.0",

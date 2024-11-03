@@ -29,6 +29,7 @@ import { tool as maliciousLinksTester } from './malicious-links-tester';
 import { tool as mathFormatsConverter } from './math-formats-converter';
 import { tool as mathOcr } from './math-ocr';
 import { tool as markdownTocGenerator } from './markdown-toc-generator';
+import { tool as passphraseGenerator } from './passphrase-generator';
 
 import { tool as cssXpathConverter } from './css-xpath-converter';
 import { tool as cssSelectorsMemo } from './css-selectors-memo';
@@ -157,6 +158,8 @@ export const toolsByCategory: ToolCategory[] = [
       hashText,
       crcCalculator,
       fileHasher,
+      passphraseGenerator,
+      hashText,
       bcrypt,
       uuidGenerator,
       ulidGenerator,

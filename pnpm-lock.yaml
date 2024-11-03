@@ -392,6 +392,9 @@ dependencies:
   shiki:
     specifier: ^1.22.0
     version: 1.22.2
+  silly-password-generator:
+    specifier: ^1.0.28
+    version: 1.0.28
   sql-formatter:
     specifier: ^13.0.0
     version: 13.0.0
@@ -5286,7 +5289,7 @@ packages:
   /@vueuse/shared@10.0.0(vue@3.3.4):
     resolution: {integrity: sha512-Zh3LgJqvUBWVY3SiMvXanTcfAneGbt63QPczBRDNgQ6jd/ehodO9a1lCFzaA6SWJJoI+ugVTjHFYJdoR656DVQ==}
     dependencies:
-      vue-demi: 0.14.5(vue@3.3.4)
+      vue-demi: 0.14.10(vue@3.3.4)
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
@@ -11451,6 +11454,13 @@ packages:
     engines: {node: '>=14'}
     dev: false
 
+  /silly-password-generator@1.0.28:
+    resolution: {integrity: sha512-wan9blB6e/5jVmfHDiXRRuwaoA2xnEtA9kZSvOnC7xwbLo+nFjyUm5JaN1MDA0vmuxJ5hoVbVxonkpPIWlipdg==}
+    dependencies:
+      lodash: 4.17.21
+      zxcvbn: 4.4.2
+    dev: false
+
   /simple-concat@1.0.1:
     resolution: {integrity: sha512-cSFtAPtRhljv69IK0hTVZQ+OfE9nePi/rtJmw5UjHeVyVroEqJXP1sFztKUy1qU+xvz3u/sfYJLa947b7nAN2Q==}
     requiresBuild: true
@@ -13628,3 +13638,7 @@ packages:
       which: 3.0.0
       yaml: 2.2.1
     dev: true
+
+  /zxcvbn@4.4.2:
+    resolution: {integrity: sha512-Bq0B+ixT/DMyG8kgX2xWcI5jUvCwqrMxSFam7m0lAf78nf04hv6lNCsyLYdyYTrCVMqNDY/206K7eExYCeSyUQ==}
+    dev: false
