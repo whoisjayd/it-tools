@@ -200,6 +200,9 @@ dependencies:
   currency-exchanger-js:
     specifier: ^1.0.4
     version: 1.0.4
+  data-guardian:
+    specifier: ^1.1.3
+    version: 1.1.3
   date-fns:
     specifier: ^2.29.3
     version: 2.29.3
@@ -278,6 +281,9 @@ dependencies:
   ip-bigint:
     specifier: ^8.2.0
     version: 8.2.0
+  ip-regex:
+    specifier: ^5.0.0
+    version: 5.0.0
   iso-639-1:
     specifier: ^3.1.3
     version: 3.1.3
@@ -6243,7 +6249,7 @@ packages:
   /@vueuse/shared@10.0.0(vue@3.3.4):
     resolution: {integrity: sha512-Zh3LgJqvUBWVY3SiMvXanTcfAneGbt63QPczBRDNgQ6jd/ehodO9a1lCFzaA6SWJJoI+ugVTjHFYJdoR656DVQ==}
     dependencies:
-      vue-demi: 0.14.10(vue@3.3.4)
+      vue-demi: 0.14.5(vue@3.3.4)
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
@@ -7536,6 +7542,11 @@ packages:
     engines: {node: '>=0.10'}
     dependencies:
       assert-plus: 1.0.0
+    dev: false
+
+  /data-guardian@1.1.3:
+    resolution: {integrity: sha512-8M9KHTopFp3MXo7NelcmF+8L77S5jeDy3Uv4RWuYIQSaBZTawvY6W3ad/eLe8db2FcLPoC44DHJb4zWNcpoueQ==}
+    engines: {node: '>=12'}
     dev: false
 
   /data-uri-to-buffer@4.0.1:
@@ -9577,6 +9588,11 @@ packages:
       jsbn: 1.1.0
     dev: false
 
+  /ip-regex@5.0.0:
+    resolution: {integrity: sha512-fOCG6lhoKKakwv+C6KdsOnGvgXnmgfmp0myi3bcNwj3qfwPAxRKWEuFhvEFF7ceYIz6+1jRZ+yguLFAmUNPEfw==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dev: false
+
   /is-alphabetical@1.0.4:
     resolution: {integrity: sha512-DwzsA04LQ10FHTZuL0/grVDk4rFoVH1pjAToYwBrHSxcrBIGQuXrQMtD5U1b0U2XVgKZCTLLP8u2Qxqhy3l2Vg==}
     dev: true
@@ -10106,7 +10122,6 @@ packages:
   /jsesc@2.5.2:
     resolution: {integrity: sha512-OYu7XEzjkCQ3C5Ps3QIZsQfNpqoJyZZA99wd9aWd05NCtC5pWOkShK2mkL6HXQR6/Cy2lbNdPlZBpuQHXE63gA==}
     engines: {node: '>=4'}
-    hasBin: true
 
   /jsesc@3.0.2:
     resolution: {integrity: sha512-xKqzzWXDttJuOcawBt4KnKHHIf5oQ/Cxax+0PWFG+DFDgHNAdi+TXECADI+RYiFUMmx8792xsMbbgXj4CwnP4g==}

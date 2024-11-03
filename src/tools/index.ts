@@ -76,6 +76,7 @@ import { tool as markdownToHtml } from './markdown-to-html';
 import { tool as nginxFormatter } from './nginx-formatter';
 import { tool as potrace } from './potrace';
 import { tool as rmbNumbers } from './rmb-numbers';
+import { tool as sensitiveDataMasker } from './sensitive-data-masker';
 import { tool as pdfSignatureChecker } from './pdf-signature-checker';
 import { tool as numeronymGenerator } from './numeronym-generator';
 import { tool as macAddressGenerator } from './mac-address-generator';
@@ -375,6 +376,7 @@ export const toolsByCategory: ToolCategory[] = [
       icalGenerator,
       icalParser,
       icalMerger,
+      sensitiveDataMasker,
     ],
   },
   {
