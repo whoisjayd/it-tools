@@ -4,6 +4,7 @@ import { tool as basicAuthGenerator } from './basic-auth-generator';
 import { tool as emailNormalizer } from './email-normalizer';
 import { tool as bounceParser } from './bounce-parser';
 import { tool as codeHighlighter } from './code-highlighter';
+import { tool as colorWheel } from './color-wheel';
 
 import { tool as asciiTextDrawer } from './ascii-text-drawer';
 
@@ -160,6 +161,7 @@ export const toolsByCategory: ToolCategory[] = [
       safelinkDecoder,
       apiTester,
       bounceParser,
+      colorWheel,
     ],
   },
   {
