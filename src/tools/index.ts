@@ -13,6 +13,7 @@ import { tool as outlookParser } from './outlook-parser';
 import { tool as fileHasher } from './file-hasher';
 import { tool as hexFileConverter } from './hex-file-converter';
 import { tool as icalMerger } from './ical-merger';
+import { tool as imageConverter } from './image-converter';
 
 import { tool as cssXpathConverter } from './css-xpath-converter';
 import { tool as cssSelectorsMemo } from './css-selectors-memo';
@@ -207,6 +208,7 @@ export const toolsByCategory: ToolCategory[] = [
       barcodeGenerator,
       heicConverter,
       icoConverter,
+      imageConverter,
     ],
   },
   {

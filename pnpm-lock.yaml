@@ -314,6 +314,9 @@ dependencies:
   regex:
     specifier: ^4.3.3
     version: 4.4.0
+  roboto-base64:
+    specifier: ^0.1.2
+    version: 0.1.2
   rtf-stream-parser:
     specifier: ^3.8.0
     version: 3.8.0
@@ -326,6 +329,9 @@ dependencies:
   sshpk:
     specifier: ^1.18.0
     version: 1.18.0
+  svg2png-wasm:
+    specifier: ^1.4.1
+    version: 1.4.1
   turndown:
     specifier: ^7.1.2
     version: 7.2.0
@@ -365,6 +371,9 @@ dependencies:
   vuedraggable:
     specifier: ^4.1.0
     version: 4.1.0(vue@3.3.4)
+  webp-converter-browser:
+    specifier: ^1.0.4
+    version: 1.0.4
   xml-formatter:
     specifier: ^3.3.2
     version: 3.3.2
@@ -9699,6 +9708,10 @@ packages:
       inherits: 2.0.4
     dev: true
 
+  /roboto-base64@0.1.2:
+    resolution: {integrity: sha512-vXOGVIresupkks/WVNy4upNA4OorZx6XbHJt5ZQaat1tHBdJxui3oI101n9XV9Yg6HWIQKeAGnQbJJaUa8mfvA==}
+    dev: false
+
   /rollup-plugin-terser@7.0.2(rollup@2.79.1):
     resolution: {integrity: sha512-w3iIaU4OxcF52UUXiZNsNeuXIMDvFrr+ZXK6bFZ0Q60qyVfq4uLptoS4bbq3paG3x216eQllFZX7zt6TIImguQ==}
     deprecated: This package has been deprecated and is no longer maintained. Please use @rollup/plugin-terser
@@ -10275,6 +10288,10 @@ packages:
   /svg-tags@1.0.0:
     resolution: {integrity: sha512-ovssysQTa+luh7A5Weu3Rta6FJlFBBbInjOh722LIt6klpU2/HtdUbszju/G4devcvk8PGt7FCLv5wftu3THUA==}
     dev: true
+
+  /svg2png-wasm@1.4.1:
+    resolution: {integrity: sha512-ZFy1NtwZVAsslaTQoI+/QqX2sg0vjmgJ/jGAuLZZvYcRlndI54hLPiwLC9JzXlFBerfxN5JiS7kpEUG0mrXS3Q==}
+    dev: false
 
   /svgo@3.0.2:
     resolution: {integrity: sha512-Z706C1U2pb1+JGP48fbazf3KxHrWOsLme6Rv7imFBn5EnuanDW1GPaA/P1/dvObE670JDePC3mnj0k0B7P0jjQ==}
@@ -11430,6 +11447,12 @@ packages:
     resolution: {integrity: sha512-VwddBukDzu71offAQR975unBIGqfKZpM+8ZX6ySk8nYhVoo5CYaZyzt3YBvYtRtO+aoGlqxPg/B87NGVZ/fu6g==}
     engines: {node: '>=12'}
     dev: true
+
+  /webp-converter-browser@1.0.4:
+    resolution: {integrity: sha512-ZkcrrM4TyxBI7mPmE4uG6PU2MF5YXhKTtvub/ll/4ZjXM7THcms0C0tA10CwnsrLzRBC+ry/sUzwpW6vdPzA8g==}
+    dependencies:
+      '@babel/runtime': 7.23.2
+    dev: false
 
   /webpack-sources@3.2.3:
     resolution: {integrity: sha512-/DyMEOrDgLKKIG0fmvtz+4dUX/3Ghozwgm6iPp8KRhvn+eQf9+Q7GWxVNMk3+uCPWfdXYC4ExGBckIXdFEfH1w==}
