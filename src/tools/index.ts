@@ -3,6 +3,7 @@ import { tool as base64StringConverter } from './base64-string-converter';
 import { tool as basicAuthGenerator } from './basic-auth-generator';
 import { tool as dnsQueries } from './dns-queries';
 import { tool as icoConverter } from './ico-converter';
+import { tool as jsonEditor } from './json-editor';
 import { tool as emailNormalizer } from './email-normalizer';
 import { tool as bounceParser } from './bounce-parser';
 import { tool as codeHighlighter } from './code-highlighter';
@@ -235,6 +236,7 @@ export const toolsByCategory: ToolCategory[] = [
       dockerComposeToDockerRunConverter,
       xmlFormatter,
       yamlViewer,
+      jsonEditor,
       emailNormalizer,
       codeHighlighter,
       regexTester,
