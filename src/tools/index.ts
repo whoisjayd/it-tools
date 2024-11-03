@@ -36,6 +36,7 @@ import { tool as pinCodeGenerator } from './pin-code-generator';
 import { tool as punycodeConverter } from './punycode-converter';
 import { tool as rsaEcdsaSigning } from './rsa-ecdsa-signing';
 import { tool as smartRawConverter } from './smart-raw-converter';
+import { tool as sslCertConverter } from './ssl-cert-converter';
 
 import { tool as cssXpathConverter } from './css-xpath-converter';
 import { tool as cssSelectorsMemo } from './css-selectors-memo';
@@ -341,6 +342,7 @@ export const toolsByCategory: ToolCategory[] = [
       macAddressConverter,
       ipv6UlaGenerator,
       punycodeConverter,
+      sslCertConverter,
     ],
   },
   {
