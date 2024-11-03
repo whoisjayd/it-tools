@@ -110,6 +110,7 @@ import { tool as csrGenerator } from './csr-generator';
 import { tool as dockerRunToKubernetesConverter } from './docker-run-to-kubernetes';
 import { tool as dockerComposeValidator } from './docker-compose-validator';
 import { tool as ecdsaKeyPairGenerator } from './ecdsa-key-pair-generator';
+import { tool as ed25519KeyPairGenerator } from './ed25519-key-pair-generator';
 import { tool as pdfSignatureChecker } from './pdf-signature-checker';
 import { tool as numeronymGenerator } from './numeronym-generator';
 import { tool as macAddressGenerator } from './mac-address-generator';
@@ -244,6 +245,9 @@ export const toolsByCategory: ToolCategory[] = [
       passwordStrengthAnalyser,
       pdfSignatureChecker,
       ecdsaKeyPairGenerator,
+      ed25519KeyPairGenerator,
+      passwordStrengthAnalyser,
+      pdfSignatureChecker,
     ],
   },
   {
