@@ -28,6 +28,7 @@ import { tool as luhnValidator } from './luhn-validator';
 import { tool as maliciousLinksTester } from './malicious-links-tester';
 import { tool as mathFormatsConverter } from './math-formats-converter';
 import { tool as mathOcr } from './math-ocr';
+import { tool as markdownTocGenerator } from './markdown-toc-generator';
 
 import { tool as cssXpathConverter } from './css-xpath-converter';
 import { tool as cssSelectorsMemo } from './css-selectors-memo';
@@ -195,6 +196,7 @@ export const toolsByCategory: ToolCategory[] = [
       hddCalculator,
       jsonToCsharp,
       jsonToGo,
+      markdownTocGenerator,
     ],
   },
   {
