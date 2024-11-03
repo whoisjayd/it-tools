@@ -26,10 +26,15 @@ const props = withDefaults(
     copyMessage?: string
     wordWrap?: boolean
 <<<<<<< HEAD
+<<<<<<< HEAD
     downloadFileName?: string
     downloadButtonText?: string
 =======
 >>>>>>> feat/cert-key-parser
+=======
+    downloadFileName?: string
+    downloadButtonText?: string
+>>>>>>> feat/email-parser
   }>(),
   {
     followHeightOf: null,

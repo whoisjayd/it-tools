@@ -16,7 +16,11 @@ import { VitePWA } from 'vite-plugin-pwa';
 import markdown from 'vite-plugin-vue-markdown';
 import svgLoader from 'vite-svg-loader';
 import { configDefaults } from 'vitest/config';
+<<<<<<< HEAD
 import topLevelAwait from "vite-plugin-top-level-await";
+=======
+import { nodePolyfills } from 'vite-plugin-node-polyfills';
+>>>>>>> feat/email-parser
 
 const baseUrl = process.env.BASE_URL ?? '/';
 
@@ -100,12 +104,15 @@ export default defineConfig({
     }),
     Unocss(),
     nodePolyfills(),
+<<<<<<< HEAD
     topLevelAwait({
       // The export name of top-level await promise for each chunk module
       promiseExportName: '__tla',
       // The function to generate import names of top-level await promise in each chunk module
       promiseImportName: i => `__tla_${i}`,
     }),
+=======
+>>>>>>> feat/email-parser
   ],
   base: baseUrl,
   resolve: {

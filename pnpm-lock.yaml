@@ -20,6 +20,12 @@ dependencies:
   '@it-tools/oggen':
     specifier: ^1.3.0
     version: 1.3.0
+  '@kenjiuno/decompressrtf':
+    specifier: ^0.1.4
+    version: 0.1.4
+  '@kenjiuno/msgreader':
+    specifier: ^1.22.0
+    version: 1.22.0
   '@regexper/render':
     specifier: ^1.0.0
     version: 1.0.0
@@ -161,11 +167,14 @@ dependencies:
   ibantools:
     specifier: ^4.3.3
     version: 4.3.3
+  iconv-lite:
+    specifier: ^0.6.3
+    version: 0.6.3
   iso-639-1:
     specifier: ^3.1.3
     version: 3.1.3
   js-base64:
-    specifier: ^3.7.7
+    specifier: ^3.7.6
     version: 3.7.7
   jsbarcode:
     specifier: ^3.11.6
@@ -227,6 +236,9 @@ dependencies:
   plausible-tracker:
     specifier: ^0.3.8
     version: 0.3.8
+  postal-mime:
+    specifier: ^2.2.7
+    version: 2.3.2
   pretty-ms:
     specifier: ^9.1.0
     version: 9.1.0
@@ -239,6 +251,9 @@ dependencies:
   regex:
     specifier: ^4.3.3
     version: 4.4.0
+  rtf-stream-parser:
+    specifier: ^3.8.0
+    version: 3.8.0
   shiki:
     specifier: ^1.22.0
     version: 1.22.2
@@ -413,8 +428,8 @@ devDependencies:
     specifier: ^4.4.9
     version: 4.4.9(@types/node@18.15.11)(less@4.1.3)
   vite-plugin-node-polyfills:
-    specifier: ^0.21.0
-    version: 0.21.0(rollup@2.79.1)(vite@4.4.9)
+    specifier: ^0.22.0
+    version: 0.22.0(rollup@2.79.1)(vite@4.4.9)
   vite-plugin-pwa:
     specifier: ^0.16.0
     version: 0.16.0(vite@4.4.9)(workbox-build@7.0.0)(workbox-window@7.0.0)
@@ -2534,6 +2549,18 @@ packages:
 
   /@juggle/resize-observer@3.4.0:
     resolution: {integrity: sha512-dfLbk+PwWvFzSxwk3n5ySL0hfBog779o8h68wK/7/APo/7cgyWp5jcXockbxdk5kFRkbeXWm4Fbi9FrdN381sA==}
+    dev: false
+
+  /@kenjiuno/decompressrtf@0.1.4:
+    resolution: {integrity: sha512-v9c/iFz17jRWyd2cRnrvJg4VOg/4I/VCk+bG8JnoX2gJ9sAesPzo3uTqcmlVXdpasTI8hChpBVw00pghKe3qTQ==}
+    dev: false
+
+  /@kenjiuno/msgreader@1.22.0:
+    resolution: {integrity: sha512-uhImwxvKLSxER8+ikuKpI2mnX7viL+POSnKAgDCFx+sVuRTD9/KkHFH1Gaw7EegVbCtDNKBTnECIK+GWxkpZRA==}
+    engines: {node: '>= 10'}
+    dependencies:
+      '@kenjiuno/decompressrtf': 0.1.4
+      iconv-lite: 0.6.3
     dev: false
 
   /@leichtgewicht/base64-codec@1.0.0:
@@ -7262,7 +7289,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       safer-buffer: 2.1.2
-    dev: true
 
   /idb@7.1.1:
     resolution: {integrity: sha512-gchesWBzyvGHRO9W8tzUWFDycow5gwjvFKfyV9FF32Y7F50yZMp7mP+T2mJIWFx49zicqyC4uefHM17o6xKIVQ==}
@@ -8919,6 +8945,10 @@ packages:
     engines: {node: '>=10.13.0'}
     dev: false
 
+  /postal-mime@2.3.2:
+    resolution: {integrity: sha512-OZaLbLfLBEJa0ENZRuRwhAminaJevjqHtSICcegO4VOc4QgNHAzNTfVT3gN+KO9YyPFPZQOZ9vtJNmv0n2y8tQ==}
+    dev: false
+
   /postcss-selector-parser@6.0.13:
     resolution: {integrity: sha512-EaV1Gl4mUEV4ddhDnv/xtj7sxwrwxdetHdWUGnT4VJQf+4d05v6lHYZr8N573k5Z0BViss7BDhfWtKS3+sfAqQ==}
     engines: {node: '>=4'}
@@ -9535,6 +9565,10 @@ packages:
   /rrweb-cssom@0.6.0:
     resolution: {integrity: sha512-APM0Gt1KoXBz0iIkkdB/kfvGOwC4UuJFeG/c+yV7wSc7q96cG/kJ0HiYCnzivD9SB53cLV1MlHFNfOuPaadYSw==}
     dev: true
+
+  /rtf-stream-parser@3.8.0:
+    resolution: {integrity: sha512-Hj+FWJ8IhywyxTy0/J1ZbPQLt1+2S8uagOwrU5u1WLBs2hSo0bOc4ZA06sWZHOypi22M60WAgkzUoTclWiqI2Q==}
+    dev: false
 
   /run-parallel@1.2.0:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}
@@ -10850,8 +10884,8 @@ packages:
       - terser
     dev: true
 
-  /vite-plugin-node-polyfills@0.21.0(rollup@2.79.1)(vite@4.4.9):
-    resolution: {integrity: sha512-Sk4DiKnmxN8E0vhgEhzLudfJQfaT8k4/gJ25xvUPG54KjLJ6HAmDKbr4rzDD/QWEY+Lwg80KE85fGYBQihEPQA==}
+  /vite-plugin-node-polyfills@0.22.0(rollup@2.79.1)(vite@4.4.9):
+    resolution: {integrity: sha512-F+G3LjiGbG8QpbH9bZ//GSBr9i1InSTkaulfUHFa9jkLqVGORFBoqc2A/Yu5Mmh1kNAbiAeKeK+6aaQUf3x0JA==}
     peerDependencies:
       vite: ^2.0.0 || ^3.0.0 || ^4.0.0 || ^5.0.0
     dependencies:

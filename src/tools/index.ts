@@ -7,6 +7,8 @@ import { tool as bounceParser } from './bounce-parser';
 import { tool as codeHighlighter } from './code-highlighter';
 import { tool as colorWheel } from './color-wheel';
 import { tool as currencyConverter } from './currency-converter';
+import { tool as emailParser } from './email-parser';
+import { tool as outlookParser } from './outlook-parser';
 
 import { tool as cssXpathConverter } from './css-xpath-converter';
 import { tool as cssSelectorsMemo } from './css-selectors-memo';
@@ -226,6 +228,8 @@ export const toolsByCategory: ToolCategory[] = [
       macAddressGenerator,
       ipv6UlaGenerator,
       dnsQueries,
+      emailParser,
+      outlookParser,
     ],
   },
   {
