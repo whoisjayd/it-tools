@@ -29,6 +29,9 @@ dependencies:
   '@kenjiuno/msgreader':
     specifier: ^1.22.0
     version: 1.22.0
+  '@plurimath/plurimath':
+    specifier: ^0.2.0
+    version: 0.2.0
   '@regexper/render':
     specifier: ^1.0.0
     version: 1.0.0
@@ -3101,6 +3104,10 @@ packages:
       fsevents: 2.3.2
     dev: true
 
+  /@plurimath/plurimath@0.2.0:
+    resolution: {integrity: sha512-5ca7O58sq/PHA7zZHDjDrg8pr1u9FPRNWOy8nqADKrExw9LHAwHX2FuvU3sz51liNZpwZ1KC5Nwy5U48S6Y5Xw==}
+    dev: false
+
   /@polka/url@1.0.0-next.21:
     resolution: {integrity: sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==}
     dev: true
@@ -4976,7 +4983,7 @@ packages:
   /@vueuse/shared@10.0.0(vue@3.3.4):
     resolution: {integrity: sha512-Zh3LgJqvUBWVY3SiMvXanTcfAneGbt63QPczBRDNgQ6jd/ehodO9a1lCFzaA6SWJJoI+ugVTjHFYJdoR656DVQ==}
     dependencies:
-      vue-demi: 0.14.10(vue@3.3.4)
+      vue-demi: 0.14.5(vue@3.3.4)
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue

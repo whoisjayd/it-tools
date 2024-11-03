@@ -45,6 +45,7 @@
     "@regexper/render": "^1.0.0",
     "@kenjiuno/decompressrtf": "^0.1.4",
     "@kenjiuno/msgreader": "^1.22.0",
+    "@plurimath/plurimath": "^0.2.0",
     "@sindresorhus/slugify": "^2.2.1",
     "@tabler/icons-vue": "^3.20.0",
     "@tiptap/pm": "2.1.6",
