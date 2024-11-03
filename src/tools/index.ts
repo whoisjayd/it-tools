@@ -10,6 +10,7 @@ import { tool as currencyConverter } from './currency-converter';
 import { tool as emailParser } from './email-parser';
 import { tool as outlookParser } from './outlook-parser';
 import { tool as fileHasher } from './file-hasher';
+import { tool as hexFileConverter } from './hex-file-converter';
 
 import { tool as cssXpathConverter } from './css-xpath-converter';
 import { tool as cssSelectorsMemo } from './css-selectors-memo';
@@ -144,6 +145,7 @@ export const toolsByCategory: ToolCategory[] = [
       romanNumeralConverter,
       base64StringConverter,
       base64FileConverter,
+      hexFileConverter,
       colorConverter,
       caseConverter,
       textToNatoAlphabet,
