@@ -30,6 +30,7 @@ import { tool as mathFormatsConverter } from './math-formats-converter';
 import { tool as mathOcr } from './math-ocr';
 import { tool as markdownTocGenerator } from './markdown-toc-generator';
 import { tool as passphraseGenerator } from './passphrase-generator';
+import { tool as pinCodeGenerator } from './pin-code-generator';
 
 import { tool as cssXpathConverter } from './css-xpath-converter';
 import { tool as cssSelectorsMemo } from './css-selectors-memo';
@@ -162,6 +163,7 @@ export const toolsByCategory: ToolCategory[] = [
       crcCalculator,
       fileHasher,
       passphraseGenerator,
+      pinCodeGenerator,
       hashText,
       bcrypt,
       uuidGenerator,
@@ -182,6 +184,8 @@ export const toolsByCategory: ToolCategory[] = [
       passwordStrengthAnalyser,
       pdfSignatureChecker,
       pdfUnlock,
+      passwordStrengthAnalyser,
+      pdfSignatureChecker,
     ],
   },
   {
