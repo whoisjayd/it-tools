@@ -66,6 +66,7 @@ import { tool as imageToCss } from './image-to-css';
 import { tool as jsonToGo } from './json-to-go';
 import { tool as jsonToSchema } from './json-to-schema';
 import { tool as markdownToHtml } from './markdown-to-html';
+import { tool as nginxFormatter } from './nginx-formatter';
 import { tool as pdfSignatureChecker } from './pdf-signature-checker';
 import { tool as numeronymGenerator } from './numeronym-generator';
 import { tool as macAddressGenerator } from './mac-address-generator';
@@ -275,6 +276,7 @@ export const toolsByCategory: ToolCategory[] = [
       jsonpathMemo,
       jsonToSchema,
       mongoObjectidConverter,
+      nginxFormatter,
     ],
   },
   {
