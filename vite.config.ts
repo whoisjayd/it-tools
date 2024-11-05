@@ -129,7 +129,15 @@ export default defineConfig({
   build: {
     target: 'esnext',
     rollupOptions: {
-      external: ['node:fs/promises', 'fs', 'regex', './out/isolated_vm'],
+      external: ['node:fs/promises', 'fs', 'regex', './out/isolated_vm', 'isolated-vm'],
+      output: {
+        format: 'es',
+        manualChunks: (id) => {
+          if (id.includes('monaco-editor')) return 'monaco-editor';
+          if (id.includes('tesseract.js')) return 'tesseract.js';
+          if (id.includes('pdfjs')) return 'pdfjs';
+        },
+      },
     },
   },
   optimizeDeps: {
