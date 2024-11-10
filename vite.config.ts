@@ -20,7 +20,6 @@ import Components from 'unplugin-vue-components/vite';
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers';
 import Unocss from 'unocss/vite';
 import { configDefaults } from 'vitest/config';
-import topLevelAwait from "vite-plugin-top-level-await";
 import Icons from 'unplugin-icons/vite';
 import IconsResolver from 'unplugin-icons/resolver';
 import VueI18n from '@intlify/unplugin-vue-i18n/vite';
@@ -104,20 +103,15 @@ export default defineConfig({
       resolvers: [NaiveUiResolver(), IconsResolver({ prefix: 'icon' })],
     }),
     Unocss(),
-    nodePolyfills({
-      exclude: ['fs'],
-    }),
-    topLevelAwait({
-      // The export name of top-level await promise for each chunk module
-      promiseExportName: '__tla',
-      // The function to generate import names of top-level await promise in each chunk module
-      promiseImportName: i => `__tla_${i}`,
-    }),
+    nodePolyfills(),
   ],
   base: baseUrl,
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
+      'node:fs/promises': fileURLToPath(new URL('./src/_empty.ts', import.meta.url)),
+      '@babel/core': fileURLToPath(new URL('./src/_empty.ts', import.meta.url)),
+      'isolated-vm': fileURLToPath(new URL('./src/_empty.ts', import.meta.url)),
     },
   },
   define: {
@@ -128,6 +122,9 @@ export default defineConfig({
   },
   build: {
     target: 'esnext',
+    // sourcemap: false,
+    // minify: false,
+    // cssMinify: false,
     rollupOptions: {
       external: ['node:fs/promises', 'fs', 'regex', './out/isolated_vm', 'isolated-vm'],
       output: {
@@ -136,8 +133,18 @@ export default defineConfig({
           if (id.includes('monaco-editor')) return 'monaco-editor';
           if (id.includes('tesseract.js')) return 'tesseract.js';
           if (id.includes('pdfjs')) return 'pdfjs';
+          if (id.includes('unicode')) return 'unicode';
+          // if (id.includes('transformers')) return 'transformers';
+          // if (id.includes("node_modules")) {
+          //   return "vendor";
+          // }
+        },
+        sourcemapIgnoreList: (relativeSourcePath) => {
+          const normalizedPath = path.normalize(relativeSourcePath);
+          return normalizedPath.includes("node_modules");
         },
       },
+      cache: false,
     },
   },
   optimizeDeps: {
