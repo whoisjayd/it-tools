@@ -103,6 +103,8 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
       'node:fs/promises': fileURLToPath(new URL('./src/_empty.ts', import.meta.url)),
+      'node:fs': fileURLToPath(new URL('./src/_empty.ts', import.meta.url)),
+      'fs': fileURLToPath(new URL('./src/_empty.ts', import.meta.url)),
       '@babel/core': fileURLToPath(new URL('./src/_empty.ts', import.meta.url)),
       'isolated-vm': fileURLToPath(new URL('./src/_empty.ts', import.meta.url)),
     },
@@ -119,7 +121,7 @@ export default defineConfig({
     // minify: false,
     // cssMinify: false,
     rollupOptions: {
-      external: ['node:fs/promises', 'fs', 'regex', './out/isolated_vm', 'isolated-vm'],
+      external: ['node:fs/promises', 'regex', './out/isolated_vm', 'isolated-vm'],
       output: {
         format: 'es',
         manualChunks: (id) => {
