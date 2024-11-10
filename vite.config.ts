@@ -1,19 +1,12 @@
 import { URL, fileURLToPath } from 'node:url';
 import { resolve } from 'node:path';
-import { resolve } from 'node:path';
 import { nodePolyfills } from 'vite-plugin-node-polyfills';
 
-import { defineConfig } from 'vite';
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
 import markdown from 'vite-plugin-vue-markdown';
 import svgLoader from 'vite-svg-loader';
-import { VitePWA } from 'vite-plugin-pwa';
-import AutoImport from 'unplugin-auto-import/vite';
-import Components from 'unplugin-vue-components/vite';
-import { NaiveUiResolver } from 'unplugin-vue-components/resolvers';
-import Unocss from 'unocss/vite';
 import { VitePWA } from 'vite-plugin-pwa';
 import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';

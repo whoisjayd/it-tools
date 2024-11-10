@@ -408,6 +408,9 @@ export const toolsByCategory: ToolCategory[] = [
       stacktracePrettier,
       xpathTester,
       fileType,
+      cssPrettifier,
+      htmlPrettifier,
+      javascriptPrettifier,
     ],
   },
   {
@@ -415,9 +418,6 @@ export const toolsByCategory: ToolCategory[] = [
     components: [
       gitMemo,
       nanoMemo,
-      cssPrettifier,
-      htmlPrettifier,
-      javascriptPrettifier,
     ],
   },
   {
