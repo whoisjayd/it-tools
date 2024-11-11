@@ -26,9 +26,9 @@ export function parseAsCIDR(form: string) {
     return (ipMatch as IPSubnetwork).toString();
   }
   if (ipMatch instanceof IPMask) {
-    return (ipMatch as IPMask).convertToSubnet()?.toString();
+    return (ipMatch as IPMask).convertToSubnet()?.toString() || '';
   }
-  return (ipMatch.convertToMasks() || [])[0]?.convertToSubnet()?.toString();
+  return (ipMatch.convertToMasks() || [])[0]?.convertToSubnet()?.toString() || '';
 }
 
 export function getSubnets(cidr: string) {
