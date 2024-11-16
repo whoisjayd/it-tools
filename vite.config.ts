@@ -118,7 +118,7 @@ export default defineConfig({
   build: {
     target: 'esnext',
     // sourcemap: false,
-    // minify: false,
+    minify: !process.env.VERCEL,
     // cssMinify: false,
     rollupOptions: {
       external: ['node:fs/promises', 'regex', './out/isolated_vm', 'isolated-vm'],
