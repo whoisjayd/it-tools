@@ -8,8 +8,4 @@ test.describe('Tool - RAID Calculator', () => {
   test('Has correct title', async ({ page }) => {
     await expect(page).toHaveTitle('RAID Calculator - IT Tools');
   });
-
-  test('', async ({ page }) => {
-
-  });
 });

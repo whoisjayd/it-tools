@@ -21,7 +21,7 @@ export function createNanoid({
   let alphabet = '';
 
   if (!withLowercase && !withUppercase && !withNumbers && !excludeLookalikes && !withSymbols) {
-    return nanoid(length);
+    return () => nanoid(length);
   }
 
   if (excludeLookalikes) {

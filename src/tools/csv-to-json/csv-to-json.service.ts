@@ -30,7 +30,7 @@ function convertCsvToArray(csv: string): Record<string, unknown>[] {
   const lines = csv.split('\n');
   const headers = getHeaders(csv);
 
-  return lines.slice(1).map(line => {
+  return lines.slice(1).map((line) => {
     // Split on comma or semicolon not within quotes
     const data = line.split(/[,;](?=(?:(?:[^"]*"){2})*[^"]*$)/).map(value => value.trim());
     return headers.reduce((obj, header, index) => {

@@ -50,8 +50,8 @@ function validateSetup() {
         <div flex items-baseline gap-2>
           <c-select
             v-model:value="diskUnit"
-            min-w-130px
-            ml-1
+
+            ml-1 min-w-130px
             :options="[
               { label: 'MB', value: 10 ** 6 },
               { label: 'GB', value: 10 ** 9 },
@@ -63,7 +63,7 @@ function validateSetup() {
       </n-form-item>
       <n-form-item v-if="['raid_50', 'raid_60'].includes(raidType)" label="Disks per stripe" label-placement="left" label-width="150" mb-2>
         <n-input-number v-model:value="diskPerStripe" max="10000" min="2" placeholder="Number of disks per stripe (ex: 3)" w-full />
-        <n-input v-model:value="totalStripes" placeholder="" ml-1 w-full readonly />
+        <n-input v-model:value="totalStripes" placeholder="" readonly ml-1 w-full />
       </n-form-item>
       <n-form-item label="RAID Type" label-placement="left" label-width="150" mb-2>
         <c-select
@@ -84,7 +84,7 @@ function validateSetup() {
         {{ raidRequirements }}
       </p>
       <p>
-        {{ raidInfo }}<br /><br />
+        {{ raidInfo }}<br><br>
         For more information on RAID types, see <a href="https://en.wikipedia.org/wiki/Standard_RAID_levels" target="_blank" rel="noopener">Wikipedia</a>.
       </p>
     </c-card>
