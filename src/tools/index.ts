@@ -140,6 +140,7 @@ import { tool as cssPrettifier } from './css-prettifier';
 import { tool as htmlPrettifier } from './html-prettifier';
 import { tool as x509CertificateGenerator } from './x509-certificate-generator';
 import { tool as pdfSignatureChecker } from './pdf-signature-checker';
+import { tool as uuidConverter } from './uuid-converter';
 import { tool as numeronymGenerator } from './numeronym-generator';
 import { tool as macAddressGenerator } from './mac-address-generator';
 import { tool as textToBinary } from './text-to-binary';
@@ -293,6 +294,7 @@ export const toolsByCategory: ToolCategory[] = [
       listComparer,
       tomlToJson,
       tomlToYaml,
+      uuidConverter,
       htmlToMarkdown,
       markdownToHtml,
       currencyConverter,
