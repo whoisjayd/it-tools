@@ -107,6 +107,7 @@ import { tool as torrentToMagnet } from './torrent-to-magnet';
 import { tool as ttlCalculator } from './ttl-calculator';
 import { tool as unicodeFormatter } from './unicode-formatter';
 import { tool as raidCalculator } from './raid-calculator';
+import { tool as nanoidGenerator } from './nanoid-generator';
 
 import { tool as asciiTextDrawer } from './ascii-text-drawer';
 
@@ -245,6 +246,7 @@ export const toolsByCategory: ToolCategory[] = [
       bcrypt,
       uuidGenerator,
       ulidGenerator,
+      nanoidGenerator,
       cypher,
       bip39,
       hmacGenerator,

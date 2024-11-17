@@ -177,6 +177,8 @@
     "monaco-editor": "^0.43.0",
     "morsee": "^1.0.9",
     "naive-ui": "^2.35.0",
+    "nanoid": "^5.0.7",
+    "nanoid-dictionary": "^4.3.0",
     "netmask": "^2.0.2",
     "netstack.js": "^2.0.0",
     "nginx-config-formatter": "^1.4.5",
