@@ -208,7 +208,7 @@
     "roboto-base64": "^0.1.2",
     "rtf-stream-parser": "^3.8.0",
     "safe-license-list": "^0.1.2",
-    "shiki": "^1.22.2",
+    "shiki": "1.22.2",
     "silly-password-generator": "^1.0.28",
     "slashes": "^3.0.12",
     "spdx-satisfies": "^5.0.1",
