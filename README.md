@@ -1,8 +1,30 @@
+### Check out these change here: <https://sharevb-it-tools.vercel.app/>
+
+You can use my image in your docker-compose file if you want an update to date version of it-tools (with my PR and some of others) until the main branch has been updated.
+
+- github action triggers on every push to this branch - [view package here](https://github.com/sharevb/it-tools/pkgs/container/it-tools)
+
+(Thanks to [gitmotion](https://github.com/gitmotion/it-tools) for this model of README fork)
+
+## Added features
+
+Almost [all PR of it-tools](https://github.com/CorentinTh/it-tools/pulls)
+
+## Installation methods
+
+| Docker Image                            | Local Installation                                                                                                          |
+|-----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
+| <span title="triple click me!">`ghcr.io/sharevb/it-tools:latest`</span> | <span title="triple click me!">`git clone -b chore/all-my-stuffs https://github.com/sharevb/it-tools.git && cd it-tools/ && pnpm i && pnpm dev`</span> |
+| replace your current image with this image | copy & paste oneliner (from github repo) |
+| You may need to clear cache and hard reload to get new features loading | Installing packages for the first time may take some time; please wait until it finishes |
+
 <picture>
     <source srcset="./.github/logo-dark.png" media="(prefers-color-scheme: light)">
     <source srcset="./.github/logo-white.png" media="(prefers-color-scheme: dark)">
     <img src="./.github/logo-dark.png" alt="logo">
 </picture>
+
+<details>
 
 Useful tools for developer and people working in IT. [Have a look !](https://it-tools.tech).
 
@@ -133,3 +155,5 @@ Contributor graph is generated using [contrib.rocks](https://contrib.rocks/previ
 ## License
 
 This project is under the [GNU GPLv3](LICENSE).
+
+</details>

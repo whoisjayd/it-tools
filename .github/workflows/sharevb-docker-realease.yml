@@ -56,11 +56,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/${{ github.repository_owner }}/it-tools:latest
-          # Optionally add version tags or specific branch tags like:
-          # tags: |
-          #   ghcr.io/${{ github.repository_owner }}/your-repo-name:latest
-          #   ghcr.io/${{ github.repository_owner }}/your-repo-name:${{ github.sha }}
+          tags: ghcr.io/${{ github.repository_owner }}/it-tools:dev
 
       # Optionally log out
       - name: Log out from GitHub Container Registry
