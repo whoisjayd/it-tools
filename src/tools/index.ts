@@ -106,6 +106,7 @@ import { tool as textToUnicodeNames } from './text-to-unicode-names';
 import { tool as torrentToMagnet } from './torrent-to-magnet';
 import { tool as ttlCalculator } from './ttl-calculator';
 import { tool as unicodeFormatter } from './unicode-formatter';
+import { tool as raidCalculator } from './raid-calculator';
 
 import { tool as asciiTextDrawer } from './ascii-text-drawer';
 
@@ -447,6 +448,7 @@ export const toolsByCategory: ToolCategory[] = [
       ipRangeToCidr,
       option43Generator,
       portNumbers,
+      raidCalculator,
     ],
   },
   {
