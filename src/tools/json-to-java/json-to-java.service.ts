@@ -6,19 +6,17 @@ export function convert(className: string, data: string | null) {
   if (data === null) {
     return '';
   }
-  if (typeof data === 'string') {
-    data = JSON.parse(data);
-  }
+  const obj = JSON.parse(data);
   if (className === '') {
     className = 'Result';
   }
-  const keys = Object.keys(data);
+  const keys = Object.keys(obj);
   const objects: { [key: string]: any } = {};
   className = capitalizeFirstLetter(className);
   let result = `public class ${className} {\n`;
   for (const i in keys) {
     const key = keys[i];
-    const value = data[key];
+    const value = obj[key];
     let type = typeof value as string;
     if (Array.isArray(value)) {
       const typeName = capitalizeFirstLetter(fixListClass(key));
