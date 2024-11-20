@@ -1,6 +1,7 @@
 import { tool as base64FileConverter } from './base64-file-converter';
 import { tool as base64StringConverter } from './base64-string-converter';
 import { tool as basicAuthGenerator } from './basic-auth-generator';
+import { tool as propertiesToYaml } from './properties-to-yaml';
 import { tool as jsonToJava } from './json-to-java';
 import { tool as jsonSortMaster } from './json-sort-master';
 import { tool as jsonStringConverter } from './json-string-converter';
@@ -307,6 +308,7 @@ export const toolsByCategory: ToolCategory[] = [
       listComparer,
       tomlToJson,
       tomlToYaml,
+      propertiesToYaml,
       uuidConverter,
       htmlToMarkdown,
       markdownToHtml,
