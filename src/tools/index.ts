@@ -236,6 +236,7 @@ import { tool as imageExifReader } from './image-exif-reader';
 import { tool as ipInRange } from './ip-in-range';
 import { tool as isbnValidatorAndParser } from './isbn-validator-and-parser';
 import { tool as yamlViewer } from './yaml-viewer';
+import { tool as unicodeToJavaEntities } from './unicode-characters-to-java-entities-converter';
 import { tool as barcodeReader } from './barcode-reader';
 import { tool as barcodeGenerator } from './barcode-generator';
 import { tool as htmlToMarkdown } from './html-to-markdown';
@@ -311,6 +312,7 @@ export const toolsByCategory: ToolCategory[] = [
       listComparer,
       tomlToJson,
       tomlToYaml,
+      unicodeToJavaEntities,
       propertiesToYaml,
       uuidConverter,
       htmlToMarkdown,

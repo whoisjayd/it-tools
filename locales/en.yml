@@ -439,3 +439,6 @@ tools:
   multi-link-downloader:
     title: Multi link downloader
     description: Asynchronously downloads from multiple links into a zip file while a single link downloads directly. (Requires an internet connection)
+  unicode-to-java-entities:
+    title: Unicode Characters to Java Entities Converter
+    description: Unicode Characters to Java Entities Converter and vice-versa
