@@ -435,3 +435,7 @@ tools:
   json-to-object:
     title: JSON to object
     description: Parse and convert JSON to object.
+
+  multi-link-downloader:
+    title: Multi link downloader
+    description: Asynchronously downloads from multiple links into a zip file while a single link downloads directly. (Requires an internet connection)
