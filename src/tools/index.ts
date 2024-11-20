@@ -233,6 +233,7 @@ import { tool as pdfUnlock } from './pdf-unlock';
 import { tool as ipCidrToRange } from './ip-cidr-to-range';
 import { tool as ipRangeToCidr } from './ip-range-to-cidr';
 import { tool as ipv6AddressConverter } from './ipv6-address-converter';
+import { tool as jsonToObject } from './json-to-object';
 
 export const toolsByCategory: ToolCategory[] = [
   {
@@ -385,6 +386,7 @@ export const toolsByCategory: ToolCategory[] = [
       jsonLinter,
       jsonToCsv,
       csvToJson,
+      jsonToObject,
       sqlPrettify,
       chmodCalculator,
       dockerRunToDockerComposeConverter,
