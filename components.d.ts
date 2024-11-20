@@ -115,6 +115,7 @@ declare module '@vue/runtime-core' {
     EnergyComputer: typeof import('./src/tools/energy-computer/energy-computer.vue')['default']
     EnergyConverter: typeof import('./src/tools/energy-converter/energy-converter.vue')['default']
     EtaCalculator: typeof import('./src/tools/eta-calculator/eta-calculator.vue')['default']
+    ExtractTextFromHtml: typeof import('./src/tools/extract-text-from-html/extract-text-from-html.vue')['default']
     FavoriteButton: typeof import('./src/components/FavoriteButton.vue')['default']
     FileHasher: typeof import('./src/tools/file-hasher/file-hasher.vue')['default']
     FileType: typeof import('./src/tools/file-type/file-type.vue')['default']

@@ -1,6 +1,7 @@
 import { tool as base64FileConverter } from './base64-file-converter';
 import { tool as base64StringConverter } from './base64-string-converter';
 import { tool as basicAuthGenerator } from './basic-auth-generator';
+import { tool as extractTextFromHtml } from './extract-text-from-html';
 import { tool as propertiesToYaml } from './properties-to-yaml';
 import { tool as jsonToJava } from './json-to-java';
 import { tool as jsonSortMaster } from './json-sort-master';
@@ -412,6 +413,7 @@ export const toolsByCategory: ToolCategory[] = [
       xmlFormatter,
       xsltTester,
       yamlViewer,
+      extractTextFromHtml,
       jsonEditor,
       emailNormalizer,
       codeHighlighter,
