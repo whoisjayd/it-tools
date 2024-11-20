@@ -1,6 +1,7 @@
 import { tool as base64FileConverter } from './base64-file-converter';
 import { tool as base64StringConverter } from './base64-string-converter';
 import { tool as basicAuthGenerator } from './basic-auth-generator';
+import { tool as imageResizer } from './image-resizer';
 import { tool as multiLinkDownloader } from './multi-link-downloader';
 import { tool as aspectRatioCalculator } from './aspect-ratio-calculator';
 import { tool as extractTextFromHtml } from './extract-text-from-html';
@@ -391,6 +392,7 @@ export const toolsByCategory: ToolCategory[] = [
       imageToAsciiArt,
       imageExifReader,
       aspectRatioCalculator,
+      imageResizer,
     ],
   },
   {

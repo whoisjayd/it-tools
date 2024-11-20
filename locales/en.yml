@@ -432,6 +432,11 @@ tools:
   text-to-binary:
     title: Text to ASCII binary
     description: Convert text to its ASCII binary representation and vice-versa.
+
+  image-resizer:
+    title: Image resizer
+    description: Convert the width and height of an image file, preview, and download it in a desired format (.jpg, .jpeg, .png, .bmp, .ico, .svg)  json-to-object:
+
   json-to-object:
     title: JSON to object
     description: Parse and convert JSON to object.
@@ -439,6 +444,7 @@ tools:
   multi-link-downloader:
     title: Multi link downloader
     description: Asynchronously downloads from multiple links into a zip file while a single link downloads directly. (Requires an internet connection)
+
   unicode-to-java-entities:
     title: Unicode Characters to Java Entities Converter
     description: Unicode Characters to Java Entities Converter and vice-versa
