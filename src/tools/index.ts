@@ -1,6 +1,7 @@
 import { tool as base64FileConverter } from './base64-file-converter';
 import { tool as base64StringConverter } from './base64-string-converter';
 import { tool as basicAuthGenerator } from './basic-auth-generator';
+import { tool as aspectRatioCalculator } from './aspect-ratio-calculator';
 import { tool as extractTextFromHtml } from './extract-text-from-html';
 import { tool as propertiesToYaml } from './properties-to-yaml';
 import { tool as jsonToJava } from './json-to-java';
@@ -386,6 +387,7 @@ export const toolsByCategory: ToolCategory[] = [
       removeExif,
       imageToAsciiArt,
       imageExifReader,
+      aspectRatioCalculator,
     ],
   },
   {
