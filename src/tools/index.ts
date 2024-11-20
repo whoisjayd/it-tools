@@ -1,6 +1,7 @@
 import { tool as base64FileConverter } from './base64-file-converter';
 import { tool as base64StringConverter } from './base64-string-converter';
 import { tool as basicAuthGenerator } from './basic-auth-generator';
+import { tool as jsonStringConverter } from './json-string-converter';
 import { tool as dnsQueries } from './dns-queries';
 import { tool as icoConverter } from './ico-converter';
 import { tool as jsonEditor } from './json-editor';
@@ -289,6 +290,7 @@ export const toolsByCategory: ToolCategory[] = [
       textToNatoAlphabet,
       textToBinary,
       textToUnicode,
+      jsonStringConverter,
       textToUnicodeNames,
       yamlToJson,
       yamlToToml,
