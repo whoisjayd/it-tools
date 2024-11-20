@@ -74,3 +74,7 @@ tools:
   csv-to-json:
     title: 'CSV в JSON'
     description: 'Конвертуйте CSV в JSON з автоматичним визначенням заголовків.'
+
+  json-sort-master:
+    title: JSON сортувальник
+    description: Сортуйте ваш JSON за ключами та значеннями.

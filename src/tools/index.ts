@@ -1,6 +1,7 @@
 import { tool as base64FileConverter } from './base64-file-converter';
 import { tool as base64StringConverter } from './base64-string-converter';
 import { tool as basicAuthGenerator } from './basic-auth-generator';
+import { tool as jsonSortMaster } from './json-sort-master';
 import { tool as jsonStringConverter } from './json-string-converter';
 import { tool as dnsQueries } from './dns-queries';
 import { tool as icoConverter } from './ico-converter';
@@ -298,6 +299,7 @@ export const toolsByCategory: ToolCategory[] = [
       jsonToJavascript,
       jsonToYaml,
       jsonToToml,
+      jsonSortMaster,
       jsonToTS,
       listConverter,
       listComparer,

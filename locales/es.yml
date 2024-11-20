@@ -71,6 +71,10 @@ tools:
     text: Text
     data: Data
 
+  json-sort-master:
+    title: Maestro de clasificación JSON
+    description: Ordena tu JSON por claves y valores.
+
   csv-to-json:
     title: CSV a JSON
     description: Convierte CSV a JSON con detección automática de cabeceras.

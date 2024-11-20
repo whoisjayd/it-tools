@@ -74,3 +74,7 @@ tools:
   csv-to-json:
     title: CSV para JSON
     description: Converte CSV para JSON com detecção automática de cabeçalhos.
+
+  json-sort-master:
+    title: 'Mestre de classificação JSON'
+    description: 'Ordene seu JSON por chaves e valores.'
