@@ -2,12 +2,12 @@
 import { Copy } from '@vicons/tabler';
 import { useElementSize } from '@vueuse/core';
 import hljs from 'highlight.js/lib/core';
-import javascriptHljs from 'highlight.js/lib/languages/javascript';
 import jsonHljs from 'highlight.js/lib/languages/json';
 import sqlHljs from 'highlight.js/lib/languages/sql';
 import xmlHljs from 'highlight.js/lib/languages/xml';
 import yamlHljs from 'highlight.js/lib/languages/yaml';
 import iniHljs from 'highlight.js/lib/languages/ini';
+import tsHljs from 'highlight.js/lib/languages/typescript';
 import bashHljs from 'highlight.js/lib/languages/bash';
 import markdownHljs from 'highlight.js/lib/languages/markdown';
 import jsHljs from 'highlight.js/lib/languages/javascript';
@@ -38,13 +38,13 @@ const props = withDefaults(
     downloadButtonText: 'Download',
   },
 );
-hljs.registerLanguage('javascript', javascriptHljs);
 hljs.registerLanguage('sql', sqlHljs);
 hljs.registerLanguage('json', jsonHljs);
 hljs.registerLanguage('html', xmlHljs);
 hljs.registerLanguage('xml', xmlHljs);
 hljs.registerLanguage('yaml', yamlHljs);
 hljs.registerLanguage('toml', iniHljs);
+hljs.registerLanguage('ts', tsHljs);
 hljs.registerLanguage('bash', bashHljs);
 hljs.registerLanguage('markdown', markdownHljs);
 hljs.registerLanguage('css', cssHljs);
