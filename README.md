@@ -8,7 +8,7 @@ You can use my image in your docker-compose file if you want an update to date v
 
 ## Added features
 
-Almost [all PR of it-tools](https://github.com/CorentinTh/it-tools/pulls)
+Almost [all tools PR of it-tools](https://github.com/CorentinTh/it-tools/pulls). This is an english only version. No translation will be integrated.
 
 ## Installation methods
 
@@ -27,10 +27,6 @@ Almost [all PR of it-tools](https://github.com/CorentinTh/it-tools/pulls)
 <details>
 
 Useful tools for developer and people working in IT. [Have a look !](https://it-tools.tech).
-
-## Sponsors
-
-[![Fern banner](./.github/fern-banner.svg)](https://bit.ly/3zBl7DG)
 
 ## Functionalities and roadmap
 
