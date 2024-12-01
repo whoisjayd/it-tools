@@ -14,7 +14,7 @@ test.describe('Tool - CSV to JSON', () => {
 Age,Salary,Gender,Country,Purchased
 18,20000,Male,Germany,N
 19,22000,Female,France,N
-    `);
+    `.trim());
 
     const generatedJson = await page.getByTestId('area-content').innerText();
 

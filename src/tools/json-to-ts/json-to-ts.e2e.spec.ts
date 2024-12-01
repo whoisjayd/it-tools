@@ -26,19 +26,19 @@ test.describe('Tool - JSON to TS', () => {
 
     expect(generatedJson.trim()).toEqual(
       `
-      interface DataProps {
-        foo: string;
-        list: List;
-      }
-      
-      interface List {
-        name: string;
-        another: Another;
-      }
-      
-      interface Another {
-        key: string;
-      }
+interface DataProps {
+  foo: string;
+  list: List;
+}
+
+interface List {
+  name: string;
+  another: Another;
+}
+
+interface Another {
+  key: string;
+}
    `.trim(),
     );
   });
