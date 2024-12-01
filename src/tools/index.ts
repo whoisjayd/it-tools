@@ -248,6 +248,7 @@ import { tool as ipCidrToRange } from './ip-cidr-to-range';
 import { tool as ipRangeToCidr } from './ip-range-to-cidr';
 import { tool as ipv6AddressConverter } from './ipv6-address-converter';
 import { tool as jsonToObject } from './json-to-object';
+import { tool as micTester } from './mic-tester';
 
 export const toolsByCategory: ToolCategory[] = [
   {
@@ -362,6 +363,7 @@ export const toolsByCategory: ToolCategory[] = [
       jsonDiff,
       softwareLicenceCompatibility,
       safelinkDecoder,
+      micTester,
       snowflakeIdExtractor,
       apiTester,
       bounceParser,
