@@ -118,6 +118,7 @@ import { tool as ttlCalculator } from './ttl-calculator';
 import { tool as unicodeFormatter } from './unicode-formatter';
 import { tool as raidCalculator } from './raid-calculator';
 import { tool as nanoidGenerator } from './nanoid-generator';
+import { tool as sipAuth } from './sip-auth';
 
 import { tool as asciiTextDrawer } from './ascii-text-drawer';
 
@@ -484,6 +485,7 @@ export const toolsByCategory: ToolCategory[] = [
       option43Generator,
       portNumbers,
       raidCalculator,
+      sipAuth,
     ],
   },
   {

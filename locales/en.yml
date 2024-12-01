@@ -458,3 +458,12 @@ tools:
   unicode-to-java-entities:
     title: Unicode Characters to Java Entities Converter
     description: Unicode Characters to Java Entities Converter and vice-versa
+    
+  sip-auth:
+    password: SIP password
+    password-tips: Enter a password...
+    message: SIP message
+    message-tips: Paste your SIP message here...
+    result: Result
+    sucess: Sucess
+    failure: Failure
