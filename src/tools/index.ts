@@ -23,6 +23,7 @@ import { tool as energyConverter } from './energy-converter';
 import { tool as areaConverter } from './area-converter';
 import { tool as angleConverter } from './angle-converter';
 import { tool as floatingPointNumberConverter } from './floating-point-number-converter';
+import { tool as snowflakeIdExtractor } from './snowflake-id-extractor';
 import { tool as emailNormalizer } from './email-normalizer';
 import { tool as bounceParser } from './bounce-parser';
 import { tool as codeHighlighter } from './code-highlighter';
@@ -361,6 +362,7 @@ export const toolsByCategory: ToolCategory[] = [
       jsonDiff,
       softwareLicenceCompatibility,
       safelinkDecoder,
+      snowflakeIdExtractor,
       apiTester,
       bounceParser,
       colorWheel,
