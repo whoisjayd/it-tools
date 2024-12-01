@@ -22,6 +22,7 @@ import { tool as forceConverter } from './force-converter';
 import { tool as energyConverter } from './energy-converter';
 import { tool as areaConverter } from './area-converter';
 import { tool as angleConverter } from './angle-converter';
+import { tool as floatingPointNumberConverter } from './floating-point-number-converter';
 import { tool as emailNormalizer } from './email-normalizer';
 import { tool as bounceParser } from './bounce-parser';
 import { tool as codeHighlighter } from './code-highlighter';
@@ -289,6 +290,7 @@ export const toolsByCategory: ToolCategory[] = [
       dateTimeConverter,
       timezoneConverter,
       baseConverter,
+      floatingPointNumberConverter,
       romanNumeralConverter,
       base64StringConverter,
       base64FileConverter,
