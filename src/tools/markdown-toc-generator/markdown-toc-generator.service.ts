@@ -129,7 +129,7 @@ export function getTocMarkdown({
   const titles = getTitles(markdown, titleContent => getFinalId(genericAnchorGenerator(titleContent, concatSpaces)));
 
   const createLink = (linkText: string, url: string) => {
-    return `[${linkText.replace(/\[/g, '\\[').replace(/\]/g, '\\]')}](${url.replace(/\(/g, '%28').replace(/\(/g, '%29')})`;
+    return `[${linkText.replace(/\\/g, '\\\\').replace(/\[/g, '\\[').replace(/\]/g, '\\]')}](${url.replace(/\(/g, '%28').replace(/\(/g, '%29')})`;
   };
 
   let markdownTOC = '';
