@@ -20,8 +20,20 @@ Age,Salary,Gender,Country,Purchased
 
     expect(generatedJson.trim()).toEqual(`
 [
-  {"Age": "18", "Salary": "20000", "Gender": "Male", "Country": "Germany", "Purchased": "N"},
-  {"Age": "19", "Salary": "22000", "Gender": "Female", "Country": "France", "Purchased": "N"}
+  {
+    "Age": "18",
+    "Salary": "20000",
+    "Gender": "Male",
+    "Country": "Germany",
+    "Purchased": "N"
+  },
+  {
+    "Age": "19",
+    "Salary": "22000",
+    "Gender": "Female",
+    "Country": "France",
+    "Purchased": "N"
+  }
 ]
    `.trim(),
     );
