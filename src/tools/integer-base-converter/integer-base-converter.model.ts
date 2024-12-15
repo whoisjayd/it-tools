@@ -5,7 +5,7 @@ export function hasNumberPrefix(value: string) {
 export function convertBase(
   {
     value, fromBase, toBase,
-    ignorePunctuationsRegexChars = ' \u00A0_\.,-',
+    ignorePunctuationsRegexChars = ' \u00A0_\\.,-',
     handlePrefixSuffix = true,
     ignoreCase = true,
   }: {
