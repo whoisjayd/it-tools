@@ -11,7 +11,6 @@ import {
   blake2s,
   blake3,
   crc32,
-  crc32c,
   createSHA256,
   keccak,
   pbkdf2,
@@ -45,7 +44,6 @@ const algoNames = Object.keys(algos) as AlgoNames[];
 const algosWasm = {
   adler32,
   crc32,
-  crc32c,
   blake2b,
   blake2s,
   blake3,
@@ -77,7 +75,6 @@ const hashText = (algo: AlgoNames, value: string) => formatWithEncoding(algos[al
 const defaultHashWasmValues = {
   adler32: '',
   crc32: '',
-  crc32c: '',
   blake2b: '',
   blake2s: '',
   blake3: '',

@@ -5,7 +5,6 @@ import {
   createBLAKE2s, // (bits?: number, key?: IDataType): Promise<IHasher> // default is 256 bits
   createBLAKE3, // (bits?: number, key?: IDataType): Promise<IHasher> // default is 256 bits
   createCRC32, // (): Promise<IHasher>
-  createCRC32C, // (): Promise<IHasher>
   createKeccak, // (bits?: 224 | 256 | 384 | 512): Promise<IHasher> // default is 512 bits
   createMD4, // (): Promise<IHasher>
   createMD5, // (): Promise<IHasher>
@@ -42,7 +41,6 @@ async function getHashersAsync() {
     BLAKE2s: await createBLAKE2s(), // (bits?: number, key?: IDataType): Promise<IHasher> // default is 256 bits
     BLAKE3: await createBLAKE3(), // (bits?: number, key?: IDataType): Promise<IHasher> // default is 256 bits
     CRC32: await createCRC32(), // (): Promise<IHasher>
-    CRC32C: await createCRC32C(), // (): Promise<IHasher>
     Keccak_224: await createKeccak(224), // (bits?: 224 | 256 | 384 | 512): Promise<IHasher> // default is 512 bits
     Keccak_256: await createKeccak(256), // (bits?: 224 | 256 | 384 | 512): Promise<IHasher> // default is 512 bits
     Keccak_384: await createKeccak(384), // (bits?: 224 | 256 | 384 | 512): Promise<IHasher> // default is 512 bits
@@ -70,7 +68,6 @@ const defaultHashWasmValues = {
   BLAKE2s: '',
   BLAKE3: '',
   CRC32: '',
-  CRC32C: '',
   Keccak_224: '',
   Keccak_256: '',
   Keccak_384: '',
