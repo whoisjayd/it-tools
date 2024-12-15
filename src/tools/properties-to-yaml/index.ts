@@ -4,7 +4,7 @@ import { defineTool } from '../tool';
 export const tool = defineTool({
   name: 'Properties to YAML',
   path: '/properties-to-yaml',
-  description: '',
+  description: 'Convert Java .properties content to Yaml',
   keywords: ['properties', 'yaml', 'convert', 'spring', 'spring-boot', 'parse'],
   component: () => import('./properties-to-yaml.vue'),
   icon: AlignJustified,
