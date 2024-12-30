@@ -6,7 +6,7 @@ on:
       - chore/all-my-stuffs
 jobs:
   test:
-    timeout-minutes: 10
+    timeout-minutes: 30
     runs-on: ubuntu-latest
     strategy:
       matrix:

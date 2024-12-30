@@ -21,7 +21,7 @@ test.describe('Tool - List converter', () => {
     expect(result.trim()).toEqual('1, 2, 3, 4, 5');
   });
 
-  test('Duplicates should be removed, list should be sorted and prefix and suffix list items', async ({ page }) => {
+  test('Duplicates should be removed, list should not be sorted and prefix and suffix list items', async ({ page }) => {
     await page.getByTestId('input').fill(`1
     2
     2
