@@ -8,7 +8,7 @@ You can use my image in your docker-compose file if you want an update to date v
 
 ## Added features
 
-Almost [all tools PR of it-tools](https://github.com/CorentinTh/it-tools/pulls). This is an english only version. No translation will be integrated.
+Almost [all tools PR of it-tools](https://github.com/CorentinTh/it-tools/pulls).
 
 ## Installation methods
 
