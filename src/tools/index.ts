@@ -45,6 +45,7 @@ import { tool as phpArrayToJson } from './php-array-to-json';
 import { tool as jsonSizeAnalyzer } from './json-size-analyzer';
 import { tool as jsonToCsharp } from './json-to-csharp';
 import { tool as luhnValidator } from './luhn-validator';
+import { tool as mathFormatsConverter } from './math-formats-converter';
 import { tool as mathOcr } from './math-ocr';
 import { tool as markdownTocGenerator } from './markdown-toc-generator';
 import { tool as passphraseGenerator } from './passphrase-generator';
@@ -493,6 +494,7 @@ export const toolsByCategory: ToolCategory[] = [
       mathEvaluator,
       etaCalculator,
       percentageCalculator,
+      mathFormatsConverter,
       mathOcr,
       dataTransferRateConverter,
       dataStorageUnitConverter,
