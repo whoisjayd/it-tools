@@ -18,6 +18,19 @@ docker build -t it-tools --build-arg BASE_URL="/my-folder/" .
 docker run -d --name it-tools --restart unless-stopped -p 8080:80 it-tools
 ```
 
+## Use in Docker Compose file
+
+```yml
+services:
+  it-tools:
+    container_name: it-tools
+    image: ghcr.io/sharevb/it-tools:nightly
+    pull_policy: always
+    restart: unless-stopped
+    ports:
+      - 8080:80
+```
+
 ## Installation methods
 
 | Docker Image                            | Local Installation                                                                                                          |
