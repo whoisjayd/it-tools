@@ -35,11 +35,11 @@ about:
 
     ## Technologie
 
-    IT Tools zostało stworzone w Vue.js (Vue 3) z wykorzystaniem biblioteki komponentów Naive UI i jest hostowane oraz ciągle wdrażane przez Vercel. Niektóre narzędzia korzystają z zewnętrznych bibliotek open-source, pełną listę znajdziesz w pliku [package.json](https://github.com/CorentinTh/it-tools/blob/main/package.json) repozytorium.
+    IT Tools zostało stworzone w Vue.js (Vue 3) z wykorzystaniem biblioteki komponentów Naive UI i jest hostowane oraz ciągle wdrażane przez Vercel. Niektóre narzędzia korzystają z zewnętrznych bibliotek open-source, pełną listę znajdziesz w pliku [package.json](https://github.com/sharevb/it-tools/blob/main/package.json) repozytorium.
 
     ## Znalazłeś błąd? Brakuje jakiegoś narzędzia?
 
-    Jeśli potrzebujesz narzędzia, które nie jest jeszcze dostępne, a uważasz, że mogłoby być przydatne, zapraszam do zgłoszenia propozycji funkcji w [sekcji issue](https://github.com/CorentinTh/it-tools/issues/new/choose) repozytorium GitHub.
+    Jeśli potrzebujesz narzędzia, które nie jest jeszcze dostępne, a uważasz, że mogłoby być przydatne, zapraszam do zgłoszenia propozycji funkcji w [sekcji issue](https://github.com/sharevb/it-tools/issues/new/choose) repozytorium GitHub.
 
 404:
   notFound: '404 Nie znaleziono'

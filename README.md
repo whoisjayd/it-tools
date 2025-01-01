@@ -8,11 +8,11 @@ You can use my image in your docker-compose file if you want an update to date v
 
 ## Added features
 
-Almost [all tools PR of it-tools](https://github.com/CorentinTh/it-tools/pulls).
+Almost [all tools PR of it-tools](https://github.com/sharevb/it-tools/pulls).
 
 ## Build docker image for a subfolder
 
-According to https://github.com/CorentinTh/it-tools/pull/461#issuecomment-1602506049:
+According to https://github.com/sharevb/it-tools/pull/461#issuecomment-1602506049:
 ```
 docker build -t it-tools --build-arg BASE_URL="/my-folder/" .
 docker run -d --name it-tools --restart unless-stopped -p 8080:80 it-tools
@@ -51,9 +51,9 @@ Useful tools for developer and people working in IT. [Have a look !](https://it-
 
 ## Functionalities and roadmap
 
-Please check the [issues](https://github.com/CorentinTh/it-tools/issues) to see if some feature listed to be implemented.
+Please check the [issues](https://github.com/sharevb/it-tools/issues) to see if some feature listed to be implemented.
 
-You have an idea of a tool? Submit a [feature request](https://github.com/CorentinTh/it-tools/issues/new/choose)!
+You have an idea of a tool? Submit a [feature request](https://github.com/sharevb/it-tools/issues/new/choose)!
 
 ## Self host
 
@@ -156,7 +156,7 @@ It will create a directory in `src/tools` with the correct files, and a the impo
 
 Big thanks to all the people who have already contributed!
 
-[![contributors](https://contrib.rocks/image?repo=corentinth/it-tools&refresh=1)](https://github.com/corentinth/it-tools/graphs/contributors)
+[![contributors](https://contrib.rocks/image?repo=corentinth/it-tools&refresh=1)](https://github.com/sharevb/it-tools/graphs/contributors)
 
 ## Credits
 
