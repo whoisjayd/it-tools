@@ -10,6 +10,14 @@ You can use my image in your docker-compose file if you want an update to date v
 
 Almost [all tools PR of it-tools](https://github.com/CorentinTh/it-tools/pulls).
 
+## Build docker image for a subfolder
+
+According to https://github.com/CorentinTh/it-tools/pull/461#issuecomment-1602506049:
+```
+docker build -t it-tools --build-arg BASE_URL="/my-folder/" .
+docker run -d --name it-tools --restart unless-stopped -p 8080:80 it-tools
+```
+
 ## Installation methods
 
 | Docker Image                            | Local Installation                                                                                                          |

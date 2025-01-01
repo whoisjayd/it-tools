@@ -8,10 +8,14 @@ WORKDIR /app
 COPY package.json pnpm-lock.yaml ./
 RUN npm install -g pnpm && pnpm i --frozen-lockfile
 COPY . .
+ARG BASE_URL
+ENV BASE_URL=${BASE_URL}
 RUN pnpm build
 
 # production stage
 FROM nginx:stable-alpine AS production-stage
+ARG BASE_URL
+ENV BASE_URL=${BASE_URL}
 COPY --from=build-stage /app/dist /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 EXPOSE 80
