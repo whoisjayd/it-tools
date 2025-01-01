@@ -203,6 +203,7 @@
     "pythonstack.js": "^1.0.2",
     "qpdf-wasm-esm-embedded": "^1.1.1",
     "qrcode": "^1.5.1",
+    "sandybox": "^1.1.2",
     "qrcode-parser": "^2.1.3",
     "qrcode-terminal-nooctal": "^0.12.1",
     "randexp": "^0.5.3",
