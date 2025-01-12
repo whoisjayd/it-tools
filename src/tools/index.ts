@@ -25,6 +25,7 @@ import { tool as angleConverter } from './angle-converter';
 import { tool as floatingPointNumberConverter } from './floating-point-number-converter';
 import { tool as snowflakeIdExtractor } from './snowflake-id-extractor';
 import { tool as emailNormalizer } from './email-normalizer';
+import { tool as gptTokenEstimator } from './gpt-token-estimator';
 import { tool as myIp } from './my-ip';
 import { tool as geoDistanceCalculator } from './geo-distance-calculator';
 import { tool as xVrSpamcauseDecoder } from './x-vr-spamcause-decoder';
@@ -461,6 +462,7 @@ export const toolsByCategory: ToolCategory[] = [
     components: [
       gitMemo,
       nanoMemo,
+      gptTokenEstimator,
     ],
   },
   {

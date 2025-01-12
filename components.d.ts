@@ -257,6 +257,7 @@ declare module '@vue/runtime-core' {
     NLayoutSider: typeof import('naive-ui')['NLayoutSider']
     NMenu: typeof import('naive-ui')['NMenu']
     NScrollbar: typeof import('naive-ui')['NScrollbar']
+    NScrollbar: typeof import('naive-ui')['NScrollbar']
     NumeronymGenerator: typeof import('./src/tools/numeronym-generator/numeronym-generator.vue')['default']
     OcrImage: typeof import('./src/tools/ocr-image/ocr-image.vue')['default']
     Option43Generator: typeof import('./src/tools/option43-generator/option43-generator.vue')['default']

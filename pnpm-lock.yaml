@@ -260,6 +260,9 @@ dependencies:
   get-timezone-offset:
     specifier: ^1.0.5
     version: 1.0.5
+  gpt-tokens:
+    specifier: ^1.3.13
+    version: 1.3.13
   hash-wasm:
     specifier: ^4.11.0
     version: 4.12.0
@@ -10657,6 +10660,14 @@ packages:
     resolution: {integrity: sha512-ZUKRh6/kUFoAiTAtTYPZJ3hw9wNxx+BIBOijnlG9PnrJsCcSjs1wyyD6vJpaYtgnzDrKYRSqf3OO6Rfa93xsRg==}
     engines: {node: '>= 0.4'}
 
+  /gpt-tokens@1.3.13:
+    resolution: {integrity: sha512-f1s9yc7jn2XCuy4jdeDJ5eaLwg1/fYKaLCxSE9osCQbQeBmoULr8XLNYYz4fr5ZzXzJH25m/9QwgUY0DCkUagA==}
+    dependencies:
+      decimal.js: 10.4.3
+      js-tiktoken: 1.0.16
+      openai-chat-tokens: 0.2.8
+    dev: false
+
   /graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
 
@@ -11831,6 +11842,12 @@ packages:
 
   /js-sha256@0.9.0:
     resolution: {integrity: sha512-sga3MHh9sgQN2+pJ9VYZ+1LPwXOxuBJBA5nrR5/ofPfuiJBE2hnjsaN8se8JznOmGLN2p49Pe5U/ttafcs/apA==}
+    dev: false
+
+  /js-tiktoken@1.0.16:
+    resolution: {integrity: sha512-nUVdO5k/M9llWpiaZlBBDdtmr6qWXwSD6fgaDu2zM8UP+OXxx9V37lFkI6w0/1IuaDx7WffZ37oYd9KvcWKElg==}
+    dependencies:
+      base64-js: 1.5.1
     dev: false
 
   /js-tokens@4.0.0:
@@ -13291,6 +13308,12 @@ packages:
       is-docker: 2.2.1
       is-wsl: 2.2.0
     dev: true
+
+  /openai-chat-tokens@0.2.8:
+    resolution: {integrity: sha512-nW7QdFDIZlAYe6jsCT/VPJ/Lam3/w2DX9oxf/5wHpebBT49KI3TN43PPhYlq1klq2ajzXWKNOLY6U4FNZM7AoA==}
+    dependencies:
+      js-tiktoken: 1.0.16
+    dev: false
 
   /opencollective-postinstall@2.0.3:
     resolution: {integrity: sha512-8AV/sCtuzUeTo8gQK5qDZzARrulB3egtLzFgteqB2tcT4Mw7B8Kt7JcDHmltjz6FOAHsvTevk70gZEbhM4ZS9Q==}
