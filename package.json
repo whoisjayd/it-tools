@@ -129,6 +129,7 @@
     "highlight.js": "^11.7.0",
     "iarna-toml-esm": "^3.0.5",
     "ibantools": "^4.3.3",
+    "jose": "^5.9.6",
     "ical-generator": "^8.0.1",
     "ical.js": "^2.1.0",
     "iconv-lite": "^0.6.3",

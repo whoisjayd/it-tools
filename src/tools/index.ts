@@ -25,6 +25,7 @@ import { tool as angleConverter } from './angle-converter';
 import { tool as floatingPointNumberConverter } from './floating-point-number-converter';
 import { tool as snowflakeIdExtractor } from './snowflake-id-extractor';
 import { tool as emailNormalizer } from './email-normalizer';
+import { tool as jwtGenerator } from './jwt-generator';
 import { tool as gptTokenEstimator } from './gpt-token-estimator';
 import { tool as myIp } from './my-ip';
 import { tool as geoDistanceCalculator } from './geo-distance-calculator';
@@ -361,6 +362,7 @@ export const toolsByCategory: ToolCategory[] = [
       otpCodeGeneratorAndValidator,
       mimeTypes,
       jwtParser,
+      jwtGenerator,
       keycodeInfo,
       slugifyString,
       htmlWysiwygEditor,
