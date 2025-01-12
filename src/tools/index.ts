@@ -25,6 +25,7 @@ import { tool as angleConverter } from './angle-converter';
 import { tool as floatingPointNumberConverter } from './floating-point-number-converter';
 import { tool as snowflakeIdExtractor } from './snowflake-id-extractor';
 import { tool as emailNormalizer } from './email-normalizer';
+import { tool as xVrSpamcauseDecoder } from './x-vr-spamcause-decoder';
 import { tool as bounceParser } from './bounce-parser';
 import { tool as codeHighlighter } from './code-highlighter';
 import { tool as colorWheel } from './color-wheel';
@@ -488,6 +489,7 @@ export const toolsByCategory: ToolCategory[] = [
       portNumbers,
       raidCalculator,
       sipAuth,
+      xVrSpamcauseDecoder,
     ],
   },
   {
