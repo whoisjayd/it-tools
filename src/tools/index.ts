@@ -150,6 +150,7 @@ import { tool as javascriptPrettifier } from './javascript-prettifier';
 import { tool as cssPrettifier } from './css-prettifier';
 import { tool as htmlPrettifier } from './html-prettifier';
 import { tool as x509CertificateGenerator } from './x509-certificate-generator';
+import { tool as ipIncludeExclude } from './ip-include-exclude';
 import { tool as pdfSignatureChecker } from './pdf-signature-checker';
 import { tool as uuidConverter } from './uuid-converter';
 import { tool as numeronymGenerator } from './numeronym-generator';
@@ -467,6 +468,7 @@ export const toolsByCategory: ToolCategory[] = [
       ipv6SubnetCalculator,
       ipv4AddressConverter,
       cidrInCidr,
+      ipIncludeExclude,
       ipv4RangeExpander,
       macAddressLookup,
       macAddressGenerator,

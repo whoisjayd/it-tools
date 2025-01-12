@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { merge, parse } from 'cidr-tools';
+import { mergeCidr, parseCidr } from 'cidr-tools';
 import { isIP, isIPv6 } from 'is-ip';
 import { Exchange } from '@vicons/tabler';
 import { stringifyIp } from 'ip-bigint';
@@ -19,8 +19,8 @@ const result = computed(() => {
       return [];
     }
 
-    const startIp = parse(rawStartAddress.value).start;
-    const endIp = parse(rawEndAddress.value).end;
+    const startIp = parseCidr(rawStartAddress.value).start;
+    const endIp = parseCidr(rawEndAddress.value).end;
     isReversed.value = startIp > endIp;
     if (isReversed.value) {
       return [];
@@ -34,7 +34,7 @@ const result = computed(() => {
       allIps[i] = iterIp++;
     }
 
-    return merge(Array.from(allIps, ip => stringifyIp({ number: ip, version })));
+    return mergeCidr(Array.from(allIps, ip => stringifyIp({ number: ip, version })));
   }
   catch (e) {
     return [];

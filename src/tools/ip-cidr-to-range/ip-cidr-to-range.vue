@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import isCidr from 'is-cidr';
-import { expand } from 'cidr-tools';
+import { expandCidr } from 'cidr-tools';
 import { getIPNetworkType, parseAsCIDR } from '@/utils/ip';
 import { useValidation } from '@/composable/validation';
 
@@ -8,7 +8,7 @@ const rawCIDR = useStorage('ip-cidr-to-range:cidr', '192.168.1.0/24'); // NOSONA
 
 const result = computed(() => {
   const parsedCIDR = parseAsCIDR(rawCIDR.value) || rawCIDR.value;
-  const ips = expand(parsedCIDR);
+  const ips = [...expandCidr(parsedCIDR)];
   if (!ips || !ips.length) {
     return undefined;
   }

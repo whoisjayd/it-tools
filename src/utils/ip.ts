@@ -1,6 +1,6 @@
 import { isIPv4 } from 'is-ip';
 import { Address4, Address6 } from 'ip-address';
-import { contains as containsCidr } from 'cidr-tools';
+import { containsCidr } from 'cidr-tools';
 import type { IPMatch } from 'ip-matching';
 import { IPMask, IPSubnetwork, getMatch } from 'ip-matching';
 import isCidr from 'is-cidr';

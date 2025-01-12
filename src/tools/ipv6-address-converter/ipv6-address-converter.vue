@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { isIPv6 } from 'is-ip';
-import { parse } from 'cidr-tools';
+import { parseCidr } from 'cidr-tools';
 import { stringifyIp } from 'ip-bigint';
 import { convertBase } from '../integer-base-converter/integer-base-converter.model';
 import { getIPNetworkType, toARPA, toMicrosoftTranscription } from '@/utils/ip';
@@ -10,7 +10,7 @@ const rawIpAddress = useStorage('ipv6-converter:ip', '2001:db8:0:85a3::ac1f:8001
 
 const convertedSections = computed(() => {
   try {
-    const parsedIPv6 = parse(rawIpAddress.value);
+    const parsedIPv6 = parseCidr(rawIpAddress.value);
     const ipInDecimal = parsedIPv6.start;
 
     return [
