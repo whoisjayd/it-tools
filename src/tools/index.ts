@@ -25,6 +25,7 @@ import { tool as angleConverter } from './angle-converter';
 import { tool as floatingPointNumberConverter } from './floating-point-number-converter';
 import { tool as snowflakeIdExtractor } from './snowflake-id-extractor';
 import { tool as emailNormalizer } from './email-normalizer';
+import { tool as geoDistanceCalculator } from './geo-distance-calculator';
 import { tool as xVrSpamcauseDecoder } from './x-vr-spamcause-decoder';
 import { tool as bounceParser } from './bounce-parser';
 import { tool as codeHighlighter } from './code-highlighter';
@@ -505,7 +506,8 @@ export const toolsByCategory: ToolCategory[] = [
       ttlCalculator,
       percentageCalculator,
       angleConverter,
-      percentageCalculator],
+      percentageCalculator,
+    ],
   },
   {
     name: 'Measurement',
@@ -527,6 +529,7 @@ export const toolsByCategory: ToolCategory[] = [
       powerConverter,
       energyComputer,
       benchmarkBuilder,
+      geoDistanceCalculator,
     ],
   },
   {
