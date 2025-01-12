@@ -277,6 +277,7 @@ declare module '@vue/runtime-core' {
     NMenu: typeof import('naive-ui')['NMenu']
     NProgress: typeof import('naive-ui')['NProgress']
     NScrollbar: typeof import('naive-ui')['NScrollbar']
+    NSpin: typeof import('naive-ui')['NSpin']
     NSwitch: typeof import('naive-ui')['NSwitch']
     NumeronymGenerator: typeof import('./src/tools/numeronym-generator/numeronym-generator.vue')['default']
     OcrImage: typeof import('./src/tools/ocr-image/ocr-image.vue')['default']
