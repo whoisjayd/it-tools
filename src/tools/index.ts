@@ -237,7 +237,7 @@ import { tool as manyUnitsConverter } from './many-units-converter';
 import { tool as powerConverter } from './power-converter';
 import { tool as dockerComposeConverter } from './docker-compose-converter';
 import { tool as imageExifReader } from './image-exif-reader';
-import { tool as ipInRange } from './ip-in-range';
+import { tool as cidrInCidr } from './cidr-in-cidr';
 import { tool as isbnValidatorAndParser } from './isbn-validator-and-parser';
 import { tool as yamlViewer } from './yaml-viewer';
 import { tool as unicodeToJavaEntities } from './unicode-characters-to-java-entities-converter';
@@ -463,10 +463,10 @@ export const toolsByCategory: ToolCategory[] = [
     name: 'Network',
     components: [
       ipv4SubnetCalculator,
-      ipInRange,
       ipv6AddressConverter,
       ipv6SubnetCalculator,
       ipv4AddressConverter,
+      cidrInCidr,
       ipv4RangeExpander,
       macAddressLookup,
       macAddressGenerator,
