@@ -27,7 +27,7 @@ const parsedEmail = computedAsync(async () => {
   }
 });
 
-function downloadFile(data: ArrayBuffer, fileName: string, fileType: string) {
+function downloadFile(data: ArrayBuffer | string, fileName: string, fileType: string) {
   const blob = new Blob([data], { type: fileType || 'application/octet-stream' });
   const downloadUrl = URL.createObjectURL(blob);
   const a = document.createElement('a');
