@@ -125,6 +125,9 @@ dependencies:
   big.js:
     specifier: ^6.2.2
     version: 6.2.2
+  bwip-js:
+    specifier: ^4.5.1
+    version: 4.5.1
   change-case:
     specifier: ^4.1.2
     version: 4.1.2
@@ -7708,6 +7711,11 @@ packages:
     dependencies:
       semver: 7.6.3
     dev: true
+
+  /bwip-js@4.5.1:
+    resolution: {integrity: sha512-83yQCKiIftz5YonnsTh6wIkFoHHWl+B/XaGWD1UdRw7aB6XP9JtyYP9n8sRy3m5rzL+Ch/RUPnu28UW0RrPZUA==}
+    hasBin: true
+    dev: false
 
   /bytes.js@0.0.2:
     resolution: {integrity: sha512-KrLm4hv5Qs9w6b0U7h1bCdqxrsf+e9QMsfHeyQFzAz94x/5Aqa+FTEUSNBtt5d2VuV3Hfiea3c4ti74RZDDYkg==}

@@ -247,7 +247,6 @@ declare module '@vue/runtime-core' {
     NCode: typeof import('naive-ui')['NCode']
     NCollapseTransition: typeof import('naive-ui')['NCollapseTransition']
     NConfigProvider: typeof import('naive-ui')['NConfigProvider']
-    NDivider: typeof import('naive-ui')['NDivider']
     NEllipsis: typeof import('naive-ui')['NEllipsis']
     NginxFormatter: typeof import('./src/tools/nginx-formatter/nginx-formatter.vue')['default']
     NH1: typeof import('naive-ui')['NH1']

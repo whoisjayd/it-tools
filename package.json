@@ -76,6 +76,7 @@
     "apache-md5": "^1.1.8",
     "arr-diff": "^4.0.0",
     "bcryptjs": "^2.4.3",
+    "bwip-js": "^4.5.1",
     "big.js": "^6.2.2",
     "change-case": "^4.1.2",
     "chatgpt-prompt-splitter": "^1.0.5",
