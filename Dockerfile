@@ -4,6 +4,9 @@ FROM node:lts-alpine AS build-stage
 ENV NPM_CONFIG_LOGLEVEL warn
 ENV CI true
 
+RUN apk add --update python3 make g++\
+   && rm -rf /var/cache/apk/*
+
 WORKDIR /app
 COPY package.json pnpm-lock.yaml ./
 RUN npm install -g pnpm && pnpm i --frozen-lockfile
