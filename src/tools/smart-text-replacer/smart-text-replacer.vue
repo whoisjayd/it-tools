@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/no-side-effects-in-computed-properties -->
 <script setup lang="ts">
 import { useCopy } from '@/composable/copy';
 

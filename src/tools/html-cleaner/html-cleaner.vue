@@ -16,8 +16,7 @@ const outputHtml = computed(() => {
       FORBID_TAGS: ['form', 'span'],
       ALLOW_DATA_ATTR: false,
       ALLOW_ARIA_ATTR: false,
-      RETURN_DOM: true,
-    }).outerHTML;
+    });
   return beautify.html(cleanedHtml, {
     unformatted: ['code', 'pre', 'em', 'strong', 'span'],
     indent_inner_html: true,

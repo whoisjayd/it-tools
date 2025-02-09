@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/no-side-effects-in-computed-properties -->
 <script setup lang="ts">
 import { mergeCidr, parseCidr } from 'cidr-tools';
 import { isIP, isIPv6 } from 'is-ip';

@@ -1,5 +1,5 @@
+/* eslint-disable no-restricted-globals */
 import { describe, expect, it } from 'vitest';
-import { getKeyOrCertificateInfosAsync } from './certificate-key-parser.service';
 
 const encryptedPrivateKey = /* NOSONAR */ `-----BEGIN ENCRYPTED PRIVATE KEY-----
 MIIFHzBJBgkqhkiG9w0BBQ0wPDAbBgkqhkiG9w0BBQwwDgQILjmiBkdY16UCAggA
@@ -188,7 +188,13 @@ c6:b9:73:b8:68:49:33:ad:27:51:bb:6c:16:e7:9c:da:dd:e3:92:15
   },
 ];
 
-describe('certificate-key-parser', () => {
+describe('certificate-key-parser', async () => {
+  const textEncoding = await import('text-encoding-utf-8');
+  global.TextEncoder = textEncoding.TextEncoder as never;
+  global.TextDecoder = textEncoding.TextDecoder as never;
+
+  const { getKeyOrCertificateInfosAsync } = await import('./certificate-key-parser.service');
+
   for (const format of formatsData) {
     const { input, pass, type, title } = format;
     it(`Parse '${title ?? type}' format with right type (${type})`, async () => {
