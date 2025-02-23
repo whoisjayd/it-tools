@@ -1,3 +1,7 @@
+## BREAKING CHANGE for Docker Image
+
+Since *Docker base image* is now `nginx-unpriviledged`, docker image now listen to **8080** and no more 80. So you need to update your port mapping, ie from `8080:80` to `8080:8080`.
+
 ### Check out these change here: <https://sharevb-it-tools.vercel.app/>
 
 You can use my image in your docker-compose file if you want an update to date version of it-tools (with my PR and some of others) until the main branch has been updated.
@@ -15,7 +19,7 @@ Almost [all tools PR of it-tools](https://github.com/sharevb/it-tools/pulls).
 According to https://github.com/sharevb/it-tools/pull/461#issuecomment-1602506049:
 ```
 docker build -t it-tools --build-arg BASE_URL="/my-folder/" .
-docker run -d --name it-tools --restart unless-stopped -p 8080:80 it-tools
+docker run -d --name it-tools --restart unless-stopped -p 8080:8080 it-tools
 ```
 
 ## Use in Docker Compose file
@@ -28,7 +32,7 @@ services:
     pull_policy: always
     restart: unless-stopped
     ports:
-      - 8080:80
+      - 8080:8080
 ```
 
 ## Installation methods
@@ -62,13 +66,13 @@ Self host solutions for your homelab
 **From docker hub:**
 
 ```sh
-docker run -d --name it-tools --restart unless-stopped -p 8080:80 corentinth/it-tools:latest
+docker run -d --name it-tools --restart unless-stopped -p 8080:8080 corentinth/it-tools:latest
 ```
 
 **From github packages:**
 
 ```sh
-docker run -d --name it-tools --restart unless-stopped -p 8080:80 ghcr.io/corentinth/it-tools:latest
+docker run -d --name it-tools --restart unless-stopped -p 8080:8080 ghcr.io/corentinth/it-tools:latest
 ```
 
 **Other solutions:**
