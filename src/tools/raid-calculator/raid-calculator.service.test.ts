@@ -83,6 +83,31 @@ describe('raid-calculator', () => {
       });
     });
 
+    describe('RAID 7', () => {
+      it('should validate correctly (num >= 5)', () => {
+        expect(raidCalculations.raid_7.validate(5, 0, 0)).toBe(true);
+        expect(raidCalculations.raid_7.validate(4, 0, 0)).toBe(false);
+      });
+
+      it('should calculate capacity correctly', () => {
+        expect(raidCalculations.raid_7.capacity(5, 500, 0, 1)).toBe(1000);
+        expect(raidCalculations.raid_7.capacity(6, 500, 0, 1)).toBe(1500);
+        expect(raidCalculations.raid_7.capacity(7, 500, 0, 1)).toBe(2000);
+      });
+
+      it('should calculate efficiency correctly', () => {
+        expect(raidCalculations.raid_7.efficiency(5, 0)).toBe(40);
+        expect(raidCalculations.raid_7.efficiency(6, 0)).toBe(50);
+        expect(raidCalculations.raid_7.efficiency(7, 0)).toBe(57.14285714285714);
+      });
+
+      it('should have fault tolerance for 3 drive failures', () => {
+        expect(raidCalculations.raid_7.fault(5, 500, 1)).toBe('3 drive failures');
+        expect(raidCalculations.raid_7.fault(6, 500, 1)).toBe('3 drive failures');
+        expect(raidCalculations.raid_7.fault(7, 500, 1)).toBe('3 drive failures');
+      });
+    });
+
     describe('RAID 10', () => {
       it('should validate correctly (num >= 4 and even)', () => {
         expect(raidCalculations.raid_10.validate(4, 0, 0)).toBe(true);
@@ -143,6 +168,33 @@ describe('raid-calculator', () => {
 
       it('should have fault tolerance for 2 drive failures per RAID 6 set', () => {
         expect(raidCalculations.raid_60.fault(8, 500, 1)).toBe('2 drive failures per RAID 6 set');
+      });
+    });
+
+    describe('RAID 70', () => {
+      it('should validate correctly (num >= 10 and stripeSize >= 5)', () => {
+        expect(raidCalculations.raid_70.validate(10, 0, 5)).toBe(true);
+        expect(raidCalculations.raid_70.validate(9, 0, 5)).toBe(false);
+        expect(raidCalculations.raid_70.validate(10, 0, 4)).toBe(false);
+        expect(raidCalculations.raid_70.validate(10, 0, 6)).toBe(false);
+      });
+
+      it('should calculate capacity correctly', () => {
+        expect(raidCalculations.raid_70.capacity(10, 500, 5, 1)).toBe(2000);
+        expect(raidCalculations.raid_70.capacity(15, 500, 5, 1)).toBe(3000);
+        expect(raidCalculations.raid_70.capacity(20, 500, 5, 1)).toBe(4000);
+      });
+
+      it('should calculate efficiency correctly', () => {
+        expect(raidCalculations.raid_70.efficiency(10, 5)).toBe(40);
+        expect(raidCalculations.raid_70.efficiency(15, 5)).toBe(40);
+        expect(raidCalculations.raid_70.efficiency(20, 5)).toBe(40);
+      });
+
+      it('should have fault tolerance for 3 drive failures', () => {
+        expect(raidCalculations.raid_70.fault(10, 500, 1)).toBe('3 drive failures per RAID 7 set');
+        expect(raidCalculations.raid_70.fault(15, 500, 1)).toBe('3 drive failures per RAID 7 set');
+        expect(raidCalculations.raid_70.fault(20, 500, 1)).toBe('3 drive failures per RAID 7 set');
       });
     });
   });
