@@ -1,4 +1,5 @@
 import { parseExpression } from 'cron-parser';
+import cronstrue from 'cronstrue';
 import EventCronParser from 'event-cron-parser';
 
 export type CronType = 'standard' | 'aws';
@@ -32,6 +33,7 @@ export function isCronValid(cronExpression: string, cronType: CronType | 'any' =
 export function getCronType(cronExpression: string) {
   try {
     parseExpression(cronExpression);
+    cronstrue.toString(cronExpression, { throwExceptionOnParseError: true });
     return 'standard';
   }
   catch (_) {

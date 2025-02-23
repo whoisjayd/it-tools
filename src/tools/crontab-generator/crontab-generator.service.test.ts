@@ -33,6 +33,7 @@ describe('crontab-generator', () => {
     it('should return false for all invalid formats', () => {
       expect(isCronValid('aert')).toBe(false);
       expect(isCronValid('40 *')).toBe(false);
+      expect(isCronValid('* * * *')).toBe(false);
     });
   });
 
