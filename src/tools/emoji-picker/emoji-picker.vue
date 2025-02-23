@@ -24,6 +24,7 @@ const emojisGroups: { emojiInfos: EmojiInfo[]; group: string }[] = _
   .map((emojiInfos, group) => ({ group, emojiInfos }))
   .value();
 
+const limit = ref(100);
 const searchQuery = useDebouncedRef('', 500);
 
 const { searchResult } = useFuzzySearch({
@@ -35,21 +36,24 @@ const { searchResult } = useFuzzySearch({
     useExtendedSearch: true,
     isCaseSensitive: false,
   },
+  limit: limit.value,
 });
 </script>
 
 <template>
   <div mx-auto max-w-2400px important:flex-1>
-    <div flex items-center gap-3>
+    <div mx-auto max-w-600px flex justify-center gap-3>
       <c-input-text
         v-model:value="searchQuery"
         placeholder="Search emojis (e.g. 'smile')..."
-        mx-auto max-w-600px
       >
         <template #prefix>
           <icon-mdi-search mr-6px color-black op-70 dark:color-white />
         </template>
       </c-input-text>
+      <n-form-item label="Max results:" label-placement="left">
+        <n-input-number v-model:value="limit" :min="1" />
+      </n-form-item>
     </div>
 
     <div v-if="searchQuery.trim().length > 0">

@@ -8,10 +8,12 @@ function useFuzzySearch<Data>({
   search,
   data,
   options = {},
+  limit = -1,
 }: {
   search: MaybeRef<string>
   data: Data[]
   options?: IFuseOptions<Data> & { filterEmpty?: boolean }
+  limit?: number
 }) {
   const fuse = new Fuse(data, options);
   const filterEmpty = options.filterEmpty ?? true;
@@ -23,7 +25,7 @@ function useFuzzySearch<Data>({
       return data;
     }
 
-    return fuse.search(query).map(({ item }) => item);
+    return fuse.search(query, { limit }).map(({ item }) => item);
   });
 
   return { searchResult };

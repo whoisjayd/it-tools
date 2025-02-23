@@ -14,6 +14,7 @@ const countriesSearchData = Object.entries(CountriesDB.getAllCountries()).map(([
     info,
   };
 });
+const limit = ref(100);
 const { searchResult } = useFuzzySearch({
   search: searchQuery,
   data: countriesSearchData,
@@ -23,6 +24,7 @@ const { searchResult } = useFuzzySearch({
     isCaseSensitive: false,
     useExtendedSearch: true,
   },
+  limit: limit.value,
 });
 
 function langToName(code: string) {
@@ -36,16 +38,18 @@ function langToName(code: string) {
 
 <template>
   <div mx-auto max-w-2400px important:flex-1>
-    <div flex items-center gap-3>
+    <div mx-auto max-w-600px flex justify-center gap-3>
       <c-input-text
         v-model:value="searchQuery"
         placeholder="Search Countries by name, iso2, iso3..."
-        mx-auto max-w-600px
       >
         <template #prefix>
           <icon-mdi-search mr-6px color-black op-70 dark:color-white />
         </template>
       </c-input-text>
+      <n-form-item label="Max results:" label-placement="left">
+        <n-input-number v-model:value="limit" :min="1" />
+      </n-form-item>
     </div>
 
     <div v-if="searchQuery.trim().length > 0">

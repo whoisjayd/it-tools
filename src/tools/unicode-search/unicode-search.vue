@@ -39,6 +39,7 @@ const unicodeSearchData = [...unicodeNames].map(([codePoint, characterName]) => 
   };
 });
 
+const limit = ref(100);
 const { searchResult } = useFuzzySearch({
   search: parsedSearchQuery,
   data: unicodeSearchData,
@@ -49,21 +50,24 @@ const { searchResult } = useFuzzySearch({
     minMatchCharLength: 3,
     useExtendedSearch: true,
   },
+  limit: limit.value,
 });
 </script>
 
 <template>
   <div mx-auto max-w-2400px important:flex-1>
-    <div flex items-center gap-3>
+    <div mx-auto max-w-600px flex justify-center gap-3>
       <c-input-text
         v-model:value="searchQuery"
         placeholder="Search Unicode by name (e.g. 'zero width') or code point..."
-        mx-auto max-w-600px
       >
         <template #prefix>
           <icon-mdi-search mr-6px color-black op-70 dark:color-white />
         </template>
       </c-input-text>
+      <n-form-item label="Max results:" label-placement="left">
+        <n-input-number v-model:value="limit" :min="1" />
+      </n-form-item>
     </div>
 
     <div v-if="searchQuery.trim().length > 0">
