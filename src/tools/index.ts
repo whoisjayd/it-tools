@@ -510,9 +510,7 @@ export const toolsByCategory: ToolCategory[] = [
       dataTransferRateConverter,
       dataStorageUnitConverter,
       ttlCalculator,
-      percentageCalculator,
       angleConverter,
-      percentageCalculator,
     ],
   },
   {
