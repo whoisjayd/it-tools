@@ -77,13 +77,24 @@ export async function getKeyOrCertificateInfosAsync(keyOrCertificateValue: strin
         certificateX509DER = Base64.fromUint8Array(cert.toBuffer('x509'));
       }
       catch {}
+      let forgeCertificate: forge.pki.Certificate | null = null;
+      try {
+        forgeCertificate = forge.pki.certificateFromPem(inputKeyOrCertificateValue?.toString(), false, false);
+      }
+      catch {}
+      if (!forgeCertificate) {
+        try {
+          forgeCertificate = forge.pki.certificateFromAsn1(inputKeyOrCertificateValue as never, false);
+        }
+        catch {}
+      }
 
-      return { values: getCertificateLabelValues(cert), certificateX509DER };
+      return { values: getCertificateLabelValues(cert, forgeCertificate), certificateX509DER };
     }
 
     const csr = canParse(inputKeyOrCertificateValue, (value) => {
       return forge.pki.certificationRequestFromPem(value.toString(), false, false);
-    }) as forge.pki.Certificate;
+    }) as forge.pki.CertificateSigningRequest;
     if (csr) {
       return { values: getCSRLabelValues(csr) };
     }

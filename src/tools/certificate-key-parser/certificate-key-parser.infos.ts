@@ -102,7 +102,7 @@ export function getPrivateKeyLabelValues(privateKey: PrivateKey) {
   ] as LabelValue[];
 }
 
-export function getCertificateLabelValues(cert: Certificate) {
+export function getCertificateLabelValues(cert: Certificate, forgeCertificate: forge.pki.Certificate | null) {
   return [
     {
       label: 'Type:',
@@ -162,12 +162,21 @@ export function getCertificateLabelValues(cert: Certificate) {
       value: cert.purposes?.join(', '),
     },
     {
-      label: 'Extensions:',
+      label: 'Extensions (parsed):',
       value: JSON.stringify(cert.getExtensions().map(ext => ({
         oid: (<any>ext).oid,
         name: (<any>ext).name || (<any>oids)[(<any>ext).oid],
         critical: (<any>ext).critical,
         data: ext.data?.toString('hex') || (<any>ext).bits?.toString('hex'),
+      })), null, 2),
+      multiline: true,
+    },
+    {
+      label: 'Extensions (raw):',
+      value: JSON.stringify(forgeCertificate?.extensions.map(ext => ({
+        id: (<any>ext).id,
+        name: (<any>ext).id || (<any>oids)[(<any>ext).id],
+        ...ext,
       })), null, 2),
       multiline: true,
     },
@@ -260,7 +269,7 @@ export async function getPGPPrivateKeyLabelValuesAsync(pgpPrivateKey: openpgp.Ke
   ] as LabelValue[];
 }
 
-export function getCSRLabelValues(csr: forge.pki.Certificate) {
+export function getCSRLabelValues(csr: forge.pki.CertificateSigningRequest) {
   return [
     {
       label: 'Type:',
@@ -271,18 +280,14 @@ export function getCSRLabelValues(csr: forge.pki.Certificate) {
       value: csr.subject?.attributes?.map(a => JSON.stringify(a, null, 2)).join('\n'),
       multiline: true,
     },
-    {
-      label: 'Issuer:',
-      value: csr.issuer?.toString(),
-      multiline: true,
-    },
-    {
-      label: 'Validity:',
-      value: JSON.stringify(csr.validity, null, 2),
-    },
+    // {
+    //   label: 'Request Info:',
+    //   value: JSON.stringify(csr.certificationRequestInfo, null, 2),
+    //   multiline: true,
+    // },
     {
       label: 'Signature:',
-      value: csr.signature,
+      value: csr.signature?.toString('hex'),
     },
     {
       label: 'Signature Oid:',
@@ -297,22 +302,18 @@ export function getCSRLabelValues(csr: forge.pki.Certificate) {
       value: JSON.stringify(csr.siginfo, null, 2),
     },
     {
-      label: 'Serial:',
-      value: csr.serialNumber?.toString(),
-    },
-    {
       label: 'Extensions:',
-      value: JSON.stringify(csr.extensions, null, 2),
+      value: JSON.stringify(csr.attributes, null, 2),
       multiline: true,
     },
     {
       label: 'Public Key:',
-      value: onErrorReturnErrorMessage(() => forge.pki.publicKeyToPem(csr.publicKey)),
+      value: onErrorReturnErrorMessage(() => forge.pki.publicKeyToPem(csr.publicKey as never)),
       multiline: true,
     },
     {
       label: 'Public Key Fingerprint:',
-      value: onErrorReturnErrorMessage(() => forge.pki.getPublicKeyFingerprint(csr.publicKey)?.toHex()),
+      value: onErrorReturnErrorMessage(() => forge.pki.getPublicKeyFingerprint(csr.publicKey as never)?.toHex()),
       multiline: true,
     },
   ] as LabelValue[];
