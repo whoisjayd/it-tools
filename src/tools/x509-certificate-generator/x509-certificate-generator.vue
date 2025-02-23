@@ -24,6 +24,7 @@ const city = ref('Paris');
 const state = ref('FR');
 const country = ref('France');
 const contactEmail = ref('');
+const subjectAlternativeNames = ref('');
 const emptyCSR = { certificatePem: '', privateKeyPem: '', publicKeyPem: '', fingerprint: '' };
 
 const [certs, refreshCerts] = computedRefreshableAsync(
@@ -41,6 +42,7 @@ const [certs, refreshCerts] = computedRefreshableAsync(
       organizationName: organizationName.value,
       organizationalUnit: organizationalUnit.value,
       contactEmail: contactEmail.value,
+      subjectAlternativeNames: subjectAlternativeNames.value,
       days: days.value,
     });
   },
@@ -151,6 +153,19 @@ const [certs, refreshCerts] = computedRefreshableAsync(
 
     <div>
       <n-form-item
+        label="Subject Alternative Names:"
+        label-placement="top"
+      >
+        <n-input
+          v-model:value="subjectAlternativeNames"
+          placeholder="DNS Names, emails, IP, URI..."
+          type="textarea"
+        />
+      </n-form-item>
+    </div>
+
+    <div>
+      <n-form-item
         label="Private Key passphrase:"
         label-placement="top"
       >
@@ -174,22 +189,22 @@ const [certs, refreshCerts] = computedRefreshableAsync(
     <div v-if="commonNameValidation.isValid">
       <div>
         <h3>Certificate (PEM)</h3>
-        <TextareaCopyable :value="certs.certificatePem" />
+        <TextareaCopyable :value="certs.certificatePem" :download-file-name="`${organizationName}.crt`" />
       </div>
 
       <div>
         <h3>Fingerprint:</h3>
-        <TextareaCopyable :value="certs.fingerprint" :word-wrap="true" />
+        <TextareaCopyable :value="certs.fingerprint" word-wrap />
       </div>
 
       <div>
         <h3>Public key</h3>
-        <TextareaCopyable :value="certs.publicKeyPem" :word-wrap="true" />
+        <TextareaCopyable :value="certs.publicKeyPem" word-wrap :download-file-name="`${organizationName}.pem`" />
       </div>
 
       <div>
         <h3>Private key</h3>
-        <TextareaCopyable :value="certs.privateKeyPem" />
+        <TextareaCopyable :value="certs.privateKeyPem" :download-file-name="`${organizationName}.key`" />
       </div>
     </div>
   </div>

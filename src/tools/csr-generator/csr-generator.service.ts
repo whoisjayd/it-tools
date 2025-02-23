@@ -1,22 +1,7 @@
 import { pki } from 'node-forge';
-import workerScript from 'node-forge/dist/prime.worker.min?url';
+import { generateRSAPairs, getSubjectAlternativeNames } from '@/utils/crypto';
 
-export { generateCSR };
-
-function generateRSAPairs({ bits = 2048 }) {
-  return new Promise<pki.rsa.KeyPair>((resolve, reject) =>
-    pki.rsa.generateKeyPair({ bits, workerScript }, (err, keyPair) => {
-      if (err) {
-        reject(err);
-        return;
-      }
-
-      resolve(keyPair);
-    }),
-  );
-}
-
-async function generateCSR(config: {
+export async function generateCSR(config: {
   bits?: number
   password?: string
   commonName?: string
@@ -25,6 +10,7 @@ async function generateCSR(config: {
   state?: string
   organizationName?: string
   organizationalUnit?: string
+  subjectAlternativeNames?: string
   contactEmail?: string
 } = {}): Promise<{
   publicKeyPem: string
@@ -58,6 +44,18 @@ async function generateCSR(config: {
     name: 'emailAddress',
     value: config.contactEmail,
   }].filter(attr => attr.value !== null && attr.value?.trim() !== ''));
+
+  const extensions = [];
+  const sanExtension = getSubjectAlternativeNames(config.subjectAlternativeNames);
+  if (sanExtension) {
+    extensions.push(sanExtension);
+  }
+  if (extensions.length) {
+    csr.setAttributes([{
+      name: 'extensionRequest',
+      extensions,
+    }]);
+  }
 
   // sign certification request
   csr.sign(privateKey);

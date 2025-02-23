@@ -23,6 +23,7 @@ const city = ref('Paris');
 const state = ref('FR');
 const country = ref('France');
 const contactEmail = ref('');
+const subjectAlternativeNames = ref('');
 const emptyCSR = { csrPem: '', privateKeyPem: '', publicKeyPem: '' };
 
 const [certs, refreshCerts] = computedRefreshableAsync(
@@ -39,6 +40,7 @@ const [certs, refreshCerts] = computedRefreshableAsync(
       state: state.value,
       organizationName: organizationName.value,
       organizationalUnit: organizationalUnit.value,
+      subjectAlternativeNames: subjectAlternativeNames.value,
       contactEmail: contactEmail.value,
     });
   },
@@ -136,6 +138,19 @@ const [certs, refreshCerts] = computedRefreshableAsync(
 
     <div>
       <n-form-item
+        label="Subject Alternative Names:"
+        label-placement="top"
+      >
+        <n-input
+          v-model:value="subjectAlternativeNames"
+          placeholder="DNS Names, emails, IP, URI..."
+          type="textarea"
+        />
+      </n-form-item>
+    </div>
+
+    <div>
+      <n-form-item
         label="Private Key passphrase:"
         label-placement="top"
       >
@@ -159,17 +174,17 @@ const [certs, refreshCerts] = computedRefreshableAsync(
     <div v-if="commonNameValidation.isValid">
       <div>
         <h3>Certificate Signing Request</h3>
-        <TextareaCopyable :value="certs.csrPem" />
+        <TextareaCopyable :value="certs.csrPem" :download-file-name="`${organizationName}.csr`" />
       </div>
 
       <div>
         <h3>Public key</h3>
-        <TextareaCopyable :value="certs.publicKeyPem" :word-wrap="true" />
+        <TextareaCopyable :value="certs.publicKeyPem" word-wrap :download-file-name="`${organizationName}.pem`" />
       </div>
 
       <div>
         <h3>Private key</h3>
-        <TextareaCopyable :value="certs.privateKeyPem" />
+        <TextareaCopyable :value="certs.privateKeyPem" :download-file-name="`${organizationName}.key`" />
       </div>
     </div>
   </div>

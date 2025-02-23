@@ -1,36 +1,7 @@
 import { asn1, md, pki, random, util } from 'node-forge';
-import workerScript from 'node-forge/dist/prime.worker.min?url';
+import { generateRSAPairs, getSubjectAlternativeNames, toPositiveHex } from '@/utils/crypto';
 
-export { generateSSLCertificate };
-
-function generateRSAPairs({ bits = 2048 }) {
-  return new Promise<pki.rsa.KeyPair>((resolve, reject) =>
-    pki.rsa.generateKeyPair({ bits, workerScript }, (err, keyPair) => {
-      if (err) {
-        reject(err);
-        return;
-      }
-
-      resolve(keyPair);
-    }),
-  );
-}
-
-// a hexString is considered negative if it's most significant bit is 1
-// because serial numbers use ones' complement notation
-// this RFC in section 4.1.2.2 requires serial numbers to be positive
-// http://www.ietf.org/rfc/rfc5280.txt
-function toPositiveHex(hexString: string) {
-  let mostSiginficativeHexAsInt = Number.parseInt(hexString[0], 16);
-  if (mostSiginficativeHexAsInt < 8) {
-    return hexString;
-  }
-
-  mostSiginficativeHexAsInt -= 8;
-  return mostSiginficativeHexAsInt.toString() + hexString.substring(1);
-}
-
-async function generateSSLCertificate(config: {
+export async function generateSSLCertificate(config: {
   bits?: number
   password?: string
   commonName?: string
@@ -40,6 +11,7 @@ async function generateSSLCertificate(config: {
   organizationName?: string
   organizationalUnit?: string
   contactEmail?: string
+  subjectAlternativeNames?: string
   days?: number
 } = {}): Promise<{
   fingerprint: string
@@ -83,19 +55,28 @@ async function generateSSLCertificate(config: {
   cert.setSubject(attrs);
   cert.setIssuer(attrs);
 
-  cert.publicKey = publicKey;
+  const extensions: any[] = [
+    {
+      name: 'basicConstraints',
+      cA: true,
+    },
+    {
+      name: 'keyUsage',
+      keyCertSign: true,
+      digitalSignature: true,
+      nonRepudiation: true,
+      keyEncipherment: true,
+      dataEncipherment: true,
+    }];
+  const sanExtension = getSubjectAlternativeNames(config.subjectAlternativeNames);
+  if (sanExtension) {
+    extensions.push(sanExtension);
+  }
+  if (extensions.length) {
+    cert.setExtensions(extensions);
+  }
 
-  cert.setExtensions([{
-    name: 'basicConstraints',
-    cA: true,
-  }, {
-    name: 'keyUsage',
-    keyCertSign: true,
-    digitalSignature: true,
-    nonRepudiation: true,
-    keyEncipherment: true,
-    dataEncipherment: true,
-  }]);
+  cert.publicKey = publicKey;
 
   cert.sign(privateKey);
 
