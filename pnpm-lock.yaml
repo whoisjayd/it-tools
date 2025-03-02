@@ -35,6 +35,9 @@ dependencies:
   '@kenjiuno/msgreader':
     specifier: ^1.22.0
     version: 1.22.0
+  '@mdit/plugin-align':
+    specifier: ^0.16.0
+    version: 0.16.0(markdown-it@14.1.0)
   '@regexper/render':
     specifier: ^1.0.0
     version: 1.0.0
@@ -419,6 +422,18 @@ dependencies:
   markdown-it:
     specifier: ^14.1.0
     version: 14.1.0
+  markdown-it-mark:
+    specifier: ^4.0.0
+    version: 4.0.0
+  markdown-it-sanitizer:
+    specifier: ^0.4.3
+    version: 0.4.3
+  markdown-it-sub:
+    specifier: ^2.0.0
+    version: 2.0.0
+  markdown-it-sup:
+    specifier: ^2.0.0
+    version: 2.0.0
   marked:
     specifier: ^10.0.0
     version: 10.0.0
@@ -4660,6 +4675,33 @@ packages:
     resolution: {integrity: sha512-mrC4y8n88BYvgcgzq9bvTlDgFyi2zuvzmPilRvRc3Uz1iIvq8mDhxJ0rHKFUNzPEScpDvJdIujqiDrulMqiudA==}
     dev: true
 
+  /@mdit/plugin-align@0.16.0(markdown-it@14.1.0):
+    resolution: {integrity: sha512-BJhOjX4Zobs+ZKEpDtxGrUCnppkFCTGIBLjXkCPmxeLf4Tsh7dqv5vVhbRueSOz/EIzc2RJzR0dlMLofsaCFeA==}
+    engines: {node: '>= 18'}
+    peerDependencies:
+      markdown-it: ^14.1.0
+    peerDependenciesMeta:
+      markdown-it:
+        optional: true
+    dependencies:
+      '@mdit/plugin-container': 0.16.0(markdown-it@14.1.0)
+      '@types/markdown-it': 14.1.2
+      markdown-it: 14.1.0
+    dev: false
+
+  /@mdit/plugin-container@0.16.0(markdown-it@14.1.0):
+    resolution: {integrity: sha512-NCsyEiOmoJvXSEVJSY6vaEcvbE11sciRSx5qXBvQQZxUYGYsB+ObYSFVZDFPezsEN35X3b07rurLx8P2Mi9DgQ==}
+    engines: {node: '>= 18'}
+    peerDependencies:
+      markdown-it: ^14.1.0
+    peerDependenciesMeta:
+      markdown-it:
+        optional: true
+    dependencies:
+      '@types/markdown-it': 14.1.2
+      markdown-it: 14.1.0
+    dev: false
+
   /@mixmark-io/domino@2.2.0:
     resolution: {integrity: sha512-Y28PR25bHXUg88kCV7nivXrP2Nj2RueZ3/l/jdx6J9f8J4nsEGcgX0Qe6lt7Pa+J79+kPiJU3LguR6O/6zrLOw==}
     dev: false
@@ -6243,7 +6285,7 @@ packages:
     dependencies:
       '@unhead/dom': 0.5.1
       '@unhead/schema': 0.5.1
-      '@vueuse/shared': 12.5.0(typescript@5.2.2)
+      '@vueuse/shared': 12.7.0(typescript@5.2.2)
       unhead: 0.5.1
       vue: 3.3.4
     transitivePeerDependencies:
@@ -6946,8 +6988,8 @@ packages:
       - vue
     dev: false
 
-  /@vueuse/shared@12.5.0(typescript@5.2.2):
-    resolution: {integrity: sha512-vMpcL1lStUU6O+kdj6YdHDixh0odjPAUM15uJ9f7MY781jcYkIwFA4iv2EfoIPO6vBmvutI1HxxAwmf0cx5ISQ==}
+  /@vueuse/shared@12.7.0(typescript@5.2.2):
+    resolution: {integrity: sha512-coLlUw2HHKsm7rPN6WqHJQr18WymN4wkA/3ThFaJ4v4gWGWAQQGK+MJxLuJTBs4mojQiazlVWAKNJNpUWGRkNw==}
     dependencies:
       vue: 3.5.13(typescript@5.2.2)
     transitivePeerDependencies:
@@ -12409,6 +12451,14 @@ packages:
       markdown-it: '*'
     dependencies:
       markdown-it: 14.1.0
+    dev: false
+
+  /markdown-it-mark@4.0.0:
+    resolution: {integrity: sha512-YLhzaOsU9THO/cal0lUjfMjrqSMPjjyjChYM7oyj4DnyaXEzA8gnW6cVJeyCrCVeyesrY2PlEdUYJSPFYL4Nkg==}
+    dev: false
+
+  /markdown-it-sanitizer@0.4.3:
+    resolution: {integrity: sha512-0Q2ua8+oDN7/3r5UXMnbVq8C+LRfT2pzVKA+h4nXTLEMBFQDwp7qJZOe7DkBa79C7V2cSBXJyScxJ7vYs9kE2w==}
     dev: false
 
   /markdown-it-sub@2.0.0:
