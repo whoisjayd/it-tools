@@ -121,7 +121,7 @@ export default defineConfig({
     minify: !process.env.VERCEL,
     // cssMinify: false,
     rollupOptions: {
-      external: ['node:fs/promises', 'regex', './out/isolated_vm', 'isolated-vm'],
+      external: ['regex', './out/isolated_vm', 'isolated-vm'],
       output: {
         format: 'es',
         manualChunks: (id) => {
