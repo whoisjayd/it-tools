@@ -362,9 +362,6 @@ dependencies:
   json-to-ts:
     specifier: ^1.7.0
     version: 1.7.0
-  json2csharp:
-    specifier: ^1.0.3
-    version: 1.0.3
   json5:
     specifier: ^2.2.3
     version: 2.2.3
@@ -6285,7 +6282,7 @@ packages:
     dependencies:
       '@unhead/dom': 0.5.1
       '@unhead/schema': 0.5.1
-      '@vueuse/shared': 12.7.0(typescript@5.2.2)
+      '@vueuse/shared': 12.8.2(typescript@5.2.2)
       unhead: 0.5.1
       vue: 3.3.4
     transitivePeerDependencies:
@@ -6988,8 +6985,8 @@ packages:
       - vue
     dev: false
 
-  /@vueuse/shared@12.7.0(typescript@5.2.2):
-    resolution: {integrity: sha512-coLlUw2HHKsm7rPN6WqHJQr18WymN4wkA/3ThFaJ4v4gWGWAQQGK+MJxLuJTBs4mojQiazlVWAKNJNpUWGRkNw==}
+  /@vueuse/shared@12.8.2(typescript@5.2.2):
+    resolution: {integrity: sha512-dznP38YzxZoNloI0qpEfpkms8knDtaoQ6Y/sfS0L7Yki4zh40LFHEhur0odJC6xTHG5dxWVPiUWBXn+wCG2s5w==}
     dependencies:
       vue: 3.5.13(typescript@5.2.2)
     transitivePeerDependencies:
@@ -11974,10 +11971,6 @@ packages:
       es7-shim: 6.0.0
       hash.js: 1.1.7
       pluralize: 3.1.0
-    dev: false
-
-  /json2csharp@1.0.3:
-    resolution: {integrity: sha512-hbe5csNMtvYf4neEDvYRWkJf8fgxeheuMAfhG80f2HIpeUMunPvv+4F2fS1PLpXbdzBp6EMQjZiocRvKhtahgg==}
     dev: false
 
   /json5@2.2.3:

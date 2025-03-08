@@ -24,6 +24,7 @@ import { tool as areaConverter } from './area-converter';
 import { tool as angleConverter } from './angle-converter';
 import { tool as floatingPointNumberConverter } from './floating-point-number-converter';
 import { tool as snowflakeIdExtractor } from './snowflake-id-extractor';
+import { tool as qrContactInfoGenerator } from './qr-contact-info-generator';
 import { tool as emailNormalizer } from './email-normalizer';
 import { tool as jwtGenerator } from './jwt-generator';
 import { tool as gptTokenEstimator } from './gpt-token-estimator';
@@ -392,6 +393,7 @@ export const toolsByCategory: ToolCategory[] = [
     components: [
       qrCodeGenerator,
       wifiQrCodeGenerator,
+      qrContactInfoGenerator,
       barcodeReader,
       barcodeGenerator,
       heicConverter,
