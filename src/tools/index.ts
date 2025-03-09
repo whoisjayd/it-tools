@@ -26,6 +26,7 @@ import { tool as floatingPointNumberConverter } from './floating-point-number-co
 import { tool as snowflakeIdExtractor } from './snowflake-id-extractor';
 import { tool as qrContactInfoGenerator } from './qr-contact-info-generator';
 import { tool as emailNormalizer } from './email-normalizer';
+import { tool as hexConverter } from './hex-converter';
 import { tool as sharepointDecoder } from './sharepoint-decoder';
 import { tool as jwtGenerator } from './jwt-generator';
 import { tool as gptTokenEstimator } from './gpt-token-estimator';
@@ -302,6 +303,7 @@ export const toolsByCategory: ToolCategory[] = [
       timezoneConverter,
       baseConverter,
       floatingPointNumberConverter,
+      hexConverter,
       romanNumeralConverter,
       base64StringConverter,
       base64FileConverter,
