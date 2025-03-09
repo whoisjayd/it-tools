@@ -277,6 +277,7 @@
     "@types/figlet": "^1.7.0",
     "@types/js-beautify": "^1.14.3",
     "@types/hex-array": "^1.0.2",
+    "@types/har-format": "^1.2.16",
     "@types/jsdom": "^21.1.7",
     "@types/jsonpath": "^0.2.4",
     "@types/libmime": "^5.0.3",
