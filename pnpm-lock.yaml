@@ -293,6 +293,12 @@ dependencies:
   highlight.js:
     specifier: ^11.11.1
     version: 11.11.1
+  hyparquet:
+    specifier: ^1.9.0
+    version: 1.9.0
+  hyparquet-compressors:
+    specifier: ^1.0.0
+    version: 1.0.0
   iarna-toml-esm:
     specifier: ^3.0.5
     version: 3.0.5
@@ -10536,6 +10542,10 @@ packages:
     hasBin: true
     dev: true
 
+  /fzstd@0.1.1:
+    resolution: {integrity: sha512-dkuVSOKKwh3eas5VkJy1AW1vFpet8TA/fGmVA5krThl8YcOVE/8ZIoEA1+U1vEn5ckxxhLirSdY837azmbaNHA==}
+    dev: false
+
   /generate-schema@2.6.0:
     resolution: {integrity: sha512-EUBKfJNzT8f91xUk5X5gKtnbdejZeE065UAJ3BCzE8VEbvwKI9Pm5jaWmqVeK1MYc1g5weAVFDTSJzN7ymtTqA==}
     hasBin: true
@@ -11169,6 +11179,21 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /hyparquet-compressors@1.0.0:
+    resolution: {integrity: sha512-cKueptWa8P9oXX3DMlLoHHXl4DWHvEJwXihb30vXJVJWMSrDsEK6v1v455vW1g3nF+b3THYWpRT3pi++YB4sOg==}
+    dependencies:
+      fzstd: 0.1.1
+      hysnappy: 1.0.0
+    dev: false
+
+  /hyparquet@1.9.0:
+    resolution: {integrity: sha512-StgrDzLnawgI+z01IP5u1yEpVexlgBSG6mnyeFngzEHw8z11rWW262yA5yGfhjVvgRoeUMZZQotCboz9WEWETg==}
+    dev: false
+
+  /hysnappy@1.0.0:
+    resolution: {integrity: sha512-MNrC4NfwDGPb889O6gIfEtbvEZCSWUsSEhsz4Oq2FRcpGtXHfeVz3KciSPp5Pnnz1NjFMgDQNfxdJozymJEDDA==}
+    dev: false
 
   /iarna-toml-esm@3.0.5:
     resolution: {integrity: sha512-CgeDbPohnFG827UoRaCqKxJ8idiIDZDWlcHf5hUReQnZ8jHnNnhN4QJFiY12fKvr0LvuDuKAimqQfrmQnacbtw==}

@@ -133,6 +133,8 @@
     "heic-convert": "^2.1.0",
     "hex-array": "^1.0.0",
     "highlight.js": "^11.11.1",
+    "hyparquet": "^1.9.0",
+    "hyparquet-compressors": "^1.0.0",
     "iarna-toml-esm": "^3.0.5",
     "ibantools": "^4.5.1",
     "ical-generator": "^8.1.1",

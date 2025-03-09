@@ -28,6 +28,7 @@ import { tool as floatingPointNumberConverter } from './floating-point-number-co
 import { tool as snowflakeIdExtractor } from './snowflake-id-extractor';
 import { tool as qrContactInfoGenerator } from './qr-contact-info-generator';
 import { tool as emailNormalizer } from './email-normalizer';
+import { tool as parquetsReader } from './parquets-reader';
 import { tool as fortuneWheel } from './fortune-wheel';
 import { tool as cardPicker } from './card-picker';
 import { tool as coinFlipper } from './coin-flipper';
@@ -463,6 +464,7 @@ export const toolsByCategory: ToolCategory[] = [
       nginxFormatter,
       regexTester,
       regexMemo,
+      parquetsReader,
       commonRegexMemo,
       stacktracePrettier,
       xpathTester,
