@@ -28,6 +28,10 @@ import { tool as floatingPointNumberConverter } from './floating-point-number-co
 import { tool as snowflakeIdExtractor } from './snowflake-id-extractor';
 import { tool as qrContactInfoGenerator } from './qr-contact-info-generator';
 import { tool as emailNormalizer } from './email-normalizer';
+import { tool as fortuneWheel } from './fortune-wheel';
+import { tool as cardPicker } from './card-picker';
+import { tool as coinFlipper } from './coin-flipper';
+import { tool as diceRoller } from './dice-roller';
 import { tool as hexConverter } from './hex-converter';
 import { tool as sharepointDecoder } from './sharepoint-decoder';
 import { tool as jwtGenerator } from './jwt-generator';
@@ -521,6 +525,10 @@ export const toolsByCategory: ToolCategory[] = [
       dataStorageUnitConverter,
       ttlCalculator,
       angleConverter,
+      diceRoller,
+      coinFlipper,
+      cardPicker,
+      fortuneWheel,
     ],
   },
   {
