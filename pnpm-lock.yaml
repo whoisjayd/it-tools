@@ -26,6 +26,9 @@ dependencies:
   '@huggingface/transformers':
     specifier: 3.0.0-alpha.14
     version: 3.0.0-alpha.14
+  '@iplookup/country-extra':
+    specifier: ^1.0.20250317
+    version: 1.0.20250317
   '@it-tools/bip39':
     specifier: ^0.0.4
     version: 0.0.4
@@ -3644,6 +3647,10 @@ packages:
       - rollup
       - supports-color
     dev: true
+
+  /@iplookup/country-extra@1.0.20250317:
+    resolution: {integrity: sha512-pKzMGz7oAX1GmFqLw8hLS4A66iouzY6Mjk5HoI0mVgFFnxYgmi2YZQHRuBMvUlFg40gMo7dWeCfMfxd5HSWeQg==}
+    dev: false
 
   /@isaacs/cliui@8.0.2:
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
