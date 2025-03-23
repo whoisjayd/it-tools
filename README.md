@@ -37,9 +37,11 @@ services:
 
 ## Installation methods
 
+Local installation required installing first: `python3 make g++`
+
 | Docker Image                            | Local Installation                                                                                                          |
 |-----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
-| <span title="triple click me!">`ghcr.io/sharevb/it-tools:latest`</span> | <span title="triple click me!">`git clone -b chore/all-my-stuffs https://github.com/sharevb/it-tools.git && cd it-tools/ && pnpm i && pnpm dev`</span> |
+| <span title="triple click me!">`ghcr.io/sharevb/it-tools:latest`</span> | <span title="triple click me!">`sudo apt-get install python3 make g++ && git clone -b chore/all-my-stuffs https://github.com/sharevb/it-tools.git && cd it-tools/ && pnpm i && pnpm dev`</span> |
 | replace your current image with this image | copy & paste oneliner (from github repo) |
 | You may need to clear cache and hard reload to get new features loading | Installing packages for the first time may take some time; please wait until it finishes |
 
