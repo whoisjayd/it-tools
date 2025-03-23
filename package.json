@@ -231,7 +231,7 @@
     "silly-password-generator": "^1.0.28",
     "slashes": "^3.0.12",
     "spdx-satisfies": "^5.0.1",
-    "sql-formatter": "^15.4.10",
+    "sql-formatter": "^15.5.1",
     "sshpk": "^1.18.0",
     "stringify-object": "^5.0.0",
     "svg2png-wasm": "^1.4.1",
