@@ -15,6 +15,8 @@ import { UTCDate } from '@date-fns/utc';
 import type { DateFormat, ToDateMapper } from './date-time-converter.types';
 import {
   dateToExcelFormat,
+  dateToLDAPTimestamp,
+  dateToWin32FileTime,
   excelFormatToDate,
   fromJSDate,
   fromTimestamp,
@@ -22,13 +24,17 @@ import {
   isISO8601DateTimeString,
   isISO9075DateString,
   isJSDate,
+  isLDAPTimestamp,
   isMongoObjectId,
   isRFC3339DateString,
   isRFC7231DateString,
   isTimestamp,
   isUTCDateString,
   isUnixTimestamp,
+  isWin32FileTime,
+  lDAPTimestampToDate,
   toJSDate,
+  win32FileTimeToUnix,
 } from './date-time-converter.models';
 import { withDefaultOnError } from '@/utils/defaults';
 import { useValidation } from '@/composable/validation';
@@ -109,6 +115,18 @@ const formats: DateFormat[] = [
     fromDate: date => toJSDate(date),
     toDate: date => fromJSDate(date),
     formatMatcher: isJSDate,
+  },
+  {
+    name: 'LDAP YMD Timestamp',
+    fromDate: date => dateToLDAPTimestamp(date),
+    toDate: date => lDAPTimestampToDate(date),
+    formatMatcher: isLDAPTimestamp,
+  },
+  {
+    name: 'Win32 FileTime/LDAP 18 digits Timestamp',
+    fromDate: date => dateToWin32FileTime(date),
+    toDate: date => win32FileTimeToUnix(date),
+    formatMatcher: isWin32FileTime,
   },
 ];
 

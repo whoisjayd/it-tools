@@ -428,6 +428,9 @@ dependencies:
   lodash.last:
     specifier: ^3.0.0
     version: 3.0.0
+  long:
+    specifier: ^5.3.1
+    version: 5.3.1
   lorem-ipsum-japanese:
     specifier: ^1.0.1
     version: 1.0.1
@@ -13045,8 +13048,8 @@ packages:
       is-unicode-supported: 0.1.0
     dev: true
 
-  /long@5.2.4:
-    resolution: {integrity: sha512-qtzLbJE8hq7VabR3mISmVGtoXP8KGc2Z/AT8OuqlYD7JTR3oqrgwdjnk07wpj1twXxYmgDXgoKVWUG/fReSzHg==}
+  /long@5.3.1:
+    resolution: {integrity: sha512-ka87Jz3gcx/I7Hal94xaN2tZEOPoUOEVftkQqZx2EeQRN7LGdfLlI3FvZ+7WDplm+vK2Urx9ULrvSowtdCieng==}
     dev: false
 
   /loose-envify@1.4.0:
@@ -14051,7 +14054,7 @@ packages:
     dependencies:
       flatbuffers: 1.12.0
       guid-typescript: 1.0.9
-      long: 5.2.4
+      long: 5.3.1
       onnxruntime-common: 1.20.0-dev.20240827-5d54dc1462
       platform: 1.3.6
       protobufjs: 7.4.0
@@ -14921,7 +14924,7 @@ packages:
       '@protobufjs/pool': 1.1.0
       '@protobufjs/utf8': 1.1.0
       '@types/node': 18.19.75
-      long: 5.2.4
+      long: 5.3.1
     dev: false
 
   /prr@1.0.1:

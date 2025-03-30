@@ -6,7 +6,7 @@ export const tool = defineTool({
   name: translate('tools.date-converter.title'),
   path: '/date-converter',
   description: translate('tools.date-converter.description'),
-  keywords: ['date', 'time', 'converter', 'iso', 'utc', 'unix', 'epoch', 'timezone', 'year', 'month', 'day', 'minute', 'seconde'],
+  keywords: ['date', 'time', 'converter', 'iso', 'utc', 'unix', 'epoch', 'timezone', 'year', 'month', 'day', 'minute', 'seconde', 'filetime', 'ldap', 'win32'],
   component: () => import('./date-time-converter.vue'),
   icon: Calendar,
   npmPackages: ['date-fns'],
