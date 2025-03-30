@@ -1,17 +1,26 @@
 <script setup lang="ts">
 import cards from '@younestouati/playing-cards-standard-deck';
+import { exhaustiveUniqueRandom } from 'unique-random';
 import { computedRefreshable } from '@/composable/computedRefreshable';
 import { useCopy } from '@/composable/copy';
 import { useQueryParamOrStorage } from '@/composable/queryParams';
-import { randIntFromInterval } from '@/utils/random';
 
-const cardKeys = Object.keys(cards);
+const cardKeys = [...Object.keys(cards).filter(k => k !== 'joker'), 'joker', 'joker'];
 type CardNames = keyof typeof cards;
 
 const numberOfCards = useQueryParamOrStorage({ name: 'cards', storageName: 'card-picker:n', defaultValue: 5 });
-const [cardPicked, refreshCardPicked] = computedRefreshable(() =>
-  Array.from({ length: numberOfCards.value },
-    () => cardKeys[randIntFromInterval(0, 51)]));
+const numberOfPacks = useQueryParamOrStorage({ name: 'packs', storageName: 'card-picker:p', defaultValue: 1 });
+const useJokers = useQueryParamOrStorage({ name: 'jokers', storageName: 'card-picker:j', defaultValue: true });
+const [cardPicked, refreshCardPicked] = computedRefreshable(() => {
+  let cardNumbers: number[] = [];
+  for (let pack = 0; pack < numberOfPacks.value; pack++) {
+    cardNumbers = [...cardNumbers, ...Array.from({ length: useJokers.value ? 54 : 52 }, (_, num) => num)];
+  }
+
+  const random = exhaustiveUniqueRandom(0, cardNumbers.length - 1);
+  return Array.from({ length: numberOfCards.value }, () => cardKeys[cardNumbers[random()]]);
+});
+const maxCards = computed(() => (useJokers.value ? 54 : 52) * numberOfPacks.value);
 
 const suitNames = {
   c: 'clubs (♣)',
@@ -40,16 +49,24 @@ const { copy } = useCopy({ source: cardPickedString, text: 'Cards Picked copied 
 
 <template>
   <c-card>
-    <div mb-2 flex justify-center>
+    <n-space justify="space-around" mb-1>
       <img v-for="(card, index) in cardPicked" :key="index" style="width:90px" mr-1 :src="`data:image/svg+xml;base64,${cards[card as CardNames]}`">
-    </div>
+    </n-space>
     <div mb-2>
       <textarea-copyable :value="cardPickedString" readonly mb-1 />
     </div>
     <div flex justify-center gap-3>
       <n-form-item label="Number of cards:" label-placement="left">
-        <n-input-number v-model:value="numberOfCards" min="1" placeholder="Width of the text" />
+        <n-input-number v-model:value="numberOfCards" min="1" :max="maxCards" placeholder="Number of cards to pick" />
       </n-form-item>
+      <n-form-item label="Number of packs:" label-placement="left">
+        <n-input-number v-model:value="numberOfPacks" min="1" placeholder="Number of card packs to pick in" />
+      </n-form-item>
+    </div>
+    <div mb-4 flex justify-center>
+      <n-checkbox v-model:checked="useJokers">
+        Use Jokers
+      </n-checkbox>
     </div>
     <div flex justify-center gap-3>
       <c-button @click="copy()">

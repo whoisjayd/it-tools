@@ -243,6 +243,7 @@
     "ua-parser-js": "^2.0.1",
     "ulid": "^2.3.0",
     "unicode-emoji-json": "^0.4.0",
+    "unique-random": "^4.0.0",
     "unplugin-auto-import": "^0.16.4",
     "utf8": "^3.0.0",
     "uuid": "^11.0.5",
