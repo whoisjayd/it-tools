@@ -267,6 +267,7 @@ import { tool as ipRangeToCidr } from './ip-range-to-cidr';
 import { tool as ipv6AddressConverter } from './ipv6-address-converter';
 import { tool as jsonToObject } from './json-to-object';
 import { tool as micTester } from './mic-tester';
+import { tool as mermaidPreviewer } from './mermaid-previewer';
 
 export const toolsByCategory: ToolCategory[] = [
   {
@@ -398,6 +399,7 @@ export const toolsByCategory: ToolCategory[] = [
       unicodeSearch,
       jsonEscaper,
       asciiTextDrawer,
+      mermaidPreviewer,
     ],
   },
   {

@@ -243,6 +243,7 @@ declare module '@vue/runtime-core' {
     MenuBarItem: typeof import('./src/tools/html-wysiwyg-editor/editor/menu-bar-item.vue')['default']
     MenuIconItem: typeof import('./src/components/MenuIconItem.vue')['default']
     MenuLayout: typeof import('./src/components/MenuLayout.vue')['default']
+    MermaidPreviewer: typeof import('./src/tools/mermaid-previewer/mermaid-previewer.vue')['default']
     MetaTagGenerator: typeof import('./src/tools/meta-tag-generator/meta-tag-generator.vue')['default']
     MicTester: typeof import('./src/tools/mic-tester/mic-tester.vue')['default']
     MimeConverter: typeof import('./src/tools/mime-converter/mime-converter.vue')['default']
