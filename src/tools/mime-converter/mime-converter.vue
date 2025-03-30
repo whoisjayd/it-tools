@@ -12,7 +12,7 @@ const encodedBOutput = computed(() => withDefaultOnError(() => libmime.encodeWor
 </script>
 
 <template>
-  <div style="max-width: 600px;">
+  <div>
     <c-card title="Encode string in Encoded-Word format">
       <c-input-text
         v-model:value="rawInput"

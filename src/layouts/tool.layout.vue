@@ -92,13 +92,13 @@ const themeVars = useThemeVars();
   overflow-x: auto;
 
   ::v-deep(& > *) {
-    flex: 0 1 600px;
+    flex: 0 1 1200px;
     min-width:0;
   }
 }
 
 .tool-layout {
-  max-width: 600px;
+  max-width: 1200px;
   margin: 0 auto;
   box-sizing: border-box;
 

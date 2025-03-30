@@ -27,7 +27,7 @@ const ssidValidation = useValidation({
 </script>
 
 <template>
-  <div style="max-width: 600px;">
+  <div>
     <c-card title="Wifi Infos" mb-2>
       <c-input-text
         v-model:value="ssid"

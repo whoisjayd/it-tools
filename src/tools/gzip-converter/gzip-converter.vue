@@ -17,7 +17,7 @@ const compressedZlibOutput = computed(() => withDefaultOnError(() => Base64.from
 </script>
 
 <template>
-  <div style="max-width: 600px;">
+  <div>
     <c-card title="Compress string" mb-5>
       <c-input-text
         v-model:value="rawInput"

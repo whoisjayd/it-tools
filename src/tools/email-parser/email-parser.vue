@@ -46,7 +46,7 @@ function onUpload(file: File) {
 </script>
 
 <template>
-  <div style="max-width: 600px;">
+  <div>
     <c-card title="Input" mb-2>
       <n-radio-group v-model:value="inputType" name="radiogroup" mb-2 flex justify-center>
         <n-space>

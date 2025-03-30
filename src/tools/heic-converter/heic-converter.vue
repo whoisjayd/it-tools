@@ -60,6 +60,7 @@ async function onFileUploaded(uploadedFile: File) {
       v-model:value="format"
       :options="formats"
       label="Output format"
+      max-w-600px
     />
 
     <div style="flex: 0 0 100%" mt-3>

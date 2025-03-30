@@ -28,7 +28,7 @@ const smartDecodedValue = computed(() => {
 </script>
 
 <template>
-  <div style="max-width: 600px;">
+  <div max-w-600px>
     <c-input-text
       v-model:value="rawValue"
       label="Smart Raw Value"

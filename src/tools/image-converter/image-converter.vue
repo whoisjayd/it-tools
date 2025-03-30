@@ -132,7 +132,7 @@ async function onFileUploaded(uploadedFile: File) {
 </script>
 
 <template>
-  <div>
+  <div max-w-800px>
     <h4>First, select output options:</h4>
 
     <c-select

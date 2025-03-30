@@ -32,7 +32,7 @@ const xmlValidation = useValidation({
 </script>
 
 <template>
-  <div style="max-width: 600px;">
+  <div>
     <c-card title="Input" mb-2>
       <c-input-text
         v-model:value="xpath"

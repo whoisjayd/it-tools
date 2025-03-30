@@ -56,7 +56,7 @@ async function onFileUploaded(uploadedFile: File) {
 </script>
 
 <template>
-  <c-card style="max-width: 600px;">
+  <c-card>
     <div style="flex: 0 0 100%">
       <div mx-auto max-w-600px>
         <c-file-upload

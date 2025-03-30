@@ -52,7 +52,7 @@ async function ocr(file: File) {
 </script>
 
 <template>
-  <div style="max-width: 600px;">
+  <div>
     <c-alert type="warning" mb-2>
       NB: processing is done in your browser, so be patient, processing can take a while
       <br>

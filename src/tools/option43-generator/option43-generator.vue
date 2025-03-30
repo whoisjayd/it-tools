@@ -33,7 +33,7 @@ const option43Infos = computed(() => getOption43Infos(ipAdresses.value, wifiVend
 </script>
 
 <template>
-  <div style="margin: 0 auto; max-width: 600px">
+  <div style="margin: 0 auto;">
     <c-card>
       <c-select
         v-model:value="wifiVendor"

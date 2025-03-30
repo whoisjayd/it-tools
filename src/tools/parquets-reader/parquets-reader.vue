@@ -40,7 +40,7 @@ function downloadCsv() {
 </script>
 
 <template>
-  <div style="max-width: 600px;">
+  <div>
     <c-card title="Input" mb-2>
       <c-file-upload
         title="Drag and drop Parquet file here, or click to select a file"

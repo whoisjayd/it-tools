@@ -6,7 +6,7 @@ const themeVars = useThemeVars();
 </script>
 
 <template>
-  <div max-w-600px>
+  <div max-w-1200px>
     <Memo style="overflow-x: auto;" />
   </div>
 </template>

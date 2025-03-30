@@ -66,7 +66,7 @@ async function onUpload(file: File) {
 </script>
 
 <template>
-  <div style="max-width: 600px;">
+  <div>
     <c-file-upload
       title="Drag and drop an image here, or click to select a file"
       :paste-image="true"

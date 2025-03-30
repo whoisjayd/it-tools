@@ -26,7 +26,7 @@ const MONACO_EDITOR_OPTIONS = {
 </script>
 
 <template>
-  <div max-w-600>
+  <div>
     <div style="flex: 0 0 100%">
       <div style="margin: 0 auto; max-width: 600px" flex justify-center gap-3>
         <n-form-item label="Sort keys :" label-placement="left" label-width="100">

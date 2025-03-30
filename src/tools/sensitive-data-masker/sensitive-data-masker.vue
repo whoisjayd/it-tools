@@ -33,7 +33,7 @@ function transformer(value: string) {
 </script>
 
 <template>
-  <div style="max-width: 600px;">
+  <div>
     <c-input-text
       v-model:value="customRegex"
       label="Your custom cleaning regex(es) (case insensitive):"

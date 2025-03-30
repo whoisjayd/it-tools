@@ -39,7 +39,7 @@ const [certs, refreshCerts] = computedRefreshableAsync(
 </script>
 
 <template>
-  <div max-w-600px>
+  <div>
     <n-space mb-1>
       <c-select
         v-model:value="format"

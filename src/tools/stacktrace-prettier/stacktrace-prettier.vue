@@ -80,7 +80,7 @@ const wrap = ref(true);
 </script>
 
 <template>
-  <div max-w-600px>
+  <div>
     <n-radio-group v-model:value="stackType" name="radiogroup" mb-2 flex justify-center>
       <n-space>
         <n-radio

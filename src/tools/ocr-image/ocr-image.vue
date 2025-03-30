@@ -189,7 +189,7 @@ async function ocr(file: File, language: string) {
 </script>
 
 <template>
-  <div style="max-width: 600px;">
+  <div>
     <c-select
       v-model:value="language"
       label="Language"

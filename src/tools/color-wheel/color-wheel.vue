@@ -84,7 +84,7 @@ watch(
 </script>
 
 <template>
-  <div style="max-width: 600px">
+  <div>
     <c-card title="Pick a color" mb-2>
       <n-color-picker :value="wheelColor" :show-alpha="false" />
       <div

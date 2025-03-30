@@ -103,7 +103,7 @@ function handleLicenceFallback() {
 </script>
 
 <template>
-  <div style="max-width: 600px;">
+  <div>
     <n-card title="Software licences compatibility" mb-5>
       <n-form-item label="First License (SPDX):" label-placement="left" label-width="120">
         <n-auto-complete
