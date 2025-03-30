@@ -87,22 +87,22 @@ const umask = computed(() => computeUmaskRepresentation({ permissions: permissio
 <template>
   <div>
     <n-space justify="center">
-    <c-input-text
-      v-model:value="octalPermissionsInput"
-      placeholder="Put your octal permissions here..."
-      label="Copy your octal permissions"
-      :validation="octalPermissionsInputValidation"
-      mb-2
-    />
+      <c-input-text
+        v-model:value="octalPermissionsInput"
+        placeholder="Put your octal permissions here..."
+        label="Copy your octal permissions"
+        :validation="octalPermissionsInputValidation"
+        mb-2
+      />
 
-    <c-input-text
-      v-model:value="symbolicPermissionsInput"
-      placeholder="Put your symbolic permissions here..."
-      label="Copy your symbolic permissions"
-      :validation="symbolicPermissionsInputValidation"
-      mb-2
-    />
-  </n-space>
+      <c-input-text
+        v-model:value="symbolicPermissionsInput"
+        placeholder="Put your symbolic permissions here..."
+        label="Copy your symbolic permissions"
+        :validation="symbolicPermissionsInputValidation"
+        mb-2
+      />
+    </n-space>
 
     <n-divider />
 
@@ -156,8 +156,8 @@ const umask = computed(() => computeUmaskRepresentation({ permissions: permissio
     </div>
 
     <c-card title="Chmod command" mb-1>
-    <InputCopyable label-position="left" :value="`chmod ${octal} path`" readonly />
-</c-card>
+      <InputCopyable label-position="left" :value="`chmod ${octal} path`" readonly />
+    </c-card>
 
     <c-card title="Umask">
       <InputCopyable label="Octal:" label-position="left" label-width="100px" :value="umask.octal" readonly />
