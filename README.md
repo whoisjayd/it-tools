@@ -16,10 +16,16 @@ Almost [all tools PR of it-tools](https://github.com/sharevb/it-tools/pulls).
 
 ## Build docker image for a subfolder
 
-According to https://github.com/sharevb/it-tools/pull/461#issuecomment-1602506049:
+According to https://github.com/sharevb/it-tools/pull/461#issuecomment-1602506049 and https://github.com/CorentinTh/it-tools/pull/461:
 ```
-docker build -t it-tools --build-arg BASE_URL="/my-folder/" .
+docker build -t it-tools  --build-arg BASE_URL="/my-folder/" .
 docker run -d --name it-tools --restart unless-stopped -p 8080:8080 it-tools
+```
+
+For `/it-tools/` subfolder, you can use `baseurl-it-tools` tag:
+
+```
+docker run -p 8080:8080 ghcr.io/sharevb/it-tools:baseurl-it-tools
 ```
 
 ## Docker images
