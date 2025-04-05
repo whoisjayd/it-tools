@@ -14,14 +14,6 @@ You can use my image in your docker-compose file if you want an update to date v
 
 Almost [all tools PR of it-tools](https://github.com/sharevb/it-tools/pulls).
 
-## Build docker image for a subfolder
-
-According to https://github.com/sharevb/it-tools/pull/461#issuecomment-1602506049:
-```
-docker build -t it-tools --build-arg BASE_URL="/my-folder/" .
-docker run -d --name it-tools --restart unless-stopped -p 8080:8080 it-tools
-```
-
 ## Docker images
 
 [GitHub Container Registry](https://github.com/sharevb/it-tools/pkgs/container/it-tools): `ghcr.io/sharevb/it-tools:latest`
@@ -39,6 +31,102 @@ services:
     restart: unless-stopped
     ports:
       - 8080:8080
+```
+
+## Build docker image for a custom subfolder
+
+According to https://github.com/sharevb/it-tools/pull/461#issuecomment-1602506049 and https://github.com/CorentinTh/it-tools/pull/461:
+```
+docker build -t it-tools  --build-arg BASE_URL="/my-folder/" .
+docker run -d --name it-tools --restart unless-stopped -p 8080:8080 it-tools
+```
+
+Then if you go to `http://localhost:8080` you'll get a blank page, but opening the DevTools (& refreshing) you'll notice in the Network tab that the app is trying to fetch assets from `/my-folder/...`
+
+So you would need to put another server in front of it, like [Nginx Proxy Manager](https://nginxproxymanager.com/), [Traefik](https://traefik.io/traefik/), [caddy](https://caddyserver.com/) etc. Then setup a reverse proxy pass using `/my-folder`
+
+## Docker compose for hosting in a `/it-tools/` subfolder
+
+For `/it-tools/` subfolder, you can use `baseurl-it-tools` tag.
+
+See (sample of docker-compose.yml and nginx.conf)[https://github.com/sharevb/it-tools/docker-subfolder-sample], this docker image needs to have another reverse proxy in front of it, like [Nginx Proxy Manager](https://nginxproxymanager.com/), [Traefik](https://traefik.io/traefik/), [caddy](https://caddyserver.com/) etc. 
+
+Setup a reverse proxy pass using `/it-tools/`. 
+
+
+## To build using a custom folder:
+
+1. `BASE_URL="/it-tools/" pnpm build`
+2. Rename the generated `dist` folder to `it-tools` and serve on `https://your-domain.com/it-tools`
+
+## To build for GitHub Pages:
+
+1. Enable GitHub Pages build and deployment option in your fork, under **Settings** > **Pages** and select **GitHub Actions** as the source
+2. Add the following GitHub action to your repo:
+
+.github/workflows/deploy-pages.yaml
+```yaml
+name: Deploy static content to Pages
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["main"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # Single deploy job since we're just deploying
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 8
+          run_install: true
+
+      - name: Build
+        run: |
+          BASE_URL="/it-tools/" pnpm build
+          cp dist/index.html dist/404.html
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: './dist'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
 ```
 
 ## Installation methods

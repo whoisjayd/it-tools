@@ -62,6 +62,19 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
+      - name: Build and push (BASE_URL)
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./Dockerfile
+          build-args: |
+            "BASE_URL=/it-tools/"
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: |
+            sharevb/it-tools:baseurl-it-tools
+            ghcr.io/sharevb/it-tools:baseurl-it-tools
+
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
@@ -72,7 +85,6 @@ jobs:
           tags: |
             sharevb/it-tools:latest
             ghcr.io/${{ github.repository_owner }}/it-tools:latest
-
 
       # Optionally log out
       - name: Log out from GitHub Container Registry
