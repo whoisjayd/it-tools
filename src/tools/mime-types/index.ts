@@ -10,4 +10,5 @@ export const tool = defineTool({
   component: () => import('./mime-types.vue'),
   icon: World,
   npmPackages: ['mime-types'],
+  category: 'Web',
 });

@@ -42,4 +42,5 @@ export const tool = defineTool({
   component: () => import('./math-evaluator.vue'),
   icon: Math,
   npmPackages: ['mathjs'],
+  category: 'Maths',
 });

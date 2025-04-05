@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./ai-prompt-splitter.vue'),
   icon: Prompt,
   createdAt: new Date('2024-07-14'),
+  category: 'Text',
 });

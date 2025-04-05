@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./punycode-converter.vue'),
   icon: World,
   createdAt: new Date('2024-08-15'),
+  category: 'Network',
 });

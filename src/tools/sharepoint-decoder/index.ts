@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./sharepoint-decoder.vue'),
   icon: Mailbox,
   createdAt: new Date('2025-02-09'),
+  category: 'Forensic',
 });

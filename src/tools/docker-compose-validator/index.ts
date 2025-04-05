@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./docker-compose-validator.vue'),
   icon: BrandDocker,
   createdAt: new Date('2024-01-25'),
+  category: 'Docker',
 });

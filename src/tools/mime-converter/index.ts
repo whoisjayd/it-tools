@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./mime-converter.vue'),
   icon: Mail,
   createdAt: new Date('2024-03-09'),
+  category: 'Forensic',
 });

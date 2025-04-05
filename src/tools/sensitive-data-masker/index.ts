@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./sensitive-data-masker.vue'),
   icon: ShieldLock,
   createdAt: new Date('2024-06-16'),
+  category: 'Forensic',
 });

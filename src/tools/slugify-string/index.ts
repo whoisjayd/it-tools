@@ -10,4 +10,5 @@ export const tool = defineTool({
   component: () => import('./slugify-string.vue'),
   icon: AbcRound,
   npmPackages: ['@sindresorhus/slugify'],
+  category: 'Web',
 });

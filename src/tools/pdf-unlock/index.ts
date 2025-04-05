@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./pdf-unlock.vue'),
   icon: LockOff,
   createdAt: new Date('2024-01-09'),
+  category: 'PDF',
 });

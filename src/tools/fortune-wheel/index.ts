@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./fortune-wheel.vue'),
   icon: ArrowsShuffle,
   createdAt: new Date('2025-02-24'),
+  category: 'Gaming',
 });

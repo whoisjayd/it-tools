@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./ical-merger.vue'),
   icon: CalendarPlus,
   createdAt: new Date('2024-08-15'),
+  category: 'Datetime',
 });

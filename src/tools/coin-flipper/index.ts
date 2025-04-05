@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./coin-flipper.vue'),
   icon: Coin,
   createdAt: new Date('2025-02-09'),
+  category: 'Gaming',
 });

@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./rmb-numbers.vue'),
   icon: CurrencyYen,
   createdAt: new Date('2024-04-29'),
+  category: 'Data',
 });

@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./folder-structure-diagram.vue'),
   icon: Folder,
   createdAt: new Date('2024-04-20'),
+  category: 'Text',
 });

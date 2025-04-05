@@ -10,4 +10,5 @@ export const tool = defineTool({
   component: () => import('./csv-to-json.vue'),
   icon: ArrowsShuffle,
   createdAt: new Date('2024-04-12'),
+  category: 'JSON',
 });

@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./mongo-objectid-converter.vue'),
   icon: Database,
   createdAt: new Date('2024-08-15'),
+  category: 'Forensic',
 });

@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./ico-converter.vue'),
   icon: PictureInPicture,
   createdAt: new Date('2024-08-15'),
+  category: 'Images',
 });

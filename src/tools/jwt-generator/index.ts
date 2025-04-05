@@ -26,4 +26,5 @@ export const tool = defineTool({
   component: () => import('./jwt-generator.vue'),
   icon: Key,
   createdAt: new Date('2024-08-15'),
+  category: 'Crypto',
 });

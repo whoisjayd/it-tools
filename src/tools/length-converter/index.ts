@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./length-converter.vue'),
   icon: SquareHalf,
   createdAt: new Date('2024-08-15'),
+  category: 'Physics',
 });

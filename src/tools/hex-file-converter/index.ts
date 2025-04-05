@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./hex-file-converter.vue'),
   icon: FileDigit,
   createdAt: new Date('2024-08-15'),
+  category: 'Development',
 });

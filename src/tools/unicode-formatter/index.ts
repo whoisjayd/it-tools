@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./unicode-formatter.vue'),
   icon: Edit,
   createdAt: new Date('2024-04-07'),
+  category: 'Text',
 });

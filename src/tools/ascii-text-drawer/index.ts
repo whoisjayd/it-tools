@@ -10,4 +10,5 @@ export const tool = defineTool({
   icon: Artboard,
   createdAt: new Date('2024-03-03'),
   npmPackages: ['figlet'],
+  category: 'Text',
 });

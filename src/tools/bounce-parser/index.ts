@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./bounce-parser.vue'),
   icon: Mailbox,
   createdAt: new Date('2024-08-15'),
+  category: 'Forensic',
 });

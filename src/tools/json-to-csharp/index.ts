@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./json-to-csharp.vue'),
   icon: CSharp,
   createdAt: new Date('2024-05-11'),
+  category: 'JSON',
 });

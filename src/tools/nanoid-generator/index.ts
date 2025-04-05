@@ -10,4 +10,5 @@ export const tool = defineTool({
   component: () => import('./nanoid-generator.vue'),
   icon: Fingerprint,
   createdAt: new Date('2024-05-31'),
+  category: 'Generators',
 });

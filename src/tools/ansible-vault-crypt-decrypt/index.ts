@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./ansible-vault-crypt-decrypt.vue'),
   icon: LockSquare,
   createdAt: new Date('2024-02-25'),
+  category: 'Crypto',
 });

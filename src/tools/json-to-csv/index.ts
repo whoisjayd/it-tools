@@ -11,4 +11,5 @@ export const tool = defineTool({
   icon: List,
   createdAt: new Date('2023-06-18'),
   npmPackages: ['json5'],
+  category: 'JSON',
 });

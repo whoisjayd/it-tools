@@ -26,4 +26,5 @@ export const tool = defineTool({
   icon: Phone,
   createdAt: new Date('2023-05-01'),
   npmPackages: ['libphonenumber-js', 'country-code-lookup'],
+  category: 'Data',
 });

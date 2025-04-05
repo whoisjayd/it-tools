@@ -29,4 +29,5 @@ export const tool = defineTool({
   component: () => import('./many-units-converter.vue'),
   icon: Calculator,
   createdAt: new Date('2024-08-15'),
+  category: 'Converters',
 });

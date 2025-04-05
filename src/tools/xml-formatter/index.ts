@@ -11,4 +11,5 @@ export const tool = defineTool({
   icon: Code,
   createdAt: new Date('2023-06-17'),
   npmPackages: ['xml-formatter'],
+  category: 'XML',
 });

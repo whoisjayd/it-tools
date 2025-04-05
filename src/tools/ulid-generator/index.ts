@@ -11,4 +11,5 @@ export const tool = defineTool({
   icon: SortDescendingNumbers,
   createdAt: new Date('2023-09-11'),
   npmPackages: ['ulid'],
+  category: 'Converters',
 });

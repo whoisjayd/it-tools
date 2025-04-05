@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./api-tester.vue'),
   icon: World,
   createdAt: new Date('2024-05-11'),
+  category: 'Development',
 });

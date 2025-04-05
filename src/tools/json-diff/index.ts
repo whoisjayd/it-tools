@@ -11,4 +11,5 @@ export const tool = defineTool({
   icon: CompareArrowsRound,
   createdAt: new Date('2023-04-20'),
   npmPackages: ['json5'],
+  category: 'JSON',
 });

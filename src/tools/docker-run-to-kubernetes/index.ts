@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./docker-run-to-kubernetes.vue'),
   icon: BrandDocker,
   createdAt: new Date('2024-02-18'),
+  category: 'Docker',
 });

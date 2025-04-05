@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./javascript-prettifier.vue'),
   icon: BrandJavascript,
   createdAt: new Date('2024-03-15'),
+  category: 'Development',
 });

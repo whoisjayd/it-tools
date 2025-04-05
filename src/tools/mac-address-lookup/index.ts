@@ -11,4 +11,5 @@ export const tool = defineTool({
   icon: Devices,
   createdAt: new Date('2023-04-06'),
   npmPackages: ['oui-data'],
+  category: 'Network',
 });

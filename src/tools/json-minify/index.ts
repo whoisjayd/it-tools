@@ -10,4 +10,5 @@ export const tool = defineTool({
   component: () => import('./json-minify.vue'),
   icon: Braces,
   npmPackages: ['json5'],
+  category: 'JSON',
 });

@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./paste-as-markdown.vue'),
   icon: Markdown,
   createdAt: new Date('2024-07-14'),
+  category: 'Markdown',
 });

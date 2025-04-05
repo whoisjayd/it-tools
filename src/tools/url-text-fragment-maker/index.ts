@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./url-text-fragment-maker.vue'),
   icon: FileSearch,
   createdAt: new Date('2024-01-17'),
+  category: 'Web',
 });

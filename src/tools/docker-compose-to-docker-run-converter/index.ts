@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./docker-compose-to-docker-run-converter.vue'),
   icon: BrandDocker,
   createdAt: new Date('2024-01-03'),
+  category: 'Docker',
 });

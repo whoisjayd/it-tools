@@ -11,4 +11,5 @@ export const tool = defineTool({
   icon: AlignJustified,
   createdAt: new Date('2023-04-10'),
   npmPackages: ['yaml'],
+  category: 'YAML',
 });

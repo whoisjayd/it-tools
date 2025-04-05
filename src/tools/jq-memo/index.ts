@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./jq-memo.vue'),
   icon: Brackets,
   createdAt: new Date('2024-08-15'),
+  category: 'Cheatsheets',
 });

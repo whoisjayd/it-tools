@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./xslt-tester.vue'),
   icon: HandMove,
   createdAt: new Date('2024-05-11'),
+  category: 'XML',
 });

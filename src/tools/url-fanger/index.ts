@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./url-fanger.vue'),
   icon: EyeOff,
   createdAt: new Date('2024-03-09'),
+  category: 'Web',
 });

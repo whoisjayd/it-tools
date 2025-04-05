@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./jq-tester.vue'),
   icon: Braces,
   createdAt: new Date('2024-08-15'),
+  category: 'Development',
 });

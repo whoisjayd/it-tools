@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./image-to-ascii-art.vue'),
   icon: Artboard,
   createdAt: new Date('2024-03-15'),
+  category: 'Text',
 });

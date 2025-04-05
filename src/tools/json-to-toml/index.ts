@@ -11,4 +11,5 @@ export const tool = defineTool({
   icon: Braces,
   createdAt: new Date('2023-06-23'),
   npmPackages: ['json5', 'iarna-toml-esm'],
+  category: 'JSON',
 });

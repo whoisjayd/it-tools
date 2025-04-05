@@ -11,4 +11,5 @@ export const tool = defineTool({
   icon: Bank,
   createdAt: new Date('2023-08-26'),
   npmPackages: ['ibantools'],
+  category: 'Data',
 });

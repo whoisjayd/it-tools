@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./hex-converter.vue'),
   icon: Binary,
   createdAt: new Date('2025-02-09'),
+  category: 'Forensic',
 });

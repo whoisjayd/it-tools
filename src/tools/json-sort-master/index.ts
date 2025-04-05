@@ -10,4 +10,5 @@ export const tool = defineTool({
   component: () => import('./json-sort-master.vue'),
   icon: ArrowsSort,
   createdAt: new Date('2024-03-27'),
+  category: 'JSON',
 });

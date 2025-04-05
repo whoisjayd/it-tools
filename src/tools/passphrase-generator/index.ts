@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./passphrase-generator.vue'),
   icon: ArrowsShuffle,
   createdAt: new Date('2024-08-15'),
+  category: 'Generators',
 });

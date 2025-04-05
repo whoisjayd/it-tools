@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./illuminance-converter.vue'),
   icon: Brightness2,
   createdAt: new Date('2025-02-09'),
+  category: 'Physics',
 });

@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./option43-generator.vue'),
   icon: RouterOutlined,
   createdAt: new Date('2024-03-09'),
+  category: 'Network',
 });

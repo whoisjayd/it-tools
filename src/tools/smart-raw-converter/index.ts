@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./smart-raw-converter.vue'),
   icon: Disc,
   createdAt: new Date('2024-07-14'),
+  category: 'Forensic',
 });

@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./wpa-psk-generator.vue'),
   icon: Wifi,
   createdAt: new Date('2024-08-15'),
+  category: 'Network',
 });

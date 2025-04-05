@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./rsa-ecdsa-signing.vue'),
   icon: Lock,
   createdAt: new Date('2024-05-01'),
+  category: 'Crypto',
 });

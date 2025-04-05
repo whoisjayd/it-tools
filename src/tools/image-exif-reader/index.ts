@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./image-exif-reader.vue'),
   icon: FileInfo,
   createdAt: new Date('2024-01-09'),
+  category: 'Images',
 });

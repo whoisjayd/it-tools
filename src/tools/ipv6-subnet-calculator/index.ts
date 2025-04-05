@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./ipv6-subnet-calculator.vue'),
   icon: RouterOutlined,
   createdAt: new Date('2024-02-25'),
+  category: 'Network',
 });

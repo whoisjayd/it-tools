@@ -10,4 +10,5 @@ export const tool = defineTool({
   component: () => import('./date-time-converter.vue'),
   icon: Calendar,
   npmPackages: ['date-fns'],
+  category: 'Datetime',
 });

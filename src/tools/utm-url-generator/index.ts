@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./utm-url-generator.vue'),
   icon: Ad,
   createdAt: new Date('2024-03-15'),
+  category: 'Web',
 });

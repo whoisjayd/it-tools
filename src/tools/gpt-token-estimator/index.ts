@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./gpt-token-estimator.vue'),
   icon: CurrencyDollar,
   createdAt: new Date('2024-08-15'),
+  category: 'Text',
 });

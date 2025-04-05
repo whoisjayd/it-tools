@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./xpath-tester.vue'),
   icon: Brackets,
   createdAt: new Date('2024-08-15'),
+  category: 'XML',
 });

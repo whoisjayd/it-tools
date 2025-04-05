@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./css-prettifier.vue'),
   icon: BrandCss3,
   createdAt: new Date('2024-03-15'),
+  category: 'Web',
 });

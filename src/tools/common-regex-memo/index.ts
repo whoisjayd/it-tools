@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./common-regex-memo.vue'),
   icon: FileText,
   createdAt: new Date('2024-05-11'),
+  category: 'Cheatsheets',
 });

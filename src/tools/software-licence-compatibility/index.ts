@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./software-licence-compatibility.vue'),
   icon: License,
   createdAt: new Date('2024-03-17'),
+  category: 'Data',
 });

@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./ip-cidr-to-range.vue'),
   icon: Binary,
   createdAt: new Date('2024-01-10'),
+  category: 'Network',
 });

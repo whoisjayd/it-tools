@@ -10,4 +10,5 @@ export const tool = defineTool({
   component: () => import('./unicode-characters-to-java-entities.vue'),
   icon: TextWrapDisabled,
   createdAt: new Date('2024-05-16'),
+  category: 'Converters',
 });

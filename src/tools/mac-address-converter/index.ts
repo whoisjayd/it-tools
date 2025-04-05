@@ -17,4 +17,5 @@ export const tool = defineTool({
   ],
   component: () => import('./mac-address-converter.vue'),
   icon: Devices,
+  category: 'Network',
 });

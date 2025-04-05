@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./dice-roller.vue'),
   icon: Dice,
   createdAt: new Date('2025-02-09'),
+  category: 'Gaming',
 });

@@ -10,4 +10,5 @@ export const tool = defineTool({
   component: () => import('./uuid-converter.vue'),
   icon: Replace,
   createdAt: new Date('2023-11-08'),
+  category: 'Generators',
 });

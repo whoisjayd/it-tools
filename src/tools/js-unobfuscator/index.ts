@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./js-unobfuscator.vue'),
   icon: BrandJavascript,
   createdAt: new Date('2024-05-11'),
+  category: 'Development',
 });

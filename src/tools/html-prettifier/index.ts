@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./html-prettifier.vue'),
   icon: BrandHtml5,
   createdAt: new Date('2024-03-15'),
+  category: 'Web',
 });

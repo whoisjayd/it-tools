@@ -10,4 +10,5 @@ export const tool = defineTool({
   component: () => import('./hmac-generator.vue'),
   icon: ShortTextRound,
   npmPackages: ['crypto-js'],
+  category: 'Crypto',
 });

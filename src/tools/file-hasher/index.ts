@@ -35,4 +35,5 @@ export const tool = defineTool({
   component: () => import('./file-hasher.vue'),
   icon: EyeOff,
   createdAt: new Date('2024-05-11'),
+  category: 'Crypto',
 });

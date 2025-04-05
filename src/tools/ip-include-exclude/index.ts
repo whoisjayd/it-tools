@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./ip-include-exclude.vue'),
   icon: UnfoldMoreOutlined,
   createdAt: new Date('2024-08-15'),
+  category: 'Network',
 });

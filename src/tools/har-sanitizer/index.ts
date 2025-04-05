@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./har-sanitizer.vue'),
   icon: ClearFormatting,
   createdAt: new Date('2024-06-17'),
+  category: 'Network',
 });

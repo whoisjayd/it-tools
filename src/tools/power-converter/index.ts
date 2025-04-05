@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./power-converter.vue'),
   icon: Power,
   createdAt: new Date('2024-08-15'),
+  category: 'Physics',
 });

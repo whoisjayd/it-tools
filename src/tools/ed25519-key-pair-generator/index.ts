@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./ed25519-key-pair-generator.vue'),
   icon: Certificate,
   createdAt: new Date('2024-02-14'),
+  category: 'Crypto',
 });

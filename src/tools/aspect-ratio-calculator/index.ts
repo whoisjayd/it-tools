@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./aspect-ratio-calculator.vue'),
   icon: AspectRatio,
   createdAt: new Date('2024-08-14'),
+  category: 'Measurement',
 });

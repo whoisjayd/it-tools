@@ -11,4 +11,5 @@ export const tool = defineTool({
   icon: BuildingFactory,
   createdAt: new Date('2023-04-09'),
   npmPackages: ['crypto-js'],
+  category: 'Network',
 });

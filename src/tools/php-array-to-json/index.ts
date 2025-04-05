@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./php-array-to-json.vue'),
   icon: BrandPhp,
   createdAt: new Date('2024-05-11'),
+  category: 'JSON',
 });

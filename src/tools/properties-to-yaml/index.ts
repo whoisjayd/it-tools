@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./properties-to-yaml.vue'),
   icon: AlignJustified,
   createdAt: new Date('2023-12-24'),
+  category: 'Converters',
 });

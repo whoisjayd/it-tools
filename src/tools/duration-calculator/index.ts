@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./duration-calculator.vue'),
   icon: CalendarTime,
   createdAt: new Date('2024-08-15'),
+  category: 'Datetime',
 });

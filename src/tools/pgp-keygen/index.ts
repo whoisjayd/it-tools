@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./pgp-keygen.vue'),
   icon: Certificate,
   createdAt: new Date('2024-04-20'),
+  category: 'Crypto',
 });

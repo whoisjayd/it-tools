@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./csr-generator.vue'),
   icon: ArrowsShuffle,
   createdAt: new Date('2024-02-25'),
+  category: 'Crypto',
 });

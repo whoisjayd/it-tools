@@ -11,4 +11,5 @@ export const tool = defineTool({
   icon: Qrcode,
   createdAt: new Date('2023-09-06'),
   npmPackages: ['qrcode'],
+  category: 'Barcodes',
 });

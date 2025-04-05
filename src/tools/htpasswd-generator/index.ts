@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./htpasswd-generator.vue'),
   icon: PasswordRound,
   createdAt: new Date('2024-02-20'),
+  category: 'Network',
 });

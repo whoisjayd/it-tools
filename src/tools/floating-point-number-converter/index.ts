@@ -10,4 +10,5 @@ export const tool = defineTool({
   component: () => import('./floating-point-number-converter.vue'),
   icon: ArrowsLeftRight,
   createdAt: new Date('2024-10-12'),
+  category: 'Forensic',
 });

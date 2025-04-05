@@ -10,4 +10,5 @@ export const tool = defineTool({
   component: () => import('./qr-code-generator.vue'),
   icon: Qrcode,
   npmPackages: ['qrcode'],
+  category: 'Barcodes',
 });

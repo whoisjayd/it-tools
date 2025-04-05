@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./image-resizer.vue'),
   icon: IconResize,
   createdAt: new Date('2024-10-22'),
+  category: 'Images',
 });

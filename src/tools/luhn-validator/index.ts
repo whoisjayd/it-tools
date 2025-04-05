@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./luhn-validator.vue'),
   icon: Check,
   createdAt: new Date('2024-08-15'),
+  category: 'Data',
 });

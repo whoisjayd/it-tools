@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./volume-converter.vue'),
   icon: Gauge,
   createdAt: new Date('2024-08-15'),
+  category: 'Physics',
 });

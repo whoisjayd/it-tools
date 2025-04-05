@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./json-string-converter.vue'),
   icon: IconBraces,
   createdAt: new Date('2024-10-17'),
+  category: 'JSON',
 });

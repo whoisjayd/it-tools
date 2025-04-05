@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./html-cleaner.vue'),
   icon: BrandHtml5,
   createdAt: new Date('2024-02-25'),
+  category: 'Web',
 });

@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./math-ocr.vue'),
   icon: MathSymbols,
   createdAt: new Date('2024-08-15'),
+  category: 'Maths',
 });

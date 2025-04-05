@@ -10,4 +10,5 @@ export const tool = defineTool({
   component: () => import('./html-wysiwyg-editor.vue'),
   icon: Edit,
   npmPackages: ['monaco', 'prettier'],
+  category: 'Web',
 });

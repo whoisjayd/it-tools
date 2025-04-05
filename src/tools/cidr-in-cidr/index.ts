@@ -10,4 +10,5 @@ export const tool = defineTool({
   redirectFrom: ['/ip-in-range'],
   icon: UnfoldMoreOutlined,
   createdAt: new Date('2025-01-12'),
+  category: 'Network',
 });

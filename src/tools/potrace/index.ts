@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./potrace.vue'),
   icon: ArrowsShuffle,
   createdAt: new Date('2024-05-11'),
+  category: 'Images',
 });

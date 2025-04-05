@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./ssl-cert-converter.vue'),
   icon: ShieldChevron,
   createdAt: new Date('2024-08-15'),
+  category: 'Crypto',
 });

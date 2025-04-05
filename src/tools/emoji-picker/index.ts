@@ -11,4 +11,5 @@ export const tool = defineTool({
   icon: MoodSmile,
   createdAt: new Date('2023-08-07'),
   npmPackages: ['unicode-emoji-json', 'emojilib'],
+  category: 'Text',
 });

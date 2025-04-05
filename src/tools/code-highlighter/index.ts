@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./code-highlighter.vue'),
   icon: Code,
   createdAt: new Date('2024-08-15'),
+  category: 'Development',
 });

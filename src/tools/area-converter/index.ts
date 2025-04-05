@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./area-converter.vue'),
   icon: SquaresDiagonal,
   createdAt: new Date('2024-08-15'),
+  category: 'Physics',
 });

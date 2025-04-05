@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./pgp-encryption.vue'),
   icon: Lock,
   createdAt: new Date('2024-04-20'),
+  category: 'Crypto',
 });

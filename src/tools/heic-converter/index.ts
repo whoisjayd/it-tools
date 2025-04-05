@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./heic-converter.vue'),
   icon: Photo,
   createdAt: new Date('2024-04-28'),
+  category: 'Images',
 });

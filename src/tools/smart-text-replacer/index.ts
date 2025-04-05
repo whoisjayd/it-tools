@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./smart-text-replacer.vue'),
   icon: Search,
   createdAt: new Date('2024-04-03'),
+  category: 'Text',
 });

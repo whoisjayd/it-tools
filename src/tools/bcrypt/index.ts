@@ -10,4 +10,5 @@ export const tool = defineTool({
   component: () => import('./bcrypt.vue'),
   icon: LockSquare,
   npmPackages: ['bcryptjs'],
+  category: 'Crypto',
 });

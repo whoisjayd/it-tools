@@ -10,4 +10,5 @@ export const tool = defineTool({
   component: () => import('./uuid-generator.vue'),
   icon: Fingerprint,
   npmPackages: ['uuid'],
+  category: 'Generators',
 });

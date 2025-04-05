@@ -13,4 +13,5 @@ export const tool = defineTool({
   component: () => import('./data-storage-unit-converter.vue'),
   icon: ArrowsLeftRight,
   createdAt: new Date('2024-08-15'),
+  category: 'Converters',
 });

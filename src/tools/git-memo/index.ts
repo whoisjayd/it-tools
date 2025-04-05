@@ -9,4 +9,5 @@ export const tool = defineTool({
   keywords: ['git', 'push', 'force', 'pull', 'commit', 'branch', 'switch', 'checkout', 'amend', 'rebase', 'merge', 'reset', 'soft', 'hard', 'lease'],
   component: () => import('./git-memo.vue'),
   icon: BrandGit,
+  category: 'Cheatsheets',
 });

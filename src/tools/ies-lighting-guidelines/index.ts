@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./ies-lighting-guidelines.vue'),
   icon: BuildingLighthouse,
   createdAt: new Date('2025-02-09'),
+  category: 'Data',
 });

@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./jsonpath-memo.vue'),
   icon: Brackets,
   createdAt: new Date('2024-08-15'),
+  category: 'Cheatsheets',
 });

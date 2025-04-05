@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./certificate-key-parser.vue'),
   icon: FileCertificate,
   createdAt: new Date('2024-02-22'),
+  category: 'Crypto',
 });

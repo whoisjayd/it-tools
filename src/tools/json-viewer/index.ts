@@ -11,4 +11,5 @@ export const tool = defineTool({
   icon: Braces,
   redirectFrom: ['/json-viewer'],
   npmPackages: ['json5'],
+  category: 'JSON',
 });

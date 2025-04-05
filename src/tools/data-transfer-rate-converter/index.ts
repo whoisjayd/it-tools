@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./data-transfer-rate-converter.vue'),
   icon: TransferIn,
   createdAt: new Date('2024-08-15'),
+  category: 'Network',
 });

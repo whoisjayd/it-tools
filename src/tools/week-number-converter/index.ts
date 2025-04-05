@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./week-number-converter.vue'),
   icon: Calendar,
   createdAt: new Date('2024-08-15'),
+  category: 'Datetime',
 });

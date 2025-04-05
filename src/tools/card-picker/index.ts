@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./card-picker.vue'),
   icon: PlayCard,
   createdAt: new Date('2025-02-09'),
+  category: 'Gaming',
 });

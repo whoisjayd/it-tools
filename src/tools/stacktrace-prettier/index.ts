@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./stacktrace-prettier.vue'),
   icon: Stack,
   createdAt: new Date('2024-08-15'),
+  category: 'Development',
 });

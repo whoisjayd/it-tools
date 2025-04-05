@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./torrent-to-magnet.vue'),
   icon: Bookmarks,
   createdAt: new Date('2024-04-20'),
+  category: 'Converters',
 });

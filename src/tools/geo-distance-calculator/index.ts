@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./geo-distance-calculator.vue'),
   icon: WorldLatitude,
   createdAt: new Date('2025-01-01'),
+  category: 'Measurement',
 });

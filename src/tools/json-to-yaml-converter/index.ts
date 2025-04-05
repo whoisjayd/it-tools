@@ -11,4 +11,5 @@ export const tool = defineTool({
   icon: Braces,
   createdAt: new Date('2023-04-10'),
   npmPackages: ['yaml', 'json5'],
+  category: 'JSON',
 });

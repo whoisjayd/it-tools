@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./ip-geo-location.vue'),
   icon: World,
   createdAt: new Date('2024-01-17'),
+  category: 'Network',
 });

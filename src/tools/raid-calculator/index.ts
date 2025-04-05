@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./raid-calculator.vue'),
   icon: Database,
   createdAt: new Date('2024-07-27'),
+  category: 'Network',
 });

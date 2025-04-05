@@ -11,4 +11,5 @@ export const tool = defineTool({
   icon: FileCertIcon,
   createdAt: new Date('2023-12-09'),
   npmPackages: ['pdf-signature-reader'],
+  category: 'PDF',
 });

@@ -10,4 +10,5 @@ export const tool = defineTool({
   component: () => import('./extract-text-from-html.vue'),
   icon: CursorText,
   createdAt: new Date('2024-05-10'),
+  category: 'Text',
 });

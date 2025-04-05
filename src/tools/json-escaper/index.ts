@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./json-escaper.vue'),
   icon: Braces,
   createdAt: new Date('2024-03-09'),
+  category: 'JSON',
 });

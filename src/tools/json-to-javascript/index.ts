@@ -10,4 +10,5 @@ export const tool = defineTool({
   component: () => import('./json-to-javascript.vue'),
   icon: Braces,
   createdAt: new Date('2024-03-29'),
+  category: 'JSON',
 });

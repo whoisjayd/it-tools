@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./curl-converter.vue'),
   icon: ExternalLink,
   createdAt: new Date('2024-04-20'),
+  category: 'Development',
 });

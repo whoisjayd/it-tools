@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./json-linter.vue'),
   icon: Braces,
   createdAt: new Date('2024-03-20'),
+  category: 'JSON',
 });

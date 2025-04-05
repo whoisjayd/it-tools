@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./x509-certificate-generator.vue'),
   icon: FileCertificate,
   createdAt: new Date('2024-02-25'),
+  category: 'Crypto',
 });

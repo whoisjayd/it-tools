@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./isbn-validator-and-parser.vue'),
   icon: Books,
   createdAt: new Date('2024-01-10'),
+  category: 'Data',
 });

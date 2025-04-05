@@ -3,21 +3,22 @@ import { defineStore } from 'pinia';
 import type { Ref } from 'vue';
 import _ from 'lodash';
 import type { Tool, ToolCategory, ToolWithCategory } from './tools.types';
-import { toolsWithCategory } from './index';
+import { tools as allTools } from './index';
 
 export const useToolStore = defineStore('tools', () => {
   const favoriteToolsName = useStorage('favoriteToolsName', []) as Ref<string[]>;
   const { t } = useI18n();
 
-  const tools = computed<ToolWithCategory[]>(() => toolsWithCategory.map((tool) => {
+  const tools = computed<ToolWithCategory[]>(() => allTools.map((tool) => {
     const toolI18nKey = tool.path.replace(/\//g, '');
+    const category = tool.category || 'Development';
 
     return ({
       ...tool,
       path: tool.path,
       name: t(`tools.${toolI18nKey}.title`, tool.name),
       description: t(`tools.${toolI18nKey}.description`, tool.description),
-      category: t(`tools.categories.${tool.category.toLowerCase()}`, tool.category),
+      category: t(`tools.categories.${category.toLowerCase()}`, category),
     });
   }));
 

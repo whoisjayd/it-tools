@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./url-cleaner.vue'),
   icon: ClearAll,
   createdAt: new Date('2024-03-13'),
+  category: 'Web',
 });

@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./parquets-reader.vue'),
   icon: Parking,
   createdAt: new Date('2025-02-09'),
+  category: 'Forensic',
 });

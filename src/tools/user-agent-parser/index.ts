@@ -11,4 +11,5 @@ export const tool = defineTool({
   icon: Browser,
   createdAt: new Date('2023-04-06'),
   npmPackages: ['ua-parser-js'],
+  category: 'Web',
 });

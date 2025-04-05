@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./json-size-analyzer.vue'),
   icon: FileAnalytics,
   createdAt: new Date('2024-07-14'),
+  category: 'JSON',
 });

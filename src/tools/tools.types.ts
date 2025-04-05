@@ -12,6 +12,7 @@ export interface Tool {
   createdAt?: Date
   npmPackages?: string[]
   footer?: string
+  category: string
 }
 
 export interface ToolCategory {

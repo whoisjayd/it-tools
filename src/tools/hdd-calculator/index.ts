@@ -11,4 +11,5 @@ export const tool = defineTool({
   component: () => import('./hdd-calculator.vue'),
   icon: DeviceDesktop,
   createdAt: new Date('2024-04-07'),
+  category: 'Network',
 });

@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./css-xpath-converter.vue'),
   icon: Braces,
   createdAt: new Date('2024-08-15'),
+  category: 'Web',
 });

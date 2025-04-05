@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./sip-auth.vue'),
   icon: ShieldCheck,
   createdAt: new Date('2024-04-11'),
+  category: 'Network',
 });

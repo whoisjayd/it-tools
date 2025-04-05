@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./integers-to-ip.vue'),
   icon: Binary,
   createdAt: new Date('2024-07-14'),
+  category: 'Network',
 });

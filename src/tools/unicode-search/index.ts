@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./unicode-search.vue'),
   icon: FileText,
   createdAt: new Date('2024-08-15'),
+  category: 'Data',
 });

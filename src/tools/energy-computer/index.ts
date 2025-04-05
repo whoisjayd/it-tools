@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./energy-computer.vue'),
   icon: Engine,
   createdAt: new Date('2024-08-15'),
+  category: 'Converters',
 });

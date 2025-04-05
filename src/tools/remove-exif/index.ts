@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./remove-exif.vue'),
   icon: PictureInPictureOff,
   createdAt: new Date('2024-07-14'),
+  category: 'Images',
 });

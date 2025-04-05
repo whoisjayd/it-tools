@@ -9,4 +9,5 @@ export const tool = defineTool({
   keywords: ['mic', 'microphone', 'test', 'check', 'troubleshoot', 'sound'],
   component: () => import('./mic-tester.vue'),
   icon: Microphone,
+  category: 'Network',
 });

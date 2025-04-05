@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./sla-calculator.vue'),
   icon: Clock,
   createdAt: new Date('2024-05-11'),
+  category: 'Data',
 });

@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./snowflake-id-extractor.vue'),
   icon: Id,
   createdAt: new Date('2024-07-22'),
+  category: 'Forensic',
 });

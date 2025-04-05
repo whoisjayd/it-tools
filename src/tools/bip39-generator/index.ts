@@ -10,4 +10,5 @@ export const tool = defineTool({
   component: () => import('./bip39-generator.vue'),
   icon: AlignJustified,
   npmPackages: ['@it-tools/bip39'],
+  category: 'Generators',
 });

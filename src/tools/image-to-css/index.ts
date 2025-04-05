@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./image-to-css.vue'),
   icon: BrandCss3,
   createdAt: new Date('2024-05-11'),
+  category: 'Web',
 });

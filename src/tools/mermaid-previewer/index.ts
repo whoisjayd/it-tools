@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./mermaid-previewer.vue'),
   icon: ChartPie,
   createdAt: new Date('2025-03-09'),
+  category: 'Text',
 });

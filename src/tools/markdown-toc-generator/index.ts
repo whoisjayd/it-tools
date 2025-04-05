@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./markdown-toc-generator.vue'),
   icon: Table,
   createdAt: new Date('2024-05-11'),
+  category: 'Markdown',
 });

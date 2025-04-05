@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./math-formats-converter.vue'),
   icon: EqualNot,
   createdAt: new Date('2024-05-11'),
+  category: 'Maths',
 });

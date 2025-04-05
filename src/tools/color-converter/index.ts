@@ -11,4 +11,5 @@ export const tool = defineTool({
   icon: Palette,
   redirectFrom: ['/color-picker-converter'],
   npmPackages: ['colord'],
+  category: 'Web',
 });
