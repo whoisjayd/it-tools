@@ -147,7 +147,7 @@ Local installation required installing first: `python3 make g++`
 
 <details>
 
-Useful tools for developer and people working in IT. [Have a look !](https://it-tools.tech).
+Useful tools for developer and people working in IT. [Have a look !](https://sharevb-it-tools.vercel.app).
 
 ## Functionalities and roadmap
 

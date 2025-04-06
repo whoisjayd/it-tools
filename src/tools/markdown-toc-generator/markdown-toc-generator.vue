@@ -17,7 +17,7 @@ Some text
 
 Some text
 
-### Title with Link [TOC](http://it-tools.tech)
+### Title with Link [TOC](http://sharevb-it-tools.vercel.app)
 
 \`\`\`
 ## some bash code
