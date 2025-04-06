@@ -677,6 +677,9 @@ dependencies:
   w-websocket-client:
     specifier: ^1.0.29
     version: 1.0.29
+  wcag-contrast-utils:
+    specifier: ^1.0.1
+    version: 1.0.1
   webcrack:
     specifier: ^2.15.0
     version: 2.15.0
@@ -18004,6 +18007,11 @@ packages:
 
   /wasm-feature-detect@1.8.0:
     resolution: {integrity: sha512-zksaLKM2fVlnB5jQQDqKXXwYHLQUVH9es+5TOOHwGOVJOCeRBCiPjwSg+3tN2AdTCzjgli4jijCH290kXb/zWQ==}
+    dev: false
+
+  /wcag-contrast-utils@1.0.1:
+    resolution: {integrity: sha512-XDO0ZoIzJmZa/+dDA3hsZTRb/enObfSpo5khBHiW++s+u7ydrFZv4l/0KkomjAlsHZHSI4QCr0n6DJmqwIJOHw==}
+    engines: {node: '>=10'}
     dev: false
 
   /wcwidth@1.0.1:
