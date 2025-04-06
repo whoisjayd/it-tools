@@ -11,11 +11,11 @@ const output = ref('');
 const errored = ref(false);
 const processing = ref(false);
 
-figlet.defaults({ fontPath: '//unpkg.com/figlet@1.8.0/fonts' });
+figlet.defaults({ fontPath: '/figlet-fonts' });
 
 const languagesOptions = languages.map(lang => ({ value: lang.id, label: lang.name }));
 
-figlet.defaults({ fontPath: '//unpkg.com/figlet@1.8.0/fonts' });
+figlet.defaults({ fontPath: '/figlet-fonts' });
 
 watchEffect(async () => {
   const inputValue = input.value;
