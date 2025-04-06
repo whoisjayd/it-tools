@@ -677,6 +677,9 @@ dependencies:
   w-websocket-client:
     specifier: ^1.0.29
     version: 1.0.29
+  wcag-contrast-utils:
+    specifier: ^1.0.1
+    version: 1.0.1
   webcrack:
     specifier: ^2.15.0
     version: 2.15.0
@@ -2639,7 +2642,7 @@ packages:
       '@babel/helper-split-export-declaration': 7.22.6
       '@babel/parser': 7.22.10
       '@babel/types': 7.22.10
-      debug: 4.3.4
+      debug: 4.4.0
       globals: 11.12.0
     transitivePeerDependencies:
       - supports-color
@@ -6465,7 +6468,7 @@ packages:
     dependencies:
       '@typescript-eslint/typescript-estree': 6.4.1(typescript@5.2.2)
       '@typescript-eslint/utils': 6.4.1(eslint@8.47.0)(typescript@5.2.2)
-      debug: 4.3.4
+      debug: 4.4.0
       eslint: 8.47.0
       ts-api-utils: 1.0.1(typescript@5.2.2)
       typescript: 5.2.2
@@ -6520,7 +6523,7 @@ packages:
     dependencies:
       '@typescript-eslint/types': 6.4.1
       '@typescript-eslint/visitor-keys': 6.4.1
-      debug: 4.3.4
+      debug: 4.4.0
       globby: 11.1.0
       is-glob: 4.0.3
       semver: 7.7.1
@@ -6584,7 +6587,7 @@ packages:
       '@typescript-eslint/types': 6.4.1
       '@typescript-eslint/typescript-estree': 6.4.1(typescript@5.2.2)
       eslint: 8.47.0
-      semver: 7.5.4
+      semver: 7.7.1
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -8014,7 +8017,7 @@ packages:
   /builtins@5.0.1:
     resolution: {integrity: sha512-qwVpFEHNfhYJIzNRBvd2C1kyo6jz3ZSMPyyuR47OPdiKWlbYnZNyDWuyR175qDnAJLiCo5fBBqPb3RiXgWlkOQ==}
     dependencies:
-      semver: 7.5.4
+      semver: 7.7.1
     dev: true
 
   /bwip-js@4.5.1:
@@ -17838,7 +17841,7 @@ packages:
       espree: 9.6.1
       esquery: 1.5.0
       lodash: 4.17.21
-      semver: 7.5.4
+      semver: 7.7.1
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -17981,6 +17984,11 @@ packages:
 
   /wasm-feature-detect@1.8.0:
     resolution: {integrity: sha512-zksaLKM2fVlnB5jQQDqKXXwYHLQUVH9es+5TOOHwGOVJOCeRBCiPjwSg+3tN2AdTCzjgli4jijCH290kXb/zWQ==}
+    dev: false
+
+  /wcag-contrast-utils@1.0.1:
+    resolution: {integrity: sha512-XDO0ZoIzJmZa/+dDA3hsZTRb/enObfSpo5khBHiW++s+u7ydrFZv4l/0KkomjAlsHZHSI4QCr0n6DJmqwIJOHw==}
+    engines: {node: '>=10'}
     dev: false
 
   /wcwidth@1.0.1:

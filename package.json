@@ -261,6 +261,7 @@
     "vue3-fortune-wheel": "^2.0.5",
     "vuedraggable": "^4.1.0",
     "w-websocket-client": "^1.0.29",
+    "wcag-contrast-utils": "^1.0.1",
     "webcrack": "^2.15.0",
     "webp-converter-browser": "^1.0.4",
     "xml-formatter": "^3.6.4",
