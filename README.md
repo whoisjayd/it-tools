@@ -26,7 +26,7 @@ Almost [all tools PR of it-tools](https://github.com/sharevb/it-tools/pulls).
 services:
   it-tools:
     container_name: it-tools
-    image: ghcr.io/sharevb/it-tools:nightly
+    image: sharevb/it-tools:latest
     pull_policy: always
     restart: unless-stopped
     ports:
