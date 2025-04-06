@@ -57,6 +57,9 @@ export default defineConfig({
     svgLoader(),
     VitePWA({
       registerType: 'autoUpdate',
+      workbox: {
+        maximumFileSizeToCacheInBytes: 10 * 1024 ** 2,
+      },
       strategies: 'generateSW',
       manifest: {
         name: 'IT Tools',
