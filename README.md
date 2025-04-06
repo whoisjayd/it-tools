@@ -49,10 +49,19 @@ So you would need to put another server in front of it, like [Nginx Proxy Manage
 
 For `/it-tools/` subfolder, you can use `baseurl-it-tools` tag.
 
-See (sample of docker-compose.yml and nginx.conf)[https://github.com/sharevb/it-tools/docker-subfolder-sample], this docker image needs to have another reverse proxy in front of it, like [Nginx Proxy Manager](https://nginxproxymanager.com/), [Traefik](https://traefik.io/traefik/), [caddy](https://caddyserver.com/) etc. 
+See [sample of docker-compose.yml and nginx.conf](https://github.com/sharevb/it-tools/docker-subfolder-sample), this docker image needs to have another reverse proxy in front of it, like [Nginx Proxy Manager](https://nginxproxymanager.com/), [Traefik](https://traefik.io/traefik/), [caddy](https://caddyserver.com/) etc. 
 
-Setup a reverse proxy pass using `/it-tools/`. 
+Setup a reverse proxy pass using `/it-tools/`. And you should be able to access it-tools in `/it-tools/` of your server.
 
+To run the sample:
+
+```bash
+git clone https://github.com/sharevb/it-tools
+cd it-tools/docker-subfolder-sample/
+docker compose up
+```
+
+Then navigate to http://localhost:8080/it-tools/
 
 ## To build using a custom folder:
 
