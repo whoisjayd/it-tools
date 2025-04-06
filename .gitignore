@@ -34,4 +34,4 @@ coverage
 # Webkit with playwright creates a salt file
 salt
 # WSL can create Zone.Identifier
-Zone.Identifier
+*:Zone.Identifier
