@@ -41,8 +41,10 @@ const properties: { title: string; key: keyof URL }[] = [
   { title: 'Username', key: 'username' },
   { title: 'Password', key: 'password' },
   { title: 'Hostname', key: 'hostname' },
+  { title: 'Host', key: 'host' },
   { title: 'Port', key: 'port' },
   { title: 'Path', key: 'pathname' },
+  { title: 'Fragment', key: 'hash' },
   { title: 'Params', key: 'search' },
 ];
 </script>
