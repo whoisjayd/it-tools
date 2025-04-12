@@ -19,15 +19,18 @@ function calculateResult() {
     const ratio = calculateAspectRatio(width.value, height.value);
     if (r2.value) {
       r1.value = ratio.r1 / ratio.r2;
-    } else if (r1.value) {
+    }
+    else if (r1.value) {
       r2.value = ratio.r2 / ratio.r1;
-    } else {
+    }
+    else {
       r1.value = ratio.r1;
       r2.value = ratio.r2;
     }
     if (ratio.r1 !== r1.value) {
       result.value = `Aspect Ratio: ${r1.value}:${r2.value} or ${ratio.r1}:${ratio.r2}`;
-    } else {
+    }
+    else {
       result.value = `Aspect Ratio: ${ratio.r1}:${ratio.r2}`;
     }
   }
@@ -105,7 +108,7 @@ function clearRatio() {
       <NButton type="primary" @click="calculateResult">
         Calculate
       </NButton>
-      <NButton @click="clearRatio" v-if="mode === 'ratio'">
+      <NButton v-if="mode === 'ratio'" @click="clearRatio">
         Clear Ratio
       </NButton>
       <NButton @click="clearAll">

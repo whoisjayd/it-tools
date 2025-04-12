@@ -104,6 +104,7 @@ declare module '@vue/runtime-core' {
     DeviceInformation: typeof import('./src/tools/device-information/device-information.vue')['default']
     DiceRoller: typeof import('./src/tools/dice-roller/dice-roller.vue')['default']
     DiffViewer: typeof import('./src/tools/json-diff/diff-viewer/diff-viewer.vue')['default']
+    DmarcReportAnalyzer: typeof import('./src/tools/dmarc-report-analyzer/dmarc-report-analyzer.vue')['default']
     DnsQueries: typeof import('./src/tools/dns-queries/dns-queries.vue')['default']
     DockerComposeConverter: typeof import('./src/tools/docker-compose-converter/docker-compose-converter.vue')['default']
     DockerComposeToDockerRunConverter: typeof import('./src/tools/docker-compose-to-docker-run-converter/docker-compose-to-docker-run-converter.vue')['default']
