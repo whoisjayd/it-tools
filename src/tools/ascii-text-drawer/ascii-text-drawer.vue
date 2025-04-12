@@ -11,11 +11,11 @@ const output = ref('');
 const errored = ref(false);
 const processing = ref(false);
 
-figlet.defaults({ fontPath: '/figlet-fonts' });
+const base = import.meta.env.BASE_URL ?? '/';
+
+figlet.defaults({ fontPath: `${base}figlet-fonts` });
 
 const languagesOptions = languages.map(lang => ({ value: lang.id, label: lang.name }));
-
-figlet.defaults({ fontPath: '/figlet-fonts' });
 
 watchEffect(async () => {
   const inputValue = input.value;
