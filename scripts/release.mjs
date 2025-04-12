@@ -19,6 +19,8 @@ const markdown = rawCommitsToMarkdown({ rawCommits });
 
 consola.info(`Changelog: \n\n${markdown}\n\n`);
 
+consola.info(`Version: ${version}`);
+
 if (isDryRun) {
   consola.info(`[dry-run] Not creating version nor tag`);
   consola.info('Aborting');
