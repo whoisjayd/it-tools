@@ -7,7 +7,7 @@ const themeVars = useThemeVars();
 
 const input = ref('');
 const saltCount = ref(10);
-const hashed = computed(() => hashSync(input.value, saltCount.value));
+const hashed = computed(() => hashSync(input.value, saltCount.value || 10));
 const { copy } = useCopy({ source: hashed, text: 'Hashed string copied to the clipboard' });
 
 const compareString = ref('');
