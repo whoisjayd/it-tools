@@ -1,6 +1,7 @@
 import { URL, fileURLToPath } from 'node:url';
 import { resolve } from 'node:path';
 import { nodePolyfills } from 'vite-plugin-node-polyfills';
+import wasm from 'vite-plugin-wasm';
 
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
@@ -103,6 +104,7 @@ export default defineConfig({
     }),
     Unocss(),
     nodePolyfills(),
+    wasm(),
   ],
   base: baseUrl,
   resolve: {

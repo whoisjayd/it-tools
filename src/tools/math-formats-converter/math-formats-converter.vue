@@ -1,10 +1,9 @@
 <script setup lang="ts">
 import { useScriptTag } from '@vueuse/core';
+import { convert_math } from 'mitex-wasm';
 import { useQueryParamOrStorage } from '@/composable/queryParams';
 
-const base = import.meta.env.BASE_URL ?? '/';
-
-const { load: loadPlurimath } = useScriptTag(`${base}plurimath/index.js`, undefined, { type: 'module', manual: true });
+const { load: loadPlurimath } = useScriptTag('/plurimath/index.js', undefined, { type: 'module', manual: true });
 
 const formats = [
   { value: 'asciimath', label: 'AsciiMath' },
@@ -48,6 +47,9 @@ const target = computedAsync(async () => {
         case 'omml':
           result = formula.toOmml();
           break;
+        case 'typst':
+          result = convert_math(formula.toLatex(), new Uint8Array());
+          break;
         default:
           result = '# unknown format';
           break;
@@ -74,17 +76,22 @@ const target = computedAsync(async () => {
     />
     <c-select
       v-model:value="sourceFormat"
+      label="Source format:"
       :options="formats"
       placeholder="Source format"
+      mb-2
     />
-
-    <n-divider />
 
     <c-select
       v-model:value="targetFormat"
-      :options="formats"
-      placeholder="Source format"
+      label="Target format:"
+      :options="[...formats, { value: 'typst', label: 'Typst' }]"
+      placeholder="Target format"
+      mb-2
     />
-    <textarea-copyable v-if="target" :value="target" :language="targetFormat" word-wrap />
+
+    <c-card title="Converted expression:">
+      <textarea-copyable :value="target" :language="targetFormat" word-wrap />
+    </c-card>
   </div>
 </template>

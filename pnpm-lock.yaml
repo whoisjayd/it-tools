@@ -482,6 +482,9 @@ dependencies:
   mime-types:
     specifier: ^2.1.35
     version: 2.1.35
+  mitex-wasm:
+    specifier: ^0.2.5
+    version: 0.2.5
   monaco-editor:
     specifier: ^0.43.0
     version: 0.43.0
@@ -919,6 +922,9 @@ devDependencies:
   vite-plugin-vue-markdown:
     specifier: ^0.23.5
     version: 0.23.5(rollup@2.79.2)(vite@4.4.9)
+  vite-plugin-wasm:
+    specifier: ^3.4.1
+    version: 3.4.1(vite@4.4.9)
   vite-svg-loader:
     specifier: ^4.0.0
     version: 4.0.0
@@ -13658,6 +13664,10 @@ packages:
       rimraf: 5.0.10
     dev: false
 
+  /mitex-wasm@0.2.5:
+    resolution: {integrity: sha512-pGIaSWmcfFEW/zjsNwgg2Y/Xthiah8ZLWU8QlF21dJPql8ifr1D268V5A5AwDZcGzfe2t44D4uEpGj81DUGCsA==}
+    dev: false
+
   /mkdirp-classic@0.5.3:
     resolution: {integrity: sha512-gKLcREMhtuZRwRAfqP3RFW+TK4JqApVBtOIftVgjuABpAtpxhPGaDcfvbhNvD0B8iD1oUr/txX35NjcaY6Ns/A==}
     dev: false
@@ -17785,6 +17795,14 @@ packages:
       vite: 4.4.9(@types/node@18.19.75)(less@4.2.2)
     transitivePeerDependencies:
       - rollup
+    dev: true
+
+  /vite-plugin-wasm@3.4.1(vite@4.4.9):
+    resolution: {integrity: sha512-ja3nSo2UCkVeitltJGkS3pfQHAanHv/DqGatdI39ja6McgABlpsZ5hVgl6wuR8Qx5etY3T5qgDQhOWzc5RReZA==}
+    peerDependencies:
+      vite: ^2 || ^3 || ^4 || ^5 || ^6
+    dependencies:
+      vite: 4.4.9(@types/node@18.19.75)(less@4.2.2)
     dev: true
 
   /vite-svg-loader@4.0.0:
