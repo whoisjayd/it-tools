@@ -33,6 +33,13 @@ services:
       - 8080:8080
 ```
 
+## To build using a custom folder:
+
+```
+docker build -t it-tools-fr --build-arg BVITE_LANGUAGE=fr .
+docker run -d --name it-tools-fr --restart unless-stopped -p 8080:8080 it-tools-fr
+```
+
 ## Build docker image for a custom subfolder
 
 According to https://github.com/sharevb/it-tools/pull/461#issuecomment-1602506049 and https://github.com/CorentinTh/it-tools/pull/461:
