@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import PomodoroApp from './app/App.vue';
+import PomodoroApp from './app/PomodoroApp.vue';
 </script>
 
 <template>
