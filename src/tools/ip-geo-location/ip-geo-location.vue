@@ -36,8 +36,8 @@ async function onGetInfos() {
 
     const geoInfoQueryResponse = await fetch(
       token.value !== ''
-        ? `https://ipinfo.io/${ip.value}/json?token=${token.value}`
-        : `https://ipinfo.io/${ip.value}/json`);
+        ? `//ipinfo.io/${ip.value}/json?token=${token.value}`
+        : `//ipinfo.io/${ip.value}/json`);
     if (!geoInfoQueryResponse.ok) {
       throw geoInfoQueryResponse.statusText;
     }

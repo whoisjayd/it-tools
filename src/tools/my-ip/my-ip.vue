@@ -33,7 +33,7 @@ const [clientIPDetails, refreshClientIP] = computedRefreshableAsync(async () => 
     error: '',
   };
   try {
-    ipv4.ip = (await (await fetch('https://api4.ipify.org?format=json', {
+    ipv4.ip = (await (await fetch('//api4.ipify.org?format=json', {
       mode: 'cors',
     })).json()).ip?.toString();
   }
@@ -41,7 +41,7 @@ const [clientIPDetails, refreshClientIP] = computedRefreshableAsync(async () => 
     ipv4.error = `Not detected (${e.toString()})`;
   }
   try {
-    ipv6.ip = (await (await fetch('https://api6.ipify.org?format=json', {
+    ipv6.ip = (await (await fetch('//api6.ipify.org?format=json', {
       mode: 'cors',
     })).json()).ip?.toString();
   }

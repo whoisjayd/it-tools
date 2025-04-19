@@ -90,7 +90,7 @@ const currentTab = computed(
 </template>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+@import url("//fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 
 :root {
     --pomodoro-app-accent-color: #3b83b0;

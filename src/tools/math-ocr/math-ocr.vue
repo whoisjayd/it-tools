@@ -5,7 +5,7 @@ import VueMathjax from 'vue-mathjax-next';
 import { useScriptTag } from '@vueuse/core';
 import TextareaCopyable from '@/components/TextareaCopyable.vue';
 
-useScriptTag('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_HTML');
+useScriptTag('//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_HTML');
 
 const ocrInProgress = ref(false);
 const fileInput = ref() as Ref<File>;

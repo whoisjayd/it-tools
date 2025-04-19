@@ -36,7 +36,7 @@ window.IpLookup = (function () {
 		return getUnderberFill(num.toString(36), 2)
 	};
 
-	const TOP_URL = 'https://cdn.jsdelivr.net/npm/@iplookup/country-extra/';
+	const TOP_URL = '//cdn.jsdelivr.net/npm/@iplookup/country-extra/';
 	const MAIN_RECORD_SIZE = 2 ;
 	const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
