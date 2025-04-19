@@ -15,7 +15,9 @@ declare global {
   }
 }
 
-const { load: loadIpLookup } = useScriptTag('/iplookup.js', undefined, { type: 'module', manual: true });
+const base = import.meta.env.BASE_URL ?? '/';
+
+const { load: loadIpLookup } = useScriptTag(`${base}iplookup.js`, undefined, { type: 'module', manual: true });
 
 const [clientIPDetails, refreshClientIP] = computedRefreshableAsync(async () => {
   const ipv4 = { ip: '', error: '' };
