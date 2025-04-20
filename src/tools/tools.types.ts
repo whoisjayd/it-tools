@@ -20,4 +20,11 @@ export interface ToolCategory {
   components: Tool[]
 }
 
+export interface ToolsFilter {
+  excludeCategoryFilterRegex?: string
+  includeCategoryFilterRegex?: string
+  excludeToolsFilterRegex?: string
+  includeToolsFilterRegex?: string
+}
+
 export type ToolWithCategory = Tool & { category: string };

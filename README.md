@@ -33,6 +33,23 @@ services:
       - 8080:8080
 ```
 
+## Filter tools and add home custom content
+
+You can add custom content in Home page by mounting a `home.custom.md` in `/usr/share/nginx/html`.
+
+You can filter available tools by mounting `tools-filter.json` in `/usr/share/nginx/html`. It can contains the following filtering regex:
+```json
+{
+  "excludeCategoryFilterRegex": "",
+  "includeCategoryFilterRegex": "",
+  "excludeToolsFilterRegex": "",
+  "includeToolsFilterRegex": ""
+}
+```
+Category matches on category (English) names ; Tools matches on tools path/url.
+
+See (docker-tools-filter-and-home-content)[https://github.com/sharevb/it-tools]
+
 ## To build using a custom folder:
 
 ```

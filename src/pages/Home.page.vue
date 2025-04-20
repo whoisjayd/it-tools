@@ -3,10 +3,23 @@ import { IconDragDrop, IconFileDescription, IconHeart } from '@tabler/icons-vue'
 import { useHead } from '@vueuse/head';
 import { computed } from 'vue';
 import Draggable from 'vuedraggable';
+import VueMarkdown from 'vue-markdown-render';
 import ColoredCard from '../components/ColoredCard.vue';
 import ToolCard from '../components/ToolCard.vue';
 import { useToolStore } from '@/tools/tools.store';
 import { config } from '@/config';
+
+const base = import.meta.env.BASE_URL ?? '/';
+const homeCustomMarkdown = computedAsync(async () => {
+  try {
+    const remoteCustomHomeMarkdownResponse = await fetch(`${base}home.custom.md`);
+    if (remoteCustomHomeMarkdownResponse.ok) {
+      return await remoteCustomHomeMarkdownResponse.text();
+    }
+  }
+  catch {}
+  return '';
+});
 
 const toolStore = useToolStore();
 
@@ -85,6 +98,10 @@ function onUpdateFavoriteTools() {
         <div class="grid grid-cols-1 gap-12px lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 xl:grid-cols-4">
           <ToolCard v-for="tool in toolStore.newTools" :key="tool.name" :tool="tool" />
         </div>
+      </div>
+
+      <div v-if="homeCustomMarkdown">
+        <VueMarkdown :source="homeCustomMarkdown" />
       </div>
 
       <h3 class="mb-5px mt-25px font-500 text-neutral-400">

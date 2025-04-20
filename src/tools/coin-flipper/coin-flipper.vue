@@ -12,7 +12,7 @@ const [coinFlip, refreshCoinFlip] = computedRefreshable(() => ({
   <div>
     <Transition name="bounce" mode="out-in">
       <div :key="coinFlip.dt" flex items-center justify-center>
-        <div flex items-center justify-center rounded-full outline style="width: 5em; height: 5em" mt-1 mb-1>
+        <div style="width: 5em; height: 5em" mb-1 mt-1 flex items-center justify-center rounded-full outline>
           {{ coinFlip.coin }}
         </div>
       </div>
