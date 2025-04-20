@@ -11,6 +11,7 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     '404.page': typeof import('./src/pages/404.page.vue')['default']
     About: typeof import('./src/pages/About.vue')['default']
+    AdLdapSearcher: typeof import('./src/tools/ad-ldap-searcher/ad-ldap-searcher.vue')['default']
     AiPromptSplitter: typeof import('./src/tools/ai-prompt-splitter/ai-prompt-splitter.vue')['default']
     AlarmSoundToggle: typeof import('./src/tools/pomodoro-timer/app/components/AlarmSoundToggle.vue')['default']
     AngleConverter: typeof import('./src/tools/angle-converter/angle-converter.vue')['default']
@@ -289,6 +290,7 @@ declare module '@vue/runtime-core' {
     NP: typeof import('naive-ui')['NP']
     NRate: typeof import('naive-ui')['NRate']
     NScrollbar: typeof import('naive-ui')['NScrollbar']
+    NTable: typeof import('naive-ui')['NTable']
     NTag: typeof import('naive-ui')['NTag']
     NumberInput: typeof import('./src/tools/pomodoro-timer/app/components/NumberInput.vue')['default']
     NumeronymGenerator: typeof import('./src/tools/numeronym-generator/numeronym-generator.vue')['default']
