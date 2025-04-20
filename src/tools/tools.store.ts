@@ -24,6 +24,7 @@ export const useToolStore = defineStore('tools', () => {
 
   const toolsByCategory = computed<ToolCategory[]>(() => {
     return _.chain(tools.value)
+      .orderBy(['category', 'name'], 'asc')
       .groupBy('category')
       .map((components, name, path) => ({
         name,
