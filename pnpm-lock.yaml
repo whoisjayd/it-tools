@@ -131,6 +131,9 @@ dependencies:
   '@zxing/library':
     specifier: ^0.21.3
     version: 0.21.3
+  a11y-color-contrast:
+    specifier: ^0.2.0
+    version: 0.2.0
   aircodes:
     specifier: ^1.3.16
     version: 1.3.16
@@ -704,9 +707,6 @@ dependencies:
   w-websocket-client:
     specifier: ^1.0.29
     version: 1.0.29
-  wcag-contrast-utils:
-    specifier: ^1.0.1
-    version: 1.0.1
   webcrack:
     specifier: ^2.15.0
     version: 2.15.0
@@ -7467,6 +7467,11 @@ packages:
 
   /JSV@4.0.2:
     resolution: {integrity: sha512-ZJ6wx9xaKJ3yFUhq5/sk82PJMuUyLk277I8mQeyDgCTjGdjWJIvPfaU5LIXaMuaN2UO1X3kZH4+lgphublZUHw==}
+    dev: false
+
+  /a11y-color-contrast@0.2.0:
+    resolution: {integrity: sha512-INSv5cMPGvJ/jMLvIxRTT9CDQqxODOhoedaQ2+yWIwbxhKyOns9m/7aJjXVQjxp1rntkbiL4lBUtikuH5YK6Cg==}
+    engines: {node: '>=16.6.0'}
     dev: false
 
   /abab@2.0.6:
@@ -18178,11 +18183,6 @@ packages:
 
   /wasm-feature-detect@1.8.0:
     resolution: {integrity: sha512-zksaLKM2fVlnB5jQQDqKXXwYHLQUVH9es+5TOOHwGOVJOCeRBCiPjwSg+3tN2AdTCzjgli4jijCH290kXb/zWQ==}
-    dev: false
-
-  /wcag-contrast-utils@1.0.1:
-    resolution: {integrity: sha512-XDO0ZoIzJmZa/+dDA3hsZTRb/enObfSpo5khBHiW++s+u7ydrFZv4l/0KkomjAlsHZHSI4QCr0n6DJmqwIJOHw==}
-    engines: {node: '>=10'}
     dev: false
 
   /wcwidth@1.0.1:
