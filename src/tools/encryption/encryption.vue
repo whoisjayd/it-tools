@@ -1,24 +1,22 @@
 <script setup lang="ts">
-import { AES, RC4, Rabbit, TripleDES, enc } from 'crypto-js';
+import type { KeyEncoding } from './encryption.service';
+import { algos } from './encryption.service';
 import { computedCatch } from '@/composable/computed/catchedComputed';
 
-const algos = { AES, TripleDES, Rabbit, RC4 };
-type KeyEncoding = 'Text' | 'Hex';
-
 const cypherInput = ref('Lorem ipsum dolor sit amet');
-const cypherAlgo = ref<keyof typeof algos>('AES');
-const cypherSecret = ref('my secret key');
+const cypherAlgo = ref<keyof typeof algos>('AES-CBC');
+const cypherSecret = ref('my secret key 16');
 const cypherSecretEncoding = ref<KeyEncoding>('Text');
-const [cypherOutput, cypherError] = computedCatch(() => algos[cypherAlgo.value].encrypt(cypherInput.value, cypherSecretEncoding.value === 'Text' ? cypherSecret.value : enc.Hex.parse(cypherSecret.value), { iv: enc.Hex.parse('') }).toString(), {
+const [cypherOutput, cypherError] = computedCatch(() => algos[cypherAlgo.value].encrypt(cypherInput.value, cypherSecret.value, cypherSecretEncoding.value), {
   defaultValue: '',
   defaultErrorMessage: 'Unable to cypher your text',
 });
 
-const decryptInput = ref('U2FsdGVkX1/EC3+6P5dbbkZ3e1kQ5o2yzuU0NHTjmrKnLBEwreV489Kr0DIB+uBs');
-const decryptAlgo = ref<keyof typeof algos>('AES');
-const decryptSecret = ref('my secret key');
+const decryptInput = ref('dopEIE7v5TJlhHl+0+mA4Q+BxNj4xcdTsiVGw4tmpLlkDln8lzmzavO3egJuzpCD');
+const decryptAlgo = ref<keyof typeof algos>('AES-CBC');
+const decryptSecret = ref('my secret key 16');
 const decryptSecretEncoding = ref<KeyEncoding>('Text');
-const [decryptOutput, decryptError] = computedCatch(() => algos[decryptAlgo.value].decrypt(decryptInput.value, decryptSecretEncoding.value === 'Text' ? decryptSecret.value : enc.Hex.parse(decryptSecret.value), { iv: enc.Hex.parse('') }).toString(enc.Utf8), {
+const [decryptOutput, decryptError] = computedCatch(() => algos[decryptAlgo.value].decrypt(decryptInput.value, decryptSecret.value, decryptSecretEncoding.value), {
   defaultValue: '',
   defaultErrorMessage: 'Unable to decrypt your text',
 });
