@@ -115,6 +115,7 @@
     "date-fns": "^2.30.0",
     "date-holidays": "^3.23.21",
     "decomposerize": "^1.4.4",
+    "detect-csv": "^1.1.0",
     "dmarc-report-parser": "^0.1.5",
     "dns-query": "^0.11.2",
     "docker2kube": "^0.0.14",

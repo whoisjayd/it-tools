@@ -242,6 +242,9 @@ dependencies:
   decomposerize:
     specifier: ^1.4.4
     version: 1.4.4
+  detect-csv:
+    specifier: ^1.1.0
+    version: 1.1.0
   dmarc-report-parser:
     specifier: ^0.1.5
     version: 0.1.5
@@ -9611,6 +9614,10 @@ packages:
   /destr@2.0.3:
     resolution: {integrity: sha512-2N3BOUU4gYMpTP24s5rF5iP7BDr7uNTCs4ozw3kf/eKfvWSIu93GEBi5m427YoyJoeOzQ5smuu4nNAPGb8idSQ==}
     dev: true
+
+  /detect-csv@1.1.0:
+    resolution: {integrity: sha512-msOkPMiNTtr73yh5G5doGASChThzQiRF3Es+wPKD2+0W+j14lRIfH4P3QDmweMRFfuRoauh531X4vtaaI/oeCw==}
+    dev: false
 
   /detect-europe-js@0.1.2:
     resolution: {integrity: sha512-lgdERlL3u0aUdHocoouzT10d9I89VVhk0qNRmll7mXdGfJT1/wqZ2ZLA4oJAjeACPY5fT1wsbq2AT+GkuInsow==}
