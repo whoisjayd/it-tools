@@ -31,10 +31,10 @@ const result = computed(() => {
     const wcagLevel = wcagContrastValue(bgHex, fgHex);
     return {
       wcag21ConstrastValue: wcagLevel,
-      aaNormal: wcag(bgHex, fgHex, { level: 'AA', size: 'normal' }),
-      aaaNormal: wcag(bgHex, fgHex, { level: 'AAA', size: 'normal' }),
-      aaLarge: wcag(bgHex, fgHex, { level: 'AA', size: 'large' }),
-      aaaLarge: wcag(bgHex, fgHex, { level: 'AAA', size: 'large' }),
+      aaNormal: wcag(bgHex, fgHex, { level: 'AA', size: 'normal' }).pass,
+      aaaNormal: wcag(bgHex, fgHex, { level: 'AAA', size: 'normal' }).pass,
+      aaLarge: wcag(bgHex, fgHex, { level: 'AA', size: 'large' }).pass,
+      aaaLarge: wcag(bgHex, fgHex, { level: 'AAA', size: 'large' }).pass,
       level: levels.find(l => wcagLevel < l.score),
       largeLevel: largeLevels.find(l => wcagLevel < l.score),
       smallLevel: smallLevels.find(l => wcagLevel < l.score),
