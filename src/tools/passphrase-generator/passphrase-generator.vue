@@ -11,6 +11,7 @@ const numbers = useQueryParamOrStorage({ name: 'nums', storageName: 'pass-genera
 const capitalize = useQueryParamOrStorage({ name: 'capitalize', storageName: 'pass-generator:capitalize', defaultValue: false });
 const saltChars = useQueryParamOrStorage({ name: 'salt', storageName: 'pass-generator:salt', defaultValue: '' });
 const separator = useQueryParamOrStorage({ name: 'sep', storageName: 'pass-generator:sep', defaultValue: '-' });
+const maxLen = useQueryParamOrStorage({ name: 'maxlen', storageName: 'pass-generator:maxlen', defaultValue: 100 });
 
 const [passphrases, refreshPassphrases] = computedRefreshable(
   () => Array.from({ length: count.value },
@@ -31,16 +32,24 @@ const [passphrases, refreshPassphrases] = computedRefreshable(
         }
       }
 
-      return generateSillyPassword({
-        capitalize: capitalize.value,
-        wordCount: words.value,
-        salt: saltChars.value,
-      }).split(/\s+/g).map((word, i) => {
-        if (nums.includes(i)) {
-          return word + randIntFromInterval(1, 100);
+      let maxIter = 10;
+      while (maxIter > 0) {
+        const passphrase = generateSillyPassword({
+          capitalize: capitalize.value,
+          wordCount: words.value,
+          salt: saltChars.value,
+        }).split(/\s+/g).map((word, i) => {
+          if (nums.includes(i)) {
+            return word + randIntFromInterval(1, 100);
+          }
+          return word;
+        }).join(separator.value);
+        if (passphrase.length < maxLen.value) {
+          return passphrase;
         }
-        return word;
-      }).join(separator.value);
+        maxIter -= 1;
+      }
+      return `# Cannot generate a passphrase of max ${maxLen.value} characters`;
     }).join('\n'),
 );
 
@@ -50,16 +59,22 @@ const { copy } = useCopy({ source: passphrases, text: 'Passphrase(s) copied to c
 <template>
   <div>
     <c-card>
-      <n-form-item :label="`Words (${words})`" label-placement="left">
-        <n-slider v-model:value="words" :step="1" :min="1" :max="512" mr-2 />
-        <n-input-number v-model:value="words" size="small" />
-      </n-form-item>
-      <n-form-item label="Add numbers after X words" label-placement="left">
-        <n-slider v-model:value="numbers" :step="1" :min="1" :max="words" mr-2 />
-        <n-input-number v-model:value="numbers" :max="words" size="small" />
-      </n-form-item>
+      <n-space>
+        <n-form-item :label="`Words (${words})`" label-placement="left">
+          <n-slider v-model:value="words" :step="1" :min="1" :max="512" mr-2 />
+          <n-input-number v-model:value="words" size="small" />
+        </n-form-item>
+        <n-form-item label="Add numbers after X words" label-placement="left">
+          <n-slider v-model:value="numbers" :step="1" :min="1" :max="words" mr-2 />
+          <n-input-number v-model:value="numbers" :max="words" size="small" />
+        </n-form-item>
+      </n-space>
 
       <n-space>
+        <n-form-item label="Max passphrase len" label-placement="left">
+          <n-input-number v-model:value="maxLen" size="small" />
+        </n-form-item>
+
         <n-form-item label="Capitalize" label-placement="left">
           <n-switch v-model:value="capitalize" />
         </n-form-item>
