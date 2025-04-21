@@ -428,6 +428,9 @@ dependencies:
   jsonpath:
     specifier: ^1.1.1
     version: 1.1.1
+  jsonrepair:
+    specifier: ^3.12.0
+    version: 3.12.0
   jsstack.js:
     specifier: ^2.0.0
     version: 2.0.0
@@ -12906,8 +12909,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /jsonrepair@3.11.2:
-    resolution: {integrity: sha512-ejydGcTq0qKk1r0NUBwjtvswbPFhs19+QEfwSeGwB8KJZ59W7/AOFmQh04c68mkJ+2hGk+OkOmkr2bKG4tGlLQ==}
+  /jsonrepair@3.12.0:
+    resolution: {integrity: sha512-SWfjz8SuQ0wZjwsxtSJ3Zy8vvLg6aO/kxcp9TWNPGwJKgTZVfhNEQBMk/vPOpYCDFWRxD6QWuI6IHR1t615f0w==}
     hasBin: true
     dev: false
 
@@ -17668,7 +17671,7 @@ packages:
       immutable-json-patch: 6.0.1
       jmespath: 0.16.0
       json-source-map: 0.6.1
-      jsonrepair: 3.11.2
+      jsonrepair: 3.12.0
       lodash-es: 4.17.21
       memoize-one: 6.0.0
       natural-compare-lite: 1.4.0

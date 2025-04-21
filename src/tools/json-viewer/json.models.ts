@@ -1,5 +1,6 @@
 import { type MaybeRef, get } from '@vueuse/core';
 import JSON5 from 'json5';
+import { jsonrepair } from 'jsonrepair';
 
 export { sortObjectKeys, formatJson };
 
@@ -31,14 +32,17 @@ function formatJson({
   sortKeys = true,
   indentSize = 3,
   unescapeUnicode = false,
+  repairJson = false,
 }: {
   rawJson: MaybeRef<string>
   sortKeys?: MaybeRef<boolean>
   indentSize?: MaybeRef<number>
   unescapeUnicode?: MaybeRef<boolean>
+  repairJson?: MaybeRef<boolean>
 }) {
-  const raw = get(rawJson);
-  const parsedObject = JSON5.parse(get(unescapeUnicode) ? unescapeUnicodeJSON(raw) : raw);
+  const unwrappedJson = get(rawJson);
+  const jsonString = get(repairJson) ? jsonrepair(unwrappedJson) : unwrappedJson;
+  const parsedObject = JSON5.parse(get(unescapeUnicode) ? unescapeUnicodeJSON(jsonString) : jsonString);
 
   return JSON.stringify(get(sortKeys) ? sortObjectKeys(parsedObject) : parsedObject, null, get(indentSize));
 }
