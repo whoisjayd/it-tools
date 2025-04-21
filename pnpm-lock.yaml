@@ -503,6 +503,9 @@ dependencies:
   memorystream:
     specifier: ^0.3.1
     version: 0.3.1
+  mermaid:
+    specifier: ^11.6.0
+    version: 11.6.0
   mime-types:
     specifier: ^2.1.35
     version: 2.1.35
@@ -698,9 +701,6 @@ dependencies:
   vue-mathjax-next:
     specifier: ^0.0.6
     version: 0.0.6
-  vue-mermaid-string:
-    specifier: ^7.0.0
-    version: 7.0.0
   vue-router:
     specifier: ^4.1.6
     version: 4.1.6(vue@3.3.4)
@@ -18093,16 +18093,6 @@ packages:
 
   /vue-mathjax-next@0.0.6:
     resolution: {integrity: sha512-H4nZ8t31TmBJgiR6pHrOGz+RWhlw34d0yhD8fi8CnXoGOydGFreNH/Crd/9Jfd2IMSu/I0AC3ymT9D09JRMIrw==}
-    dev: false
-
-  /vue-mermaid-string@7.0.0:
-    resolution: {integrity: sha512-bpOXTO6ppZ/hwHOkKJOUhRI98i5xZmroDXmyBSnUJC2IO1IsXZJE0EL+YleDs5EtuOH25Db4m7OVVkFgQaLYqg==}
-    engines: {node: '>=18'}
-    dependencies:
-      mermaid: 11.6.0
-      nanoid: 5.0.9
-    transitivePeerDependencies:
-      - supports-color
     dev: false
 
   /vue-router@4.1.6(vue@3.3.4):
