@@ -650,6 +650,9 @@ dependencies:
   sshpk:
     specifier: ^1.18.0
     version: 1.18.0
+  staveless-futhark:
+    specifier: ^0.6.1
+    version: 0.6.1
   stringify-object:
     specifier: ^5.0.0
     version: 5.0.0
@@ -16308,6 +16311,11 @@ packages:
     resolution: {integrity: sha512-N/D219Hcr2bPjLxPiV+TQE++Tsmrady7TqAJugLy7Xk1EumfDWS/f5dtBbkRCGE7wKKXuYockQoj8Rm2/pVKyg==}
     dependencies:
       escodegen: 1.14.3
+    dev: false
+
+  /staveless-futhark@0.6.1:
+    resolution: {integrity: sha512-1pypneqdPd5qIPUBuf8gRr1VjoS6DSc72vL3ervyqMfFpT98skVAmdRMaz+9FOM/N9D8bs5htvyd8Yxv9ltezg==}
+    engines: {node: '>=12.0.0'}
     dev: false
 
   /std-env@3.3.3:
