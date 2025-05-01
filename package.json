@@ -229,6 +229,7 @@
     "potrace": "^2.1.8",
     "pp-qr-code": "^0.6.4",
     "pretty-ms": "^9.2.0",
+    "properties": "^1.2.1",
     "punycode": "^2.3.1",
     "pythonstack.js": "^1.0.2",
     "qpdf-wasm-esm-embedded": "^1.1.1",
