@@ -30,7 +30,7 @@ function fromProperties(value: string) {
 }
 function toProperties(value: string) {
   try {
-    return properties.stringify(flatten(yaml.parse(value)), { sections: true });
+    return properties.stringify(flatten(yaml.parse(value)));
   }
   catch (e: any) {
     return e.toString();
@@ -40,23 +40,23 @@ function toProperties(value: string) {
 
 <template>
   <c-card title=".properties to YAML">
-  <format-transformer
-    input-label="Your .properties content:"
-    :input-default="defaultPropertiesValue"
-    input-placeholder="Paste your .properties content here..."
-    output-label="YAML version:"
-    output-language="yaml"
-    :transformer="fromProperties"
-  />
+    <format-transformer
+      input-label="Your .properties content:"
+      :input-default="defaultPropertiesValue"
+      input-placeholder="Paste your .properties content here..."
+      output-label="YAML version:"
+      output-language="yaml"
+      :transformer="fromProperties"
+    />
   </c-card>
   <c-card title="YAML to .properties">
-  <format-transformer
-    input-label="Your YAML content:"
-    :input-default="defaultYamlValue"
-    input-placeholder="Paste your YAML content here..."
-    output-label=".properties version:"
-    output-language="ini"
-    :transformer="toProperties"
-  />
+    <format-transformer
+      input-label="Your YAML content:"
+      :input-default="defaultYamlValue"
+      input-placeholder="Paste your YAML content here..."
+      output-label=".properties version:"
+      output-language="ini"
+      :transformer="toProperties"
+    />
   </c-card>
 </template>
