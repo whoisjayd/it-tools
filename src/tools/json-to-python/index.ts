@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./json-to-python.vue'),
   icon: BrandPython,
   createdAt: new Date('2025-03-09'),
+  category: 'JSON',
 });
