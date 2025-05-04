@@ -9,4 +9,5 @@ export const tool = defineTool({
   component: () => import('./json-to-php.vue'),
   icon: Braces,
   createdAt: new Date('2025-04-21'),
+  category: 'JSON',
 });
