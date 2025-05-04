@@ -1,94 +1,36 @@
-<script lang="ts">
-import { defineComponent, ref } from 'vue';
-import { NButton, NCard, NSelect } from 'naive-ui';
+<script lang="ts" setup>
 import * as XLSX from 'xlsx';
-import yaml from 'yaml';
+import { objectArrayToData } from './excel-to-data.service';
+import type { ExportFormat } from './excel-to-data.service';
 
-export default defineComponent({
-  components: { NCard, NButton, NSelect },
-  setup() {
-    const data = ref<any[]>([]);
-    const convertedData = ref<string>('');
-    const selectedFormat = ref<string>('json');
-    const formatLanguage = ref<string>('json');
-    const tableName = ref<string>('TableName');
+const data = ref<any[]>([]);
+const convertedData = ref<string>('');
+const selectedFormat = ref<string>('json');
+const tableName = ref<string>('TableName');
 
-    const formats = [
-      { label: 'JSON', value: 'json' },
-      { label: 'YAML', value: 'yaml' },
-      { label: 'SQL INSERT', value: 'sql' },
-      { label: 'CSV (comma)', value: 'csv' },
-      { label: 'CSV (semicolon)', value: 'csv_semicolon' },
-      { label: 'CSV (tab)', value: 'tsv' },
-      { label: 'Markdown', value: 'markdown' },
-    ];
+const formats = [
+  { label: 'JSON', value: 'json' },
+  { label: 'YAML', value: 'yaml' },
+  { label: 'SQL INSERT', value: 'sql' },
+  { label: 'CSV (comma)', value: 'csv' },
+  { label: 'CSV (semicolon)', value: 'csv_semicolon' },
+  { label: 'CSV (tab)', value: 'tsv' },
+  { label: 'Markdown', value: 'markdown' },
+];
 
-    const escapeSQL = (value: any) =>
-      typeof value === 'string' ? `'${value.replace(/'/g, '\'\'')}'` : value;
+async function handleFileUpload(file: File) {
+  const workbook = XLSX.read(await file.arrayBuffer(), { type: 'binary' });
+  const sheetName = workbook.SheetNames[0];
+  data.value = XLSX.utils.sheet_to_json(workbook.Sheets[sheetName]);
+}
 
-    const escapeCSV = (value: any) =>
-      `"${String(value).replace(/"/g, '""')}"`;
+function convertFile() {
+  if (!data.value.length || !selectedFormat.value) {
+    return;
+  }
 
-    const escapeMarkdown = (value: any) =>
-      String(value).replace(/\|/g, '\\|').replace(/`/g, '\\`');
-
-    const handleFileUpload = async (file: File) => {
-      const workbook = XLSX.read(await file.arrayBuffer(), { type: 'binary' });
-      const sheetName = workbook.SheetNames[0];
-      data.value = XLSX.utils.sheet_to_json(workbook.Sheets[sheetName]);
-    };
-
-    const convertFile = () => {
-      if (!data.value.length || !selectedFormat.value) {
-        return;
-      }
-
-      switch (selectedFormat.value) {
-        case 'json':
-          formatLanguage.value = 'json';
-          convertedData.value = JSON.stringify(data.value, null, 2);
-          break;
-        case 'yaml':
-          formatLanguage.value = 'yaml';
-          convertedData.value = yaml.stringify(data.value);
-          break;
-        case 'sql':
-          formatLanguage.value = 'sql';
-          convertedData.value = data.value.map((row) => {
-            const keys = Object.keys(row).map(k => k?.replace(/\s/g, '')).join(', ');
-            const values = Object.values(row).map(escapeSQL).join(', ');
-            return `INSERT INTO ${tableName.value} (${keys}) VALUES (${values});`;
-          }).join('\n');
-          break;
-        case 'csv':
-        case 'tsv':
-        case 'csv_semicolon':
-          formatLanguage.value = 'text';
-          // eslint-disable-next-line no-case-declarations
-          let sep = ',';
-          if (selectedFormat.value === 'tsv') {
-            sep = '\t';
-          }
-          else if (selectedFormat.value === 'csv_semicolon') {
-            sep = ';';
-          }
-          convertedData.value = [
-            Object.keys(data.value[0]).map(escapeCSV).join(sep),
-            ...data.value.map(row => Object.values(row).map(escapeCSV).join(sep)),
-          ].join('\n');
-          break;
-        case 'markdown':
-          formatLanguage.value = 'markdown';
-          convertedData.value
-            = `| ${Object.keys(data.value[0]).map(escapeMarkdown).join(' | ')} |\n| ${Object.keys(data.value[0]).map(() => '---').join(' | ')} |\n${
-             data.value.map(row => `| ${Object.values(row).map(escapeMarkdown).join(' | ')} |`).join('\n')}`;
-          break;
-      }
-    };
-
-    return { handleFileUpload, convertFile, selectedFormat, formats, convertedData, data, tableName, formatLanguage };
-  },
-});
+  convertedData.value = objectArrayToData(data.value, selectedFormat.value as ExportFormat, tableName.value);
+};
 </script>
 
 <template>
@@ -112,7 +54,7 @@ export default defineComponent({
       </NButton>
     </div>
     <c-card v-if="convertedData" title="Converted data">
-      <textarea-copyable :value="convertedData" :language="formatLanguage" />
+      <textarea-copyable :value="convertedData" :language="selectedFormat" />
     </c-card>
   </NCard>
 </template>
