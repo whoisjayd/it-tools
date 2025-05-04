@@ -50,10 +50,10 @@ Category matches on category (English) names ; Tools matches on tools path/url.
 
 See (docker-tools-filter-and-home-content)[https://github.com/sharevb/it-tools]
 
-## To build using a custom folder:
+## To build using a custom default language:
 
 ```
-docker build -t it-tools-fr --build-arg BVITE_LANGUAGE=fr .
+docker build -t it-tools-fr --build-arg VITE_LANGUAGE=fr .
 docker run -d --name it-tools-fr --restart unless-stopped -p 8080:8080 it-tools-fr
 ```
 
