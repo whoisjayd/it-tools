@@ -13,6 +13,7 @@ import markdownHljs from 'highlight.js/lib/languages/markdown';
 import jsHljs from 'highlight.js/lib/languages/javascript';
 import cssHljs from 'highlight.js/lib/languages/css';
 import goHljs from 'highlight.js/lib/languages/go';
+import pythonHljs from 'highlight.js/lib/languages/python';
 import csharpHljs from 'highlight.js/lib/languages/csharp';
 import { Base64 } from 'js-base64';
 import { useCopy } from '@/composable/copy';
@@ -51,6 +52,7 @@ hljs.registerLanguage('css', cssHljs);
 hljs.registerLanguage('javascript', jsHljs);
 hljs.registerLanguage('go', goHljs);
 hljs.registerLanguage('csharp', csharpHljs);
+hljs.registerLanguage('python', pythonHljs);
 
 const { value, language, followHeightOf, copyPlacement, copyMessage, downloadFileName, downloadButtonText } = toRefs(props);
 const { height } = followHeightOf.value ? useElementSize(followHeightOf) : { height: ref(null) };
