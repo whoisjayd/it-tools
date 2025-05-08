@@ -1,12 +1,15 @@
 <script lang="ts" setup>
 import * as XLSX from 'xlsx';
-import { objectArrayToData } from './excel-to-data.service';
-import type { ExportFormat } from './excel-to-data.service';
+import { objectArrayToData } from '@/utils/objectarray.export';
+import type { ExportFormat } from '@/utils/objectarray.export';
 
-const data = ref<any[]>([]);
+const workbook = ref<XLSX.WorkBook | null>(null);
 const convertedData = ref<string>('');
 const selectedFormat = ref<string>('json');
 const tableName = ref<string>('TableName');
+const nestify = ref(false);
+const sheetName = ref('');
+const error = ref('');
 
 const formats = [
   { label: 'JSON', value: 'json' },
@@ -16,20 +19,35 @@ const formats = [
   { label: 'CSV (semicolon)', value: 'csv_semicolon' },
   { label: 'CSV (tab)', value: 'tsv' },
   { label: 'Markdown', value: 'markdown' },
+  { label: 'XML', value: 'xml' },
 ];
 
 async function handleFileUpload(file: File) {
-  const workbook = XLSX.read(await file.arrayBuffer(), { type: 'binary' });
-  const sheetName = workbook.SheetNames[0];
-  data.value = XLSX.utils.sheet_to_json(workbook.Sheets[sheetName]);
+  error.value = '';
+  workbook.value = null;
+  sheetName.value = '';
+  try {
+    workbook.value = XLSX.read(await file.arrayBuffer(), { type: 'binary' });
+    sheetName.value = workbook.value.SheetNames[0];
+  }
+  catch (e: any) {
+    error.value = e.toString();
+  }
 }
 
 function convertFile() {
-  if (!data.value.length || !selectedFormat.value) {
+  if (!workbook.value) {
+    return;
+  }
+  const data = XLSX.utils.sheet_to_json(workbook.value.Sheets[sheetName.value]);
+  if (!data.length || !selectedFormat.value) {
     return;
   }
 
-  convertedData.value = objectArrayToData(data.value, selectedFormat.value as ExportFormat, tableName.value);
+  convertedData.value = objectArrayToData(data, selectedFormat.value as ExportFormat, {
+    tableName: tableName.value,
+    nestify: nestify.value,
+  });
 };
 </script>
 
@@ -42,17 +60,30 @@ function convertFile() {
       @file-upload="handleFileUpload"
     />
 
+    <NFormItem v-if="workbook" label="Select Sheet to use:" label-placement="left">
+      <NSelect v-model:value="sheetName" :options="workbook.SheetNames?.map((s) => ({ label: s, value: s }))" placeholder="Select sheet" />
+    </NFormItem>
+
     <NFormItem label="Select output format:" label-placement="left">
       <NSelect v-model:value="selectedFormat" :options="formats" placeholder="Select format" />
     </NFormItem>
 
+    <n-form-item label="Nestify ('a.b.c' to nested objects)" label-placement="left">
+      <n-checkbox v-model:checked="nestify" />
+    </n-form-item>
+
     <c-input-text v-if="selectedFormat === 'sql'" v-model:value="tableName" label="Table Name:" label-placement="left" />
 
     <div mt-3 flex justify-center>
-      <NButton :disabled="!data.length" @click="convertFile">
+      <NButton :disabled="!workbook" @click="convertFile">
         Convert
       </NButton>
     </div>
+
+    <c-alert v-if="error">
+      {{ error }}
+    </c-alert>
+
     <c-card v-if="convertedData" title="Converted data">
       <textarea-copyable :value="convertedData" :language="selectedFormat" />
     </c-card>

@@ -530,6 +530,9 @@ dependencies:
   nanoid-dictionary:
     specifier: ^4.3.0
     version: 4.3.0
+  nestify-anything:
+    specifier: ^3.0.3
+    version: 3.0.3
   netmask:
     specifier: ^2.0.2
     version: 2.0.2
@@ -2793,7 +2796,7 @@ packages:
       '@babel/helper-split-export-declaration': 7.22.6
       '@babel/parser': 7.22.10
       '@babel/types': 7.22.10
-      debug: 4.3.4
+      debug: 4.4.0
       globals: 11.12.0
     transitivePeerDependencies:
       - supports-color
@@ -12692,6 +12695,11 @@ packages:
     engines: {node: '>=18'}
     dev: false
 
+  /is-what@5.2.1:
+    resolution: {integrity: sha512-FLNNgur29o+0/G6RcG3B6KRDCT6SvMfb7MlfjdydTZWPgBLfiemceChDhY0DHu50O35BDNbNp4rJLQXMt4fG0g==}
+    engines: {node: '>=18'}
+    dev: false
+
   /is-windows@1.0.2:
     resolution: {integrity: sha512-eXK1UInq2bPmjyX6e3VHIzMLobc4J94i4AWn+Hpq3OU5KkrRC96OAcR3PRJ/pGu6m8TRnBHP9dkXQVsT/COVIA==}
     engines: {node: '>=0.10.0'}
@@ -13729,6 +13737,13 @@ packages:
     engines: {node: '>= 0.10.0'}
     dev: false
 
+  /merge-anything@6.0.6:
+    resolution: {integrity: sha512-F3K1W45PvTjRZzbcYIhXntNr8cux00gUxR8IzNPPG+80gNlAHZGVBwFyN4x5yjw/7QkLPKDbRQBK4KrJKo69mw==}
+    engines: {node: '>=18'}
+    dependencies:
+      is-what: 5.2.1
+    dev: false
+
   /merge-stream@2.0.0:
     resolution: {integrity: sha512-abv/qOcuPfk3URPfDzmZU1LKmuw8kT+0nIHvKrKgFrwifol/doWcdA4ZqsWQ8ENrFKkd67Mfpo/LovbIUsbt3w==}
     dev: true
@@ -14084,6 +14099,13 @@ packages:
       sax: 1.2.4
     dev: true
     optional: true
+
+  /nestify-anything@3.0.3:
+    resolution: {integrity: sha512-prpbKIksMjdlnaSrkKn86b1p883y3phhPk3euQC5nqKONLbtWTVZ0772uouIBzr2QxhaJgyylIUhll/iNdeaJQ==}
+    engines: {node: '>=18'}
+    dependencies:
+      merge-anything: 6.0.6
+    dev: false
 
   /netmask@2.0.2:
     resolution: {integrity: sha512-dBpDMdxv9Irdq66304OLfEmQ9tbNRFnFTuZiLo+bD+r332bBmMJ8GBLXklIXXgxd3+v9+KUnZaUR5PJMa75Gsg==}

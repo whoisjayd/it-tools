@@ -211,6 +211,7 @@
     "naive-ui": "^2.35.0",
     "nanoid": "^5.0.9",
     "nanoid-dictionary": "^4.3.0",
+    "nestify-anything": "^3.0.3",
     "netmask": "^2.0.2",
     "netstack.js": "^2.1.1",
     "nginx-config-formatter": "^1.4.5",
