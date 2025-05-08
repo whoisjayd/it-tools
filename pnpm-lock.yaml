@@ -680,6 +680,12 @@ dependencies:
   tidy-url:
     specifier: ^1.18.3
     version: 1.18.3
+  to-double-quotes:
+    specifier: ^4.0.0
+    version: 4.0.0
+  to-single-quotes:
+    specifier: ^4.0.0
+    version: 4.0.0
   turndown:
     specifier: ^7.2.0
     version: 7.2.0
@@ -17143,6 +17149,13 @@ packages:
     hasBin: true
     dev: false
 
+  /to-double-quotes@4.0.0:
+    resolution: {integrity: sha512-frEcC+DRPpFrbEfUS2IwDKu2Pv/jjV1hcQGUjQvLhnv9zJlhMCXgrwODmhM1wlvfBik3GHOtyvm4WoZpKylL2Q==}
+    engines: {node: '>=12'}
+    dependencies:
+      to-single-quotes: 3.0.0
+    dev: false
+
   /to-fast-properties@2.0.0:
     resolution: {integrity: sha512-/OaKK0xYrs3DmxRYqL/yDc+FxFUVYhDlXMhRmv3z915w2HF1tnN1omB354j8VUGO/hbRzyD6Y3sA7v7GS/ceog==}
     engines: {node: '>=4'}
@@ -17152,6 +17165,16 @@ packages:
     engines: {node: '>=8.0'}
     dependencies:
       is-number: 7.0.0
+
+  /to-single-quotes@3.0.0:
+    resolution: {integrity: sha512-XdY9d95LLY+6yPI34vzUtI9KVSlfUM6RQIrLvislvD/rwYgjIHgKZsjiqjxJsWwPATEqXLgb1fM0Zy5x5rvPxA==}
+    engines: {node: '>=4'}
+    dev: false
+
+  /to-single-quotes@4.0.0:
+    resolution: {integrity: sha512-sMi8lbpy+CIqZUb2Q/ZjhChlg+2B7ohuLaKYy0SsOqaAp8Yky2YT0JgbBTPqOi/rOtEMBcEFyeYM4QhHUbsLQg==}
+    engines: {node: '>=12'}
+    dev: false
 
   /to-through@3.0.0:
     resolution: {integrity: sha512-y8MN937s/HVhEoBU1SxfHC+wxCHkV1a9gW8eAdTadYh/bGyesZIVcbjI+mSpFbSVwQici/XjBjuUyri1dnXwBw==}
