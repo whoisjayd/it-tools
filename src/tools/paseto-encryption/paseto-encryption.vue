@@ -162,7 +162,7 @@ const decryptedToken = computedAsync(async () => {
       />
       <n-space justify="center">
         <n-form-item label="Validate Payload" label-placement="left">
-          <n-checkbox v-model:value="validatePayload" />
+          <n-checkbox v-model:checked="validatePayload" />
         </n-form-item>
       </n-space>
 
