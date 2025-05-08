@@ -95,7 +95,7 @@
     "chinesegen": "^0.3.3",
     "cidr-tools": "^11.0.2",
     "colord": "^2.9.3",
-    "composerize": "^1.7.1",
+    "composerize": "^1.7.2",
     "composeverter": "^1.7.4",
     "convert": "^5.7.0",
     "countries-and-timezones": "^3.7.2",
