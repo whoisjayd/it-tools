@@ -5,8 +5,8 @@ const cookieHeader = useQueryParam({ name: 'cookies', defaultValue: '' });
 
 const parsedCookies = computed(() => {
   return (cookieHeader.value || '').replace(/^Cookie:\s*/, '').split('; ').map((cookie) => {
-    const [name, value] = cookie.split('=');
-    return { name, value: decodeURIComponent(value || '') };
+    const [name, ...values] = cookie.split('=');
+    return { name, value: decodeURIComponent(values?.join('=') || '') };
   });
 });
 </script>
