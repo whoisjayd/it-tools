@@ -127,7 +127,9 @@ export default defineConfig({
     target: 'esnext',
     // sourcemap: false,
     minify: !process.env.VERCEL,
+    reportCompressedSize: !process.env.VERCEL,
     // cssMinify: false,
+    modulePreload: false,
     rollupOptions: {
       external: ['regex', './out/isolated_vm', 'isolated-vm'],
       output: {
@@ -151,7 +153,7 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
-    include: ['re2-wasm-embedded', 'isolated-vm', 'pdfjs-dist'], // optionally specify dependency name
+    include: ['isolated-vm', 'pdfjs-dist'], // optionally specify dependency name
     esbuildOptions: {
       supported: {
         'top-level-await': true,
