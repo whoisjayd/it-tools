@@ -1,4 +1,4 @@
-name: Build and Push Docker Image
+name: Build and Push Docker Image (baseurl-it-tools)
 
 on:
   push:
@@ -36,6 +36,9 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        architecture: [amd64,arm64]
     needs:
       - ci
     steps:
@@ -69,22 +72,11 @@ jobs:
           file: ./Dockerfile
           build-args: |
             "BASE_URL=/it-tools/"
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/${{ matrix.architecture }}
           push: true
           tags: |
             sharevb/it-tools:baseurl-it-tools
             ghcr.io/sharevb/it-tools:baseurl-it-tools
-
-      - name: Build and push
-        uses: docker/build-push-action@v5
-        with:
-          context: .
-          file: ./Dockerfile
-          platforms: linux/amd64,linux/arm64
-          push: true
-          tags: |
-            sharevb/it-tools:latest
-            ghcr.io/${{ github.repository_owner }}/it-tools:latest
 
       # Optionally log out
       - name: Log out from GitHub Container Registry
