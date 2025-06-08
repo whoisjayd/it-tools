@@ -30,15 +30,7 @@ const favoriteTools = computed(() => toolStore.favoriteTools);
 
 const isOrderingFavorites = ref(false);
 
-window.oncontextmenu = (e) => {
-  if (isOrderingFavorites.value) {
-    e.preventDefault();
-    e.stopPropagation();
-    e.stopImmediatePropagation();
-    return false;
-  }
-};
-window.addEventListener('touchstart', (e) => {
+window.addEventListener('contextmenu', (e) => {
   if (isOrderingFavorites.value) {
     e.preventDefault();
     e.stopPropagation();
