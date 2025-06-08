@@ -6,6 +6,7 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 
 import { registerSW } from 'virtual:pwa-register';
 import shadow from 'vue-shadow-dom';
+import { hideSplashScreen } from 'vite-plugin-splash-screen/runtime';
 import { plausible } from './plugins/plausible.plugin';
 
 import 'virtual:uno.css';
@@ -34,3 +35,5 @@ app.use(shadow);
 app.use(store, 'pomodoro-store');
 
 app.mount('#app');
+
+hideSplashScreen();

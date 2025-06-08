@@ -994,6 +994,9 @@ devDependencies:
   vite-plugin-pwa:
     specifier: ^1.0.0
     version: 1.0.0(vite@4.4.9)(workbox-build@7.3.0)(workbox-window@7.3.0)
+  vite-plugin-splash-screen:
+    specifier: ^0.2.0
+    version: 0.2.0
   vite-plugin-vue-markdown:
     specifier: ^0.23.5
     version: 0.23.5(rollup@2.79.2)(vite@4.4.9)
@@ -18208,6 +18211,10 @@ packages:
       workbox-window: 7.3.0
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /vite-plugin-splash-screen@0.2.0:
+    resolution: {integrity: sha512-PCUiVq8wjx7dHMa9vOqnB+bewKp60VFbhPJJjQOA8UdwmPdf9ChBGuxh+sku4szrnJFsriB0gIDAURAmOqBcUQ==}
     dev: true
 
   /vite-plugin-vue-markdown@0.23.5(rollup@2.79.2)(vite@4.4.9):
