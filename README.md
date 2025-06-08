@@ -2,13 +2,20 @@
 
 Since *Docker base image* is now `nginx-unpriviledged`, docker image now listen to **8080** and no more 80. So you need to update your port mapping, ie from `8080:80` to `8080:8080`.
 
-### Check out these change here: <https://sharevb-it-tools.vercel.app/>
+### Check out these change here: <https://sharevb-it-tools.vercel.app/> or <https://sharevb.github.io/it-tools/>
 
 You can use my image in your docker-compose file if you want an update to date version of it-tools (with my PR and some of others) until the main branch has been updated.
 
 - github action triggers on every push to this branch - [view package here](https://github.com/sharevb/it-tools/pkgs/container/it-tools)
 
 (Thanks to [gitmotion](https://github.com/gitmotion/it-tools) for this model of README fork)
+
+## Contributors
+
+Big thanks to all the people who have already contributed!
+
+[![contributors](https://contrib.rocks/image?repo=sharevb/it-tools&refresh=1)](https://github.com/sharevb/it-tools/graphs/contributors)
+
 
 ## Added features
 
