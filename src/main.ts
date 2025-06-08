@@ -3,7 +3,7 @@ import { createPinia } from 'pinia';
 import { createHead } from '@vueuse/head';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
-import {LoadingPlugin} from 'vue-loading-overlay';
+import { LoadingPlugin } from 'vue-loading-overlay';
 
 import { registerSW } from 'virtual:pwa-register';
 import shadow from 'vue-shadow-dom';
