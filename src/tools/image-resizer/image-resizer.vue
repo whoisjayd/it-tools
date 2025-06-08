@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue';
-import { IconInfoCircleFilled, IconLock, IconLockOpen2, IconReload } from '@tabler/icons-vue';
+import { IconLock, IconLockOpen2, IconReload } from '@tabler/icons-vue';
 
 // State variables
 const imageFile = ref<File | null>(null);
