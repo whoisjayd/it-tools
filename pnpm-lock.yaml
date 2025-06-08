@@ -734,6 +734,9 @@ dependencies:
   vue-i18n:
     specifier: ^9.14.3
     version: 9.14.4(vue@3.3.4)
+  vue-loading-overlay:
+    specifier: ^6.0
+    version: 6.0.6(vue@3.3.4)
   vue-markdown-render:
     specifier: ^2.2.1
     version: 2.2.1(vue@3.3.4)
@@ -18478,6 +18481,15 @@ packages:
       '@intlify/shared': 9.14.4
       '@vue/devtools-api': 6.5.0
       vue: 3.3.4
+
+  /vue-loading-overlay@6.0.6(vue@3.3.4):
+    resolution: {integrity: sha512-ZPrWawjCoNKGbCG9z4nePgbs/K9KXPa1j1oAJXP6T8FQho3NO+/chhjx4MLYFzfpwr+xkiQ8SNrV1kUG1bZPAw==}
+    engines: {node: '>=12.13.0'}
+    peerDependencies:
+      vue: ^3.2.0
+    dependencies:
+      vue: 3.3.4
+    dev: false
 
   /vue-markdown-render@2.2.1(vue@3.3.4):
     resolution: {integrity: sha512-XkYnC0PMdbs6Vy6j/gZXSvCuOS0787Se5COwXlepRqiqPiunyCIeTPQAO2XnB4Yl04EOHXwLx5y6IuszMWSgyQ==}
