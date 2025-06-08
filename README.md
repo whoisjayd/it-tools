@@ -27,6 +27,17 @@ Almost [all tools PR of it-tools](https://github.com/sharevb/it-tools/pulls).
 
 [Docker Hub](https://hub.docker.com/r/sharevb/it-tools): `sharevb/it-tools:latest`
 
+## HTTPS is recommanded
+
+Some tools like PGP encryption rely on WebCrypto API that is only available in HTTPS/SSL.
+
+So even on internal installations, you can enable HTTPS using Let's Encrypt using DNS Challenge
+
+Some docs about DNS Challenge:
+- https://medium.com/@life-is-short-so-enjoy-it/homelab-nginx-proxy-manager-setup-ssl-certificate-with-domain-name-in-cloudflare-dns-732af64ddc0b
+- https://doc.traefik.io/traefik/user-guides/docker-compose/acme-dns/
+- https://medium.com/@svenvanginkel/traefik-letsencrypt-dns01-challenge-with-ovhcloud-52f2a2c6d08a
+
 ## Use in Docker Compose file
 
 ```yml
