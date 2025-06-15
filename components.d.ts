@@ -298,56 +298,22 @@ declare module '@vue/runtime-core' {
     MorseConverter: typeof import('./src/tools/morse-converter/morse-converter.vue')['default']
     MultiLinkDownloader: typeof import('./src/tools/multi-link-downloader/multi-link-downloader.vue')['default']
     MyIp: typeof import('./src/tools/my-ip/my-ip.vue')['default']
-    NA: typeof import('naive-ui')['NA']
     NanoidGenerator: typeof import('./src/tools/nanoid-generator/nanoid-generator.vue')['default']
     NanoMemo: typeof import('./src/tools/nano-memo/nano-memo.vue')['default']
     'NanoMemo.content': typeof import('./src/tools/nano-memo/nano-memo.content.md')['default']
     NavbarButtons: typeof import('./src/components/NavbarButtons.vue')['default']
-<<<<<<< HEAD
-    NButton: typeof import('naive-ui')['NButton']
-    NCard: typeof import('naive-ui')['NCard']
-    NCode: typeof import('naive-ui')['NCode']
-=======
-<<<<<<< HEAD
-=======
-    NCode: typeof import('naive-ui')['NCode']
->>>>>>> 1e405c34468067d5be1186268d190ad3c0739efa
->>>>>>> chore/all-my-stuffs
     NConfigProvider: typeof import('naive-ui')['NConfigProvider']
     NDivider: typeof import('naive-ui')['NDivider']
     NEllipsis: typeof import('naive-ui')['NEllipsis']
-    NForm: typeof import('naive-ui')['NForm']
-    NFormItem: typeof import('naive-ui')['NFormItem']
     NginxFormatter: typeof import('./src/tools/nginx-formatter/nginx-formatter.vue')['default']
     NginxMemo: typeof import('./src/tools/nginx-memo/nginx-memo.vue')['default']
     'NginxMemo.content': typeof import('./src/tools/nginx-memo/nginx-memo.content.md')['default']
     NH1: typeof import('naive-ui')['NH1']
     NH3: typeof import('naive-ui')['NH3']
     NIcon: typeof import('naive-ui')['NIcon']
-    NInput: typeof import('naive-ui')['NInput']
-    NInputGroup: typeof import('naive-ui')['NInputGroup']
-    NInputGroupLabel: typeof import('naive-ui')['NInputGroupLabel']
-    NInputNumber: typeof import('naive-ui')['NInputNumber']
     NLayout: typeof import('naive-ui')['NLayout']
     NLayoutSider: typeof import('naive-ui')['NLayoutSider']
     NMenu: typeof import('naive-ui')['NMenu']
-<<<<<<< HEAD
-    NRadio: typeof import('naive-ui')['NRadio']
-    NRadioGroup: typeof import('naive-ui')['NRadioGroup']
-    NScrollbar: typeof import('naive-ui')['NScrollbar']
-    NSpace: typeof import('naive-ui')['NSpace']
-    NSpin: typeof import('naive-ui')['NSpin']
-    NTable: typeof import('naive-ui')['NTable']
-    NTabPane: typeof import('naive-ui')['NTabPane']
-    NTabs: typeof import('naive-ui')['NTabs']
-=======
-<<<<<<< HEAD
-=======
-    NScrollbar: typeof import('naive-ui')['NScrollbar']
-    NSpace: typeof import('naive-ui')['NSpace']
-    NSwitch: typeof import('naive-ui')['NSwitch']
->>>>>>> 1e405c34468067d5be1186268d190ad3c0739efa
->>>>>>> chore/all-my-stuffs
     NumberInput: typeof import('./src/tools/pomodoro-timer/app/components/NumberInput.vue')['default']
     NumeronymGenerator: typeof import('./src/tools/numeronym-generator/numeronym-generator.vue')['default']
     OcrImage: typeof import('./src/tools/ocr-image/ocr-image.vue')['default']
