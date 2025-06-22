@@ -122,6 +122,15 @@ Then navigate to http://localhost:8080/it-tools/
 1. Enable GitHub Pages build and deployment option in your fork, under **Settings** > **Pages** and select **GitHub Actions** as the source
 2. Add the following GitHub action to your repo: https://github.com/sharevb/it-tools/.github/workflows/sharevb-github-pages-publish.yml
 
+## To add authentication
+
+Assuming you're already hosting it-tools behind a reverse proxy, you can configure forward-auth and enforce authentication from the reverse proxy
+
+* [Official guides](https://docs.goauthentik.io/docs/add-secure-apps/providers/proxy/server_nginx) with nginx. Guides with other reverse proxy setups are available
+* [Step-by-step setup guide with nginx-proxy-manager](https://geekscircuit.com/set-up-authentik-sso-with-nginx-proxy-manager/)
+
+(thanks @jogerj)
+
 ## Installation methods
 
 Local installation required installing first: `python3 make g++`
