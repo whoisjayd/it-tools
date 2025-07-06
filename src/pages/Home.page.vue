@@ -187,7 +187,7 @@ onUnmounted(() => {
       <!-- Loading indicator when more tools are coming -->
       <div v-if="visibleToolsCount < toolStore.tools.length" mt-6 text-center>
         <div text-14px op-70>
-          Loading more tools... ({{ visibleTools.length }}/{{ toolStore.tools.length }})
+          {{ t('home.loading-more-tools') }} <span>({{ visibleTools.length }}/{{ toolStore.tools.length }})</span>
         </div>
       </div>
     </div>
