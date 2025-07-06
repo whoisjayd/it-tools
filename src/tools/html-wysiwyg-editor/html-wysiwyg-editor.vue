@@ -24,6 +24,18 @@ const formattedHtml = computed(() => {
 </script>
 
 <template>
+  <details>
+    <summary>Click here to paste or edit raw html</summary>
+    <c-input-text
+      v-model:value="html"
+      multiline raw-text
+      placeholder="Your Html content..."
+      rows="8"
+      autofocus
+      label="Your Html to convert (can paste from clipboard):"
+      paste-html
+    />
+  </details>
   <Editor v-model:html="html" />
   <NSpace justify="center">
     <n-form-item label="Minify:" label-placement="left" mt-2>
