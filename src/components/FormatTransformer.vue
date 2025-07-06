@@ -28,7 +28,7 @@ const props = withDefaults(
     outputLabel: t('formatTransformer.output'),
     outputLanguage: '',
     downloadFileName: '',
-    downloadButtonText: 'Download',
+    downloadButtonText: t('formatTransformer.download'),
     rows: 15,
   },
 );

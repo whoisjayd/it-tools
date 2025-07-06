@@ -41,7 +41,7 @@ const props = withDefaults(
     copyPlacement: 'top-right',
     copyMessage: t('textareaCopyable.copy'),
     downloadFileName: '',
-    downloadButtonText: 'Download',
+    downloadButtonText: t('textareaCopyable.download'),
     scrollable: false,
     maxHeight: '400px',
   },
