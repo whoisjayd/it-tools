@@ -1,8 +1,9 @@
 import { IconBraces } from '@tabler/icons-vue';
 import { defineTool } from '../tool';
+import { translate } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: 'Json string converter',
+  name: translate('tools.json-string-converter.title'),
   path: '/json-string-converter',
   description: '',
   keywords: ['json', 'string', 'converter'],

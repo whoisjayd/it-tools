@@ -1,10 +1,11 @@
 import { BrandHtml5 } from '@vicons/tabler';
 import { defineTool } from '../tool';
+import { translate } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: 'HTML Minifier',
+  name: translate('tools.html-minifier.title'),
   path: '/html-minifier',
-  description: 'Minify HTML content',
+  description: translate('tools.html-minifier.description'),
   keywords: ['html', 'minifier'],
   component: () => import('./html-minifier.vue'),
   icon: BrandHtml5,
