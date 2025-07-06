@@ -4,6 +4,7 @@ import { Base64 } from 'js-base64';
 import type { UseValidationRule } from '@/composable/validation';
 import CInputText from '@/ui/c-input-text/c-input-text.vue';
 import { useDownloadFileFromBase64 } from '@/composable/downloadBase64';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 const props = withDefaults(
   defineProps<{
@@ -21,10 +22,10 @@ const props = withDefaults(
   {
     transformer: _.identity,
     inputValidationRules: () => [],
-    inputLabel: 'Input',
+    inputLabel: t('formatTransformer.input'),
     inputDefault: '',
-    inputPlaceholder: 'Input...',
-    outputLabel: 'Output',
+    inputPlaceholder: t('formatTransformer.input-placeholder'),
+    outputLabel: t('formatTransformer.output'),
     outputLanguage: '',
     downloadFileName: '',
     downloadButtonText: 'Download',

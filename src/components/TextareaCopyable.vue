@@ -20,6 +20,7 @@ import protobufHljs from 'highlight.js/lib/languages/protobuf';
 import { Base64 } from 'js-base64';
 import { useCopy } from '@/composable/copy';
 import { useDownloadFileFromBase64 } from '@/composable/downloadBase64';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 const props = withDefaults(
   defineProps<{
@@ -38,7 +39,7 @@ const props = withDefaults(
     followHeightOf: null,
     language: 'txt',
     copyPlacement: 'top-right',
-    copyMessage: 'Copy to clipboard',
+    copyMessage: t('textareaCopyable.copy'),
     downloadFileName: '',
     downloadButtonText: 'Download',
     scrollable: false,
@@ -78,7 +79,7 @@ watch(value, () => {
 }, { flush: 'post' });
 
 const { copy, isJustCopied } = useCopy({ source: value, createToast: false });
-const tooltipText = computed(() => isJustCopied.value ? 'Copied!' : copyMessage.value);
+const tooltipText = computed(() => isJustCopied.value ? t('textareaCopyable.copied') : copyMessage.value);
 
 const valueBase64 = computed(() => Base64.encode(value.value));
 const { download } = useDownloadFileFromBase64(

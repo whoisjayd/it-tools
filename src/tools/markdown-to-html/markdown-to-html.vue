@@ -30,6 +30,7 @@ const outputHtml = computed(() => {
   }
   return md.render(inputMarkdown.value);
 });
+const { t } = useI18n();
 
 function printHtml() {
   const w = window.open();
@@ -46,10 +47,10 @@ function printHtml() {
     <c-input-text
       v-model:value="inputMarkdown"
       multiline raw-text
-      placeholder="Your Markdown content..."
+      :placeholder="t('tools.markdown-to-html.markdownInput')"
       rows="8"
       autofocus
-      label="Your Markdown to convert:"
+      :label="t('tools.markdown-to-html.markdown')"
     />
 
     <n-space justify="center" gap-1>
@@ -74,7 +75,7 @@ function printHtml() {
 
     <n-divider />
 
-    <n-form-item label="Output HTML:">
+    <n-form-item :label="t('tools.markdown-to-html.html')">
       <TextareaCopyable :value="outputHtml" :word-wrap="true" language="html" />
     </n-form-item>
 
