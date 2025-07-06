@@ -146,6 +146,7 @@
     "heic-convert": "^2.1.0",
     "hex-array": "^1.0.0",
     "highlight.js": "^11.11.1",
+    "htmlfy": "^0.8.1",
     "hyparquet": "^1.9.0",
     "hyparquet-compressors": "^1.0.0",
     "iarna-toml-esm": "^3.0.5",
