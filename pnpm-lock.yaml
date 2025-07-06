@@ -188,6 +188,9 @@ dependencies:
   cidr-tools:
     specifier: ^11.0.2
     version: 11.0.2
+  citation-formatter:
+    specifier: ^1.0.1
+    version: 1.0.1
   colord:
     specifier: ^2.9.3
     version: 2.9.3
@@ -8715,6 +8718,10 @@ packages:
       inherits: 2.0.4
       safe-buffer: 5.2.1
     dev: true
+
+  /citation-formatter@1.0.1:
+    resolution: {integrity: sha512-cq42634FYQtB/alrsjCDIqLJSFXo1154KsCXkcqAVq318DHEi+7+4+YB09wXWr5fm8WGnhR8eLbtuGmMIAdszg==}
+    dev: false
 
   /citty@0.1.6:
     resolution: {integrity: sha512-tskPPKEs8D2KPafUypv2gxwJP8h/OaJmC82QQGGDQcHvXX43xF2VDACcJVmZ0EuSxkpO9Kc4MlrA3q0+FG58AQ==}

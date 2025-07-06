@@ -97,6 +97,7 @@
     "chatgpt-prompt-splitter": "^1.0.5",
     "chinesegen": "^0.3.3",
     "cidr-tools": "^11.0.2",
+    "citation-formatter": "^1.0.1",
     "colord": "^2.9.3",
     "composerize": "^1.7.2",
     "composeverter": "^1.7.4",
