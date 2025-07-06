@@ -51,6 +51,7 @@
     "@iplookup/country-extra": "^1.0.20250317",
     "@it-tools/bip39": "^0.0.4",
     "@it-tools/oggen": "^1.3.0",
+    "@jsonquerylang/jsonquery": "^5.0.4",
     "@kenjiuno/decompressrtf": "^0.1.4",
     "@kenjiuno/msgreader": "^1.22.0",
     "@mdit/plugin-align": "^0.16.0",

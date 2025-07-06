@@ -50,6 +50,9 @@ dependencies:
   '@it-tools/oggen':
     specifier: ^1.3.0
     version: 1.3.0
+  '@jsonquerylang/jsonquery':
+    specifier: ^5.0.4
+    version: 5.0.4
   '@kenjiuno/decompressrtf':
     specifier: ^0.1.4
     version: 0.1.4
@@ -4895,6 +4898,11 @@ packages:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.1
       '@jridgewell/sourcemap-codec': 1.5.0
+
+  /@jsonquerylang/jsonquery@5.0.4:
+    resolution: {integrity: sha512-QdgVkapeGRxUqOOJuh2svDutejKaCizhupEmO4ZKSsaLolD7w5QhgrjmBNuS1wMCM5TyNKifK4i1wBDfNzO9xQ==}
+    hasBin: true
+    dev: false
 
   /@juggle/resize-observer@3.4.0:
     resolution: {integrity: sha512-dfLbk+PwWvFzSxwk3n5ySL0hfBog779o8h68wK/7/APo/7cgyWp5jcXockbxdk5kFRkbeXWm4Fbi9FrdN381sA==}
