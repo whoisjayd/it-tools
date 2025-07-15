@@ -74,6 +74,7 @@
     "@tiptap/vue-3": "2.9.1",
     "@types/haversine": "^1.1.8",
     "@types/moment": "^2.13.0",
+    "@types/swagger-ui-dist": "^3.30.6",
     "@unicode/unicode-15.1.0": "^1.6.5",
     "@vicons/material": "^0.12.0",
     "@vicons/tabler": "^0.12.0",
@@ -265,6 +266,7 @@
     "stringify-object": "^5.0.0",
     "svg2png-wasm": "^1.4.1",
     "svgo": "^3.3.2",
+    "swagger-ui-dist": "^5.26.2",
     "tesseract.js": "^5.1.1",
     "text-encoding-utf-8": "^1.0.2",
     "tick-time": "^1.0.1",
@@ -386,5 +388,8 @@
     "overrides": {
       "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.2/xlsx-0.20.2.tgz"
     }
+  },
+  "scarfSettings": {
+    "enabled": false
   }
 }

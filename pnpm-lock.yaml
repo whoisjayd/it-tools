@@ -116,6 +116,9 @@ dependencies:
   '@types/moment':
     specifier: ^2.13.0
     version: 2.13.0
+  '@types/swagger-ui-dist':
+    specifier: ^3.30.6
+    version: 3.30.6
   '@unicode/unicode-15.1.0':
     specifier: ^1.6.5
     version: 1.6.5
@@ -689,6 +692,9 @@ dependencies:
   svgo:
     specifier: ^3.3.2
     version: 3.3.2
+  swagger-ui-dist:
+    specifier: ^5.26.2
+    version: 5.26.2
   tesseract.js:
     specifier: ^5.1.1
     version: 5.1.1
@@ -5679,6 +5685,11 @@ packages:
     resolution: {integrity: sha512-sXo/qW2/pAcmT43VoRKOJbDOfV3cYpq3szSVfIThQXNt+E4DfKj361vaAt3c88U5tPUxzEswam7GW48PJqtKAg==}
     dev: true
 
+  /@scarf/scarf@1.4.0:
+    resolution: {integrity: sha512-xxeapPiUXdZAE3che6f3xogoJPeZgig6omHEy1rIY5WVsB3H2BHNnZH+gHG6x91SCWyQCzWGsuL2Hh3ClO5/qQ==}
+    requiresBuild: true
+    dev: false
+
   /@scena/dragscroll@1.4.0:
     resolution: {integrity: sha512-3O8daaZD9VXA9CP3dra6xcgt/qrm0mg0xJCwiX6druCteQ9FFsXffkF8PrqxY4Z4VJ58fFKEa0RlKqbsi/XnRA==}
     dependencies:
@@ -6719,6 +6730,10 @@ packages:
   /@types/stringify-object@4.0.5:
     resolution: {integrity: sha512-TzX5V+njkbJ8iJ0mrj+Vqveep/1JBH4SSA3J2wYrE1eUrOhdsjTBCb0kao4EquSQ8KgPpqY4zSVP2vCPWKBElg==}
     dev: true
+
+  /@types/swagger-ui-dist@3.30.6:
+    resolution: {integrity: sha512-FVxN7wjLYRtJsZBscOcOcf8oR++m38vbUFjT33Mr9HBuasX9bRDrJsp7iwixcOtKSHEEa2B7o2+4wEiXqC+Ebw==}
+    dev: false
 
   /@types/text-encoding-utf-8@1.0.5:
     resolution: {integrity: sha512-TvFzTUXYoNECsORUpuuvKoU4/bsOBto2m8U38Cy8LOG9+BAgvMfwV9jV/vouocSYvgNzWrUfJeZ1rkGIrJgnvA==}
@@ -16929,6 +16944,12 @@ packages:
       css-what: 6.1.0
       csso: 5.0.5
       picocolors: 1.1.1
+
+  /swagger-ui-dist@5.26.2:
+    resolution: {integrity: sha512-WmMS9iMlHQejNm/Uw5ZTo4e3M2QMmEavRz7WLWVsq7Mlx4PSHJbY+VCrLsAz9wLxyHVgrJdt7N8+SdQLa52Ykg==}
+    dependencies:
+      '@scarf/scarf': 1.4.0
+    dev: false
 
   /swap-case@1.1.2:
     resolution: {integrity: sha512-BAmWG6/bx8syfc6qXPprof3Mn5vQgf5dwdUNJhsNqU9WdPt5P+ES/wQ5bxfijy8zwZgZZHslC3iAsxsuQMCzJQ==}
