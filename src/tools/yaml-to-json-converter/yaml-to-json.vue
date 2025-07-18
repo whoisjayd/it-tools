@@ -9,7 +9,7 @@ const nestify = ref(false);
 
 function transformer(value: string) {
   return withDefaultOnError(() => {
-    let obj = parseYaml(value, { merge: true });
+    let obj = parseYaml(value, { merge: true, intAsBigInt: true });
     if (nestify.value) {
       if (obj && Array.isArray(obj)) {
         obj = (obj as any[]).map(o => nestifyObject(o));

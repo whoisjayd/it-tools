@@ -30,7 +30,7 @@ function fromProperties(value: string) {
 }
 function toProperties(value: string) {
   try {
-    return properties.stringify(flatten(yaml.parse(value)));
+    return properties.stringify(flatten(yaml.parse(value, { intAsBigInt: true })));
   }
   catch (e: any) {
     return e.toString();
