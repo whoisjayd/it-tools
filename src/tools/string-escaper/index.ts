@@ -1,11 +1,11 @@
 import { Code } from '@vicons/tabler';
 import { defineTool } from '../tool';
-import { translate } from '@/plugins/i18n.plugin';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: translate('tools.string-escaper.title'),
+  name: t('tools.string-escaper.title'),
   path: '/string-escaper',
-  description: translate('tools.string-escaper.description'),
+  description: t('tools.string-escaper.description'),
   keywords: ['string', 'code', 'escaper'],
   component: () => import('./string-escaper.vue'),
   icon: Code,

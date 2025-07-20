@@ -1,11 +1,11 @@
 import { Binary } from '@vicons/tabler';
 import { defineTool } from '../tool';
-import { translate } from '@/plugins/i18n.plugin';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: translate('tools.hex-converter.title'),
+  name: t('tools.hex-converter.title'),
   path: '/hex-converter',
-  description: translate('tools.hex-converter.description'),
+  description: t('tools.hex-converter.description'),
   keywords: ['hex', 'encode', 'decode', 'endianess', 'float', 'bits', 'hex', 'struct'],
   component: () => import('./hex-converter.vue'),
   icon: Binary,

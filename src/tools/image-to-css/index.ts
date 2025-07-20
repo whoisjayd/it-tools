@@ -1,11 +1,11 @@
 import { BrandCss3 } from '@vicons/tabler';
 import { defineTool } from '../tool';
-import { translate } from '@/plugins/i18n.plugin';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: translate('tools.image-to-css.title'),
+  name: t('tools.image-to-css.title'),
   path: '/image-to-css',
-  description: translate('tools.image-to-css.description'),
+  description: t('tools.image-to-css.description'),
   keywords: ['image', 'css'],
   component: () => import('./image-to-css.vue'),
   icon: BrandCss3,

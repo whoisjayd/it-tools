@@ -1,11 +1,11 @@
 import { BrandJavascript } from '@vicons/tabler';
 import { defineTool } from '../tool';
-import { translate } from '@/plugins/i18n.plugin';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: translate('tools.js-unobfuscator.title'),
+  name: t('tools.js-unobfuscator.title'),
   path: '/js-unobfuscator',
-  description: translate('tools.js-unobfuscator.description'),
+  description: t('tools.js-unobfuscator.description'),
   keywords: ['js', 'unobfuscator', 'obfuscator.io', 'unminify', 'transpile', 'unpack', 'webpack', 'browserify'],
   component: () => import('./js-unobfuscator.vue'),
   icon: BrandJavascript,

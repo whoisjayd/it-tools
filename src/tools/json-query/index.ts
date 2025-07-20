@@ -1,11 +1,11 @@
 import { Braces } from '@vicons/tabler';
 import { defineTool } from '../tool';
-import { translate } from '@/plugins/i18n.plugin';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: translate('tools.json-query.title'),
+  name: t('tools.json-query.title'),
   path: '/json-query',
-  description: translate('tools.json-query.description'),
+  description: t('tools.json-query.description'),
   keywords: ['json', 'query', 'jsonquery', 'lang'],
   component: () => import('./json-query.vue'),
   icon: Braces,

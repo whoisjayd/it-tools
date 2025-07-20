@@ -1,11 +1,11 @@
 import { CalendarTime } from '@vicons/tabler';
 import { defineTool } from '../tool';
-import { translate } from '@/plugins/i18n.plugin';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: translate('tools.ttl-calculator.title'),
+  name: t('tools.ttl-calculator.title'),
   path: '/ttl-calculator',
-  description: translate('tools.ttl-calculator.description'),
+  description: t('tools.ttl-calculator.description'),
   keywords: ['ttl', 'dns', 'calculator', 'time', 'live', 'duration'],
   component: () => import('./ttl-calculator.vue'),
   icon: CalendarTime,

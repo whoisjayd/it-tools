@@ -1,11 +1,11 @@
 import { FileExport } from '@vicons/tabler';
 import { defineTool } from '../tool';
-import { translate } from '@/plugins/i18n.plugin';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: translate('tools.pdf-text-extractor.title'),
+  name: t('tools.pdf-text-extractor.title'),
   path: '/pdf-text-extractor',
-  description: translate('tools.pdf-text-extractor.description'),
+  description: t('tools.pdf-text-extractor.description'),
   keywords: ['pdf', 'text', 'extractor'],
   component: () => import('./pdf-text-extractor.vue'),
   icon: FileExport,

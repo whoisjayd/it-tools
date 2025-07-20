@@ -1,11 +1,11 @@
 import { Markdown } from '@vicons/tabler';
 import { defineTool } from '../tool';
-import { translate } from '@/plugins/i18n.plugin';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: translate('tools.paste-as-markdown.title'),
+  name: t('tools.paste-as-markdown.title'),
   path: '/paste-as-markdown',
-  description: translate('tools.paste-as-markdown.description'),
+  description: t('tools.paste-as-markdown.description'),
   keywords: ['paste', 'cell', 'table', 'links', 'md', 'markdown'],
   component: () => import('./paste-as-markdown.vue'),
   icon: Markdown,

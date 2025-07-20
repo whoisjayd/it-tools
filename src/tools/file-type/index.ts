@@ -1,11 +1,11 @@
 import { File } from '@vicons/tabler';
 import { defineTool } from '../tool';
-import { translate } from '@/plugins/i18n.plugin';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: translate('tools.file-type.title'),
+  name: t('tools.file-type.title'),
   path: '/file-type',
-  description: translate('tools.file-type.description'),
+  description: t('tools.file-type.description'),
   keywords: ['file', 'type', 'identify', 'detector'],
   component: () => import('./file-type.vue'),
   icon: File,

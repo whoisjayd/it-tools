@@ -1,11 +1,11 @@
 import { List } from '@vicons/tabler';
 import { defineTool } from '../tool';
-import { translate } from '@/plugins/i18n.plugin';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: translate('tools.list-comparer.title'),
+  name: t('tools.list-comparer.title'),
   path: '/list-comparer',
-  description: translate('tools.list-comparer.description'),
+  description: t('tools.list-comparer.description'),
   keywords: ['list', 'comparer'],
   component: () => import('./list-comparer.vue'),
   icon: List,

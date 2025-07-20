@@ -1,11 +1,11 @@
 import { World } from '@vicons/tabler';
 import { defineTool } from '../tool';
-import { translate } from '@/plugins/i18n.plugin';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: translate('tools.dmarc-dns-generator.title'),
+  name: t('tools.dmarc-dns-generator.title'),
   path: '/dmarc-dns-generator',
-  description: translate('tools.dmarc-dns-generator.description'),
+  description: t('tools.dmarc-dns-generator.description'),
   keywords: ['dmarc', 'dns'],
   component: () => import('./dmarc-dns-generator.vue'),
   icon: World,

@@ -1,11 +1,11 @@
 import { Coin } from '@vicons/tabler';
 import { defineTool } from '../tool';
-import { translate } from '@/plugins/i18n.plugin';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: translate('tools.coin-flipper.title'),
+  name: t('tools.coin-flipper.title'),
   path: '/coin-flipper',
-  description: translate('tools.coin-flipper.description'),
+  description: t('tools.coin-flipper.description'),
   keywords: ['coin', 'flipper'],
   component: () => import('./coin-flipper.vue'),
   icon: Coin,

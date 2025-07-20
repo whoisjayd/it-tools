@@ -1,11 +1,11 @@
 import { Atom } from '@vicons/tabler';
 import { defineTool } from '../tool';
-import { translate } from '@/plugins/i18n.plugin';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: translate('tools.mass-converter.title'),
+  name: t('tools.mass-converter.title'),
   path: '/mass-converter',
-  description: translate('tools.mass-converter.description'),
+  description: t('tools.mass-converter.description'),
   keywords: ['mass', 'converter'],
   component: () => import('./mass-converter.vue'),
   icon: Atom,

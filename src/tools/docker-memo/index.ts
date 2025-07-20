@@ -1,11 +1,11 @@
 import { BrandDocker } from '@vicons/tabler';
 import { defineTool } from '../tool';
-import { translate } from '@/plugins/i18n.plugin';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: translate('tools.docker-memo.title'),
+  name: t('tools.docker-memo.title'),
   path: '/docker-memo',
-  description: translate('tools.docker-memo.description'),
+  description: t('tools.docker-memo.description'),
   keywords: ['docker', 'memo'],
   component: () => import('./docker-memo.vue'),
   icon: BrandDocker,

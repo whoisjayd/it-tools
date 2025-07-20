@@ -1,11 +1,11 @@
 import { MathSymbols } from '@vicons/tabler';
 import { defineTool } from '../tool';
-import { translate } from '@/plugins/i18n.plugin';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: translate('tools.math-ocr.title'),
+  name: t('tools.math-ocr.title'),
   path: '/math-ocr',
-  description: translate('tools.math-ocr.description'),
+  description: t('tools.math-ocr.description'),
   keywords: ['math', 'ocr', 'latex', 'formula', 'image'],
   component: () => import('./math-ocr.vue'),
   icon: MathSymbols,

@@ -1,11 +1,11 @@
 import { Alarm } from '@vicons/tabler';
 import { defineTool } from '../tool';
-import { translate } from '@/plugins/i18n.plugin';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: translate('tools.time-alarm.title'),
+  name: t('tools.time-alarm.title'),
   path: '/time-alarm',
-  description: translate('tools.time-alarm.description'),
+  description: t('tools.time-alarm.description'),
   keywords: ['time', 'alarm'],
   component: () => import('./time-alarm.vue'),
   icon: Alarm,

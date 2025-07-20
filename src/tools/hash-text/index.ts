@@ -1,9 +1,9 @@
 import { EyeOff } from '@vicons/tabler';
 import { defineTool } from '../tool';
-import { translate } from '@/plugins/i18n.plugin';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: translate('tools.hash-text.title'),
+  name: t('tools.hash-text.title'),
   path: '/hash-text',
   description:
     'Hash a text string using the function you need : MD5, SHA1, SHA256, SHA224, SHA512, SHA384, SHA3, RIPEMD160, ADLER32, CRC32, CRC32C, BLAKE, KECCAK, XXHASH, SM3, WHIRLPOOL or Argon2(i/d/id)',

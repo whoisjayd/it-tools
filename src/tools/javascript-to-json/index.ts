@@ -1,11 +1,11 @@
 import { Braces } from '@vicons/tabler';
 import { defineTool } from '../tool';
-import { translate } from '@/plugins/i18n.plugin';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: translate('tools.javascript-to-json.title'),
+  name: t('tools.javascript-to-json.title'),
   path: '/javascript-to-json',
-  description: translate('tools.javascript-to-json.description'),
+  description: t('tools.javascript-to-json.description'),
   keywords: ['javascript', 'json'],
   component: () => import('./javascript-to-json.vue'),
   icon: Braces,

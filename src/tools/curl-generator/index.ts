@@ -1,11 +1,11 @@
 import { Download } from '@vicons/tabler';
 import { defineTool } from '../tool';
-import { translate } from '@/plugins/i18n.plugin';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: translate('tools.curl-generator.title'),
+  name: t('tools.curl-generator.title'),
   path: '/curl-generator',
-  description: translate('tools.curl-generator.description'),
+  description: t('tools.curl-generator.description'),
   keywords: ['curl'],
   component: () => import('./curl-generator.vue'),
   icon: Download,

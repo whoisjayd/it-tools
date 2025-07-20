@@ -1,11 +1,11 @@
 import { EyeOff } from '@vicons/tabler';
 import { defineTool } from '../tool';
-import { translate } from '@/plugins/i18n.plugin';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: translate('tools.file-hasher.title'),
+  name: t('tools.file-hasher.title'),
   path: '/file-hasher',
-  description: translate('tools.file-hasher.description'),
+  description: t('tools.file-hasher.description'),
   keywords: ['file', 'hash',
     'digest',
     'crypto',

@@ -1,11 +1,11 @@
 import { Angle } from '@vicons/tabler';
 import { defineTool } from '../tool';
-import { translate } from '@/plugins/i18n.plugin';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: translate('tools.angle-converter.title'),
+  name: t('tools.angle-converter.title'),
   path: '/angle-converter',
-  description: translate('tools.angle-converter.description'),
+  description: t('tools.angle-converter.description'),
   keywords: ['angle', 'converter'],
   component: () => import('./angle-converter.vue'),
   icon: Angle,

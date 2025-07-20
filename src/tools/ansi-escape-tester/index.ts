@@ -1,11 +1,11 @@
 import { Terminal2 } from '@vicons/tabler';
 import { defineTool } from '../tool';
-import { translate } from '@/plugins/i18n.plugin';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: translate('tools.ansi-escape-tester.title'),
+  name: t('tools.ansi-escape-tester.title'),
   path: '/ansi-escape-tester',
-  description: translate('tools.ansi-escape-tester.description'),
+  description: t('tools.ansi-escape-tester.description'),
   keywords: ['ansi', 'escape', 'tester'],
   component: () => import('./ansi-escape-tester.vue'),
   icon: Terminal2,

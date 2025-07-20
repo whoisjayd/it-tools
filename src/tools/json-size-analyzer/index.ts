@@ -1,11 +1,11 @@
 import { FileAnalytics } from '@vicons/tabler';
 import { defineTool } from '../tool';
-import { translate } from '@/plugins/i18n.plugin';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: translate('tools.json-size-analyzer.title'),
+  name: t('tools.json-size-analyzer.title'),
   path: '/json-size-analyzer',
-  description: translate('tools.json-size-analyzer.description'),
+  description: t('tools.json-size-analyzer.description'),
   keywords: ['json', 'size', 'analyzer'],
   component: () => import('./json-size-analyzer.vue'),
   icon: FileAnalytics,

@@ -1,11 +1,11 @@
 import { Lock } from '@vicons/tabler';
 import { defineTool } from '../tool';
-import { translate } from '@/plugins/i18n.plugin';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: translate('tools.rsa-encryption.title'),
+  name: t('tools.rsa-encryption.title'),
   path: '/rsa-encryption',
-  description: translate('tools.rsa-encryption.description'),
+  description: t('tools.rsa-encryption.description'),
   keywords: ['rsa', 'encryption', 'cypher', 'encipher', 'crypt', 'decrypt'],
   component: () => import('./rsa-encryption.vue'),
   icon: Lock,

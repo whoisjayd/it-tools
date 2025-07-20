@@ -1,9 +1,9 @@
 import { IconResize } from '@tabler/icons-vue';
 import { defineTool } from '../tool';
-import { translate } from '@/plugins/i18n.plugin';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: translate('tools.image-resizer.title'),
+  name: t('tools.image-resizer.title'),
   path: '/image-resizer',
   description: '',
   keywords: ['image', 'resizer', 'favicon', 'jpg', 'jpeg', 'png', 'webp'],

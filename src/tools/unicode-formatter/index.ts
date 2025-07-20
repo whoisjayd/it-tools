@@ -1,11 +1,11 @@
 import { Edit } from '@vicons/tabler';
 import { defineTool } from '../tool';
-import { translate } from '@/plugins/i18n.plugin';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: translate('tools.unicode-formatter.title'),
+  name: t('tools.unicode-formatter.title'),
   path: '/unicode-formatter',
-  description: translate('tools.unicode-formatter.description'),
+  description: t('tools.unicode-formatter.description'),
   keywords: ['unicode', 'formatter', 'fonts'],
   component: () => import('./unicode-formatter.vue'),
   icon: Edit,

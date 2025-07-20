@@ -1,11 +1,11 @@
 import { License } from '@vicons/tabler';
 import { defineTool } from '../tool';
-import { translate } from '@/plugins/i18n.plugin';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: translate('tools.software-licence-compatibility.title'),
+  name: t('tools.software-licence-compatibility.title'),
   path: '/software-licence-compatibility',
-  description: translate('tools.software-licence-compatibility.description'),
+  description: t('tools.software-licence-compatibility.description'),
   keywords: ['software', 'licence', 'compatibility'],
   component: () => import('./software-licence-compatibility.vue'),
   icon: License,

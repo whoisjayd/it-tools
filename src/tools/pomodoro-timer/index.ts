@@ -1,11 +1,11 @@
 import { CalendarTime } from '@vicons/tabler';
 import { defineTool } from '../tool';
-import { translate } from '@/plugins/i18n.plugin';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: translate('tools.pomodoro-timer.title'),
+  name: t('tools.pomodoro-timer.title'),
   path: '/pomodoro-timer',
-  description: translate('tools.pomodoro-timer.description'),
+  description: t('tools.pomodoro-timer.description'),
   keywords: ['pomodoro', 'timer'],
   component: () => import('./pomodoro-timer.vue'),
   icon: CalendarTime,

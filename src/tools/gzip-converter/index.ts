@@ -1,11 +1,11 @@
 import { FileZip } from '@vicons/tabler';
 import { defineTool } from '../tool';
-import { translate } from '@/plugins/i18n.plugin';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: translate('tools.gzip-converter.title'),
+  name: t('tools.gzip-converter.title'),
   path: '/gzip-converter',
-  description: translate('tools.gzip-converter.description'),
+  description: t('tools.gzip-converter.description'),
   keywords: ['gzip', 'deflate', 'converter'],
   component: () => import('./gzip-converter.vue'),
   icon: FileZip,

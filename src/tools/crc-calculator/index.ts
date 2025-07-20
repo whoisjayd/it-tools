@@ -1,11 +1,11 @@
 import { EyeOff } from '@vicons/tabler';
 import { defineTool } from '../tool';
-import { translate } from '@/plugins/i18n.plugin';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: translate('tools.crc-calculator.title'),
+  name: t('tools.crc-calculator.title'),
   path: '/crc-calculator',
-  description: translate('tools.crc-calculator.description'),
+  description: t('tools.crc-calculator.description'),
   keywords: ['crc', 'checksum', 'crc1',
     'crc8',
     'crc8 1-wire',

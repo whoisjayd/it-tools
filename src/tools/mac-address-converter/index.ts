@@ -1,11 +1,11 @@
 import { Devices } from '@vicons/tabler';
 import { defineTool } from '../tool';
-import { translate } from '@/plugins/i18n.plugin';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: translate('tools.mac-address-converter.title'),
+  name: t('tools.mac-address-converter.title'),
   path: '/mac-address-converter',
-  description: translate('tools.mac-address-converter.description'),
+  description: t('tools.mac-address-converter.description'),
   keywords: [
     'converter',
     'mac',

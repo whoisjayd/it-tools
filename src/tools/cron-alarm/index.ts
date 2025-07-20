@@ -1,11 +1,11 @@
 import { Alarm } from '@vicons/tabler';
 import { defineTool } from '../tool';
-import { translate } from '@/plugins/i18n.plugin';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: translate('tools.cron-alarm.title'),
+  name: t('tools.cron-alarm.title'),
   path: '/cron-alarm',
-  description: translate('tools.cron-alarm.description'),
+  description: t('tools.cron-alarm.description'),
   keywords: ['cron', 'week', 'day', 'alarm'],
   component: () => import('./cron-alarm.vue'),
   icon: Alarm,

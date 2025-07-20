@@ -1,11 +1,11 @@
 import { World } from '@vicons/tabler';
 import { defineTool } from '../tool';
-import { translate } from '@/plugins/i18n.plugin';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: translate('tools.spf-dns-generator.title'),
+  name: t('tools.spf-dns-generator.title'),
   path: '/spf-dns-generator',
-  description: translate('tools.spf-dns-generator.description'),
+  description: t('tools.spf-dns-generator.description'),
   keywords: ['spf', 'dns'],
   component: () => import('./spf-dns-generator.vue'),
   icon: World,

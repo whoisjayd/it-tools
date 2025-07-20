@@ -576,7 +576,7 @@ function getTextPosition(index: number) {
   border-radius: 50%;
   background: #414141;
   border: 4px solid #333;
-  transform: translate(-50%, -50%);
+  transform: t(-50%, -50%);
   z-index: 10;
   display: flex;
   align-items: center;

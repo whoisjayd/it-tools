@@ -1,11 +1,11 @@
 import { World } from '@vicons/tabler';
 import { defineTool } from '../tool';
-import { translate } from '@/plugins/i18n.plugin';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: translate('tools.my-ip.title'),
+  name: t('tools.my-ip.title'),
   path: '/my-ip',
-  description: translate('tools.my-ip.description'),
+  description: t('tools.my-ip.description'),
   keywords: ['my', 'client', 'ip'],
   component: () => import('./my-ip.vue'),
   icon: World,

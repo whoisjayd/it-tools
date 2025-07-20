@@ -1,11 +1,11 @@
 import { HandMove } from '@vicons/tabler';
 import { defineTool } from '../tool';
-import { translate } from '@/plugins/i18n.plugin';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: translate('tools.xslt-tester.title'),
+  name: t('tools.xslt-tester.title'),
   path: '/xslt-tester',
-  description: translate('tools.xslt-tester.description'),
+  description: t('tools.xslt-tester.description'),
   keywords: ['xslt', 'xml', 'tester'],
   component: () => import('./xslt-tester.vue'),
   icon: HandMove,
