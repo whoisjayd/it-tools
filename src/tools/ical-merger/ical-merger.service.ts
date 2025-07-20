@@ -1,4 +1,5 @@
 import ICAL from 'ical.js';
+import { v4 as uuidv4 } from 'uuid';
 
 import { translate as t } from '@/plugins/i18n.plugin';
 
@@ -6,6 +7,7 @@ export function mergeIcals(inputs: Array<string>, options: {
   calname?: string
   timezone?: string
   caldesc?: string
+  regenerate_uids?: boolean
 } = {}) {
   let calendar;
   for (const input of inputs) {
@@ -41,6 +43,12 @@ export function mergeIcals(inputs: Array<string>, options: {
 
   if (!calendar) {
     throw new Error(t('tools.ical-merger.service.text.no-icals-parsed-successfully'));
+  }
+
+  if (options.regenerate_uids) {
+    for (const vevent of calendar.getAllSubcomponents('vevent')) {
+      vevent.updatePropertyWithValue('uid', uuidv4());
+    }
   }
 
   return calendar.toString();

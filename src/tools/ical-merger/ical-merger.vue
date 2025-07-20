@@ -8,6 +8,7 @@ const fileInputs = ref<Array<File>>([]);
 const mergedOutput = ref('');
 const calendarName = ref('');
 const calendarDescription = ref('');
+const regenerateUids = ref(false);
 const errors = ref('');
 
 function onUploads(files: Array<File>) {
@@ -24,7 +25,11 @@ async function mergeFiles() {
   errors.value = '';
   mergedOutput.value = '';
   try {
-    mergedOutput.value = mergeIcals(fileBuffers);
+    mergedOutput.value = mergeIcals(fileBuffers, {
+      calname: calendarName.value,
+      caldesc: calendarDescription.value,
+      regenerate_uids: regenerateUids.value,
+    });
   }
   catch (e: any) {
     errors.value = e.toString();
@@ -59,6 +64,12 @@ function readFileAsString(file: File) {
     <n-form-item :label="t('tools.ical-merger.texts.label-description')">
       <n-input v-model:value="calendarDescription" :placeholder="t('tools.ical-merger.texts.placeholder-please-input-merged-calendar-description')" />
     </n-form-item>
+
+    <n-space justify="center">
+      <n-checkbox v-model:checked="regenerateUids">
+        {{ t('tools.ical-merger.text.regenerate-uids') }}
+      </n-checkbox>
+    </n-space>
 
     <ul>
       <li v-for="(file, index) in fileInputs" :key="index" mb-1>
