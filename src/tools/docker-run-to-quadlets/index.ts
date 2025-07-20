@@ -1,10 +1,11 @@
 import { BrandDocker } from '@vicons/tabler';
 import { defineTool } from '../tool';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: 'Docker run to Quadlets',
+  name: t('tools.docker-run-to-quadlets.title'),
   path: '/docker-run-to-quadlets',
-  description: 'Convert docker run commands to Podman Quadlets',
+  description: t('tools.docker-run-to-quadlets.description'),
   keywords: ['docker', 'run', 'podman', 'quadlets'],
   component: () => import('./docker-run-to-quadlets.vue'),
   icon: BrandDocker,

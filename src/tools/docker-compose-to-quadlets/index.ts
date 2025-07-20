@@ -1,10 +1,11 @@
 import { BrandDocker } from '@vicons/tabler';
 import { defineTool } from '../tool';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: 'Docker Compose to Quadlets',
+  name: t('tools.docker-compose-to-quadlets.title'),
   path: '/docker-compose-to-quadlets',
-  description: 'Convert Docker compose file content to Podman Quadlets',
+  description: t('tools.docker-compose-to-quadlets.description'),
   keywords: ['docker', 'compose', 'quadlets'],
   component: () => import('./docker-compose-to-quadlets.vue'),
   icon: BrandDocker,

@@ -1,10 +1,11 @@
 import { Mountain } from '@vicons/tabler';
 import { defineTool } from '../tool';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: 'Swagger UI tester',
+  name: t('tools.swagger-ui-tester.title'),
   path: '/swagger-ui-tester',
-  description: 'Test Swagger Manifest',
+  description: t('tools.swagger-ui-tester.description'),
   keywords: ['swagger', 'manifest', 'tester'],
   component: () => import('./swagger-ui-tester.vue'),
   icon: Mountain,
