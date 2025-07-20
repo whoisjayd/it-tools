@@ -36,7 +36,7 @@ export function getSubnets(cidr: string) {
   if (isIPv4(address)) {
     const prefix4Int = Number(prefix || '32');
     const getMask = (prefix: number) => (IPv4MAX >> (BigInt(32) - BigInt(prefix))) << (BigInt(32) - BigInt(prefix));
-    const bigInt = BigInt((new Address4(address)).bigInteger());
+    const bigInt = BigInt((new Address4(address)).bigInt());
 
     const subnets = [];
     let startNetwork;
@@ -50,7 +50,7 @@ export function getSubnets(cidr: string) {
     const increment = BigInt(2) ** BigInt(32 - prefix4Int);
     const netCount = getNetworksCount(cidr);
     for (let netIndex = 0; netIndex < netCount; netIndex += 1) {
-      const netAddr = Address4.fromBigInteger(startNetwork.toString()).correctForm();
+      const netAddr = Address4.fromBigInt(startNetwork).correctForm();
       subnets.push(`${netAddr}/${prefix4Int}`);
       startNetwork += increment;
     }
@@ -99,7 +99,7 @@ export function getIPNetworkType(address: string) {
 
 export function toARPA(address: string) {
   if (isIPv4(address)) {
-    const bigInt = BigInt((new Address4(address)).bigInteger());
+    const bigInt = BigInt((new Address4(address)).bigInt());
     const reverseIP = (
       [(bigInt & BigInt(255)), (bigInt >> BigInt(8) & BigInt(255)),
         (bigInt >> BigInt(16) & BigInt(255)),
