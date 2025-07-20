@@ -836,8 +836,8 @@ devDependencies:
     specifier: ^6.0.8
     version: 6.0.8(@vue/compiler-dom@3.5.13)(eslint@8.47.0)(rollup@2.79.2)(typescript@5.2.2)(vue-i18n@11.1.9)(vue@3.3.4)
   '@playwright/test':
-    specifier: ^1.50.1
-    version: 1.50.1
+    specifier: ^1.54.1
+    version: 1.54.1
   '@rushstack/eslint-patch':
     specifier: ^1.2.0
     version: 1.2.0
@@ -5515,12 +5515,12 @@ packages:
       tslib: 2.8.1
     dev: true
 
-  /@playwright/test@1.50.1:
-    resolution: {integrity: sha512-Jii3aBg+CEDpgnuDxEp/h7BimHcUTDlpEtce89xEumlJ5ef2hqepZ+PWp1DDpYC/VO9fmWVI1IlEaoI5fK9FXQ==}
+  /@playwright/test@1.54.1:
+    resolution: {integrity: sha512-FS8hQ12acieG2dYSksmLOF7BNxnVf2afRJdCuM1eMSxj6QTSE6G4InGF7oApGgDb65MX7AwMVlIkpru0yZA4Xw==}
     engines: {node: '>=18'}
     hasBin: true
     dependencies:
-      playwright: 1.50.1
+      playwright: 1.54.1
     dev: true
 
   /@polka/url@1.0.0-next.28:
@@ -15250,18 +15250,18 @@ packages:
     engines: {node: '>=10'}
     dev: false
 
-  /playwright-core@1.50.1:
-    resolution: {integrity: sha512-ra9fsNWayuYumt+NiM069M6OkcRb1FZSK8bgi66AtpFoWkg2+y0bJSNmkFrWhMbEBbVKC/EruAHH3g0zmtwGmQ==}
+  /playwright-core@1.54.1:
+    resolution: {integrity: sha512-Nbjs2zjj0htNhzgiy5wu+3w09YetDx5pkrpI/kZotDlDUaYk0HVA5xrBVPdow4SAUIlhgKcJeJg4GRKW6xHusA==}
     engines: {node: '>=18'}
     hasBin: true
     dev: true
 
-  /playwright@1.50.1:
-    resolution: {integrity: sha512-G8rwsOQJ63XG6BbKj2w5rHeavFjy5zynBA9zsJMMtBoe/Uf757oG12NXz6e6OirF7RCrTVAKFXbLmn1RbL7Qaw==}
+  /playwright@1.54.1:
+    resolution: {integrity: sha512-peWpSwIBmSLi6aW2auvrUtf2DqY16YYcCMO8rTVx486jKmDTJg7UAhyrraP98GB8BoPURZP8+nxO7TSd4cPr5g==}
     engines: {node: '>=18'}
     hasBin: true
     dependencies:
-      playwright-core: 1.50.1
+      playwright-core: 1.54.1
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
