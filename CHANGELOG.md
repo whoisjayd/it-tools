@@ -2,6 +2,80 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## Version 2025.07.20-3ccbd853
+
+### Features
+-  prepare new tools for translation (cfe5b4f)
+-  translation scripts enhancements (a4576e0)
+- **new tool**: Levenshtein Distance Calculator (9cb58fc)
+- **new tools**: YAML/JSON Flattener/Unflattener (521d0bf)
+- **new tools**: YAML/JSON Merger (1d02e32)
+- **new tools**: Docker Run/Compose to Quadlets (d28f275)
+- **Git Memo**: add git pull (c46e65f)
+- **XPath Tester**: handle namespaces (b0c43e2)
+- **new tool**: Swagger UI Tester (e5d8425)
+- **yaml-to-json**: add nestify options (e9dbf1f)
+- **i18n**: extract some more (1a2e152)
+- **i18n**: extract some more (7527853)
+- **i18n**: extract all tools name and description (a9d6b86)
+-  add script to extract tools name and description (cca32ba)
+- **HTML Editor**: add raw html editor (d625f62)
+- **new tool**: Citation Generator (APA/MLA) (700cc2a)
+- **new tool**: JSON Query (lang) (c53a8cb)
+- **JQ Tester**: add some keywords and move to JSON category (ea0a99e)
+- **new tool**: ANSI Escape Tester (241dd13)
+- **new tool**: HTML Minifier (9f5f7d8)
+- **HTML Editor**: option to minify output (5e3648e)
+- **Watermarker**: add options for repeated tile spacing and single watermark positioning (a78201b)
+- **new tool**: Image Watermarker (e00b78b)
+- **Unicode Search**: improve unicode search loading speed (#97) (f868b97)
+- **Folder Structure**: Add backwards converter for Folder Structure Page (#105) (9186038)
+
+### Bug fixes
+-  use t for translate in tools name/description (3ccbd85)
+- **Regex Tester**: remove shadow root on unmount (a26f2a2)
+- **iCal Merger**: fix name and desc + regenerate UIDs (0bb259c)
+-  remove stub @types + update podletjs + use @xterm/xterm (504aff9)
+- **nginx.conf**: allow image-src to blob and http(s) (eafc6f8)
+- **deps**: update dependency @iplookup/country-extra to v1.0.20250717 (#115) (5bdbaa9)
+-  allow connect-src any https: and http: (79e0db7)
+-  JSON stringify/parse BigInt (ad312d7)
+-  read yaml with intAsBigInt (0d4267e)
+- **HTML Editor**: remove <p> from <li> (2be6d4d)
+- **IPv4 Address Converter**: error handling (05d25da)
+
+### Chores
+-  update deps (b434ad7)
+-  update playwright (1202011)
+-  update deps (babff36)
+-  force base url / for latest and default build (91564e0)
+-  fix github issue template typo (5904fa7)
+
+### Other
+-  Additions for responsive sidebar pull request (#131) (aabbfca)
+-  add yunohost install option (#133) (96ad3eb)
+-  Feat/translate all content (#121) (a8c6ebc)
+-  Made sidebar responsive (#130) (e811a5b)
+-  Updated Irish translation (#127) (7824f48)
+-  feat(i18n) Added Irish/Gaeilge translation (#124) (4ea4420)
+-  Squashed commit of the following: (207b2ab)
+
+### Fix
+-  Massive website slowdown after visiting the Unicode Search page (#132) (be9d659)
+
+### Merge branch 'chore/all-my-stuffs' of https
+-  //github.com/sharevb/it-tools into chore/all-my-stuffs (3ffb805)
+
+### Feature
+-  Improve menu bar animation smoothness (#109) (7fd60b0)
+
+### New tool
+-  CLI Command Editor (#108) (3b921e6)
+
+### Doc
+-  add info for authentication (a12c43b)
+-  add info about ipv6, cyberpanel, https, PWA, dev under WSL2 (de76ee5)
+
 ## Version 2025.06.15-20a26514
 
 ### Features
