@@ -89,6 +89,13 @@ watchEffect(
     }
   },
 );
+
+tryOnBeforeUnmount(() => {
+  const visualizer = visualizerSVG.value?.shadow_root;
+  if (visualizer) {
+    visualizer.parentElement?.removeChild(visualizer);
+  }
+});
 </script>
 
 <template>
