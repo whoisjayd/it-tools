@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## Version 2025.08.06-0325b117
+
+### Features
+- **i18n**: add Chinese translation (#163) (6cbfa60)
+
+### Other
+-  - Added a loading background color for light and dark theme (#166) (0325b11)
+-  QR code generator UI improvements (#165) (0462c17)
+
 ## Version 2025.07.20-3ccbd853
 
 ### Features
