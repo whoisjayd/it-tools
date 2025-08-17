@@ -45,7 +45,7 @@ const rawJsonValidation = useValidation({
       <n-switch v-model:value="unescapeUnicode" />
     </n-form-item>
     <n-form-item :label="t('tools.json-viewer.texts.label-indent-size')" label-placement="left" label-width="100" :show-feedback="false">
-      <n-input-number v-model:value="indentSize" min="0" max="10" style="width: 100px" />
+      <n-input-number-i18n v-model:value="indentSize" min="0" max="10" style="width: 100px" />
     </n-form-item>
     <n-form-item :label="`${repairJsonLabel} :`" label-placement="left" label-width="110">
       <n-switch v-model:value="repairJson" />

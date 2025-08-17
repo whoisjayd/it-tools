@@ -36,7 +36,7 @@ const endAt = computed(() =>
     <n-divider />
     <div flex gap-2>
       <n-form-item :label="t('tools.eta-calculator.texts.label-amount-of-element-to-consume')" flex-1>
-        <n-input-number v-model:value="unitCount" :min="1" />
+        <n-input-number-i18n v-model:value="unitCount" :min="1" />
       </n-form-item>
       <n-form-item :label="t('tools.eta-calculator.texts.label-the-consumption-started-at')" flex-1>
         <n-date-picker v-model:value="startedAt" type="datetime" />
@@ -45,10 +45,10 @@ const endAt = computed(() =>
 
     <p>{{ t('tools.eta-calculator.texts.tag-amount-of-unit-consumed-by-time-span') }}</p>
     <div flex flex-col items-baseline gap-y-2 md:flex-row>
-      <n-input-number v-model:value="unitPerTimeSpan" :min="1" />
+      <n-input-number-i18n v-model:value="unitPerTimeSpan" :min="1" />
       <div flex items-baseline gap-2>
         <span ml-2>{{ t('tools.eta-calculator.texts.tag-in') }}</span>
-        <n-input-number v-model:value="timeSpan" min-w-130px :min="1" />
+        <n-input-number-i18n v-model:value="timeSpan" min-w-130px :min="1" />
         <c-select
           v-model:value="timeSpanUnitMultiplier"
           min-w-130px

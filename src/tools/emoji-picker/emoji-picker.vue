@@ -183,7 +183,7 @@ onUnmounted(() => {
         </template>
       </c-input-text>
       <n-form-item :label="t('tools.emoji-picker.texts.label-max-results')" label-placement="left">
-        <n-input-number v-model:value="limit" :min="10" :max="500" :step="10" style="width: 100px" />
+        <n-input-number-i18n v-model:value="limit" :min="10" :max="500" :step="10" style="width: 100px" />
       </n-form-item>
     </div>
 

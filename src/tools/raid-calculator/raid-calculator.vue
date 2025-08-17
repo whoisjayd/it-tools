@@ -45,11 +45,11 @@ function validateSetup() {
   <div>
     <c-card>
       <n-form-item :label="t('tools.raid-calculator.texts.label-number-of-disks')" label-placement="left" label-width="150" mb-2>
-        <n-input-number v-model:value="diskTotal" max="10000" min="2" :placeholder="t('tools.raid-calculator.texts.placeholder-number-of-disks-ex-2')" w-full />
+        <n-input-number-i18n v-model:value="diskTotal" max="10000" min="2" :placeholder="t('tools.raid-calculator.texts.placeholder-number-of-disks-ex-2')" w-full />
       </n-form-item>
 
       <n-form-item :label="t('tools.raid-calculator.texts.label-disk-size')" label-placement="left" label-width="150" mb-2>
-        <n-input-number v-model:value="diskSize" max="10000" min="1" :placeholder="t('tools.raid-calculator.texts.placeholder-disk-size-ex-100')" w-full />
+        <n-input-number-i18n v-model:value="diskSize" max="10000" min="1" :placeholder="t('tools.raid-calculator.texts.placeholder-disk-size-ex-100')" w-full />
         <div flex items-baseline gap-2>
           <c-select
             v-model:value="diskUnit"
@@ -65,7 +65,7 @@ function validateSetup() {
         </div>
       </n-form-item>
       <n-form-item v-if="['raid_50', 'raid_60', 'raid_70'].includes(raidType)" :label="t('tools.raid-calculator.texts.label-disks-per-stripe')" label-placement="left" label-width="150" mb-2>
-        <n-input-number v-model:value="diskPerStripe" max="10000" min="2" :placeholder="t('tools.raid-calculator.texts.placeholder-number-of-disks-per-stripe-ex-3')" w-full />
+        <n-input-number-i18n v-model:value="diskPerStripe" max="10000" min="2" :placeholder="t('tools.raid-calculator.texts.placeholder-number-of-disks-per-stripe-ex-3')" w-full />
         <n-input v-model:value="totalStripes" placeholder="" readonly ml-1 w-full />
       </n-form-item>
       <n-form-item :label="t('tools.raid-calculator.texts.label-raid-type')" label-placement="left" label-width="150" mb-2>

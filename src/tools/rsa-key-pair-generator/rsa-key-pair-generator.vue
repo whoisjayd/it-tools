@@ -59,7 +59,7 @@ const [certs, refreshCerts] = computedRefreshableAsync(
       />
 
       <n-form-item :label="t('tools.rsa-key-pair-generator.texts.label-bits')" v-bind="bitsValidationAttrs as any" label-placement="left">
-        <n-input-number v-model:value="bits" min="256" max="16384" step="8" />
+        <n-input-number-i18n v-model:value="bits" min="256" max="16384" step="8" />
       </n-form-item>
     </n-space>
 

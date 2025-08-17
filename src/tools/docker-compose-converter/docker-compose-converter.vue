@@ -118,7 +118,7 @@ const MONACO_EDITOR_OPTIONS = {
       </n-gi>
       <n-gi span="2">
         <n-form-item :label="t('tools.docker-compose-converter.texts.label-indent-size')" label-placement="top" label-width="100" :show-feedback="false">
-          <n-input-number v-model:value="indentSize" min="0" max="10" w-100px />
+          <n-input-number-i18n v-model:value="indentSize" min="0" max="10" w-100px />
         </n-form-item>
       </n-gi>
     </n-grid>

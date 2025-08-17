@@ -153,7 +153,7 @@ const encodedStructOutput = computed(() => {
         />
         <n-space v-if="decodeAs !== 'utf8'" align="baseline" justify="center">
           <n-form-item :label="t('tools.hex-converter.texts.label-bits')" label-placement="left">
-            <n-input-number v-model:value="bits" :min="1" style="width: 6em" />
+            <n-input-number-i18n v-model:value="bits" :min="1" style="width: 6em" />
           </n-form-item>
           <n-form-item>
             <n-checkbox v-model:checked="floatingPoint">
@@ -223,10 +223,10 @@ const encodedStructOutput = computed(() => {
             <n-switch v-model:value="uppercase" />
           </n-form-item>
           <n-form-item :label="t('tools.hex-converter.texts.label-group-by')" label-placement="left">
-            <n-input-number v-model:value="grouping" :min="0" style="width: 6em" mr-1 />{{ t('tools.hex-converter.texts.tag-digits-0-no-grouping') }}
+            <n-input-number-i18n v-model:value="grouping" :min="0" style="width: 6em" mr-1 />{{ t('tools.hex-converter.texts.tag-digits-0-no-grouping') }}
           </n-form-item>
           <n-form-item :label="t('tools.hex-converter.texts.label-split-as-rows-by')" label-placement="left">
-            <n-input-number v-model:value="rowlength" :min="0" style="width: 6em" mr-1 />{{ t('tools.hex-converter.texts.tag-group-of-digits-0-no-rows') }}
+            <n-input-number-i18n v-model:value="rowlength" :min="0" style="width: 6em" mr-1 />{{ t('tools.hex-converter.texts.tag-group-of-digits-0-no-rows') }}
           </n-form-item>
         </n-space>
       </c-card>
@@ -292,10 +292,10 @@ const encodedStructOutput = computed(() => {
             <n-switch v-model:value="uppercase" />
           </n-form-item>
           <n-form-item :label="t('tools.hex-converter.texts.label-group-by')" label-placement="left">
-            <n-input-number v-model:value="grouping" :min="0" style="width: 6em" mr-1 />{{ t('tools.hex-converter.texts.tag-digits-0-no-grouping') }}
+            <n-input-number-i18n v-model:value="grouping" :min="0" style="width: 6em" mr-1 />{{ t('tools.hex-converter.texts.tag-digits-0-no-grouping') }}
           </n-form-item>
           <n-form-item :label="t('tools.hex-converter.texts.label-split-as-rows-by')" label-placement="left">
-            <n-input-number v-model:value="rowlength" :min="0" style="width: 6em" mr-1 />{{ t('tools.hex-converter.texts.tag-group-of-digits-0-no-rows') }}
+            <n-input-number-i18n v-model:value="rowlength" :min="0" style="width: 6em" mr-1 />{{ t('tools.hex-converter.texts.tag-group-of-digits-0-no-rows') }}
           </n-form-item>
         </n-space>
       </c-card>

@@ -36,7 +36,7 @@ const MONACO_EDITOR_OPTIONS = {
           <n-switch v-model:value="sortKeys" />
         </n-form-item>
         <n-form-item :label="t('tools.yaml-viewer.texts.label-indent-size')" label-placement="left" label-width="100" :show-feedback="false">
-          <n-input-number v-model:value="indentSize" min="1" max="10" style="width: 100px" />
+          <n-input-number-i18n v-model:value="indentSize" min="1" max="10" style="width: 100px" />
         </n-form-item>
       </div>
     </div>

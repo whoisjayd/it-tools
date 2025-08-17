@@ -21,12 +21,12 @@ const { copy } = useCopy({ source: obfuscatedString });
     <div mt-4 flex gap-10px>
       <div>
         <div>{{ t('tools.string-obfuscator.texts.tag-keep-first') }}</div>
-        <n-input-number v-model:value="keepFirst" min="0" />
+        <n-input-number-i18n v-model:value="keepFirst" min="0" />
       </div>
 
       <div>
         <div>{{ t('tools.string-obfuscator.texts.tag-keep-last') }}</div>
-        <n-input-number v-model:value="keepLast" min="0" />
+        <n-input-number-i18n v-model:value="keepLast" min="0" />
       </div>
 
       <div>

@@ -189,7 +189,7 @@ function onCreateIpRule() {
           <NInput v-model:value="formData.cacheExtensions" :placeholder="t('tools.htaccess-generator.texts.placeholder-js-css-png')" />
         </NFormItem>
         <NFormItem :label="t('tools.htaccess-generator.texts.label-cache-duration')">
-          <NInputNumber v-model:value="formData.cacheDuration" mr-1 />
+          <n-input-number-i18n v-model:value="formData.cacheDuration" mr-1 />
           <NSelect
             v-model:value="formData.cacheDurationMultiple"
             :options="[{ label: t('tools.htaccess-generator.texts.label-seconds'), value: '1' }, { label: t('tools.htaccess-generator.texts.label-minutes'), value: '60' }, { label: t('tools.htaccess-generator.texts.label-hours'), value: '3600' }, { label: t('tools.htaccess-generator.texts.label-days'), value: '86400' }, { label: t('tools.htaccess-generator.texts.label-weeks'), value: '36288000' }, { label: t('tools.htaccess-generator.texts.label-months'), value: '160704000' }]"

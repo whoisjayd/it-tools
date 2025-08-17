@@ -13,7 +13,7 @@ const outputRmb = computed(() => rmb(inputRmb.value)); ;
 <template>
   <div flex flex-col gap-2>
     <c-card :title="t('tools.rmb-numbers.texts.title-lower-case-amount')">
-      <n-input-number v-model:value="inputRmb" max="100000000000" min="0" :placeholder="t('tools.rmb-numbers.texts.placeholder-enter-the-amount-in-lowercase-example-1314-52')" :show-button="false" w-full />
+      <n-input-number-i18n v-model:value="inputRmb" max="100000000000" min="0" :placeholder="t('tools.rmb-numbers.texts.placeholder-enter-the-amount-in-lowercase-example-1314-52')" :show-button="false" w-full />
     </c-card>
 
     <div my-16px divider />

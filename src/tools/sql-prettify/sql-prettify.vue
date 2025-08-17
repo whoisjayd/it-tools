@@ -105,7 +105,7 @@ const sqlDialects = [
         <n-checkbox v-model:checked="useTabs" mr-2 />
       </n-form-item>
       <n-form-item :label="t('tools.sql-prettify.texts.label-expressions-width')" label-placement="left">
-        <n-input-number v-model:value="expressionWidth" :min="0" size="small" />
+        <n-input-number-i18n v-model:value="expressionWidth" :min="0" size="small" />
       </n-form-item>
     </n-space>
   </div>

@@ -85,7 +85,7 @@ const convertedValue = computed(() => {
         />
 
         <n-form-item :label="t('tools.data-storage-unit-converter.texts.label-precision')" label-placement="left">
-          <n-input-number v-model:value="output.precision" style="width:100px" :placeholder="t('tools.data-storage-unit-converter.texts.placeholder-precision')" :max="10" :min="0" />
+          <n-input-number-i18n v-model:value="output.precision" style="width:100px" :placeholder="t('tools.data-storage-unit-converter.texts.placeholder-precision')" :max="10" :min="0" />
         </n-form-item>
 
         <n-checkbox v-model:checked="output.appendUnit">

@@ -60,10 +60,10 @@ const { copy } = useCopy({ source: cardPickedString, text: t('tools.card-picker.
     </div>
     <div flex justify-center gap-3>
       <n-form-item :label="t('tools.card-picker.texts.label-number-of-cards')" label-placement="left">
-        <n-input-number v-model:value="numberOfCards" min="1" :max="maxCards" :placeholder="t('tools.card-picker.texts.placeholder-number-of-cards-to-pick')" />
+        <n-input-number-i18n v-model:value="numberOfCards" min="1" :max="maxCards" :placeholder="t('tools.card-picker.texts.placeholder-number-of-cards-to-pick')" />
       </n-form-item>
       <n-form-item :label="t('tools.card-picker.texts.label-number-of-packs')" label-placement="left">
-        <n-input-number v-model:value="numberOfPacks" min="1" :placeholder="t('tools.card-picker.texts.placeholder-number-of-card-packs-to-pick-in')" />
+        <n-input-number-i18n v-model:value="numberOfPacks" min="1" :placeholder="t('tools.card-picker.texts.placeholder-number-of-card-packs-to-pick-in')" />
       </n-form-item>
     </div>
     <div mb-4 flex justify-center>

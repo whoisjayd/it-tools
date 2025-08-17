@@ -42,10 +42,10 @@ const outputWeekInYearMonday = computed(() => getFirstMondayFromISOWeek(inputWee
     <c-card :title="t('tools.week-number-converter.texts.title-iso-week-number-to-date')" mb-2>
       <div flex items-baseline gap-2>
         <n-form-item :label="t('tools.week-number-converter.texts.label-iso-week-number')" label-placement="left" flex-1>
-          <n-input-number v-model:value="inputWeekInYear.week" :min="1" :max="53" />
+          <n-input-number-i18n v-model:value="inputWeekInYear.week" :min="1" :max="53" />
         </n-form-item>
         <n-form-item :label="t('tools.week-number-converter.texts.label-year')" label-placement="left" flex-1>
-          <n-input-number v-model:value="inputWeekInYear.year" />
+          <n-input-number-i18n v-model:value="inputWeekInYear.year" />
         </n-form-item>
       </div>
 
@@ -56,13 +56,13 @@ const outputWeekInYearMonday = computed(() => getFirstMondayFromISOWeek(inputWee
     <c-card :title="t('tools.week-number-converter.texts.title-week-number-in-month-to-date')" mb-2>
       <div flex items-baseline gap-2>
         <n-form-item :label="t('tools.week-number-converter.texts.label-week-in-month')" label-placement="left" flex-1>
-          <n-input-number v-model:value="inputWeekInMonth.week" :min="1" :max="5" />
+          <n-input-number-i18n v-model:value="inputWeekInMonth.week" :min="1" :max="5" />
         </n-form-item>
         <n-form-item :label="t('tools.week-number-converter.texts.label-month')" label-placement="left" flex-1>
-          <n-input-number v-model:value="inputWeekInMonth.month" :min="1" :max="12" />
+          <n-input-number-i18n v-model:value="inputWeekInMonth.month" :min="1" :max="12" />
         </n-form-item>
         <n-form-item :label="t('tools.week-number-converter.texts.label-year')" label-placement="left" flex-1>
-          <n-input-number v-model:value="inputWeekInMonth.year" />
+          <n-input-number-i18n v-model:value="inputWeekInMonth.year" />
         </n-form-item>
       </div>
 

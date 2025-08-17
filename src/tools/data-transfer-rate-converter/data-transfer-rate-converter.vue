@@ -194,9 +194,9 @@ const amountTransferableOutput = computed(() => {
       </n-form-item>
 
       <n-form-item :label="t('tools.data-transfer-rate-converter.texts.label-duration-h-m-s')" label-placement="left">
-        <n-input-number v-model:value="transferSpeedRateInput.hours" mr-1 :placeholder="t('tools.data-transfer-rate-converter.texts.placeholder-hours')" :min="0" w-full />
-        <n-input-number v-model:value="transferSpeedRateInput.minutes" mr-1 :placeholder="t('tools.data-transfer-rate-converter.texts.placeholder-minutes')" :min="0" w-full />
-        <n-input-number v-model:value="transferSpeedRateInput.seconds" mr-1 :placeholder="t('tools.data-transfer-rate-converter.texts.placeholder-seconds')" :min="0" w-full />
+        <n-input-number-i18n v-model:value="transferSpeedRateInput.hours" mr-1 :placeholder="t('tools.data-transfer-rate-converter.texts.placeholder-hours')" :min="0" w-full />
+        <n-input-number-i18n v-model:value="transferSpeedRateInput.minutes" mr-1 :placeholder="t('tools.data-transfer-rate-converter.texts.placeholder-minutes')" :min="0" w-full />
+        <n-input-number-i18n v-model:value="transferSpeedRateInput.seconds" mr-1 :placeholder="t('tools.data-transfer-rate-converter.texts.placeholder-seconds')" :min="0" w-full />
       </n-form-item>
 
       <n-divider />
@@ -228,9 +228,9 @@ const amountTransferableOutput = computed(() => {
       </n-form-item>
 
       <n-form-item :label="t('tools.data-transfer-rate-converter.texts.label-duration-h-m-s')" label-placement="left">
-        <n-input-number v-model:value="amountTransferableInput.hours" mr-1 :placeholder="t('tools.data-transfer-rate-converter.texts.placeholder-hours')" :min="0" w-full />
-        <n-input-number v-model:value="amountTransferableInput.minutes" mr-1 :placeholder="t('tools.data-transfer-rate-converter.texts.placeholder-minutes')" :min="0" w-full />
-        <n-input-number v-model:value="amountTransferableInput.seconds" mr-1 :placeholder="t('tools.data-transfer-rate-converter.texts.placeholder-seconds')" :min="0" w-full />
+        <n-input-number-i18n v-model:value="amountTransferableInput.hours" mr-1 :placeholder="t('tools.data-transfer-rate-converter.texts.placeholder-hours')" :min="0" w-full />
+        <n-input-number-i18n v-model:value="amountTransferableInput.minutes" mr-1 :placeholder="t('tools.data-transfer-rate-converter.texts.placeholder-minutes')" :min="0" w-full />
+        <n-input-number-i18n v-model:value="amountTransferableInput.seconds" mr-1 :placeholder="t('tools.data-transfer-rate-converter.texts.placeholder-seconds')" :min="0" w-full />
       </n-form-item>
 
       <n-divider />

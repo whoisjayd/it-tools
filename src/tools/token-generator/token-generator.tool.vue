@@ -59,12 +59,12 @@ const { copy } = useCopy({ source: tokens, text: t('tools.token-generator.copied
 
       <n-form-item :label="`${t('tools.token-generator.length')} (${length})`" label-placement="left">
         <n-slider v-model:value="length" :step="1" :min="1" :max="512" mr-2 />
-        <n-input-number v-model:value="length" :min="1" :max="512" size="small" />
+        <n-input-number-i18n v-model:value="length" :min="1" :max="512" size="small" />
       </n-form-item>
 
       <n-form-item :label="t('tools.token-generator.texts.label-number-of-token-to-generate')" label-placement="left">
         <n-slider v-model:value="count" :step="1" :min="1" mr-2 />
-        <n-input-number v-model:value="count" :min="1" size="small" />
+        <n-input-number-i18n v-model:value="count" :min="1" size="small" />
       </n-form-item>
 
       <c-input-text

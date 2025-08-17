@@ -101,26 +101,26 @@ const isEnded = computed(() => status.value === 'ended');
   <div max-w-600px>
     <c-card :disabled="status !== 'stopped'" :title="t('tools.countdown.texts.title-countdown-time')" mb-4>
       <div mb-4 flex justify-center gap-2>
-        <n-input-number v-model:value="days" :min="0">
+        <n-input-number-i18n v-model:value="days" :min="0">
           <template #suffix>
             {{ t('tools.countdown.texts.tag-days') }}
           </template>
-        </n-input-number>
-        <n-input-number v-model:value="hours" :min="0">
+        </n-input-number-i18n>
+        <n-input-number-i18n v-model:value="hours" :min="0">
           <template #suffix>
             {{ t('tools.countdown.texts.tag-hours') }}
           </template>
-        </n-input-number>
-        <n-input-number v-model:value="minutes" :min="0">
+        </n-input-number-i18n>
+        <n-input-number-i18n v-model:value="minutes" :min="0">
           <template #suffix>
             {{ t('tools.countdown.texts.tag-minutes') }}
           </template>
-        </n-input-number>
-        <n-input-number v-model:value="seconds" :min="0">
+        </n-input-number-i18n>
+        <n-input-number-i18n v-model:value="seconds" :min="0">
           <template #suffix>
             {{ t('tools.countdown.texts.tag-seconds') }}
           </template>
-        </n-input-number>
+        </n-input-number-i18n>
       </div>
 
       <div flex justify-center>

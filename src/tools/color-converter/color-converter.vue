@@ -130,12 +130,12 @@ function updateColorValue(value: Colord | undefined, omitLabel?: string) {
     <c-card :title="t('tools.color-converter.texts.title-transformations')">
       <n-form-item :label="t('tools.color-converter.texts.label-saturation')" label-placement="left">
         <n-slider v-model:value="saturation" :step="1" :min="-100" :max="100" mr-2 />
-        <n-input-number v-model:value="saturation" size="small" />
+        <n-input-number-i18n v-model:value="saturation" size="small" />
       </n-form-item>
 
       <n-form-item :label="t('tools.color-converter.texts.label-brightness')" label-placement="left">
         <n-slider v-model:value="brightness" :step="1" :min="-100" :max="100" mr-2 />
-        <n-input-number v-model:value="brightness" size="small" />
+        <n-input-number-i18n v-model:value="brightness" size="small" />
       </n-form-item>
 
       <n-space>

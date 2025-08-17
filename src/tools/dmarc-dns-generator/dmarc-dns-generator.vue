@@ -65,7 +65,7 @@ const alignments = [
     </n-form-item>
 
     <n-form-item :label="t('tools.dmarc-dns-generator.texts.label-percentage-of-emails-subject-to-dmarc-policy-enforcement-0-100')" label-placement="top">
-      <n-input-number v-model:value="percentage" :min="0" :max="100" :placeholder="t('tools.dmarc-dns-generator.texts.placeholder-enter-percentage')" />
+      <n-input-number-i18n v-model:value="percentage" :min="0" :max="100" :placeholder="t('tools.dmarc-dns-generator.texts.placeholder-enter-percentage')" />
     </n-form-item>
 
     <n-form-item :label="t('tools.dmarc-dns-generator.texts.label-aggregate-email-where-aggregate-dmarc-reports-should-be-sent')" label-placement="top">
@@ -85,11 +85,11 @@ const alignments = [
     </n-form-item>
 
     <n-form-item :label="t('tools.dmarc-dns-generator.texts.label-reporting-interval-for-sending-dmarc-aggregate-reports')" label-placement="top">
-      <n-input-number v-model:value="ri" :min="3600" :placeholder="t('tools.dmarc-dns-generator.texts.placeholder-enter-interval')">
+      <n-input-number-i18n v-model:value="ri" :min="3600" :placeholder="t('tools.dmarc-dns-generator.texts.placeholder-enter-interval')">
         <template #suffix>
           {{ t('tools.dmarc-dns-generator.texts.tag-seconds') }}
         </template>
-      </n-input-number>
+      </n-input-number-i18n>
     </n-form-item>
 
     <n-card v-if="dmarcRecord" :title="t('tools.dmarc-dns-generator.texts.title-generated-dmarc-record')">

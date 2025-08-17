@@ -65,17 +65,17 @@ const { copy } = useCopy({ source: passphrases, text: t('tools.passphrase-genera
       <n-space>
         <n-form-item :label="`Words (${words})`" label-placement="left">
           <n-slider v-model:value="words" :step="1" :min="1" :max="512" mr-2 />
-          <n-input-number v-model:value="words" size="small" />
+          <n-input-number-i18n v-model:value="words" size="small" />
         </n-form-item>
         <n-form-item :label="t('tools.passphrase-generator.texts.label-add-numbers-after-x-words')" label-placement="left">
           <n-slider v-model:value="numbers" :step="1" :min="1" :max="words" mr-2 />
-          <n-input-number v-model:value="numbers" :max="words" size="small" />
+          <n-input-number-i18n v-model:value="numbers" :max="words" size="small" />
         </n-form-item>
       </n-space>
 
       <n-space>
         <n-form-item :label="t('tools.passphrase-generator.texts.label-max-passphrase-len')" label-placement="left">
-          <n-input-number v-model:value="maxLen" size="small" />
+          <n-input-number-i18n v-model:value="maxLen" size="small" />
         </n-form-item>
 
         <n-form-item :label="t('tools.passphrase-generator.texts.label-capitalize')" label-placement="left">
@@ -97,7 +97,7 @@ const { copy } = useCopy({ source: passphrases, text: t('tools.passphrase-genera
       </n-form-item>
 
       <n-form-item :label="t('tools.passphrase-generator.texts.label-number-of-passphrase-to-generate')" label-placement="left">
-        <n-input-number v-model:value="count" size="small" />
+        <n-input-number-i18n v-model:value="count" size="small" />
       </n-form-item>
 
       <c-input-text

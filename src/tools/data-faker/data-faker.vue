@@ -129,7 +129,7 @@ const rules: UseValidationRule<string>[] = [
 
     <n-space mb-1>
       <NFormItem :label="t('tools.data-faker.texts.label-number-of-objects-to-generate')" label-placement="left">
-        <NInputNumber v-model:value="itemCount" :min="1" :placeholder="t('tools.data-faker.texts.placeholder-number-of-objects-to-generate')" />
+        <n-input-number-i18n v-model:value="itemCount" :min="1" :placeholder="t('tools.data-faker.texts.placeholder-number-of-objects-to-generate')" />
       </NFormItem>
       <n-form-item :label="t('tools.data-faker.texts.label-nestify-handle-nested-objects')" label-placement="left">
         <n-checkbox v-model:checked="nestify" />

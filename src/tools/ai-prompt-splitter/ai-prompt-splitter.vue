@@ -45,7 +45,7 @@ const promptValidation = useValidation({
         mb-2
       />
       <n-form-item :label="t('tools.ai-prompt-splitter.texts.label-character-length-for-each-chunk')">
-        <n-input-number v-model:value="splitLength" :min="1" />
+        <n-input-number-i18n v-model:value="splitLength" :min="1" />
       </n-form-item>
     </c-card>
 

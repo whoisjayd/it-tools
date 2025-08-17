@@ -107,10 +107,10 @@ const inputProps = {
 
       <div mb-2 flex items-baseline gap-2>
         <n-form-item :label="t('tools.days-calculator.texts.label-business-start-hour')" label-placement="left" flex-1>
-          <n-input-number v-model:value="businessStartHour" :min="0" :max="24" />
+          <n-input-number-i18n v-model:value="businessStartHour" :min="0" :max="24" />
         </n-form-item>
         <n-form-item :label="t('tools.days-calculator.texts.label-business-end-hour')" label-placement="left" flex-1>
-          <n-input-number v-model:value="businessEndHour" :min="0" :max="24" />
+          <n-input-number-i18n v-model:value="businessEndHour" :min="0" :max="24" />
         </n-form-item>
       </div>
 

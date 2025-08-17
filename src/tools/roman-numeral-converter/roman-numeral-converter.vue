@@ -47,7 +47,7 @@ const { copy: copyArabic } = useCopy({ source: () => String(outputNumeral), text
     <c-card :title="t('tools.roman-numeral-converter.texts.title-arabic-to-roman')">
       <div flex items-center justify-between>
         <n-form-item v-bind="validationNumeral as any">
-          <n-input-number v-model:value="inputNumeral" :min="1" style="width: 200px" :show-button="false" />
+          <n-input-number-i18n v-model:value="inputNumeral" :min="1" style="width: 200px" :show-button="false" />
         </n-form-item>
         <div class="result">
           {{ outputRoman }}

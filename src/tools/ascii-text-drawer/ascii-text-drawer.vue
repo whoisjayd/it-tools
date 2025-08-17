@@ -80,7 +80,7 @@ const fonts = ['1Row', '3-D', '3D Diagonal', '3D-ASCII', '3x5', '4Max', '5 Line 
       </n-gi>
       <n-gi span="2">
         <n-form-item :label="t('tools.ascii-text-drawer.width')" label-placement="top" label-width="100" :show-feedback="false">
-          <n-input-number v-model:value="width" min="0" max="10000" w-full :placeholder="t('tools.ascii-text-drawer.texts.placeholder-width-of-the-text')" />
+          <n-input-number-i18n v-model:value="width" min="0" max="10000" w-full :placeholder="t('tools.ascii-text-drawer.texts.placeholder-width-of-the-text')" />
         </n-form-item>
       </n-gi>
     </n-grid>

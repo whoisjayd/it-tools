@@ -40,7 +40,7 @@ const dockerComposeEntry = computed<string>(() => generateCompose(formModel.valu
 
       <n-space>
         <n-form-item :label="t('tools.traefik-compose-maker.texts.label-proxied-service-load-balancer-port')">
-          <n-input-number v-model:value="formModel.proxiedServiceLoadBalancePort" :placeholder="t('tools.traefik-compose-maker.texts.placeholder-enter-port')" />
+          <n-input-number-i18n v-model:value="formModel.proxiedServiceLoadBalancePort" :placeholder="t('tools.traefik-compose-maker.texts.placeholder-enter-port')" />
         </n-form-item>
 
         <n-form-item :label="t('tools.traefik-compose-maker.texts.label-enable-load-balancer')">

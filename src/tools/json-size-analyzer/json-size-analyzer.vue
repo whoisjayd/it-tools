@@ -46,7 +46,7 @@ const jsonValidation = useValidation({
       />
 
       <n-form-item :label="t('tools.json-size-analyzer.texts.label-max-depth')" label-placement="left">
-        <n-input-number v-model:value="maxDepth" :min="0" w-full />
+        <n-input-number-i18n v-model:value="maxDepth" :min="0" w-full />
       </n-form-item>
 
       <c-input-text

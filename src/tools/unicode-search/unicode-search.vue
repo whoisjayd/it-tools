@@ -71,7 +71,7 @@ const { searchResult } = useFlexSearch({
         </template>
       </c-input-text>
       <n-form-item :label="t('tools.unicode-search.texts.label-max-results')" label-placement="left">
-        <n-input-number v-model:value="limit" :min="1" />
+        <n-input-number-i18n v-model:value="limit" :min="1" />
       </n-form-item>
     </div>
 

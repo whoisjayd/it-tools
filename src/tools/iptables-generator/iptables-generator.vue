@@ -70,16 +70,16 @@ const command = computed(() => {
       <NInput v-model:value="destinationIP" />
     </NFormItem>
     <NFormItem :label="t('tools.iptables-generator.texts.label-source-port')">
-      <NInputNumber v-model:value="sourcePort" />
+      <n-input-number-i18n v-model:value="sourcePort" />
     </NFormItem>
     <NFormItem :label="t('tools.iptables-generator.texts.label-destination-port')">
-      <NInputNumber v-model:value="destinationPort" />
+      <n-input-number-i18n v-model:value="destinationPort" />
     </NFormItem>
     <NFormItem :label="t('tools.iptables-generator.texts.label-chain')">
       <NSelect v-model:value="chain" :options="chainOptions" />
     </NFormItem>
     <NFormItem :label="t('tools.iptables-generator.texts.label-rule-order')">
-      <NInputNumber v-model:value="ruleOrder" />
+      <n-input-number-i18n v-model:value="ruleOrder" />
     </NFormItem>
   </NForm>
 

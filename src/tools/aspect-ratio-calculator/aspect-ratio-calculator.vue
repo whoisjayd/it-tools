@@ -2,7 +2,7 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
 import { ref } from 'vue';
-import { NButton, NInputNumber, NRadio, NRadioGroup, NSpace } from 'naive-ui';
+import { NButton, NRadio, NRadioGroup, NSpace } from 'naive-ui';
 import {
   calculateAspectRatio,
   calculateDimensions,
@@ -85,25 +85,25 @@ function clearRatio() {
     <div class="input-group">
       <div class="input-pair">
         <label>{{ t('tools.aspect-ratio-calculator.texts.tag-pixels-width') }}</label>
-        <NInputNumber v-model:value="width" :placeholder="t('tools.aspect-ratio-calculator.texts.placeholder-pixels-width')" :min="1" />
+        <n-input-number-i18n v-model:value="width" :placeholder="t('tools.aspect-ratio-calculator.texts.placeholder-pixels-width')" :min="1" />
       </div>
       <div class="input-pair">
         <label>{{ t('tools.aspect-ratio-calculator.texts.tag-pixels-height') }}</label>
-        <NInputNumber v-model:value="height" :placeholder="t('tools.aspect-ratio-calculator.texts.placeholder-pixels-height')" :min="1" />
+        <n-input-number-i18n v-model:value="height" :placeholder="t('tools.aspect-ratio-calculator.texts.placeholder-pixels-height')" :min="1" />
       </div>
     </div>
 
     <div class="input-group">
       <div class="input-pair">
         <label>{{ t('tools.aspect-ratio-calculator.texts.tag-ratio-width') }}</label>
-        <NInputNumber v-model:value="r1" :placeholder="t('tools.aspect-ratio-calculator.texts.placeholder-ratio-width')" :min="1" />
+        <n-input-number-i18n v-model:value="r1" :placeholder="t('tools.aspect-ratio-calculator.texts.placeholder-ratio-width')" :min="1" />
       </div>
       <div class="separator">
         {{ t('tools.aspect-ratio-calculator.texts.tag-') }}
       </div>
       <div class="input-pair">
         <label>{{ t('tools.aspect-ratio-calculator.texts.tag-ratio-height') }}</label>
-        <NInputNumber v-model:value="r2" :placeholder="t('tools.aspect-ratio-calculator.texts.placeholder-ratio-height')" :min="1" />
+        <n-input-number-i18n v-model:value="r2" :placeholder="t('tools.aspect-ratio-calculator.texts.placeholder-ratio-height')" :min="1" />
       </div>
     </div>
 

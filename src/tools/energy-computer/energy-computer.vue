@@ -13,13 +13,13 @@ const totalCost = computed(() => computeCost(wattage.value, durationHours.value,
 <template>
   <div>
     <n-form-item :label="t('tools.energy-computer.texts.label-device-wattage')" mb-1>
-      <n-input-number v-model:value="wattage" :min="0" />
+      <n-input-number-i18n v-model:value="wattage" :min="0" />
     </n-form-item>
     <n-form-item :label="t('tools.energy-computer.texts.label-usage-duration-hours')" mb-1>
-      <n-input-number v-model:value="durationHours" :min="0" />
+      <n-input-number-i18n v-model:value="durationHours" :min="0" />
     </n-form-item>
     <n-form-item :label="t('tools.energy-computer.texts.label-kwh-cost')" mb-1>
-      <n-input-number v-model:value="kWhCost" :min="0" />
+      <n-input-number-i18n v-model:value="kWhCost" :min="0" />
     </n-form-item>
 
     <n-divider />

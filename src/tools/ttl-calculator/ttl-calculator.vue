@@ -20,16 +20,16 @@ const timeDisplay = computed(() => formatDuration(intervalToDuration({ start: 0,
     <c-card :title="t('tools.ttl-calculator.texts.title-time-to-ttl')" mb-3>
       <n-space>
         <n-form-item :label="t('tools.ttl-calculator.texts.label-days')">
-          <n-input-number v-model:value="days" :min="0" />
+          <n-input-number-i18n v-model:value="days" :min="0" />
         </n-form-item>
         <n-form-item :label="t('tools.ttl-calculator.texts.label-hours')">
-          <n-input-number v-model:value="hours" :min="0" />
+          <n-input-number-i18n v-model:value="hours" :min="0" />
         </n-form-item>
         <n-form-item :label="t('tools.ttl-calculator.texts.label-minutes')">
-          <n-input-number v-model:value="minutes" :min="0" />
+          <n-input-number-i18n v-model:value="minutes" :min="0" />
         </n-form-item>
         <n-form-item :label="t('tools.ttl-calculator.texts.label-seconds')">
-          <n-input-number v-model:value="seconds" :min="0" />
+          <n-input-number-i18n v-model:value="seconds" :min="0" />
         </n-form-item>
       </n-space>
 
@@ -42,7 +42,7 @@ const timeDisplay = computed(() => formatDuration(intervalToDuration({ start: 0,
 
     <c-card :title="t('tools.ttl-calculator.texts.title-ttl-to-time')">
       <n-form-item :label="t('tools.ttl-calculator.texts.label-ttl')">
-        <n-input-number v-model:value="ttl" :min="0" />
+        <n-input-number-i18n v-model:value="ttl" :min="0" />
       </n-form-item>
 
       <n-divider />

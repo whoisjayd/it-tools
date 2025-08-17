@@ -27,7 +27,7 @@ const { copy } = useCopy({ source: pins, text: t('tools.pin-code-generator.texts
     <c-card>
       <n-form-item :label="`Number of digits (${length})`" label-placement="left">
         <n-slider v-model:value="length" :step="1" :min="1" :max="512" mr-2 />
-        <n-input-number v-model:value="length" size="small" />
+        <n-input-number-i18n v-model:value="length" size="small" />
       </n-form-item>
 
       <n-form-item :label="t('tools.pin-code-generator.texts.label-allow-repeated-digits')" label-placement="left">
@@ -35,7 +35,7 @@ const { copy } = useCopy({ source: pins, text: t('tools.pin-code-generator.texts
       </n-form-item>
 
       <n-form-item :label="t('tools.pin-code-generator.texts.label-number-of-pin-codes-to-generate')" label-placement="left">
-        <n-input-number v-model:value="count" size="small" />
+        <n-input-number-i18n v-model:value="count" size="small" />
       </n-form-item>
 
       <c-input-text

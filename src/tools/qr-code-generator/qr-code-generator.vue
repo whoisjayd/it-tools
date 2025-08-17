@@ -167,10 +167,10 @@ async function copyQRCode() {
             <n-color-picker v-model:value="background" :modes="['hex']" />
           </n-form-item>
           <n-form-item :label="t('tools.qr-code-generator.texts.label-width')">
-            <n-input-number v-model:value="width" :min="0" />
+            <n-input-number-i18n v-model:value="width" :min="0" />
           </n-form-item>
           <n-form-item :label="t('tools.qr-code-generator.texts.label-margin')">
-            <n-input-number v-model:value="margin" :min="0" />
+            <n-input-number-i18n v-model:value="margin" :min="0" />
           </n-form-item>
           <c-select
             v-model:value="errorCorrectionLevelSelectValue"
@@ -195,10 +195,10 @@ async function copyQRCode() {
 
           <n-form label-width="130" label-placement="left" mt-3>
             <n-form-item :label="t('tools.qr-code-generator.texts.label-size')">
-              <n-input-number v-model:value="imageSize" :min="0" step="0.1" />
+              <n-input-number-i18n v-model:value="imageSize" :min="0" step="0.1" />
             </n-form-item>
             <n-form-item :label="t('tools.qr-code-generator.texts.label-margin')">
-              <n-input-number v-model:value="imageMargin" :min="0" />
+              <n-input-number-i18n v-model:value="imageMargin" :min="0" />
             </n-form-item>
           </n-form>
         </c-card>

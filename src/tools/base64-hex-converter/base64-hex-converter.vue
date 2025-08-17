@@ -80,10 +80,10 @@ const b64ValidationRules = [
         <n-switch v-model:value="uppercase" />
       </n-form-item>
       <n-form-item :label="t('tools.base64-hex-converter.texts.label-group-by')" label-placement="left">
-        <n-input-number v-model:value="grouping" :min="0" style="width: 6em" mr-1 />{{ t('tools.base64-hex-converter.texts.tag-digits-0-no-grouping') }}
+        <n-input-number-i18n v-model:value="grouping" :min="0" style="width: 6em" mr-1 />{{ t('tools.base64-hex-converter.texts.tag-digits-0-no-grouping') }}
       </n-form-item>
       <n-form-item :label="t('tools.base64-hex-converter.texts.label-split-as-rows-by')" label-placement="left">
-        <n-input-number v-model:value="rowlength" :min="0" style="width: 6em" mr-1 />{{ t('tools.base64-hex-converter.texts.tag-group-of-digits-0-no-rows') }}
+        <n-input-number-i18n v-model:value="rowlength" :min="0" style="width: 6em" mr-1 />{{ t('tools.base64-hex-converter.texts.tag-group-of-digits-0-no-rows') }}
       </n-form-item>
     </n-space>
     <c-input-text

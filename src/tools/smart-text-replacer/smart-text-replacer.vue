@@ -183,7 +183,7 @@ const { copy } = useCopy({ source: highlightedText });
     </div>
     <div mt-4 w-full flex items-baseline gap-10px>
       <n-form-item :label="t('tools.smart-text-replacer.texts.label-split-every-characters')" label-placement="left">
-        <n-input-number v-model:value="splitEveryCharacterCounts" :min="0" />
+        <n-input-number-i18n v-model:value="splitEveryCharacterCounts" :min="0" />
       </n-form-item>
     </div>
     <c-card v-if="highlightedText" mt-60px flex items-center gap-5px font-mono>

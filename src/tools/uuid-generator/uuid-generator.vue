@@ -57,7 +57,7 @@ const { copy } = useCopy({ source: uuids, text: t('tools.uuid-generator.texts.te
 
     <div mb-2 flex items-center>
       <span w-100px>{{ t('tools.uuid-generator.texts.tag-quantity') }}</span>
-      <n-input-number v-model:value="count" flex-1 :min="1" :max="50" :placeholder="t('tools.uuid-generator.texts.placeholder-uuid-quantity')" />
+      <n-input-number-i18n v-model:value="count" flex-1 :min="1" :max="50" :placeholder="t('tools.uuid-generator.texts.placeholder-uuid-quantity')" />
     </div>
 
     <div v-if="version === 'v3' || version === 'v5'">

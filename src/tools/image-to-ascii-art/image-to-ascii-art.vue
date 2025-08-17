@@ -72,7 +72,7 @@ async function onFileUploaded(uploadedFile: File) {
 
     <n-form-item :label="t('tools.image-to-ascii-art.texts.label-output-scale')" label-placement="left" mt-2>
       <n-slider v-model:value="scale" :step="1" :min="1" :max="100" mr-2 />
-      <n-input-number v-model:value="scale" size="small" :min="1" :max="100" />
+      <n-input-number-i18n v-model:value="scale" size="small" :min="1" :max="100" />
     </n-form-item>
 
     <c-select v-model:value="language" :options="languagesOptions" searchable mt-3 />

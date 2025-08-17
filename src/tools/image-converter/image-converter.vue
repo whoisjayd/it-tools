@@ -149,10 +149,10 @@ async function onFileUploaded(uploadedFile: File) {
 
     <div mb-2 flex justify-center>
       <n-form-item v-if="outputFormatHasQuality" :label="t('tools.image-converter.texts.label-output-quality')" label-placement="left">
-        <n-input-number v-model:value="outputQuality" :max="100" :min="0" w-full />
+        <n-input-number-i18n v-model:value="outputQuality" :max="100" :min="0" w-full />
       </n-form-item>
       <n-form-item :label="t('tools.image-converter.texts.label-svg-scaling')" label-placement="left">
-        <n-input-number v-model:value="svgScale" :min="0" />
+        <n-input-number-i18n v-model:value="svgScale" :min="0" />
       </n-form-item>
     </div>
 

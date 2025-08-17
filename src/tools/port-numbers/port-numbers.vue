@@ -18,7 +18,7 @@ const result = computed(() => {
     <c-card :title="t('tools.port-numbers.texts.title-port-search')">
       <n-space>
         <n-form-item :label="t('tools.port-numbers.texts.label-port-number')">
-          <n-input-number v-model:value="port" :min="1" />
+          <n-input-number-i18n v-model:value="port" :min="1" />
         </n-form-item>
         <n-form-item :label="t('tools.port-numbers.texts.label-protocol')">
           <c-select

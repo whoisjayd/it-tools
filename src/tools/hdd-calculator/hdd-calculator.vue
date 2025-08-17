@@ -28,7 +28,7 @@ const claimedUnit = ref('tb');
 <template>
   <div>
     <n-form-item :label="t('tools.hdd-calculator.texts.label-claimed-capacity')">
-      <n-input-number v-model:value="claimedCapacity" :min="1" />
+      <n-input-number-i18n v-model:value="claimedCapacity" :min="1" />
     </n-form-item>
     <c-select
       v-model:value="claimedUnit"

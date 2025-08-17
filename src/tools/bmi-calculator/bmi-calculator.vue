@@ -55,10 +55,10 @@ const bmiCategory = computed(() => {
     <c-select v-model:value="units" :label="t('tools.bmi-calculator.texts.label-select-units')" :options="options" mb-2 label-position="left" />
     <n-space justify="space-evenly">
       <n-form-item :label="`Weight (${(units === 'metric' ? 'kg' : 'lbs')}):`" label-placement="left" mb-2>
-        <n-input-number v-model:value="weight" :placeholder="t('tools.bmi-calculator.texts.placeholder-enter-weight')" />
+        <n-input-number-i18n v-model:value="weight" :placeholder="t('tools.bmi-calculator.texts.placeholder-enter-weight')" />
       </n-form-item>
       <n-form-item :label="`Height (${(units === 'metric' ? 'm' : 'in')}):`" label-placement="left" mb-2>
-        <n-input-number v-model:value="height" :placeholder="t('tools.bmi-calculator.texts.placeholder-enter-height')" />
+        <n-input-number-i18n v-model:value="height" :placeholder="t('tools.bmi-calculator.texts.placeholder-enter-height')" />
       </n-form-item>
     </n-space>
     <c-card v-if="bmi" :title="t('tools.bmi-calculator.texts.title-result')">

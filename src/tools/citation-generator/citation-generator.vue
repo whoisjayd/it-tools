@@ -59,7 +59,7 @@ const formattedCitation = computed(() => {
       </n-form-item>
 
       <n-form-item :label="t('tools.citation-generator.texts.label-publication-year')">
-        <n-input-number v-model:value="citationData.year" :min="0" :status="citationData.year ? 'success' : 'error'" />
+        <n-input-number-i18n v-model:value="citationData.year" :min="0" :status="citationData.year ? 'success' : 'error'" />
       </n-form-item>
 
       <n-form-item :label="t('tools.citation-generator.texts.label-url-optional')">

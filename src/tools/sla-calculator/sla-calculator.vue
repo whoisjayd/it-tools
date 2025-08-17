@@ -100,7 +100,7 @@ const outputSLAs = computed(() => {
   <div>
     <c-card :title="t('tools.sla-calculator.texts.title-sla-to-downtimes')" mb-2>
       <n-form-item :label="t('tools.sla-calculator.texts.label-agreed-sla')" label-placement="left">
-        <n-input-number v-model:value="inputSLA" :min="0" :max="100" />
+        <n-input-number-i18n v-model:value="inputSLA" :min="0" :max="100" />
       </n-form-item>
 
       <n-divider />
@@ -154,27 +154,27 @@ const outputSLAs = computed(() => {
     <c-card :title="t('tools.sla-calculator.texts.title-weekdays-hours')">
       <div flex flex-wrap gap-1>
         <n-form-item :label="t('tools.sla-calculator.texts.label-monday')" flex-1>
-          <n-input-number v-model:value="daysHours.mon" :min="0" :max="24" />
+          <n-input-number-i18n v-model:value="daysHours.mon" :min="0" :max="24" />
         </n-form-item>
         <n-form-item :label="t('tools.sla-calculator.texts.label-tuesday')" flex-1>
-          <n-input-number v-model:value="daysHours.tue" :min="0" :max="24" />
+          <n-input-number-i18n v-model:value="daysHours.tue" :min="0" :max="24" />
         </n-form-item>
         <n-form-item :label="t('tools.sla-calculator.texts.label-wednesday')" flex-1>
-          <n-input-number v-model:value="daysHours.wed" :min="0" :max="24" />
+          <n-input-number-i18n v-model:value="daysHours.wed" :min="0" :max="24" />
         </n-form-item>
         <n-form-item :label="t('tools.sla-calculator.texts.label-thursday')" flex-1>
-          <n-input-number v-model:value="daysHours.thu" :min="0" :max="24" />
+          <n-input-number-i18n v-model:value="daysHours.thu" :min="0" :max="24" />
         </n-form-item>
         <n-form-item :label="t('tools.sla-calculator.texts.label-friday')" flex-1>
-          <n-input-number v-model:value="daysHours.fri" :min="0" :max="24" />
+          <n-input-number-i18n v-model:value="daysHours.fri" :min="0" :max="24" />
         </n-form-item>
       </div>
       <div flex flex-wrap gap-1>
         <n-form-item :label="t('tools.sla-calculator.texts.label-saturday')" flex-1>
-          <n-input-number v-model:value="daysHours.sat" :min="0" :max="24" />
+          <n-input-number-i18n v-model:value="daysHours.sat" :min="0" :max="24" />
         </n-form-item>
         <n-form-item :label="t('tools.sla-calculator.texts.label-sunday')" flex-1>
-          <n-input-number v-model:value="daysHours.sun" :min="0" :max="24" />
+          <n-input-number-i18n v-model:value="daysHours.sun" :min="0" :max="24" />
         </n-form-item>
       </div>
     </c-card>

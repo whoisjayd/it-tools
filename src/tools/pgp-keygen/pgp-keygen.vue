@@ -104,7 +104,7 @@ const [certs, refreshCerts] = computedRefreshableAsync(
           />
 
           <n-form-item v-if="format === 'rsa'" :label="t('tools.pgp-keygen.texts.label-rsa-bits')" v-bind="bitsValidationAttrs as any" label-placement="left">
-            <n-input-number v-model:value="bits" min="256" max="16384" step="8" />
+            <n-input-number-i18n v-model:value="bits" min="256" max="16384" step="8" />
           </n-form-item>
         </div>
       </div>

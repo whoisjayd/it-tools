@@ -107,11 +107,11 @@ const { copy } = useCopy({ source: nanoIds, text: t('tools.nanoid-generator.text
 
     <div mb-2 flex items-center>
       <span w-100px>{{ t('tools.nanoid-generator.length') }}</span>
-      <n-input-number v-model:value="length" flex-1 :min="1" :max="100" :placeholder="t('tools.nanoid-generator.texts.placeholder-nanoid-length')" />
+      <n-input-number-i18n v-model:value="length" flex-1 :min="1" :max="100" :placeholder="t('tools.nanoid-generator.texts.placeholder-nanoid-length')" />
     </div>
     <div mb-2 flex items-center>
       <span w-100px>{{ t('tools.nanoid-generator.quantity') }}</span>
-      <n-input-number v-model:value="count" flex-1 :min="1" :max="50" :placeholder="t('tools.nanoid-generator.texts.placeholder-nanoids-quantity')" />
+      <n-input-number-i18n v-model:value="count" flex-1 :min="1" :max="50" :placeholder="t('tools.nanoid-generator.texts.placeholder-nanoids-quantity')" />
     </div>
 
     <c-input-text

@@ -287,7 +287,7 @@ function getTextPosition(index: number) {
     <!-- Controls -->
     <div class="wheel-controls">
       <n-form-item :label="t('tools.fortune-wheel.texts.label-spin-duration-seconds')" label-placement="left" my--5>
-        <n-input-number v-model:value="spinDuration" :min="0" :max="10" />
+        <n-input-number-i18n v-model:value="spinDuration" :min="0" :max="10" />
       </n-form-item>
 
       <n-divider />

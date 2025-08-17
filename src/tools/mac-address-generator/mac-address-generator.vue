@@ -58,7 +58,7 @@ const { copy } = useCopy({ source: macAddresses, text: t('tools.mac-address-gene
   <div flex flex-col justify-center gap-2>
     <div flex items-center>
       <label w-150px pr-12px text-right>{{ t('tools.mac-address-generator.texts.tag-quantity') }}</label>
-      <n-input-number v-model:value="amount" min="1" max="100" flex-1 />
+      <n-input-number-i18n v-model:value="amount" min="1" max="100" flex-1 />
     </div>
 
     <c-input-text

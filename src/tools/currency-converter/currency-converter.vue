@@ -47,7 +47,7 @@ const currencyToCountriesOutput = computed(() => code(currencyToCountriesInput.v
         mb-2
       />
       <n-form-item :label="t('tools.currency-converter.texts.label-amount')" label-placement="left" mb-2>
-        <n-input-number v-model:value="amount" :min="0" />
+        <n-input-number-i18n v-model:value="amount" :min="0" />
       </n-form-item>
 
       <n-form-item :label="t('tools.currency-converter.texts.label-for-date')" label-placement="left" mb-2>

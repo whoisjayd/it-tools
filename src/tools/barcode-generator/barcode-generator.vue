@@ -96,13 +96,13 @@ const { download: downloadSVG } = useDownloadFileFromBase64({ source: barcodeSVG
             <n-color-picker v-model:value="background" :modes="['hex']" :show-alpha="false" />
           </n-form-item>
           <n-form-item :label="t('tools.barcode-generator.texts.label-scale')">
-            <n-input-number v-model:value="scale" :min="0" />
+            <n-input-number-i18n v-model:value="scale" :min="0" />
           </n-form-item>
           <n-form-item :label="t('tools.barcode-generator.texts.label-height-mm')">
-            <n-input-number v-model:value="height" :min="0" />
+            <n-input-number-i18n v-model:value="height" :min="0" />
           </n-form-item>
           <n-form-item :label="t('tools.barcode-generator.texts.label-margin')">
-            <n-input-number v-model:value="margin" :min="0" />
+            <n-input-number-i18n v-model:value="margin" :min="0" />
           </n-form-item>
           <n-form-item :label="t('tools.barcode-generator.texts.label-display-text')">
             <n-checkbox v-model:checked="displayValue" />

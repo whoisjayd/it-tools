@@ -280,12 +280,12 @@ watchEffect(() => drawImage(selectedIndex.value));
       <NSpace justify="center">
         <n-form-item :label="t('tools.watermarker.texts.label-font-size')" label-placement="left" mt-2>
           <NSlider v-model:value="fontSize" :step="1" :min="1" :max="100" mr-2 />
-          <n-input-number v-model:value="fontSize" size="small" :min="1" :max="100" />
+          <n-input-number-i18n v-model:value="fontSize" size="small" :min="1" :max="100" />
         </n-form-item>
 
         <n-form-item :label="t('tools.watermarker.texts.label-opacity')" label-placement="left" mt-2>
           <NSlider v-model:value="opacity" :step="0.5" :min="0" :max="100" mr-2 />
-          <n-input-number v-model:value="opacity" size="small" :min="0" :max="100" />
+          <n-input-number-i18n v-model:value="opacity" size="small" :min="0" :max="100" />
         </n-form-item>
 
         <n-form-item :label="t('tools.watermarker.texts.label-color')" label-placement="left" mt-2>
@@ -293,7 +293,7 @@ watchEffect(() => drawImage(selectedIndex.value));
         </n-form-item>
         <n-form-item :label="t('tools.watermarker.texts.label-rotation')" label-placement="left" mt-2>
           <NSlider v-model:value="rotation" :step="0.5" :min="0" :max="360" mr-2 />
-          <n-input-number v-model:value="rotation" size="small" :min="0" :max="360" />
+          <n-input-number-i18n v-model:value="rotation" size="small" :min="0" :max="360" />
         </n-form-item>
       </NSpace>
 
@@ -304,7 +304,7 @@ watchEffect(() => drawImage(selectedIndex.value));
 
         <n-form-item :label="repeatWatermark ? 'Tile spacing:' : 'Margin:'" label-placement="left" mt-2>
           <NSlider v-model:value="tileSpacing" :step="1" :min="1" :max="1000" mr-2 />
-          <n-input-number v-model:value="tileSpacing" size="small" :min="1" :max="1000" />
+          <n-input-number-i18n v-model:value="tileSpacing" size="small" :min="1" :max="1000" />
         </n-form-item>
 
         <n-form-item v-if="!repeatWatermark" :label="t('tools.watermarker.texts.label-position')" label-placement="left" mt-2>
@@ -331,7 +331,7 @@ watchEffect(() => drawImage(selectedIndex.value));
         </NSpace>
         <n-form-item :label="t('tools.watermarker.texts.label-logo-width')" label-placement="left" mt-2>
           <NSlider v-model:value="logoWidth" :min="10" :max="200" mr-2 />
-          <n-input-number v-model:value="logoWidth" size="small" :min="10" :max="200" />
+          <n-input-number-i18n v-model:value="logoWidth" size="small" :min="10" :max="200" />
         </n-form-item>
       </c-card>
 
