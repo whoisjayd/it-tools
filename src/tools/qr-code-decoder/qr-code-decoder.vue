@@ -10,7 +10,11 @@ const { t } = useI18n();
 const fileInput = ref() as Ref<File>;
 const qrCode = computedAsync(async () => {
   try {
-    return (await qrcodeParser(fileInput.value));
+    const file = fileInput.value;
+    if (!file) {
+      return null;
+    }
+    return (await qrcodeParser(file));
   }
   catch (e: any) {
     return e.toString();
@@ -18,7 +22,11 @@ const qrCode = computedAsync(async () => {
 });
 const qrCodeParsed = computed(() => {
   try {
-    const parsed = parseQRData(qrCode.value);
+    const qrCodeValue = qrCode.value;
+    if (!qrCodeValue) {
+      return '';
+    }
+    const parsed = parseQRData(qrCodeValue);
     return `Type: ${parsed.type}\nValue:${JSON.stringify(parsed.value, null, 2)}`;
   }
   catch (e: any) {
@@ -38,19 +46,20 @@ async function onUpload(file: File) {
     <c-file-upload
       :title="t('tools.qr-code-decoder.texts.title-drag-and-drop-a-qr-code-here-or-click-to-select-a-file')"
       :paste-image="true"
+      accept="image/*"
       @file-upload="onUpload"
     />
 
     <n-divider />
 
-    <div>
+    <div v-if="qrCode">
       <h3>{{ t('tools.qr-code-decoder.texts.tag-decoded') }}</h3>
       <TextareaCopyable
         :value="qrCode"
         :word-wrap="true"
       />
     </div>
-    <div>
+    <div v-if="qrCodeParsed">
       <h3>{{ t('tools.qr-code-decoder.texts.tag-parsed') }}</h3>
       <TextareaCopyable
         :value="qrCodeParsed"
