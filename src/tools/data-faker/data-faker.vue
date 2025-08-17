@@ -49,7 +49,7 @@ const formats = [
 // Extract all faker methods dynamically
 const fakerMethods = computed(() => {
   const methods: string[] = [];
-  const fakerObj = (faker as Record<string, any>);
+  const fakerObj = (faker.value as Record<string, any>);
   Object.keys(fakerObj).forEach((category) => {
     if (typeof fakerObj[category] === 'object') {
       Object.keys(fakerObj[category]).forEach((method) => {
@@ -65,12 +65,35 @@ const selectedMethod = ref<string>('');
 
 function resolveFakerValue(value: string) {
   try {
-    return value.startsWith('faker.')
-      ? value.split('.').slice(1).reduce((acc: any, prop: string) => acc[prop], faker.value)()
-      : value;
+    if (value.startsWith('faker.')) {
+      const [, funcName, args] = /^([^\(]+)(?:\((.+)\))?$/.exec(value) || [];
+
+      let argsArray: any[] = [];
+      if (args?.trim()) {
+        try {
+          argsArray = JSON5.parse(`[${args}]`);
+        }
+        catch {
+          try {
+            argsArray = [JSON5.parse(`{${args}}`).options];
+          }
+          catch {
+            throw new Error(`Unable to parse faker function options: ${args}`);
+          }
+        }
+      }
+
+      const fakerFunc = funcName.split('.').slice(1).reduce((acc: any, prop: string) => acc[prop], faker.value) as CallableFunction;
+      if (fakerFunc === null) {
+        throw new Error(`Cannot find faker function: ${funcName}`);
+      }
+
+      return fakerFunc(...argsArray);
+    }
+    return value; // raw value
   }
-  catch {
-    return value; // Fallback for invalid faker function names
+  catch (e: any) {
+    return e.toString(); // in case, of error, emit error as value
   }
 }
 
