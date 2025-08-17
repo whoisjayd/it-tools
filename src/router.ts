@@ -42,18 +42,25 @@ const router = createRouter({
 });
 
 let loader: ActiveLoader | null = null;
+let loaderTimeoutId: NodeJS.Timeout | null = null;
 
 router.beforeEach((to, from) => {
   // Only show loading for actual route changes, not just query param changes
   if (to.path !== from.path) {
     const theme = useAppTheme();
-    loader = $loading?.show({
-      color: theme.value.primary.color,
-    });
+    loaderTimeoutId = setTimeout(() => {
+      loader = $loading?.show({
+        color: theme.value.primary.color,
+      });
+    }, 350);
   }
 });
 
 router.afterEach(() => {
+  if (loaderTimeoutId) {
+    clearTimeout(loaderTimeoutId);
+    loaderTimeoutId = null;
+  }
   if (loader) {
     loader.hide();
     loader = null;
