@@ -35,3 +35,4 @@ coverage
 salt
 # WSL can create Zone.Identifier
 *:Zone.Identifier
+.vercel
