@@ -54,7 +54,7 @@ const [clientIPDetails, refreshClientIP] = computedRefreshableAsync(async () => 
 
   await loadIpLookup();
   try {
-    location.country = await window.IpLookup(ipv6.ip || ipv4.ip);
+    location.country = await window.IpLookup(ipv4.ip || ipv6.ip);
   }
   catch (e: any) {
     location.error = e.toString();
