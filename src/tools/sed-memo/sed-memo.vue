@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useThemeVars } from 'naive-ui';
-import Memo from './sed-memo.md';
+import Memo from './sed.md';
 
 const themeVars = useThemeVars();
 </script>
@@ -17,9 +17,16 @@ const themeVars = useThemeVars();
   padding: 15px 22px;
   background-color: v-bind('themeVars.cardColor');
   border-radius: 4px;
-  white-space: pre-wrap;
+  overflow: auto;
+}
+::v-deep(table) {
+  border-collapse: collapse;
+}
+::v-deep(table), ::v-deep(td), ::v-deep(th) {
+  border: 1px solid v-bind('themeVars.textColor1');
+  padding: 5px;
 }
 ::v-deep(a) {
-  color: v-bind('themeVars.textColor3');
+  color: v-bind('themeVars.textColor1');
 }
 </style>
