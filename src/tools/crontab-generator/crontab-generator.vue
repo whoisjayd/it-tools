@@ -169,7 +169,12 @@ const getHelpers = computed(() => {
 
 const cronString = computed(() => {
   if (isCronValid(cron.value)) {
-    return cronstrue.toString(cron.value, cronstrueConfig);
+    try {
+      return cronstrue.toString(cron.value, cronstrueConfig);
+    }
+    catch (e: any) {
+      return e.toString();
+    }
   }
   return ' ';
 });
