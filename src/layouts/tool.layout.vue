@@ -15,7 +15,31 @@ const head = computed<HeadObject>(() => ({
   title: `${route.meta.name} - IT Tools`,
   meta: [
     {
+      itemprop: 'name',
+      content: `${route.meta.name} - IT Tools`,
+    },
+    {
+      property: 'og:title',
+      content: `${route.meta.name} - IT Tools`,
+    },
+    {
+      property: 'twitter:title',
+      content: `${route.meta.name} - IT Tools`,
+    },
+    {
       name: 'description',
+      content: route.meta?.description as string,
+    },
+    {
+      itemprop: 'description',
+      content: route.meta?.description as string,
+    },
+    {
+      property: 'og:description',
+      content: route.meta?.description as string,
+    },
+    {
+      property: 'twitter:description',
       content: route.meta?.description as string,
     },
     {
