@@ -3,12 +3,13 @@ import { useI18n } from 'vue-i18n';
 import db from 'oui-data';
 import { macAddressValidationRules } from '@/utils/macAddress';
 import { useCopy } from '@/composable/copy';
+import { useQueryParam } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
 const getVendorValue = (address: string) => address.trim().replace(/[.:-]/g, '').toUpperCase().substring(0, 6);
 
-const macAddress = ref('20:37:06:12:34:56');
+const macAddress = useQueryParam({ tool: 'mac-lookup', name: 'addr', defaultValue: '20:37:06:12:34:56' });
 const details = computed<string | undefined>(() => (db as Record<string, string>)[getVendorValue(macAddress.value)]);
 
 const { copy } = useCopy({ source: () => details.value ?? '', text: t('tools.mac-address-lookup.texts.text-vendor-info-copied-to-the-clipboard') });

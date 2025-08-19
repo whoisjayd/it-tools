@@ -2,10 +2,11 @@
 import { useI18n } from 'vue-i18n';
 import Luhn from 'luhn-js';
 import type { CKeyValueListItems } from '@/ui/c-key-value-list/c-key-value-list.types';
+import { useQueryParam } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const rawValue = ref('44540661970241257');
+const rawValue = useQueryParam({ tool: 'luhn-validator', name: 'luhn', defaultValue: '44540661970241257' });
 const cleanedValue = computed(() => rawValue.value.replace(/[^\d]/g, ''));
 const isValid = computed(() => {
   try {

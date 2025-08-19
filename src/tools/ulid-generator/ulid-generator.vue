@@ -4,10 +4,11 @@ import { ulid } from 'ulid';
 import _ from 'lodash';
 import { computedRefreshable } from '@/composable/computedRefreshable';
 import { useCopy } from '@/composable/copy';
+import { useQueryParamOrStorage } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const amount = useStorage('ulid-generator-amount', 1);
+const amount = useQueryParamOrStorage({ name: 'amount', storageName: 'ulid-generator:amount', defaultValue: 1 });
 const formats = [{ label: t('tools.ulid-generator.texts.label-raw'), value: 'raw' }, { label: t('tools.ulid-generator.texts.label-json'), value: 'json' }] as const;
 const format = useStorage<typeof formats[number]['value']>('ulid-generator-format', formats[0].value);
 

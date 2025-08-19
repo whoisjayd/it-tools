@@ -16,6 +16,7 @@ import {
   toWgetWarn,
 } from 'curlconverter';
 import TextareaCopyable from '@/components/TextareaCopyable.vue';
+import { useQueryParamOrStorage } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
@@ -85,7 +86,7 @@ const translate = {
   'wget': [toWget, toWgetWarn],
 };
 
-const language = ref('python');
+const language = useQueryParamOrStorage({ name: 'lang', storageName: 'curl-conv:l', defaultValue: 'python' });
 const curl = ref('curl --data "hello=world" example.com');
 const inlang = computed(() => {
   try {

@@ -1,17 +1,17 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
 import { Netmask } from 'netmask';
-import { useStorage } from '@vueuse/core';
 import { ArrowLeft, ArrowRight } from '@vicons/tabler';
 import { getIPClass } from './ipv4-subnet-calculator.models';
 import { withDefaultOnError } from '@/utils/defaults';
 import { isNotThrowing } from '@/utils/boolean';
 import SpanCopyable from '@/components/SpanCopyable.vue';
 import { getIPNetworkType, getNetworksCount, getSubnets, parseAsCIDR, to6to4Prefix, toARPA, toIPv4MappedAddress, toIPv4MappedAddressDecimal } from '@/utils/ip';
+import { useITStorage } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const ip = useStorage('ipv4-subnet-calculator:ip', '192.168.0.1/24');
+const ip = useITStorage('ipv4-subnet-calculator:ip', '192.168.0.1/24');
 
 const getNetworkInfo = (address: string) => new Netmask(parseAsCIDR(address.trim()) || address.trim());
 

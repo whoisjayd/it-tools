@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
 import * as service from './cli-command-editor.service';
+import { useQueryParam } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const inputCommand = ref('');
+const inputCommand = useQueryParam({ tool: 'cli-cmd-editor', name: 'cmd', defaultValue: '' });
 const options = computed(() => service.extractOptions(inputCommand.value));
 const optionsObject = computed(() => service.buildOptionsObject(options.value));
 const optionsInput = ref<{ [k: string]: string }>(optionsObject.value);

@@ -2,11 +2,12 @@
 import { useI18n } from 'vue-i18n';
 import ports from 'port-numbers';
 import SpanCopyable from '@/components/SpanCopyable.vue';
+import { useQueryParam } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const port = ref(80);
-const protocol = ref('tcp');
+const port = useQueryParam({ tool: 'port-numbers', name: 'port', defaultValue: 80 });
+const protocol = useQueryParam({ tool: 'port-numbers', name: 'proto', defaultValue: 'tcp' });
 const result = computed(() => {
   const [type, description] = ports[`${port.value}/${protocol.value}` as (keyof typeof ports)];
   return { type: type ?? 'unknown', description: description ?? 'Unknown' };

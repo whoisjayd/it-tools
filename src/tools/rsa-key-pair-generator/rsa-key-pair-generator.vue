@@ -6,6 +6,7 @@ import TextareaCopyable from '@/components/TextareaCopyable.vue';
 import { withDefaultOnErrorAsync } from '@/utils/defaults';
 import { useValidation } from '@/composable/validation';
 import { computedRefreshableAsync } from '@/composable/computedRefreshable';
+import { useITStorage } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
@@ -14,7 +15,7 @@ const comment = ref('');
 const password = ref('');
 const emptyCerts = { publicKey: '', privateKey: '' };
 
-const format = useStorage('rsa-key-pair-generator:format', 'ssh');
+const format = useITStorage('rsa-key-pair-generator:format', 'ssh');
 const formatOptions = [
   { value: 'pem', label: t('tools.rsa-key-pair-generator.texts.label-pem') },
   { value: 'pkcs1', label: t('tools.rsa-key-pair-generator.texts.label-pkcs-1') },

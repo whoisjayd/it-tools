@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
-import { useStorage } from '@vueuse/core';
 import { formatYaml } from './yaml-models';
 import TextareaCopyable from '@/components/TextareaCopyable.vue';
+import { useITStorage } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const rawYaml = useStorage('yaml-prettify:raw-yaml', '');
-const indentSize = useStorage('yaml-prettify:indent-size', 2);
-const sortKeys = useStorage('yaml-prettify:sort-keys', false);
+const rawYaml = useITStorage('yaml-prettify:raw-yaml', '');
+const indentSize = useITStorage('yaml-prettify:indent-size', 2);
+const sortKeys = useITStorage('yaml-prettify:sort-keys', false);
 
 const yamlFormattingResult = computed(() => {
   try {

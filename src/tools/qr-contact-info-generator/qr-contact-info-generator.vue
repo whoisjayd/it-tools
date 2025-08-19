@@ -2,18 +2,19 @@
 import { useI18n } from 'vue-i18n';
 import { useContactQRCode } from './useContactQRCode';
 import { useDownloadFileFromBase64 } from '@/composable/downloadBase64';
+import { useQueryParam } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const fullName = ref('');
-const jobRole = ref('');
-const phoneNumber = ref('');
-const email = ref('');
-const website = ref('');
-const address = ref('');
+const fullName = useQueryParam({ tool: 'qr-contact-gen', name: 'name', defaultValue: '' });
+const jobRole = useQueryParam({ tool: 'qr-contact-gen', name: 'role', defaultValue: '' });
+const phoneNumber = useQueryParam({ tool: 'qr-contact-gen', name: 'phone', defaultValue: '' });
+const email = useQueryParam({ tool: 'qr-contact-gen', name: 'email', defaultValue: '' });
+const website = useQueryParam({ tool: 'qr-contact-gen', name: 'website', defaultValue: '' });
+const address = useQueryParam({ tool: 'qr-contact-gen', name: 'addr', defaultValue: '' });
 
-const foreground = ref('#000000ff');
-const background = ref('#ffffffff');
+const foreground = useQueryParam({ tool: 'qr-contact-gen', name: 'fg', defaultValue: '#000000ff' });
+const background = useQueryParam({ tool: 'qr-contact-gen', name: 'bg', defaultValue: '#ffffffff' });
 
 const { qrcode } = useContactQRCode({
   fullName,

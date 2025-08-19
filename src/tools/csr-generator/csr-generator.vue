@@ -5,10 +5,11 @@ import TextareaCopyable from '@/components/TextareaCopyable.vue';
 import { withDefaultOnErrorAsync } from '@/utils/defaults';
 import { computedRefreshableAsync } from '@/composable/computedRefreshable';
 import { useValidation } from '@/composable/validation';
+import { useQueryParam } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const commonName = ref('test.com');
+const commonName = useQueryParam({ tool: 'csr-gen', name: 'cn', defaultValue: 'test.com' });
 const commonNameValidation = useValidation({
   source: commonName,
   rules: [
@@ -19,13 +20,13 @@ const commonNameValidation = useValidation({
   ],
 });
 
-const organizationName = ref('Test');
-const organizationalUnit = ref('');
+const organizationName = useQueryParam({ tool: 'csr-gen', name: 'org', defaultValue: 'Test' });
+const organizationalUnit = useQueryParam({ tool: 'csr-gen', name: 'ou', defaultValue: '' });
 const password = ref('');
-const city = ref('Paris');
-const state = ref('FR');
-const country = ref('France');
-const contactEmail = ref('');
+const city = useQueryParam({ tool: 'csr-gen', name: 'city', defaultValue: 'Paris' });
+const state = useQueryParam({ tool: 'csr-gen', name: 'state', defaultValue: 'FR' });
+const country = useQueryParam({ tool: 'csr-gen', name: 'country', defaultValue: 'France' });
+const contactEmail = useQueryParam({ tool: 'csr-gen', name: 'email', defaultValue: '' });
 const subjectAlternativeNames = ref('');
 const emptyCSR = { csrPem: '', privateKeyPem: '', publicKeyPem: '' };
 

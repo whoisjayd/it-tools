@@ -8,11 +8,11 @@ import { randIntFromInterval } from '@/utils/random';
 
 const { t } = useI18n();
 
-const paragraphs = useStorage('lorem:paragraphs', 1);
-const sentences = useStorage('lorem:sentences', [3, 8]);
-const words = useStorage('lorem:words', [8, 15]);
+const paragraphs = useQueryParamOrStorage({ name: 'paragraphs', storageName: 'lorem:paragraphs', defaultValue: 1 });
+const sentences = useQueryParamOrStorage({ name: 'sentences', storageName: 'lorem:sentences', defaultValue: [3, 8] });
+const words = useQueryParamOrStorage({ name: 'words', storageName: 'lorem:words', defaultValue: [8, 15] });
 const startWithLoremIpsum = ref(true);
-const asHTML = ref(false);
+const asHTML = useQueryParamOrStorage({ name: 'html', storageName: 'lorem:html', defaultValue: false });
 const language = useQueryParamOrStorage({ defaultValue: 'English', storageName: 'lorem:lang', name: 'lang' });
 
 const supportedLanguages = getSupportedLanguages();

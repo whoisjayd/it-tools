@@ -1,19 +1,19 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
 import JSON5 from 'json5';
-import { useStorage } from '@vueuse/core';
 import { formatJson } from './json.models';
 import { withDefaultOnError } from '@/utils/defaults';
 import { useValidation } from '@/composable/validation';
 import TextareaCopyable from '@/components/TextareaCopyable.vue';
+import { useITStorage, useQueryParamOrStorage } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
 const inputElement = ref<HTMLElement>();
 
-const rawJson = useStorage('json-prettify:raw-json', '{"hello": "world", "foo": "bar"}');
-const sortMethod = useStorage('json-prettify:sort-method', 'key_name');
-const indentSize = useStorage('json-prettify:indent-size', 3);
+const rawJson = useITStorage('json-prettify:raw-json', '{"hello": "world", "foo": "bar"}');
+const sortMethod = useQueryParamOrStorage({ name: 'sort', storageName: 'json-prettify:sort-method', defaultValue: 'key_name' });
+const indentSize = useQueryParamOrStorage({ name: 'indent', storageName: 'json-prettify:indent-size', defaultValue: 3 });
 const keyName = ref('');
 const cleanJson = computed(() => withDefaultOnError(() => formatJson({ rawJson, sortMethod, keyName, indentSize }), ''));
 

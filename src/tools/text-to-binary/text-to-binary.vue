@@ -4,12 +4,12 @@ import { type EncodingBase, convertTextToUtf8Binary, convertUtf8BinaryToText } f
 import { withDefaultOnError } from '@/utils/defaults';
 import { useCopy } from '@/composable/copy';
 import { isNotThrowing } from '@/utils/boolean';
-import { useQueryParamOrStorage } from '@/composable/queryParams';
+import { useQueryParam, useQueryParamOrStorage } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
 const base = useQueryParamOrStorage({ name: 'base', storageName: 'txt-bin:base', defaultValue: '2' });
-const inputText = ref('');
+const inputText = useQueryParam({ tool: 'txt-bin', name: 'text', defaultValue: '' });
 const binaryFromText = computed(() => convertTextToUtf8Binary(inputText.value, { base: Number(base.value) as EncodingBase }));
 const { copy: copyBinary } = useCopy({ source: binaryFromText });
 

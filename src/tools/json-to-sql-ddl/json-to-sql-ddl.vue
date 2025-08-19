@@ -4,10 +4,11 @@ import JSON5 from 'json5';
 import GenerateSchema from 'generate-schema';
 import { withDefaultOnError } from '../../utils/defaults';
 import type { UseValidationRule } from '@/composable/validation';
+import { useQueryParamOrStorage } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const tableName = ref('TableName');
+const tableName = useQueryParamOrStorage({ name: 'table', storageName: 'json-to-sqlddl:tbl', defaultValue: 'TableName' });
 
 function convertJsonToDDL(value: string) {
   const object = JSON5.parse(value);

@@ -2,11 +2,12 @@
 import { useI18n } from 'vue-i18n';
 import promptSplitter from 'chatgpt-prompt-splitter';
 import { useValidation } from '@/composable/validation';
+import { useQueryParam } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const prompt = ref('');
-const splitLength = ref(1024);
+const prompt = useQueryParam({ tool: 'ai-prompt-split', name: 'prompt', defaultValue: '' });
+const splitLength = useQueryParam({ tool: 'ai-prompt-split', name: 'split', defaultValue: 1024 });
 
 const splittedPrompts = computed(() => {
   try {

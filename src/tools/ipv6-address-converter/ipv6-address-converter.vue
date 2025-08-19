@@ -6,10 +6,11 @@ import { stringifyIp } from 'ip-bigint';
 import { convertBase } from '../integer-base-converter/integer-base-converter.model';
 import { getIPNetworkType, toARPA, toMicrosoftTranscription } from '@/utils/ip';
 import { useValidation } from '@/composable/validation';
+import { useITStorage } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const rawIpAddress = useStorage('ipv6-converter:ip', '2001:db8:0:85a3::ac1f:8001'); // NOSONAR
+const rawIpAddress = useITStorage('ipv6-converter:ip', '2001:db8:0:85a3::ac1f:8001'); // NOSONAR
 
 const convertedSections = computed(() => {
   try {

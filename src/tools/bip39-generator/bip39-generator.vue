@@ -21,6 +21,7 @@ import { useCopy } from '@/composable/copy';
 import { useValidation } from '@/composable/validation';
 import { isNotThrowing } from '@/utils/boolean';
 import { withDefaultOnError } from '@/utils/defaults';
+import { useQueryParamOrStorage } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
@@ -40,7 +41,8 @@ const languages = {
 const entropy = ref(generateEntropy());
 const passphraseInput = ref('');
 
-const language = ref<keyof typeof languages>('English');
+const language = useQueryParamOrStorage<keyof typeof languages>({ name: 'lang', storageName: 'bip39-gen:l', defaultValue: 'English' });
+
 const passphrase = computed({
   get() {
     return withDefaultOnError(() => entropyToMnemonic(entropy.value, languages[language.value]), passphraseInput.value);

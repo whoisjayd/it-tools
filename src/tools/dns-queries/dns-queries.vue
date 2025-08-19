@@ -2,11 +2,12 @@
 import { useI18n } from 'vue-i18n';
 import { combineTXT, query, wellknown } from 'dns-query';
 import types from './dns.records.types.json';
+import { useQueryParam } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const type = ref('A');
-const name = ref('google.com');
+const type = useQueryParam({ tool: 'dns-queries', name: 'type', defaultValue: 'A' });
+const name = useQueryParam({ tool: 'dns-queries', name: 'domain', defaultValue: 'google.com' });
 const answers = ref<string[]>([]);
 
 async function queryDNS() {

@@ -4,6 +4,7 @@ import { useI18n } from 'vue-i18n';
 import { convertCsvToArray } from '../csv-to-json/csv-to-json.service';
 import { objectArrayToData } from '@/utils/objectarray.export';
 import type { ExportFormat } from '@/utils/objectarray.export';
+import { useQueryParamOrStorage } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
@@ -13,8 +14,8 @@ const fileInput = ref() as Ref<File | null>;
 const error = ref('');
 
 const convertedData = ref<string>('');
-const selectedFormat = ref<string>('json');
-const tableName = ref<string>('TableName');
+const selectedFormat = useQueryParamOrStorage({ name: 'fmt', storageName: 'csv-to-data:fmt', defaultValue: 'json' });
+const tableName = useQueryParamOrStorage({ name: 'table', storageName: 'csv-to-data:tbl', defaultValue: 'TableName' });
 const nestify = ref(false);
 const typedValues = ref(false);
 

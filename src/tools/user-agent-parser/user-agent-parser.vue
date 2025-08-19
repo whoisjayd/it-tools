@@ -5,10 +5,11 @@ import { Adjustments, Browser, Cpu, Devices, Engine } from '@vicons/tabler';
 import UserAgentResultCards from './user-agent-result-cards.vue';
 import type { UserAgentResultSection } from './user-agent-parser.types';
 import { withDefaultOnError } from '@/utils/defaults';
+import { useQueryParam } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const ua = ref(navigator.userAgent as string);
+const ua = useQueryParam({ tool: 'user-agent-parser', name: 'ua', defaultValue: navigator.userAgent as string });
 
 // If not input in the ua field is present return an empty object of type UAParser.IResult because otherwise
 // UAParser returns the values for the current Browser. This is confusing because results are shown for an empty

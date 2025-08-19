@@ -8,7 +8,7 @@ import { Terminal } from '@xterm/xterm';
 import '@xterm/xterm/css/xterm.css';
 import styles from 'ansi-styles';
 import type { CSPair } from 'ansi-styles';
-import { useQueryParamOrStorage } from '@/composable/queryParams';
+import { useQueryParam, useQueryParamOrStorage } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
@@ -77,7 +77,7 @@ onMounted(() => {
 
 watch(outputEscapeSequence, seq => writeTermAndScrollBottom(seq), { immediate: true });
 
-const escapeSequenceToTest = ref('');
+const escapeSequenceToTest = useQueryParam({ tool: 'ansi', name: 'seq', defaultValue: '' });
 </script>
 
 <template>

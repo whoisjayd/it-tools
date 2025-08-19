@@ -6,13 +6,13 @@ import { withDefaultOnError } from '@/utils/defaults';
 import { useCopy } from '@/composable/copy';
 import { useQueryParam } from '@/composable/queryParams';
 
-const count = useQueryParam({ name: 'count', defaultValue: 1 });
-const length = useQueryParam({ name: 'length', defaultValue: 21 });
-const withUppercase = useQueryParam({ name: 'uppercase', defaultValue: true });
-const withLowercase = useQueryParam({ name: 'lowercase', defaultValue: true });
-const withNumbers = useQueryParam({ name: 'numbers', defaultValue: true });
-const withSymbols = useQueryParam({ name: 'symbols', defaultValue: true });
-const excludeLookalikes = useQueryParam({ name: 'no-lookalikes', defaultValue: false });
+const count = useQueryParam({ tool: 'nanoid-gen', name: 'count', defaultValue: 1 });
+const length = useQueryParam({ tool: 'nanoid-gen', name: 'length', defaultValue: 21 });
+const withUppercase = useQueryParam({ tool: 'nanoid-gen', name: 'uppercase', defaultValue: true });
+const withLowercase = useQueryParam({ tool: 'nanoid-gen', name: 'lowercase', defaultValue: true });
+const withNumbers = useQueryParam({ tool: 'nanoid-gen', name: 'numbers', defaultValue: true });
+const withSymbols = useQueryParam({ tool: 'nanoid-gen', name: 'symbols', defaultValue: true });
+const excludeLookalikes = useQueryParam({ tool: 'nanoid-gen', name: 'no-lookalikes', defaultValue: false });
 
 const { t } = useI18n();
 

@@ -2,11 +2,11 @@
 import { useI18n } from 'vue-i18n';
 import TextareaCopyable from '@/components/TextareaCopyable.vue';
 import { escapeForLanguage, languages } from '@/utils/ascii-lang-utils';
-import { useQueryParamOrStorage } from '@/composable/queryParams';
+import { useQueryParam, useQueryParamOrStorage } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const rawInput = ref('Hello "every"\n A\'');
+const rawInput = useQueryParam({ tool: 'string-escaper', name: 'text', defaultValue: 'Hello "every"\n A\'' });
 const language = useQueryParamOrStorage({ name: 'lang', storageName: 'string-escaper:l', defaultValue: 'raw' });
 const single_linize = useQueryParamOrStorage({ name: 'singleline', storageName: 'string-escaper:sl', defaultValue: false });
 const languagesOptions = languages.map(lang => ({ value: lang.id, label: lang.name }));

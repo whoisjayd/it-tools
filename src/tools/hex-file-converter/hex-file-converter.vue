@@ -4,6 +4,7 @@ import { useI18n } from 'vue-i18n';
 import type { Ref } from 'vue';
 import { useCopy } from '@/composable/copy';
 import { useDownloadFileFromBase64 } from '@/composable/downloadBase64';
+import { useITStorage } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
@@ -52,9 +53,9 @@ async function ReadFileAsHex(file: File, separator: string = ' '): Promise<strin
   });
 }
 
-const separator = useStorage('hex-converter:sep', ' ');
+const separator = useITStorage('hex-converter:sep', ' ');
 const fileInput = ref() as Ref<File>;
-const prefix = useStorage('hex-converter:prefix', '');
+const prefix = useITStorage('hex-converter:prefix', '');
 const fileHex = computedAsync(async () => {
   const file = fileInput.value;
   const sep = separator.value;

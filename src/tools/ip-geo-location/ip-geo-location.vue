@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
 import type { CKeyValueListItems } from '@/ui/c-key-value-list/c-key-value-list.types';
+import { useITStorage, useQueryParam } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const ip = ref('8.8.8.8');
+const ip = useQueryParam({ tool: 'ip-geo-loc', name: 'ip', defaultValue: '8.8.8.8' });
 const errorMessage = ref('');
 
 const fields: Array<{ field: string; name: string }> = [
@@ -24,7 +25,7 @@ const geoInfosData = ref<{
   loc?: string
 }>({});
 const status = ref<'pending' | 'error' | 'success'>('pending');
-const token = useStorage('ip-geoloc:token', '');
+const token = useITStorage('ip-geoloc:token', '');
 
 const openStreetMapUrl = computed(
   () => {

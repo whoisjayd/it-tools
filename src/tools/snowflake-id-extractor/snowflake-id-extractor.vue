@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
 import { extractId, extractMachineId, extractTimestamp } from './snowflake-id-extractor.service';
+import { useQueryParam } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const inputId = ref('1263785187301658678');
-const inputEpoch = ref('');
+const inputId = useQueryParam({ tool: 'snowflake-id-ext', name: 'id', defaultValue: '1263785187301658678' });
+const inputEpoch = useQueryParam({ tool: 'snowflake-id-ext', name: 'epoch', defaultValue: '' });
 
 const inputProps = {
   'labelPosition': 'left',

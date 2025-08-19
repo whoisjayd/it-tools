@@ -3,11 +3,12 @@ import { useI18n } from 'vue-i18n';
 import { stringifyIp } from 'ip-bigint';
 import InputCopyable from '../../components/InputCopyable.vue';
 import { convertBase, hasNumberPrefix } from '../integer-base-converter/integer-base-converter.model';
+import { useQueryParam } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const input = ref('3232235777');
-const inputBase = ref(10);
+const input = useQueryParam({ tool: 'int-to-ip', name: 'int', defaultValue: '3232235777' });
+const inputBase = useQueryParam({ tool: 'int-to-ip', name: 'base', defaultValue: 10 });
 
 const hasInputNumberPrefix = computed(() => hasNumberPrefix(input.value));
 

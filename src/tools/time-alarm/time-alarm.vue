@@ -6,7 +6,7 @@ import { useQueryParam } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const alarmAt = useQueryParam({ name: 'alarmAt', defaultValue: '17:30:00' });
+const alarmAt = useQueryParam({ tool: 'time-alarm', name: 'alarmAt', defaultValue: '17:30:00' });
 const history = useStorage<string[]>('timealarm:hst', []);
 
 function getTimeHref(at: string) {

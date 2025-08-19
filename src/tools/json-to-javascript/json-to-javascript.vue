@@ -4,10 +4,11 @@ import JSON5 from 'json5';
 import type { UseValidationRule } from '@/composable/validation';
 import { isNotThrowing } from '@/utils/boolean';
 import { withDefaultOnError } from '@/utils/defaults';
+import { useQueryParamOrStorage } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const indentSize = useStorage('json-prettify:indent-size', 3);
+const indentSize = useQueryParamOrStorage({ name: 'indent', storageName: 'json-prettify:indent-size', defaultValue: 3 });
 const transformer = (value: string) => withDefaultOnError(() => JSON5.stringify(JSON.parse(value), null, indentSize.value), '');
 
 const rules: UseValidationRule<string>[] = [

@@ -4,7 +4,7 @@ import bwipjs, { type RenderOptions } from 'bwip-js/browser';
 import { Base64 } from 'js-base64';
 import formats from './barcode.formats.json';
 import { useDownloadFileFromBase64 } from '@/composable/downloadBase64';
-import { useQueryParamOrStorage } from '@/composable/queryParams';
+import { useQueryParam, useQueryParamOrStorage } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
@@ -15,7 +15,7 @@ const height = useQueryParamOrStorage({ name: 'height', storageName: 'barcode-ge
 const margin = useQueryParamOrStorage({ name: 'margin', storageName: 'barcode-gen:margin', defaultValue: 10 });
 const format = useQueryParamOrStorage({ name: 'format', storageName: 'barcode-gen:format', defaultValue: 'code128' });
 const displayValue = useQueryParamOrStorage({ name: 'display', storageName: 'barcode-gen:display', defaultValue: true });
-const value = ref('123456789');
+const value = useQueryParam({ tool: 'barcode-gen', name: 'text', defaultValue: '123456789' });
 const barcodeCanvas = ref<HTMLCanvasElement>();
 
 const options = computed<RenderOptions>(() => ({

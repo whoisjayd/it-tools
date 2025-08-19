@@ -3,21 +3,22 @@ import { useI18n } from 'vue-i18n';
 import { Base64 } from 'js-base64';
 import createQPDFModule from 'qpdf-wasm-esm-embedded';
 import { useDownloadFileFromBase64Refs } from '@/composable/downloadBase64';
+import { useQueryParamOrStorage } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
 const status = ref<'idle' | 'done' | 'error' | 'processing'>('idle');
 const file = ref<File | null>(null);
 
-const restrictAccessibility = useStorage('pdf-encrypt:accessibility', false);
-const restrictAnnotate = useStorage('pdf-encrypt:annotate', false);
-const restrictAssemble = useStorage('pdf-encrypt:assemble', false);
-const restrictExtract = useStorage('pdf-encrypt:extract', false);
-const restrictForm = useStorage('pdf-encrypt:form', false);
-const restrictModifyOther = useStorage('pdf-encrypt:modoth', false);
-const clearTextMetadata = useStorage('pdf-encrypt:clearmeta', false);
-const restrictModify = useStorage('pdf-encrypt:mod', 'all');
-const restrictPrint = useStorage('pdf-encrypt:print', 'full');
+const restrictAccessibility = useQueryParamOrStorage({ name: 'a11y', storageName: 'pdf-encrypt:accessibility', defaultValue: false });
+const restrictAnnotate = useQueryParamOrStorage({ name: 'annot', storageName: 'pdf-encrypt:annotate', defaultValue: false });
+const restrictAssemble = useQueryParamOrStorage({ name: 'assemble', storageName: 'pdf-encrypt:assemble', defaultValue: false });
+const restrictExtract = useQueryParamOrStorage({ name: 'extract', storageName: 'pdf-encrypt:extract', defaultValue: false });
+const restrictForm = useQueryParamOrStorage({ name: 'form', storageName: 'pdf-encrypt:form', defaultValue: false });
+const restrictModifyOther = useQueryParamOrStorage({ name: 'othermodify', storageName: 'pdf-encrypt:modoth', defaultValue: false });
+const clearTextMetadata = useQueryParamOrStorage({ name: 'clearmeta', storageName: 'pdf-encrypt:clearmeta', defaultValue: false });
+const restrictModify = useQueryParamOrStorage({ name: 'modify', storageName: 'pdf-encrypt:mod', defaultValue: 'all' });
+const restrictPrint = useQueryParamOrStorage({ name: 'print', storageName: 'pdf-encrypt:print', defaultValue: 'full' });
 const userPassword = ref('');
 const ownerPassword = ref('');
 

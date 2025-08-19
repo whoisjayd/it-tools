@@ -11,10 +11,11 @@ import {
 } from '@tabler/icons-vue';
 import { codesByCategories } from './http-status-codes.constants';
 import { useFlexSearch } from '@/composable/flexSearch';
+import { useQueryParam } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const search = ref('');
+const search = useQueryParam({ tool: 'http-status-codes', name: 's', defaultValue: '' });
 
 const { searchResult } = useFlexSearch({
   search,

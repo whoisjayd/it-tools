@@ -2,12 +2,22 @@
 import { useI18n } from 'vue-i18n';
 import { getISOWeek, getWeek, getWeekOfMonth } from 'date-fns';
 import { getFirstMondayFromISOWeek, getFirstMondayFromMonthWeek } from './week-number-converter.service';
+import { useQueryParam } from '@/composable/queryParams';
+import { withDefaultOnError } from '@/utils/defaults';
 
 const { t } = useI18n();
 
 const now = new Date();
 
-const inputDate = ref(now.getTime());
+function toISODateString(d: Date) {
+  return d.toISOString().substring(0, 10);
+}
+
+const inputDateString = useQueryParam({ tool: 'week-num-conv', name: 'date', defaultValue: toISODateString(now) });
+const inputDate = computed({
+  get() { return withDefaultOnError(() => new Date(inputDateString.value).getTime(), now.getTime()); },
+  set(newDate) { inputDateString.value = toISODateString(new Date(newDate)); },
+});
 const outputWeekInMonth = computed(() => getWeekOfMonth(inputDate.value));
 const outputLocalWeekInYear = computed(() => getWeek(inputDate.value));
 const outputISOWeekInYear = computed(() => getISOWeek(inputDate.value));

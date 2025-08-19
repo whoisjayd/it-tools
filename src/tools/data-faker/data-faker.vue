@@ -28,7 +28,7 @@ const generatedData = ref<string>('');
 const itemCount = useQueryParamOrStorage({ name: 'count', storageName: 'faker:c', defaultValue: 1 });
 const error = ref('');
 const selectedFormat = useQueryParamOrStorage({ name: 'fmt', storageName: 'faker:f', defaultValue: 'json' });
-const tableName = ref<string>('TableName');
+const tableName = useQueryParamOrStorage({ name: 'table', storageName: 'faker:t', defaultValue: 'TableName' });
 const nestify = ref(false);
 
 const allLocales = Object.keys(allFakers);

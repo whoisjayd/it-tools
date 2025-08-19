@@ -2,12 +2,13 @@
 import { useI18n } from 'vue-i18n';
 import { formatXml, isValidXML } from './xml-formatter.service';
 import type { UseValidationRule } from '@/composable/validation';
+import { useITStorage } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
 const defaultValue = '<hello><world>foo</world><world>bar</world></hello>';
-const indentSize = useStorage('xml-formatter:indent-size', 2);
-const collapseContent = useStorage('xml-formatter:collapse-content', true);
+const indentSize = useITStorage('xml-formatter:indent-size', 2);
+const collapseContent = useITStorage('xml-formatter:collapse-content', true);
 
 function transformer(value: string) {
   return formatXml(value, {

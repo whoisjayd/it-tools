@@ -2,11 +2,12 @@
 import figlet from 'figlet';
 import TextareaCopyable from '@/components/TextareaCopyable.vue';
 import { languages, printToLanguage } from '@/utils/ascii-lang-utils';
+import { useITStorage } from '@/composable/queryParams';
 
 const input = ref('Ascii ART');
-const language = useStorage('ascii-text-drawer:language', 'raw');
-const font = useStorage('ascii-text-drawer:font', 'Standard');
-const width = useStorage('ascii-text-drawer:width', 80);
+const language = useITStorage('ascii-text-drawer:language', 'raw');
+const font = useITStorage('ascii-text-drawer:font', 'Standard');
+const width = useITStorage('ascii-text-drawer:width', 80);
 const output = ref('');
 const errored = ref(false);
 const processing = ref(false);

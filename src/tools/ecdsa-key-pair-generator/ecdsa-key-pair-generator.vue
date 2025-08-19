@@ -5,20 +5,21 @@ import { generateKeyPair } from './ecdsa-key-pair-generator.service';
 import TextareaCopyable from '@/components/TextareaCopyable.vue';
 import { withDefaultOnErrorAsync } from '@/utils/defaults';
 import { computedRefreshableAsync } from '@/composable/computedRefreshable';
+import { useITStorage } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
 const password = ref('');
 const comment = ref('');
 const emptyCerts = { publicKey: '', privateKey: '' };
-const curve = useStorage('ecdsa-key-pair-generator:curve', 'nistp256');
+const curve = useITStorage('ecdsa-key-pair-generator:curve', 'nistp256');
 const curveOptions = [
   { value: 'nistp256', label: t('tools.ecdsa-key-pair-generator.texts.label-nistp256') },
   { value: 'nistp384', label: t('tools.ecdsa-key-pair-generator.texts.label-nistp384') },
   { value: 'nistp521', label: t('tools.ecdsa-key-pair-generator.texts.label-nistp521') },
 ];
 
-const format = useStorage('ecdsa-key-pair-generator:format', 'ssh');
+const format = useITStorage('ecdsa-key-pair-generator:format', 'ssh');
 const formatOptions = [
   { value: 'pem', label: t('tools.ecdsa-key-pair-generator.texts.label-pem') },
   { value: 'pkcs8', label: t('tools.ecdsa-key-pair-generator.texts.label-pkcs-8') },

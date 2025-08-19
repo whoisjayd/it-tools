@@ -5,6 +5,7 @@ import { flatten } from 'flatten-anything';
 import { objectArrayToData } from '@/utils/objectarray.export';
 import type { UseValidationRule } from '@/composable/validation';
 import TextareaCopyable from '@/components/TextareaCopyable.vue';
+import { useQueryParamOrStorage } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
@@ -17,7 +18,7 @@ const defaultValue = `{
   }
 }`;
 const jsonInput = ref(defaultValue);
-const tableName = ref<string>('TableName');
+const tableName = useQueryParamOrStorage({ name: 'table', storageName: 'json-to-sql-insert:tbl', defaultValue: 'TableName' });
 
 const sqlOutput = computed(() => {
   try {

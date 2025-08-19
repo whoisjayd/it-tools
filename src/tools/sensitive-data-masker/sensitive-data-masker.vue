@@ -2,6 +2,7 @@
 import { useI18n } from 'vue-i18n';
 import { type MatcherNames, maskSensitiveData } from './sensitive-data-masker.service';
 import { withDefaultOnError } from '@/utils/defaults';
+import { useITStorage } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
@@ -19,8 +20,8 @@ const defaultValue = `{
   token: 'eyJhbGciOiJIUzI1NiJ9.ew0KICAic3ViIjogIjEyMzQ1Njc4OTAiLA0KICAibmFtZSI6ICJBbGV4IEtvemxvdiIsDQogICJpYXQiOiAxNTE2MjM5MDIyDQp9.PNKysYFTCenU5bekHCmwIxCUXoYG41H_xc3uN3ZF_b8',
 }`;
 
-const customRegex = useStorage('sensitive-data:regex', '');
-const excludedMatchers = useStorage('sensitive-data:exclude', [] as string[]);
+const customRegex = useITStorage('sensitive-data:regex', '');
+const excludedMatchers = useITStorage('sensitive-data:exclude', [] as string[]);
 const allMatchers = [
   'uuid', 'creditCard', 'ssn', 'url', 'ipv4', 'email',
   'passwordInUri', 'mac', 'ipv6', 'urlWithOrWithoutPrefix',

@@ -1,17 +1,17 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
-import { useStorage } from '@vueuse/core';
 import { Check as CheckIcon, LetterX as CrossIcon } from '@vicons/tabler';
 import { getMatch } from 'ip-matching';
 import { cidrInCidr } from './cidr-in-cidr.service';
 import { withDefaultOnError } from '@/utils/defaults';
 import { isNotThrowing } from '@/utils/boolean';
 import SpanCopyable from '@/components/SpanCopyable.vue';
+import { useQueryParamOrStorage } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const baseRange = useStorage('cidr-in-cidr:range', '192.168.0.1/24'); // NOSONAR
-const ipOrRangeToTest = useStorage('cidr-in-cidr:ip', '192.168.0.1'); // NOSONAR
+const baseRange = useQueryParamOrStorage({ name: 'range', storageName: 'cidr-in-cidr:range', defaultValue: '192.168.0.1/24' }); // NOSONAR
+const ipOrRangeToTest = useQueryParamOrStorage({ name: 'ip', storageName: 'cidr-in-cidr:ip', defaultValue: '192.168.0.1' }); // NOSONAR
 
 const matchResult = computed(() => withDefaultOnError(
   () => cidrInCidr({ baseRange: baseRange.value, ipOrRangeToTest: ipOrRangeToTest.value }),

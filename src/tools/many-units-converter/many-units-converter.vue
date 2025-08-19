@@ -3,13 +3,14 @@ import { useI18n } from 'vue-i18n';
 import _ from 'lodash';
 import { type Unit, convertMany } from 'convert';
 import allUnits from './allunits.json';
+import { useQueryParam } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
 const allUnitsSorted = _.uniq(allUnits).sort();
 
-const inputExpression = ref('');
-const outputUnit = ref('');
+const inputExpression = useQueryParam({ tool: 'many-units-conv', name: 'expr', defaultValue: '' });
+const outputUnit = useQueryParam({ tool: 'many-units-conv', name: 'unit', defaultValue: '' });
 const result = computed(() => {
   try {
     const best = convertMany(inputExpression.value).to('best');

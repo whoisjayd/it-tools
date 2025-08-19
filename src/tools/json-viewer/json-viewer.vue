@@ -3,23 +3,23 @@ import { useI18n } from 'vue-i18n';
 import { jsonrepair } from 'jsonrepair';
 import {
   get,
-  useStorage,
 } from '@vueuse/core';
 import { formatJson } from './json.models';
 import { withDefaultOnError } from '@/utils/defaults';
 import { useValidation } from '@/composable/validation';
 import TextareaCopyable from '@/components/TextareaCopyable.vue';
+import { useITStorage } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
 const inputElement = ref<HTMLElement>();
 const repairJsonLabel = t('tools.json-viewer.text.repair-json');
 
-const rawJson = useStorage('json-prettify:raw-json', '{"hello": "world", "foo": "bar"}');
-const indentSize = useStorage('json-prettify:indent-size', 3);
-const sortKeys = useStorage('json-prettify:sort-keys', true);
-const unescapeUnicode = useStorage('json-prettify:unescape-unicode', false);
-const repairJson = useStorage('json-prettify:repair-json', false);
+const rawJson = useITStorage('json-prettify:raw-json', '{"hello": "world", "foo": "bar"}');
+const indentSize = useITStorage('json-prettify:indent-size', 3);
+const sortKeys = useITStorage('json-prettify:sort-keys', true);
+const unescapeUnicode = useITStorage('json-prettify:unescape-unicode', false);
+const repairJson = useITStorage('json-prettify:repair-json', false);
 const cleanJson = computed(() => withDefaultOnError(() => formatJson({ rawJson, indentSize, sortKeys, unescapeUnicode, repairJson }), ''));
 
 const rawJsonValidation = useValidation({

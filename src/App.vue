@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import { RouterView, useRoute } from 'vue-router';
 import { NGlobalStyle, NMessageProvider, NNotificationProvider, darkTheme } from 'naive-ui';
+import { get } from '@vueuse/core';
 import { darkThemeOverrides, lightThemeOverrides } from './themes';
 import { layouts } from './layouts';
 import { useStyleStore } from './stores/style.store';
 import { useAppTheme } from './ui/theme/themes';
+import { getITToolsSetting } from './composable/queryParams';
 
 const route = useRoute();
 const layout = computed(() => route?.meta?.layout ?? layouts.base);
@@ -29,6 +31,8 @@ watchEffect(() => {
     root.style.setProperty(key, value);
   });
 });
+
+locale.value = get(getITToolsSetting('default_locale', locale.value));
 
 syncRef(
   locale,

@@ -4,6 +4,10 @@ Since *Docker base image* is now `nginx-unpriviledged`, docker image now listen 
 
 Docker image listen to IPv6, so it needs to be enabled: https://serverfault.com/questions/1147296/how-to-enable-ipv6-on-ubuntu-20-04. Alternatively, you can mount your own `nginx.conf` own using docker option `-v "./nginx.conf:/etc/nginx/conf.d/nginx.conf"` (with `listen [::]:8080;` removed)
 
+## PR Welcome
+
+Especially for UI improvements and translation. And for anything else.
+
 ## HTTPS is recommanded
 
 Some tools like PGP encryption rely on WebCrypto API that is only available in HTTPS/SSL. Also, if you want to use PWA, HTTPS is required.
@@ -74,6 +78,54 @@ You can filter available tools by mounting `tools-filter.json` in `/usr/share/ng
 Category matches on category (English) names ; Tools matches on tools path/url.
 
 See (docker-tools-filter-and-home-content)[https://github.com/sharevb/it-tools]
+
+## Setting default tools parameters / default UI language at runtime
+
+You can set default tools parameters by mounting a `tools-setting.json` in `/usr/share/nginx/html`.
+
+It is a two level json, first level for `tool name`, second level for `parameter name`:
+```json
+{
+  "regex-tester": {
+    "multi": true,
+    "regex": "some regex",
+    "global": false
+  }
+}
+```
+
+You can find `tool name` and `parameter name` in the tools source code `src/tools` subfolder :
+- for pattern like `const global = useQueryParamOrStorage({ storageName: 'regex-tester:g', name: 'global', defaultValue: true });`:
+```json
+{
+  "regex-tester": {
+    "global": false
+  }
+}
+```
+- for pattern like `const value = useQueryParam({ tool: 'barcode-gen', name: 'text', defaultValue: '123456789' });`:
+```json
+{
+  "barcode-gen": {
+    "text": "4356"
+  }
+}
+```
+- for pattern like `const width = useITStorage('ascii-text-drawer:width', 80);`:
+```json
+{
+  "ascii-text-drawer": {
+    "width": 80
+  }
+}
+```
+
+To define default UI language, add a `default_locale` key to json:
+```json
+{
+  "default_locale": "fr"
+}
+```
 
 ## To build using a custom default language:
 

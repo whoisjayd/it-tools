@@ -2,7 +2,7 @@
 import { useI18n } from 'vue-i18n';
 import { useScriptTag } from '@vueuse/core';
 import { convert_math } from 'mitex-wasm';
-import { useQueryParamOrStorage } from '@/composable/queryParams';
+import { useQueryParam, useQueryParamOrStorage } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
@@ -16,7 +16,7 @@ const formats = [
   { value: 'omml', label: t('tools.math-formats-converter.texts.label-ooml') },
 ];
 
-const source = ref('');
+const source = useQueryParam({ tool: 'math-fmts-conv', name: 'input', defaultValue: '' });
 const sourceFormat = useQueryParamOrStorage({ name: 'src', storageName: 'math-fmts-conv:src', defaultValue: 'latex' });
 const targetFormat = useQueryParamOrStorage({ name: 'target', storageName: 'math-fmts-conv:target', defaultValue: 'mathml' });
 const target = computedAsync(async () => {

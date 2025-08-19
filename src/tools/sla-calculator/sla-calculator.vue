@@ -36,7 +36,7 @@ const daysHours = useQueryParamOrStorage<{
     sun: 24,
   },
 });
-const inputSLA = useQueryParam({ name: 'sla', defaultValue: 99.99 });
+const inputSLA = useQueryParam({ tool: 'sla', name: 'sla', defaultValue: 99.99 });
 const outputDownTimes = computed(() => {
   const weekdaysHours = daysHours.value;
   const downtimesSeconds = slaToDowntimes({
@@ -58,7 +58,7 @@ const outputDownTimes = computed(() => {
   };
 });
 
-const inputDuration = useQueryParam({ name: 'dur', defaultValue: '1s' });
+const inputDuration = useQueryParam({ tool: 'sla', name: 'dur', defaultValue: '1s' });
 const inputDurationValidation = useValidation({
   source: inputDuration,
   rules: [

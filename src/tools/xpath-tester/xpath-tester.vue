@@ -4,10 +4,11 @@ import XPathEngine from 'xpath';
 import { DOMParser } from '@xmldom/xmldom';
 import { useValidation } from '@/composable/validation';
 import { isNotThrowing } from '@/utils/boolean';
+import { useQueryParam } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const xpath = ref('//title');
+const xpath = useQueryParam({ tool: 'xpath-tester', name: 'xpath', defaultValue: '//title' });
 const xml = ref('<book><title>Harry Potter</title></book>');
 
 const selectedNodes = computed(() => {

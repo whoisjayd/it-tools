@@ -1,15 +1,15 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
-import { useStorage } from '@vueuse/core';
 import { Address6 } from 'ip-address';
 import { getIPNetworkType, parseAsCIDR } from '@/utils/ip';
 import { withDefaultOnError } from '@/utils/defaults';
 import SpanCopyable from '@/components/SpanCopyable.vue';
 import { isNotThrowing } from '@/utils/boolean';
+import { useITStorage } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const ip = useStorage('ipv6-subnet-calculator:ip', '2001:db8:0:85a3:0:0:ac1f:8001/32'); // NOSONAR
+const ip = useITStorage('ipv6-subnet-calculator:ip', '2001:db8:0:85a3:0:0:ac1f:8001/32'); // NOSONAR
 
 const getNetworkInfo = (address: string) => new Address6(parseAsCIDR(address.trim()) || address.trim());
 const networkInfo = computed(() => withDefaultOnError(() => getNetworkInfo(ip.value), undefined));

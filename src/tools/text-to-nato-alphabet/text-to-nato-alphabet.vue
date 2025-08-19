@@ -3,13 +3,14 @@ import { useI18n } from 'vue-i18n';
 import { textToNatoAlphabet } from './text-to-nato-alphabet.service';
 import { allLanguagesAndCountries } from './text-to-nato-alphabet.constants';
 import { useCopy } from '@/composable/copy';
+import { useQueryParam, useQueryParamOrStorage } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const lang = useStorage('text-to-nato:lang', '(International)');
-const input = ref('');
-const useDigitsNames = useStorage('text-to-nato:digits', false);
-const usePunctuationsNames = useStorage('text-to-nato:puncts', false);
+const lang = useQueryParamOrStorage({ name: 'lang', storageName: 'text-to-nato:lang', defaultValue: '(International)' });
+const input = useQueryParam({ tool: 'text-to-nato', name: 'text', defaultValue: '' });
+const useDigitsNames = useQueryParamOrStorage({ name: 'digits', storageName: 'text-to-nato:digits', defaultValue: false });
+const usePunctuationsNames = useQueryParamOrStorage({ name: 'puncts', storageName: 'text-to-nato:puncts', defaultValue: false });
 const natoText = computed(() => textToNatoAlphabet({ text: input.value, langOrCountry: lang.value }));
 const { copy } = useCopy({ source: natoText, text: t('tools.text-to-nato-alphabet.texts.text-nato-alphabet-string-copied') });
 </script>

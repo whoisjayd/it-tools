@@ -2,15 +2,16 @@
 import { useI18n } from 'vue-i18n';
 import { useCopy } from '@/composable/copy';
 import { useValidation } from '@/composable/validation';
+import { useITStorage } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const url = useStorage('utm-generator:url', '');
-const utmSource = useStorage('utm-generator:source', '');
-const utmMedium = useStorage('utm-generator:medium', '');
-const utmCampaign = useStorage('utm-generator:campaign', '');
-const utmContent = useStorage('utm-generator:content', '');
-const utmTerm = useStorage('utm-generator:term', '');
+const url = useITStorage('utm-generator:url', '');
+const utmSource = useITStorage('utm-generator:source', '');
+const utmMedium = useITStorage('utm-generator:medium', '');
+const utmCampaign = useITStorage('utm-generator:campaign', '');
+const utmContent = useITStorage('utm-generator:content', '');
+const utmTerm = useITStorage('utm-generator:term', '');
 const utmifiedUrl = computed(() => {
   try {
     const utmUrl = new URL(url.value);

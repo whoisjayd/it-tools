@@ -2,13 +2,14 @@
 import { useI18n } from 'vue-i18n';
 import { decode, encode } from 'morsee';
 import { computedCatch } from '@/composable/computed/catchedComputed';
+import { useQueryParam } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const encodeInput = ref('');
+const encodeInput = useQueryParam({ tool: 'morse-conv', name: 'encode', defaultValue: '' });
 const encodeOutput = computed(() => encode(encodeInput.value));
 
-const decodeInput = ref('');
+const decodeInput = useQueryParam({ tool: 'morse-conv', name: 'decode', defaultValue: '' });
 const [decodeOutput, decodeError] = computedCatch(() => decode(decodeInput.value), {
   defaultValue: '',
   defaultErrorMessage: 'Unable to decode your text',

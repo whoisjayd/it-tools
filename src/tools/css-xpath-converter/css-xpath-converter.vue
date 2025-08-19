@@ -3,10 +3,11 @@ import { useI18n } from 'vue-i18n';
 import xPathToCss from 'xpath-to-css';
 import cssToXpath from 'csstoxpath';
 import TextareaCopyable from '@/components/TextareaCopyable.vue';
+import { useQueryParam } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const cssInput = ref('');
+const cssInput = useQueryParam({ tool: 'css-xpath-conv', name: 'css', defaultValue: '' });
 const xpathOutput = computed(
   () => {
     try {
@@ -18,7 +19,7 @@ const xpathOutput = computed(
   },
 );
 
-const xpathInput = ref('');
+const xpathInput = useQueryParam({ tool: 'css-xpath-conv', name: 'xpath', defaultValue: '' });
 const cssOutput = computed(
   () => {
     try {

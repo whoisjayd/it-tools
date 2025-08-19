@@ -9,10 +9,11 @@ import {
 } from './roman-numeral-converter.service';
 import { useCopy } from '@/composable/copy';
 import { useValidation } from '@/composable/validation';
+import { useQueryParam } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const inputNumeral = ref(42);
+const inputNumeral = useQueryParam({ tool: 'roman-conver', name: 'dec', defaultValue: 42 });
 const outputRoman = computed(() => arabicToRoman(inputNumeral.value));
 
 const { attrs: validationNumeral } = useValidation({
@@ -25,7 +26,7 @@ const { attrs: validationNumeral } = useValidation({
   ],
 });
 
-const inputRoman = ref('XLII');
+const inputRoman = useQueryParam({ tool: 'roman-conver', name: 'roman', defaultValue: 'XLII' });
 const outputNumeral = computed(() => romanToArabic(inputRoman.value));
 
 const validationRoman = useValidation({

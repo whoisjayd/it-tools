@@ -3,10 +3,11 @@ import { useI18n } from 'vue-i18n';
 import InputCopyable from '../../components/InputCopyable.vue';
 import { isNotThrowing } from '@/utils/boolean';
 import { withDefaultOnError } from '@/utils/defaults';
+import { useQueryParam } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const urlToParse = ref('https://me:pwd@sharevb-it-tools.vercel.app:3000/url-parser?key=value&keyarr=value1&keyarr=value2&otherarg#the-hash');
+const urlToParse = useQueryParam({ tool: 'url-parser', name: 'url', defaultValue: 'https://me:pwd@sharevb-it-tools.vercel.app:3000/url-parser?key=value&keyarr=value1&keyarr=value2&otherarg#the-hash' });
 
 const urlParsed = computed(() => withDefaultOnError(() => new URL(urlToParse.value), undefined));
 const urlParsedParams = computed(() => {

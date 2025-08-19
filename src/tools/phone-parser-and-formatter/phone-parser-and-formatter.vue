@@ -10,11 +10,11 @@ import {
 import { withDefaultOnError } from '@/utils/defaults';
 import { booleanToHumanReadable } from '@/utils/boolean';
 import { useValidation } from '@/composable/validation';
-import { useQueryParamOrStorage } from '@/composable/queryParams';
+import { useQueryParam, useQueryParamOrStorage } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const rawPhone = ref('');
+const rawPhone = useQueryParam({ tool: 'phone-parser', name: 'phone', defaultValue: '' });
 const defaultCountryCode = useQueryParamOrStorage({ name: 'country', storageName: 'phone-parser:country', defaultValue: getDefaultCountryCode() });
 const validation = useValidation({
   source: rawPhone,

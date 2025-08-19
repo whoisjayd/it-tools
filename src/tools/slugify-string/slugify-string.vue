@@ -3,11 +3,11 @@ import { useI18n } from 'vue-i18n';
 import slugify from '@sindresorhus/slugify';
 import { withDefaultOnError } from '@/utils/defaults';
 import { useCopy } from '@/composable/copy';
-import { useQueryParamOrStorage } from '@/composable/queryParams';
+import { useQueryParam, useQueryParamOrStorage } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const input = ref('');
+const input = useQueryParam({ tool: 'slugify', name: 'text', defaultValue: '' });
 const separator = useQueryParamOrStorage({ name: 'sep', storageName: 'slugify:sep', defaultValue: '-' });
 const slug = computed(() => withDefaultOnError(() => slugify(input.value, {
   separator: separator.value,

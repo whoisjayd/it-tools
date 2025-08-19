@@ -22,10 +22,10 @@ function getCountDownHref(c: CountDown) {
   return parsedUrl.toString();
 }
 
-const days = useQueryParam({ name: 'd', defaultValue: 0 });
-const hours = useQueryParam({ name: 'h', defaultValue: 0 });
-const minutes = useQueryParam({ name: 'm', defaultValue: 0 });
-const seconds = useQueryParam({ name: 's', defaultValue: 0 });
+const days = useQueryParam({ tool: 'countdown', name: 'd', defaultValue: 0 });
+const hours = useQueryParam({ tool: 'countdown', name: 'h', defaultValue: 0 });
+const minutes = useQueryParam({ tool: 'countdown', name: 'm', defaultValue: 0 });
+const seconds = useQueryParam({ tool: 'countdown', name: 's', defaultValue: 0 });
 const history = useStorage<CountDown[]>('countdown:hst', []);
 
 const status = ref<'stopped' | 'ended' | 'running'>('stopped');

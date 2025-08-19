@@ -1,9 +1,10 @@
-import { type MaybeRef, get, useStorage } from '@vueuse/core';
+import { type MaybeRef, get } from '@vueuse/core';
 import { defineStore } from 'pinia';
 import type { Ref } from 'vue';
 import _ from 'lodash';
 import type { Tool, ToolCategory, ToolWithCategory, ToolsFilter } from './tools.types';
 import { tools as allTools } from './index';
+import { useITStorage } from '@/composable/queryParams';
 
 const base = import.meta.env.BASE_URL ?? '/';
 let filterConfig: ToolsFilter = {};
@@ -16,7 +17,7 @@ try {
 catch {}
 
 export const useToolStore = defineStore('tools', () => {
-  const favoriteToolsName = useStorage('favoriteToolsName', []) as Ref<string[]>;
+  const favoriteToolsName = useITStorage('favoriteToolsName', []) as Ref<string[]>;
   const { t } = useI18n();
 
   const makeRegExp = (regex: string | undefined) => regex ? new RegExp(regex, 'i') : null;

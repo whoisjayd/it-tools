@@ -2,10 +2,11 @@
 import { useI18n } from 'vue-i18n';
 import ISBN3 from 'isbn3';
 import type { CKeyValueListItems } from '@/ui/c-key-value-list/c-key-value-list.types';
+import { useQueryParam } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const rawIsbn = ref('9782021304534');
+const rawIsbn = useQueryParam({ tool: 'isbn-validator', name: 'isbn', defaultValue: '9782021304534' });
 
 const isbnInfos = computed<CKeyValueListItems>(() => {
   const isbn = ISBN3.parse(rawIsbn.value);

@@ -2,10 +2,11 @@
 import { useI18n } from 'vue-i18n';
 import { checkVAT, countries } from 'jsvat-next';
 import type { CKeyValueListItems } from '@/ui/c-key-value-list/c-key-value-list.types';
+import { useQueryParam } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const rawVATNumber = ref('BE0411905847');
+const rawVATNumber = useQueryParam({ tool: 'vat-validator', name: 'vat', defaultValue: 'BE0411905847' });
 const vatInfos = computed<{ isValid: boolean; infos: CKeyValueListItems }>(() => {
   const vat = checkVAT(rawVATNumber.value, countries);
   if (vat == null) {

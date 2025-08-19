@@ -4,10 +4,11 @@ import isCidr from 'is-cidr';
 import { expandCidr } from 'cidr-tools';
 import { getIPNetworkType, parseAsCIDR } from '@/utils/ip';
 import { useValidation } from '@/composable/validation';
+import { useQueryParamOrStorage } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const rawCIDR = useStorage('ip-cidr-to-range:cidr', '192.168.1.0/24'); // NOSONAR
+const rawCIDR = useQueryParamOrStorage({ name: 'cidr', storageName: 'ip-cidr-to-range:cidr', defaultValue: '192.168.1.0/24' }); // NOSONAR
 
 const result = computed(() => {
   const parsedCIDR = parseAsCIDR(rawCIDR.value) || rawCIDR.value;

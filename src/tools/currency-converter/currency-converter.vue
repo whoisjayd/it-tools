@@ -3,14 +3,14 @@ import { useI18n } from 'vue-i18n';
 import { code, countries, country } from 'currency-codes-ts';
 import converter from 'currency-exchanger-js';
 import moneysData from './moneys.json';
-import { useQueryParamOrStorage } from '@/composable/queryParams';
+import { useQueryParam, useQueryParamOrStorage } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
 const allCurrencies = Object.entries(moneysData).map(([k, v]) => ({ value: k, label: v || k }));
 const otherCurrencies = useQueryParamOrStorage<{ name: string }[]>({ name: 'to', storageName: 'currency-conv:others', defaultValue: [{ name: 'usd' }] });
 const currentCurrency = useQueryParamOrStorage<string>({ name: 'from', storageName: 'currency-conv:cur', defaultValue: 'eur' });
-const amount = ref(1);
+const amount = useQueryParam({ tool: 'currency-conv', name: 'amount', defaultValue: 1 });
 const currentDatetime = ref(Date.now());
 
 const convertedCurrencies = computedAsync<Record<string, number>>(async () => {

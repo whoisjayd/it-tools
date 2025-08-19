@@ -4,16 +4,17 @@ import TextareaCopyable from '@/components/TextareaCopyable.vue';
 import { useCopy } from '@/composable/copy';
 import { useDownloadFileFromBase64 } from '@/composable/downloadBase64';
 import { textToBase64 } from '@/utils/base64';
+import { useQueryParam } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const width = ref(600);
-const height = ref(350);
-const fontSize = ref(26);
-const bgColor = ref('#cccccc');
-const fgColor = ref('#333333');
-const useExactSize = ref(true);
-const customText = ref('');
+const width = useQueryParam({ tool: 'svg-placeholder-gen', name: 'w', defaultValue: 600 });
+const height = useQueryParam({ tool: 'svg-placeholder-gen', name: 'h', defaultValue: 350 });
+const fontSize = useQueryParam({ tool: 'svg-placeholder-gen', name: 'fs', defaultValue: 26 });
+const bgColor = useQueryParam({ tool: 'svg-placeholder-gen', name: 'bg', defaultValue: '#cccccc' });
+const fgColor = useQueryParam({ tool: 'svg-placeholder-gen', name: 'fg', defaultValue: '#333333' });
+const useExactSize = useQueryParam({ tool: 'svg-placeholder-gen', name: 'exact', defaultValue: true });
+const customText = useQueryParam({ tool: 'svg-placeholder-gen', name: 'text', defaultValue: '' });
 const svgString = computed(() => {
   const w = width.value;
   const h = height.value;

@@ -8,10 +8,11 @@ import {
   convertMacToEUI64CanonicalIETF, convertMacToLinkLocalIPv6,
   convertMacToNumber,
 } from './mac-address-converter.service';
+import { useQueryParam } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const input = ref('AA:BB:CC:DD:EE:FF');
+const input = useQueryParam({ tool: 'mac-conv', name: 'addr', defaultValue: 'AA:BB:CC:DD:EE:FF' });
 
 const formats = computed(() => [
   {

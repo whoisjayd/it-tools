@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
-import { useStorage } from '@vueuse/core';
 import { getOption43Infos } from './option43-generator.service';
+import { useITStorage } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
@@ -28,8 +28,8 @@ const wifiVendorOptions = [
   { value: 'cambium_01', label: t('tools.option43-generator.texts.label-cambium-cnmaestro') },
 ];
 
-const dhcpVendor = useStorage('option43-generator:dhcp', 'genuine');
-const wifiVendor = useStorage('option43-generator:wifi', 'cisco_01');
+const dhcpVendor = useITStorage('option43-generator:dhcp', 'genuine');
+const wifiVendor = useITStorage('option43-generator:wifi', 'cisco_01');
 const ipAdresses = ref('192.168.0.15'); // NOSONAR
 
 const option43Infos = computed(() => getOption43Infos(ipAdresses.value, wifiVendor.value, dhcpVendor.value));

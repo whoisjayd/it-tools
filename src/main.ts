@@ -32,6 +32,17 @@ registerSW();
 
 const app = createApp(App);
 
+const base = import.meta.env.BASE_URL ?? '/';
+let toolsSettings: Record<string, Record<string, any> | any> = {};
+try {
+  const remoteSettingsResponse = await fetch(`${base}tools-settings.json`);
+  if (remoteSettingsResponse.ok) {
+    toolsSettings = (await remoteSettingsResponse.json()) as Record<string, Record<string, any> | any>;
+  }
+}
+catch {}
+app.config.globalProperties.$itToolsSettings = toolsSettings;
+
 app.use(LoadingPlugin);
 app.use(createPinia());
 app.use(createHead());

@@ -3,13 +3,14 @@ import { useI18n } from 'vue-i18n';
 import libmime from 'libmime';
 import TextareaCopyable from '@/components/TextareaCopyable.vue';
 import { withDefaultOnError } from '@/utils/defaults';
+import { useQueryParam } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const encodedInput = ref('');
+const encodedInput = useQueryParam({ tool: 'mime-conv', name: 'decode', defaultValue: '' });
 const decodedOutput = computed(() => withDefaultOnError(() => libmime.decodeWords(encodedInput.value), '# invalid encoded value'));
 
-const rawInput = ref('');
+const rawInput = useQueryParam({ tool: 'mime-conv', name: 'encode', defaultValue: '' });
 const encodedQOutput = computed(() => withDefaultOnError(() => libmime.encodeWord(rawInput.value, 'Q'), ''));
 const encodedBOutput = computed(() => withDefaultOnError(() => libmime.encodeWord(rawInput.value, 'B'), ''));
 </script>

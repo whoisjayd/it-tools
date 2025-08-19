@@ -3,6 +3,7 @@ import { useI18n } from 'vue-i18n';
 import InputCopyable from '../../components/InputCopyable.vue';
 import { convertBase, hasNumberPrefix } from './integer-base-converter.model';
 import { getErrorMessageIfThrows } from '@/utils/error';
+import { useQueryParam } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
@@ -14,9 +15,9 @@ const inputProps = {
   'mb-2': '',
 } as const;
 
-const input = ref('42');
-const inputBase = ref(10);
-const outputBase = ref(42);
+const input = useQueryParam({ tool: 'int-base-conv', name: 'num', defaultValue: '42' });
+const inputBase = useQueryParam({ tool: 'int-base-conv', name: 'base', defaultValue: 10 });
+const outputBase = useQueryParam({ tool: 'int-base-conv', name: 'outbase', defaultValue: 42 });
 
 const hasInputNumberPrefix = computed(() => hasNumberPrefix(input.value));
 

@@ -5,7 +5,7 @@ import { useQueryParam } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const cookieHeader = useQueryParam({ name: 'cookies', defaultValue: '' });
+const cookieHeader = useQueryParam({ tool: 'cookies-parser', name: 'cookies', defaultValue: '' });
 
 const parsedCookies = computed(() => {
   return (cookieHeader.value || '').replace(/^Cookie:\s*/, '').split('; ').map((cookie) => {

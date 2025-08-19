@@ -3,10 +3,11 @@ import { useI18n } from 'vue-i18n';
 import { extractIBAN, friendlyFormatIBAN, isQRIBAN, validateIBAN } from 'ibantools';
 import { getFriendlyErrors } from './iban-validator-and-parser.service';
 import type { CKeyValueListItems } from '@/ui/c-key-value-list/c-key-value-list.types';
+import { useQueryParam } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const rawIban = ref('');
+const rawIban = useQueryParam({ tool: 'iban-validator', name: 'iban', defaultValue: '' });
 
 const ibanInfo = computed<CKeyValueListItems>(() => {
   const iban = rawIban.value.toUpperCase().replace(/\s/g, '').replace(/-/g, '');

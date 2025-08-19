@@ -2,11 +2,12 @@
 import { useI18n } from 'vue-i18n';
 import { getSmartValue } from './smart-raw-converter.service';
 import { useValidation } from '@/composable/validation';
+import { useQueryParam } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
 const inputRegex = /^(?:0x(?<hex>[a-f\d]+)|(?<dec>\d+))$/i;
-const rawValue = ref('0xFE45E3');
+const rawValue = useQueryParam({ tool: 'smart-raw-conv', name: 'raw', defaultValue: '0xFE45E3' });
 const rawValueValidation = useValidation({
   source: rawValue,
   rules: [

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
 import { useCopy } from '@/composable/copy';
-import { useQueryParamOrStorage } from '@/composable/queryParams';
+import { useQueryParam, useQueryParamOrStorage } from '@/composable/queryParams';
 import { useValidation } from '@/composable/validation';
 import { isNotThrowing } from '@/utils/boolean';
 import { withDefaultOnError } from '@/utils/defaults';
@@ -72,7 +72,7 @@ function encode(str: string) {
   return str;
 }
 
-const encodeInput = ref('Hello world :)');
+const encodeInput = useQueryParam({ tool: 'url-encoder', name: 'encode', defaultValue: 'Hello world :)' });
 const encodeOutput = computed(() => withDefaultOnError(() => encode(encodeInput.value), ''));
 
 const encodedValidation = useValidation({
@@ -87,7 +87,7 @@ const encodedValidation = useValidation({
 
 const { copy: copyEncoded } = useCopy({ source: encodeOutput, text: t('tools.url-encoder.texts.text-encoded-string-copied-to-the-clipboard') });
 
-const decodeInput = ref('Hello%20world%20%3A)');
+const decodeInput = useQueryParam({ tool: 'url-encoder', name: 'decode', defaultValue: 'Hello%20world%20%3A)' });
 const decodeOutput = computed(() => withDefaultOnError(() => decodeURIComponent(decodeInput.value), ''));
 
 const decodeValidation = useValidation({

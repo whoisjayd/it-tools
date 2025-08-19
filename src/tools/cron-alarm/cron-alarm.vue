@@ -8,8 +8,8 @@ import { useQueryParam } from '@/composable/queryParams';
 const { t } = useI18n();
 
 const allDays = '0,1,2,3,4,5,6';
-const alarmAt = useQueryParam({ name: 'at', defaultValue: '17:30:00' });
-const alarmDays = useQueryParam({ name: 'days', defaultValue: allDays });
+const alarmAt = useQueryParam({ tool: 'cronalarm', name: 'at', defaultValue: '17:30:00' });
+const alarmDays = useQueryParam({ tool: 'cronalarm', name: 'days', defaultValue: allDays });
 const history = useStorage<{ days: string; at: string }[]>('cronalarm:hst', []);
 
 function getTimeHref(at: string, days: string) {

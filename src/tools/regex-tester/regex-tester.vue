@@ -8,12 +8,12 @@ import { useQueryParamOrStorage } from '@/composable/queryParams';
 
 const regex = useQueryParamOrStorage({ name: 'regex', storageName: 'regex-tester:regex', defaultValue: '' });
 const text = ref('');
-const global = ref(true);
-const ignoreCase = ref(false);
-const multiline = ref(false);
-const dotAll = ref(true);
-const unicode = ref(true);
-const unicodeSets = ref(false);
+const global = useQueryParamOrStorage({ storageName: 'regex-tester:g', name: 'global', defaultValue: true });
+const ignoreCase = useQueryParamOrStorage({ storageName: 'regex-tester:i', name: 'igncase', defaultValue: false });
+const multiline = useQueryParamOrStorage({ storageName: 'regex-tester:m', name: 'multi', defaultValue: false });
+const dotAll = useQueryParamOrStorage({ storageName: 'regex-tester:da', name: 'dotall', defaultValue: true });
+const unicode = useQueryParamOrStorage({ storageName: 'regex-tester:u', name: 'uni', defaultValue: true });
+const unicodeSets = useQueryParamOrStorage({ storageName: 'regex-tester:us', name: 'unisets', defaultValue: false });
 const visualizerSVG = ref<ShadowRootExpose>();
 const { t } = useI18n();
 

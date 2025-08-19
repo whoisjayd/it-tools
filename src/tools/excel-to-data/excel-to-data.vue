@@ -4,13 +4,14 @@ import { useI18n } from 'vue-i18n';
 import * as XLSX from 'xlsx';
 import { objectArrayToData } from '@/utils/objectarray.export';
 import type { ExportFormat } from '@/utils/objectarray.export';
+import { useQueryParamOrStorage } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
 const workbook = ref<XLSX.WorkBook | null>(null);
 const convertedData = ref<string>('');
-const selectedFormat = ref<string>('json');
-const tableName = ref<string>('TableName');
+const selectedFormat = useQueryParamOrStorage({ name: 'fmt', storageName: 'excel-to-data:fmt', defaultValue: 'json' });
+const tableName = useQueryParamOrStorage({ name: 'table', storageName: 'excel-to-data:tbl', defaultValue: 'TableName' });
 const nestify = ref(false);
 const sheetName = ref('');
 const error = ref('');

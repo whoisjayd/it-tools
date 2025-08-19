@@ -2,13 +2,14 @@
 import { useI18n } from 'vue-i18n';
 import { defang, refang } from 'fanger';
 import TextareaCopyable from '@/components/TextareaCopyable.vue';
+import { useQueryParam } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const textInput = ref('');
+const textInput = useQueryParam({ tool: 'url-fanger', name: 'defang', defaultValue: '' });
 const defangOutput = computed(() => defang(textInput.value));
 
-const fangedInput = ref('');
+const fangedInput = useQueryParam({ tool: 'url-fanger', name: 'fang', defaultValue: '' });
 const refangOutput = computed(() => refang(fangedInput.value));
 </script>
 

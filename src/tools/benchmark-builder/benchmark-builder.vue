@@ -1,21 +1,21 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
 import { Plus, Trash } from '@vicons/tabler';
-import { useStorage } from '@vueuse/core';
 import _ from 'lodash';
 
 import { arrayToMarkdownTable, computeAverage, computeVariance } from './benchmark-builder.models';
 import DynamicValues from './dynamic-values.vue';
 import { useCopy } from '@/composable/copy';
+import { useITStorage } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const suites = useStorage('benchmark-builder:suites', [
+const suites = useITStorage('benchmark-builder:suites', [
   { title: 'Suite 1', data: [5, 10] },
   { title: 'Suite 2', data: [8, 12] },
 ]);
 
-const unit = useStorage('benchmark-builder:unit', '');
+const unit = useITStorage('benchmark-builder:unit', '');
 
 const round = (v: number) => Math.round(v * 1000) / 1000;
 

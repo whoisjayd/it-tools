@@ -40,10 +40,11 @@ import {
 } from './date-time-converter.models';
 import { withDefaultOnError } from '@/utils/defaults';
 import { useValidation } from '@/composable/validation';
+import { useQueryParam } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const inputDate = ref('');
+const inputDate = useQueryParam({ tool: 'date-time-converter', name: 'date', defaultValue: '' });
 
 const toDate: ToDateMapper = date => new Date(date);
 

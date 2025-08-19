@@ -7,12 +7,14 @@ import { computed, ref, watch } from 'vue';
 import { useDebounce } from '@vueuse/core';
 import type { Harmony, HarmonyType } from 'vue-color-wheel';
 import { VueColorWheel } from 'vue-color-wheel';
+import { useQueryParam } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
 extend([a11yPlugin]);
 
-const wheelColor = useDebounce(ref('#40ffff')); // { hue: 0, saturation: 0.68, value: 1 }
+const inputColor = useQueryParam({ tool: 'color-wheel', name: 'col', defaultValue: '#40ffff' });
+const wheelColor = useDebounce(inputColor); // { hue: 0, saturation: 0.68, value: 1 }
 const colors = ref<Array<Harmony>>([]);
 const currentType = ref<HarmonyType>('analogous');
 const isColorReadable = ref(false);

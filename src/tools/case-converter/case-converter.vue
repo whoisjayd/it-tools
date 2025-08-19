@@ -14,7 +14,7 @@ import {
   trainCase,
 } from 'change-case';
 import InputCopyable from '../../components/InputCopyable.vue';
-import { useQueryParamOrStorage } from '@/composable/queryParams';
+import { useQueryParam, useQueryParamOrStorage } from '@/composable/queryParams';
 import { useValidation } from '@/composable/validation';
 
 const { t } = useI18n();
@@ -34,7 +34,7 @@ const cleaningRegexValidation = useValidation({
   ],
 });
 
-const input = ref('lorem ipsum dolor sit amet');
+const input = useQueryParam({ tool: 'case-conv', name: 'text', defaultValue: 'lorem ipsum dolor sit amet' });
 const inputCleaned = computed(() => {
   if (!cleaningRegexValidation.isValid) {
     return input.value;

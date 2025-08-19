@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
 import { computeCost } from './energy-computer.service';
+import { useQueryParam } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const wattage = ref(100);
-const durationHours = ref(2);
-const kWhCost = ref(0.1);
+const wattage = useQueryParam({ tool: 'energy-computer', name: 'wattage', defaultValue: 100 });
+const durationHours = useQueryParam({ tool: 'energy-computer', name: 'hours', defaultValue: 2 });
+const kWhCost = useQueryParam({ tool: 'energy-computer', name: 'cost', defaultValue: 0.1 });
 const totalCost = computed(() => computeCost(wattage.value, durationHours.value, kWhCost.value));
 </script>
 

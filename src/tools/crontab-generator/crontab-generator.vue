@@ -5,13 +5,13 @@ import ctz from 'countries-and-timezones';
 import getTimezoneOffset from 'get-timezone-offset';
 import { type CronType, getLastExecutionTimes, isCronValid } from './crontab-generator.service';
 import { useStyleStore } from '@/stores/style.store';
-import { useQueryParamOrStorage } from '@/composable/queryParams';
+import { useQueryParam, useQueryParamOrStorage } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
 const styleStore = useStyleStore();
 
-const cron = ref('40 * * * *');
+const cron = useQueryParam({ tool: 'crontab-gen', name: 'expr', defaultValue: '40 * * * *' });
 const cronstrueConfig = reactive({
   verbose: true,
   dayOfWeekStartIndexZero: true,

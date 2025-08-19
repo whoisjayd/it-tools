@@ -6,11 +6,12 @@ import type { Ipv4RangeExpanderResult } from './ipv4-range-expander.types';
 import { calculateCidr } from './ipv4-range-expander.service';
 import ResultRow from './result-row.vue';
 import { useValidation } from '@/composable/validation';
+import { useQueryParamOrStorage } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const rawStartAddress = useStorage('ipv4-range-expander:startAddress', '192.168.1.1');
-const rawEndAddress = useStorage('ipv4-range-expander:endAddress', '192.168.6.255');
+const rawStartAddress = useQueryParamOrStorage({ name: 'start', storageName: 'ipv4-range-expander:startAddress', defaultValue: '192.168.1.1' });
+const rawEndAddress = useQueryParamOrStorage({ name: 'end', storageName: 'ipv4-range-expander:endAddress', defaultValue: '192.168.6.255' });
 
 const result = computed(() => calculateCidr({ startIp: rawStartAddress.value, endIp: rawEndAddress.value }));
 

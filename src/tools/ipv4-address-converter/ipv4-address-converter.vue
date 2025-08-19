@@ -6,10 +6,11 @@ import { ipv4ToInt, ipv4ToIpv6, isValidIpv4 } from './ipv4-address-converter.ser
 import { getIPNetworkType, to6to4Prefix, toARPA, toIPv4MappedAddressDecimal } from '@/utils/ip';
 import { useValidation } from '@/composable/validation';
 import { withDefaultOnError } from '@/utils/defaults';
+import { useQueryParamOrStorage } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const rawIpAddress = useStorage('ipv4-converter:ip', '192.168.1.1'); // NOSONAR
+const rawIpAddress = useQueryParamOrStorage({ name: 'ip', storageName: 'ipv4-converter:ip', defaultValue: '192.168.1.1' }); // NOSONAR
 
 const convertedSections = computed(() => withDefaultOnError(() => {
   const ipInDecimal = ipv4ToInt({ ip: rawIpAddress.value });

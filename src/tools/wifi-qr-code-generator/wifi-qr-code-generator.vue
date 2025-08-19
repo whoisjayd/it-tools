@@ -7,13 +7,14 @@ import {
 } from './useQRCode';
 import { useDownloadFileFromBase64 } from '@/composable/downloadBase64';
 import { useCopy } from '@/composable/copy';
+import { useQueryParam } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const foreground = ref('#000000ff');
-const background = ref('#ffffffff');
+const foreground = useQueryParam({ tool: 'wifi-qr-gen', name: 'fg', defaultValue: '#000000ff' });
+const background = useQueryParam({ tool: 'wifi-qr-gen', name: 'bg', defaultValue: '#ffffffff' });
 
-const ssid = ref();
+const ssid = useQueryParam({ tool: 'wifi-qr-gen', name: 'ssid', defaultValue: '' });
 const password = ref();
 const eapMethod = ref();
 const isHiddenSSID = ref(false);

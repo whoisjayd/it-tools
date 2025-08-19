@@ -4,6 +4,7 @@ import Composeverter from 'composeverter';
 import { useDownloadFileFromBase64 } from '@/composable/downloadBase64';
 import { textToBase64 } from '@/utils/base64';
 import TextareaCopyable from '@/components/TextareaCopyable.vue';
+import { useQueryParamOrStorage } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
@@ -15,7 +16,7 @@ const dockerCompose = ref(
         - '/var/run/docker.sock:/tmp/docker.sock:ro'
     image: nginx`,
 );
-const indentSize = useStorage('docker-compose-converter:indent-size', 4);
+const indentSize = useQueryParamOrStorage({ name: 'indent', storageName: 'docker-compose-converter:indent-size', defaultValue: 4 });
 
 const expandVolumes = ref(
   false,
@@ -23,7 +24,7 @@ const expandVolumes = ref(
 const expandPorts = ref(
   false,
 );
-const conversion = useStorage('docker-compose-converter:conversion', 'latest');
+const conversion = useQueryParamOrStorage({ name: 'conv', storageName: 'docker-compose-converter:conversion', defaultValue: 'latest' });
 const conversionOptions = [
   { value: 'v1ToV2x', label: t('tools.docker-compose-converter.texts.label-v1-to-v2-2-x') },
   { value: 'v1ToV3x', label: t('tools.docker-compose-converter.texts.label-v1-to-v2-3-x') },

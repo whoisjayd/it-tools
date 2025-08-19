@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
 import { type Encoding, convertTextToUnicode, convertUnicodeToText } from './text-to-unicode.service';
-import { useQueryParamOrStorage } from '@/composable/queryParams';
+import { useQueryParam, useQueryParamOrStorage } from '@/composable/queryParams';
 import { useCopy } from '@/composable/copy';
 
 const { t } = useI18n();
@@ -9,13 +9,13 @@ const { t } = useI18n();
 const encoding = useQueryParamOrStorage({ name: 'enc', storageName: 'txt-uni:enc', defaultValue: 'htmldec' });
 const skipAscii = useQueryParamOrStorage({ name: 'skipAscii', storageName: 'txt-uni:asc', defaultValue: true });
 
-const inputText = ref('');
+const inputText = useQueryParam({ tool: 'text-to-unicode', name: 'text', defaultValue: '' });
 const unicodeFromText = computed(() => inputText.value.trim() === ''
   ? ''
   : convertTextToUnicode(inputText.value, { encoding: encoding.value as Encoding, skipAscii: skipAscii.value }));
 const { copy: copyUnicode } = useCopy({ source: unicodeFromText });
 
-const inputUnicode = ref('');
+const inputUnicode = useQueryParam({ tool: 'text-to-unicode', name: 'uni', defaultValue: '' });
 const textFromUnicode = computed(() => inputUnicode.value.trim() === ''
   ? ''
   : convertUnicodeToText(inputUnicode.value));

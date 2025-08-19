@@ -2,10 +2,11 @@
 import { useI18n } from 'vue-i18n';
 import { decodeSharePointsURL } from './sharepoint-decoder.service';
 import TextareaCopyable from '@/components/TextareaCopyable.vue';
+import { useQueryParam } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const inputSharePointUrl = ref('');
+const inputSharePointUrl = useQueryParam({ tool: 'sharepoint-decoder', name: 'url', defaultValue: '' });
 const outputDecodedUrl = computed(() => {
   try {
     return decodeSharePointsURL(inputSharePointUrl.value);

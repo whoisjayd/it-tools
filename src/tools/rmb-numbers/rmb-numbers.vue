@@ -2,11 +2,12 @@
 import { useI18n } from 'vue-i18n';
 import { useThemeVars } from 'naive-ui';
 import { rmb } from './rmb-numbers.service';
+import { useQueryParam } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
 const themeVars = useThemeVars();
-const inputRmb = ref(23);
+const inputRmb = useQueryParam({ tool: 'rmb-conv', name: 'amount', defaultValue: 23 });
 const outputRmb = computed(() => rmb(inputRmb.value)); ;
 </script>
 

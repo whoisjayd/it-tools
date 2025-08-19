@@ -3,6 +3,7 @@ import { useI18n } from 'vue-i18n';
 import type { UseValidationRule } from '@/composable/validation';
 import { isNotThrowing } from '@/utils/boolean';
 import { withDefaultOnError } from '@/utils/defaults';
+import { useQueryParamOrStorage } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
@@ -15,7 +16,7 @@ function parseJSON(value: string) {
   }
 }
 
-const indentSize = useStorage('json-prettify:indent-size', 3);
+const indentSize = useQueryParamOrStorage({ name: 'indent', storageName: 'json-prettify:indent-size', defaultValue: 3 });
 const transformer = (value: string) => withDefaultOnError(() => JSON.stringify(parseJSON(value), null, indentSize.value), '');
 
 const rules: UseValidationRule<string>[] = [

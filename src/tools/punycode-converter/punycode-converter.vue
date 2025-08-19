@@ -2,10 +2,11 @@
 import { useI18n } from 'vue-i18n';
 import { toASCII, toUnicode } from 'punycode/';
 import TextareaCopyable from '@/components/TextareaCopyable.vue';
+import { useQueryParam } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const punycodeInput = ref('');
+const punycodeInput = useQueryParam({ tool: 'puny-conv', name: 'punycode', defaultValue: '' });
 const intlOutput = computed(
   () => {
     try {
@@ -17,7 +18,7 @@ const intlOutput = computed(
   },
 );
 
-const intlInput = ref('');
+const intlInput = useQueryParam({ tool: 'puny-conv', name: 'intl', defaultValue: '' });
 const punycodeOutput = computed(
   () => {
     try {

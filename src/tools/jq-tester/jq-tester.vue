@@ -5,15 +5,16 @@ import jsonpath from 'jsonpath';
 import jq from 'jq-wasm';
 import TextareaCopyable from '@/components/TextareaCopyable.vue';
 import { useValidation } from '@/composable/validation';
+import { useQueryParam } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
 type JQType = 'jq' | 'jsonpath';
 const indent = 2;
 
-const jqOrJsonPath = ref('');
+const jqOrJsonPath = useQueryParam({ tool: 'jq-tester', name: 'expr', defaultValue: '' });
 const json = ref('');
-const jqtype = ref<JQType>('jq');
+const jqtype = useQueryParam<JQType>({ tool: 'jq-tester', name: 'type', defaultValue: 'jq' });
 const jqtypes = [
   { value: 'jq', label: t('tools.jq-tester.texts.label-jq') },
   { value: 'jsonpath', label: t('tools.jq-tester.texts.label-jsonpath') },

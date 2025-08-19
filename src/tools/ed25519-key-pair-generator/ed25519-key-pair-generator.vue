@@ -5,6 +5,7 @@ import { generateKeyPair } from './ed25519-key-pair-generator.service';
 import TextareaCopyable from '@/components/TextareaCopyable.vue';
 import { withDefaultOnErrorAsync } from '@/utils/defaults';
 import { computedRefreshableAsync } from '@/composable/computedRefreshable';
+import { useITStorage } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
@@ -12,7 +13,7 @@ const password = ref('');
 const comment = ref('');
 const emptyCerts = { publicKey: '', privateKey: '' };
 
-const format = useStorage('ed25519-key-pair-generator:format', 'ssh');
+const format = useITStorage('ed25519-key-pair-generator:format', 'ssh');
 const formatOptions = [
   { value: 'pem', label: t('tools.ed25519-key-pair-generator.texts.label-pem') },
   { value: 'pkcs8', label: t('tools.ed25519-key-pair-generator.texts.label-pkcs-8') },

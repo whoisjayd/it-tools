@@ -5,8 +5,8 @@ import { useQueryParam } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const forecolor = useQueryParam({ name: 'fg', defaultValue: '#000' });
-const backcolor = useQueryParam({ name: 'bg', defaultValue: '#fff' });
+const forecolor = useQueryParam({ tool: 'color-constrast-checker', name: 'fg', defaultValue: '#000' });
+const backcolor = useQueryParam({ tool: 'color-constrast-checker', name: 'bg', defaultValue: '#fff' });
 
 const levels = [
   { score: 3, text: t('tools.color-contrast-checker.texts.text-very-poor'), bg: '#fbd0da', fg: '#5f071c', stars: 1 },

@@ -3,10 +3,11 @@ import { useI18n } from 'vue-i18n';
 import { SHA1 } from 'crypto-js';
 import InputCopyable from '@/components/InputCopyable.vue';
 import { macAddressValidation } from '@/utils/macAddress';
+import { useQueryParam } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const macAddress = ref('20:37:06:12:34:56');
+const macAddress = useQueryParam({ tool: 'ipv6-ula-gen', name: 'mac', defaultValue: '20:37:06:12:34:56' });
 const calculatedSections = computed(() => {
   const timestamp = new Date().getTime();
   const hex40bit = SHA1(timestamp + macAddress.value)

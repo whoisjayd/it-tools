@@ -10,7 +10,7 @@ import type {
 import qrcodeConsole from 'qrcode-terminal-nooctal';
 import { useQRCodeStyling } from './useQRCode';
 import { useDownloadFileFromBase64 } from '@/composable/downloadBase64';
-import { useQueryParamOrStorage } from '@/composable/queryParams';
+import { useQueryParam, useQueryParamOrStorage } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
@@ -52,7 +52,7 @@ const dotTypes = ['dots',
 const cornersDotTypes = ['dot', 'square', 'heart'];
 const cornersSquareTypes = ['dot', 'square', 'extra-rounded'];
 
-const text = ref('https://sharevb-it-tools.vercel.app');
+const text = useQueryParam({ tool: 'qr-code-gen', name: 'text', defaultValue: 'https://sharevb-it-tools.vercel.app' });
 const { qrcode } = useQRCodeStyling({
   text,
   color: { background, foreground },
@@ -84,7 +84,7 @@ const qrcodeTerminal = computedAsync(() => {
   });
 });
 
-const filename = ref('qr-code');
+const filename = useQueryParam({ tool: 'qr-code-gen', name: 'file', defaultValue: 'qr-code' });
 const extension = computed(() => {
   // Explicitly access the reactive value
   const type = outputType.value;

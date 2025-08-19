@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
 import { generateNumeronym } from './numeronym-generator.service';
+import { useQueryParam } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const word = ref('');
+const word = useQueryParam({ tool: 'numeronym-gen', name: 'word', defaultValue: '' });
 
 const numeronym = computed(() => generateNumeronym(word.value));
 </script>

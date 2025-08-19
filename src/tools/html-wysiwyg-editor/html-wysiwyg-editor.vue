@@ -1,14 +1,13 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
 import { minify, prettify } from 'htmlfy';
-import { useStorage } from '@vueuse/core';
 import Editor from './editor/editor.vue';
 import TextareaCopyable from '@/components/TextareaCopyable.vue';
-import { useQueryParamOrStorage } from '@/composable/queryParams';
+import { useITStorage, useQueryParamOrStorage } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const html = useStorage('html-wysiwyg-editor--html', '<h1>Hey!</h1><p>Welcome to this html wysiwyg editor</p>');
+const html = useITStorage('html-wysiwyg-editor--html', '<h1>Hey!</h1><p>Welcome to this html wysiwyg editor</p>');
 
 const minifyOutput = useQueryParamOrStorage({ name: 'minify', storageName: 'html-wysiwyg-editor--min', defaultValue: false });
 

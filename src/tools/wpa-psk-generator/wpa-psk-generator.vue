@@ -2,10 +2,11 @@
 import { useI18n } from 'vue-i18n';
 import { generateWpaPskRawKey } from './wpa-psk-generator.service';
 import { useValidation } from '@/composable/validation';
+import { useQueryParam } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const ssid = ref('');
+const ssid = useQueryParam({ tool: 'wpa-psk-gen', name: 'ssid', defaultValue: '' });
 const passphrase = ref('');
 
 const wpaPSKRawKey = ref('');

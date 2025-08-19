@@ -4,17 +4,20 @@ import JSON5 from 'json5';
 import { jsonquery } from '@jsonquerylang/jsonquery';
 import TextareaCopyable from '@/components/TextareaCopyable.vue';
 import { useValidation } from '@/composable/validation';
+import { useQueryParam } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
 const indent = 2;
 
-const jsonQuery = ref(`
+const jsonQuery = useQueryParam({
+  tool: 'json-query', name: 'q', defaultValue: `
   .friends 
     | filter(.city == "New York") 
     | sort(.age) 
     | pick(.name, .age)
-`);
+`,
+});
 const json = ref(`{
   "friends": [
     { "name": "Chris", "age": 23, "city": "New York" },

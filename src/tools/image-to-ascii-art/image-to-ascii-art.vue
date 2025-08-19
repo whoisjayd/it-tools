@@ -3,11 +3,12 @@ import { useI18n } from 'vue-i18n';
 import { ImageToAsciiArt } from 'image-to-ascii-art';
 import TextareaCopyable from '@/components/TextareaCopyable.vue';
 import { languages, printToLanguage } from '@/utils/ascii-lang-utils';
+import { useITStorage } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
 const inputBase64 = ref('');
-const language = useStorage('image-to-ascii-art:language', 'raw');
+const language = useITStorage('image-to-ascii-art:language', 'raw');
 const scale = ref(100);
 const errored = ref(false);
 const processing = ref(false);

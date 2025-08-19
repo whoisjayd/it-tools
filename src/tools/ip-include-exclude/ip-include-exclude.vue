@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
-import { useStorage } from '@vueuse/core';
 import { substractCIDRs } from './ip-include-exclude.service';
 import SpanCopyable from '@/components/SpanCopyable.vue';
 import TextareaCopyable from '@/components/TextareaCopyable.vue';
+import { useQueryParamOrStorage } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const allowedRanges = useStorage('ip-inc-exc:allow', '192.168.0.1/24'); // NOSONAR
-const disallowedRanges = useStorage('ip-inc-exc:disallow', '192.168.0.6'); // NOSONAR
+const allowedRanges = useQueryParamOrStorage({ name: 'allow', storageName: 'ip-inc-exc:allow', defaultValue: '192.168.0.1/24' }); // NOSONAR
+const disallowedRanges = useQueryParamOrStorage({ name: 'disallow', storageName: 'ip-inc-exc:disallow', defaultValue: '192.168.0.6' }); // NOSONAR
 
 const result = computed(() => substractCIDRs({
   allowedRanges: allowedRanges.value, disallowedRanges: disallowedRanges.value,

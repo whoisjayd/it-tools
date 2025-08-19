@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
 import { convertTextToUnicodeNames } from './text-to-unicode-names.service';
+import { useQueryParam } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const inputText = ref('');
+const inputText = useQueryParam({ tool: 'text-to-unicode-names', name: 'text', defaultValue: '' });
 const unicodeNamesFromText = computed(() => convertTextToUnicodeNames(inputText.value, { separator: '\n' }));
 </script>
 

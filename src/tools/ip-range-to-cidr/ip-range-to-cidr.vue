@@ -6,11 +6,12 @@ import { isIP, isIPv6 } from 'is-ip';
 import { Exchange } from '@vicons/tabler';
 import { stringifyIp } from 'ip-bigint';
 import { useValidation } from '@/composable/validation';
+import { useQueryParamOrStorage } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const rawStartAddress = useStorage('ip-range-to-cidr:startAddress', '192.168.1.1');
-const rawEndAddress = useStorage('ip-range-to-cidr:endAddress', '192.168.6.255');
+const rawStartAddress = useQueryParamOrStorage({ name: 'start', storageName: 'ip-range-to-cidr:startAddress', defaultValue: '192.168.1.1' });
+const rawEndAddress = useQueryParamOrStorage({ name: 'end', storageName: 'ip-range-to-cidr:endAddress', defaultValue: '192.168.6.255' });
 
 const isReversed = ref<boolean>(false);
 const isNotSameVersion = ref<boolean>(false);

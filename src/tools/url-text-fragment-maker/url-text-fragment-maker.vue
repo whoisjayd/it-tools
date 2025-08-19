@@ -2,10 +2,11 @@
 import { useI18n } from 'vue-i18n';
 import { getUrlWithTextFragment } from './url-text-fragment-maker.service';
 import TextareaCopyable from '@/components/TextareaCopyable.vue';
+import { useQueryParam } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const url = ref('');
+const url = useQueryParam({ tool: 'url-frag-maker', name: 'd', defaultValue: '' });
 const prefixSearch = ref('');
 const textStartSearch = ref('');
 const textStopSearch = ref('');

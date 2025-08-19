@@ -2,10 +2,11 @@
 import { useI18n } from 'vue-i18n';
 import { addSlashes, removeSlashes } from 'slashes';
 import TextareaCopyable from '@/components/TextareaCopyable.vue';
+import { useQueryParam } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
-const unescapedInput = ref('');
+const unescapedInput = useQueryParam({ tool: 'json-escaper', name: 'escape', defaultValue: '' });
 const escapedOutput = computed(
   () => {
     try {
@@ -17,7 +18,7 @@ const escapedOutput = computed(
   },
 );
 
-const escapedInput = ref('');
+const escapedInput = useQueryParam({ tool: 'json-escaper', name: 'unescape', defaultValue: '' });
 const unescapedOutput = computed(
   () => {
     try {
