@@ -76,6 +76,9 @@ function useITStorage<T>(key: string, defaults: MaybeRef<T>, storage?: StorageLi
 
 function getITToolsSetting<T>(key: string, defaultValue: MaybeRef<T>) {
   const itToolsSettings = useITToolsSettings();
+  if (!itToolsSettings) {
+    return defaultValue;
+  }
   if (key.includes(':')) {
     const [tool, subkey] = key.split(':');
     return (itToolsSettings[tool] || {})[subkey] as T ?? defaultValue;
