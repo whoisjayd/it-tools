@@ -3587,7 +3587,7 @@ tools:
       tag-ok: OK
   csv-to-data:
     title: Csv to Data
-    description: Convert CSV file to JSON, YAML, CSV, SQL INSERT, XML or Markdown
+    description: Convert CSV file to JSON, YAML, CSV, SQL INSERT, XML, Markdown or XLSX
     texts:
       label-json: JSON
       label-yaml: YAML
@@ -3610,6 +3610,7 @@ tools:
       label-table-name: 'Table Name:'
       title-converted-data: Converted data
       tag-convert: Convert
+      label-xlsx: XLSX
   curl-generator:
     title: Curl Command Generator
     description: Generate CURL command lines

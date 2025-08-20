@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { useI18n } from 'vue-i18n';
+import * as XLSX from 'xlsx';
 
 import { convertCsvToArray } from '../csv-to-json/csv-to-json.service';
 import { objectArrayToData } from '@/utils/objectarray.export';
@@ -28,6 +29,7 @@ const formats = [
   { label: t('tools.csv-to-data.texts.label-csv-tab'), value: 'tsv' },
   { label: t('tools.csv-to-data.texts.label-markdown'), value: 'markdown' },
   { label: t('tools.csv-to-data.texts.label-xml'), value: 'xml' },
+  { label: t('tools.csv-to-data.texts.label-xlsx'), value: 'xlsx' },
 ];
 
 async function handleFileUpload(file: File) {
@@ -57,16 +59,32 @@ async function convertFile() {
     }
 
     const data = convertCsvToArray(csvContentValue, typedValues.value);
-    convertedData.value = objectArrayToData(data, selectedFormat.value as ExportFormat, {
-      tableName: tableName.value,
-      nestify: nestify.value,
-    });
+    const outFormat = selectedFormat.value;
+    if (outFormat === 'xlsx') {
+      convertedData.value = '';
+      downloadXLSX(data, tableName.value);
+    }
+    else {
+      convertedData.value = objectArrayToData(data, outFormat as ExportFormat, {
+        tableName: tableName.value,
+        nestify: nestify.value,
+      });
+    }
   }
   catch (e: any) {
     error.value = e.toString();
     return null;
   }
 };
+
+function downloadXLSX<T extends Record<string, any>>(data: T[], fileName: string = 'data') {
+  const worksheet = XLSX.utils.json_to_sheet(data);
+
+  const workbook = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(workbook, worksheet, fileName);
+
+  XLSX.writeFile(workbook, `${fileName}.xlsx`);
+}
 </script>
 
 <template>
