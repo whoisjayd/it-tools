@@ -264,6 +264,7 @@
     "shiki": "1.29.2",
     "silly-password-generator": "^1.0.29",
     "slashes": "^3.0.12",
+    "smol-toml": "^1.4.2",
     "spdx-satisfies": "^5.0.1",
     "sql-formatter": "^15.6.6",
     "sshpk": "^1.18.0",

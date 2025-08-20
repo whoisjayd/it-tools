@@ -10,6 +10,6 @@ export const tool = defineTool({
   component: () => import('./toml-to-yaml.vue'),
   icon: BracketIcon,
   createdAt: new Date('2023-06-23'),
-  npmPackages: ['yaml', 'iarna-toml-esm'],
-  category: 'YAML',
+  npmPackages: ['yaml', 'smol-toml'],
+  category: 'TOML',
 });

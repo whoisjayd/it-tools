@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
-import { parse as parseToml } from 'iarna-toml-esm';
+import { parse as parseToml } from 'smol-toml';
 import { stringify as stringifyToYaml } from 'yaml';
 import { withDefaultOnError } from '../../utils/defaults';
 import { isValidToml } from '../toml-to-json/toml.services';

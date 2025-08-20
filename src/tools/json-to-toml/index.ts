@@ -10,6 +10,6 @@ export const tool = defineTool({
   component: () => import('./json-to-toml.vue'),
   icon: Braces,
   createdAt: new Date('2023-06-23'),
-  npmPackages: ['json5', 'iarna-toml-esm'],
+  npmPackages: ['json5', 'smol-toml'],
   category: 'JSON',
 });
