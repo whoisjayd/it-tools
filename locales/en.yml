@@ -6108,3 +6108,9 @@ tools:
       title-your-second-yaml-content: 'Your second YAML Content:'
       title-merged-yaml: 'Merged YAML:'
       placeholder-your-merged-yaml-will-be-here: Your merged YAML will be here
+  json-to-data:
+    texts:
+      title-json-converter: JSON Converter
+      title-drag-and-drop-a-json-file-here-or-click-to-select-a-file: Drag and drop a JSON file here, or click to select a file
+      label-paste-your-json-content: Paste your JSON content
+      placeholder-your-json: Your JSON
