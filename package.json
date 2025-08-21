@@ -209,6 +209,7 @@
     "lorem-ipsum-japanese": "^1.0.1",
     "luhn-js": "^1.1.2",
     "luxon": "^3.5.0",
+    "markdown-docx": "^1.2.0",
     "markdown-it": "^14.1.0",
     "markdown-it-mark": "^4.0.0",
     "markdown-it-sanitizer": "^0.4.3",
