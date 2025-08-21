@@ -6,7 +6,9 @@ import { useQueryParam, useQueryParamOrStorage } from '@/composable/queryParams'
 
 const { t } = useI18n();
 
-const { load: loadPlurimath } = useScriptTag('/plurimath/index.js', undefined, { type: 'module', manual: true });
+const base = import.meta.env.BASE_URL ?? '/';
+
+const { load: loadPlurimath } = useScriptTag(`${base}plurimath/index.js`, undefined, { type: 'module', manual: true });
 
 const formats = [
   { value: 'asciimath', label: t('tools.math-formats-converter.texts.label-asciimath') },

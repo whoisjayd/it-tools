@@ -37,7 +37,9 @@ declare class Go {
   run(instance: WebAssembly.Instance): Promise<void>;
 }
 
-const { load: loadGo } = useScriptTag('/age-wasm/wasm_exec.js', undefined, { type: 'module', manual: true });
+const base = import.meta.env.BASE_URL ?? '/';
+
+const { load: loadGo } = useScriptTag(`${base}age-wasm/wasm_exec.js`, undefined, { type: 'module', manual: true });
 
 await loadGo();
 
