@@ -2355,6 +2355,7 @@ tools:
       placeholder-put-your-string-to-unescape: Put your string to unescape...
       label-string-to-unescape: String to unescape
       label-unescaped-string: Unescaped string
+      label-wrap-in-quotes: Wrap in quotes
   json-linter:
     title: JSON Linter
     description: Check and lint JSON content
