@@ -47,6 +47,29 @@ function getCertificateFromP12(p12: any) {
   return { pemCertificate, commonName };
 }
 
+export function convertCertificates(
+  inputKeyOrCertificateValue: string | Buffer,
+  password: string) {
+  if (typeof inputKeyOrCertificateValue !== 'string') {
+    return convertCertificate(inputKeyOrCertificateValue, password);
+  }
+  const parts = inputKeyOrCertificateValue.toString().trim().split(/(-----BEGIN [^-]+-----\n)/).filter(s => s !== '');
+  if (!parts.length) {
+    return convertCertificate(inputKeyOrCertificateValue, password);
+  }
+  let parsedPEMs: Array<{
+    alias: string
+    key: string
+    der: Certificate
+    pem: string
+  }> = [];
+  for (let i = 0; i < parts.length; i += 2) {
+    const pemPart = parts[i] + parts[i + 1];
+    parsedPEMs = [...parsedPEMs, ...(convertCertificate(pemPart, password) || [])];
+  }
+  return parsedPEMs;
+}
+
 export function convertCertificate(
   inputKeyOrCertificateValue: string | Buffer,
   password: string) {

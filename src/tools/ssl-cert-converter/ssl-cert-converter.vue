@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Buffer } from 'node:buffer';
 import { useI18n } from 'vue-i18n';
-import { convertCertificate } from './ssl-cert-converter.service';
+import { convertCertificates } from './ssl-cert-converter.service';
 
 const { t } = useI18n();
 
@@ -41,7 +41,7 @@ const convertedCertificates = computed(() => {
     inputKeyOrCertificateValue = inputContent;
   }
 
-  return convertCertificate(inputKeyOrCertificateValue, passphrase.value);
+  return convertCertificates(inputKeyOrCertificateValue, passphrase.value);
 });
 </script>
 
