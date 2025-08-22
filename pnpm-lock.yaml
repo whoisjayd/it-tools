@@ -71,6 +71,9 @@ dependencies:
   '@sindresorhus/slugify':
     specifier: ^2.2.1
     version: 2.2.1
+  '@skeepit/unicode-to-gsm7':
+    specifier: ^1.0.0
+    version: 1.0.0
   '@tabler/icons-vue':
     specifier: ^3.20.0
     version: 3.30.0(vue@3.3.4)
@@ -710,6 +713,9 @@ dependencies:
   smol-toml:
     specifier: ^1.4.2
     version: 1.4.2
+  sms-segments-calculator:
+    specifier: ^1.2.0
+    version: 1.2.0
   spdx-satisfies:
     specifier: ^5.0.1
     version: 5.0.1
@@ -5859,6 +5865,12 @@ packages:
       escape-string-regexp: 5.0.0
     dev: false
 
+  /@skeepit/unicode-to-gsm7@1.0.0:
+    resolution: {integrity: sha512-HaocC9ncVTmGQ/pBjKd3kg9qkhefFOqk20lEEVKreOtsMZciF4bugh+3S3lk7VWSD84zlU1NkVHGGbkajyU7vw==}
+    dependencies:
+      any-ascii: 0.3.3
+    dev: false
+
   /@sphinxxxx/color-conversion@2.2.2:
     resolution: {integrity: sha512-XExJS3cLqgrmNBIP3bBw6+1oQ1ksGjFh0+oClDKFYpCCqx/hlqwWO5KO/S63fzUo67SxI9dMrF0y5T/Ey7h8Zw==}
     dev: false
@@ -8258,6 +8270,11 @@ packages:
   /ansible-vault@1.3.0:
     resolution: {integrity: sha512-LPqmE+ZJX4cY+fMfGc6ooXzmkPga/oYn05xJ7DQqDgZUYX/JBCB8GIEPHHRsTcCqq8YQddEpt/SWwALNNbeyyg==}
     engines: {node: '>=18.0.0'}
+    dev: false
+
+  /any-ascii@0.3.3:
+    resolution: {integrity: sha512-8hm+zPrc1VnlxD5eRgMo9F9k2wEMZhbZVLKwA/sPKIt6ywuz7bI9uV/yb27uvc8fv8q6Wl2piJT51q1saKX0Jw==}
+    engines: {node: '>=12.20'}
     dev: false
 
   /any-base@1.1.0:
@@ -12203,6 +12220,10 @@ packages:
 
   /graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
+
+  /grapheme-splitter@1.0.4:
+    resolution: {integrity: sha512-bzh50DW9kTPM00T8y4o8vQg89Di9oLJVLW/KaOGIXJWP/iqCN6WKYkbNOF04vFLJhwcpYUh9ydh/+5vpOqV4YQ==}
+    dev: false
 
   /graphemer@1.4.0:
     resolution: {integrity: sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag==}
@@ -17073,6 +17094,12 @@ packages:
   /smol-toml@1.4.2:
     resolution: {integrity: sha512-rInDH6lCNiEyn3+hH8KVGFdbjc099j47+OSgbMrfDYX1CmXLfdKd7qi6IfcWj2wFxvSVkuI46M+wPGYfEOEj6g==}
     engines: {node: '>= 18'}
+    dev: false
+
+  /sms-segments-calculator@1.2.0:
+    resolution: {integrity: sha512-TIBw8q0qCbxMooxGQxiLcGkKJonzpWJGaEBhkI144Bw+WPLObe6M3aUyYSd3mJfAAEfEq9LCdA4oCz5pqwp18Q==}
+    dependencies:
+      grapheme-splitter: 1.0.4
     dev: false
 
   /snake-case@2.1.0:
