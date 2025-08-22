@@ -6,7 +6,7 @@ export const tool = defineTool({
   name: t('tools.gpt-token-estimator.title'),
   path: '/gpt-token-estimator',
   description: t('tools.gpt-token-estimator.description'),
-  keywords: ['gpt', 'token', 'estimator'],
+  keywords: ['gpt', 'llm', 'openai', 'token', 'estimator'],
   component: () => import('./gpt-token-estimator.vue'),
   icon: CurrencyDollar,
   createdAt: new Date('2024-08-15'),

@@ -347,9 +347,6 @@ dependencies:
   get-timezone-offset:
     specifier: ^1.0.5
     version: 1.0.5
-  gpt-tokens:
-    specifier: ^1.3.14
-    version: 1.3.14
   hash-wasm:
     specifier: ^4.12.0
     version: 4.12.0
@@ -440,6 +437,9 @@ dependencies:
   js-beautify:
     specifier: ^1.15.4
     version: 1.15.4
+  js-tiktoken:
+    specifier: ^1.0.21
+    version: 1.0.21
   jsbarcode:
     specifier: ^3.12.1
     version: 3.12.1
@@ -596,6 +596,9 @@ dependencies:
   node-forge:
     specifier: ^1.3.1
     version: 1.3.1
+  openai-chat-tokens:
+    specifier: ^0.2.8
+    version: 0.2.8
   openpgp:
     specifier: ^6.2.0
     version: 6.2.0
@@ -10541,7 +10544,7 @@ packages:
       '@one-ini/wasm': 0.1.1
       commander: 10.0.0
       minimatch: 9.0.1
-      semver: 7.7.1
+      semver: 7.7.2
     dev: false
 
   /ejs@3.1.10:
@@ -12198,14 +12201,6 @@ packages:
     resolution: {integrity: sha512-ZUKRh6/kUFoAiTAtTYPZJ3hw9wNxx+BIBOijnlG9PnrJsCcSjs1wyyD6vJpaYtgnzDrKYRSqf3OO6Rfa93xsRg==}
     engines: {node: '>= 0.4'}
 
-  /gpt-tokens@1.3.14:
-    resolution: {integrity: sha512-cFNErQQYGWRwYmew0wVqhCBZxTvGNr96/9pMwNXqSNu9afxqB5PNHOKHlWtUC/P4UW6Ne2UQHHaO2PaWWLpqWQ==}
-    dependencies:
-      decimal.js: 10.4.3
-      js-tiktoken: 1.0.16
-      openai-chat-tokens: 0.2.8
-    dev: false
-
   /graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
 
@@ -13410,8 +13405,8 @@ packages:
     resolution: {integrity: sha512-sga3MHh9sgQN2+pJ9VYZ+1LPwXOxuBJBA5nrR5/ofPfuiJBE2hnjsaN8se8JznOmGLN2p49Pe5U/ttafcs/apA==}
     dev: false
 
-  /js-tiktoken@1.0.16:
-    resolution: {integrity: sha512-nUVdO5k/M9llWpiaZlBBDdtmr6qWXwSD6fgaDu2zM8UP+OXxx9V37lFkI6w0/1IuaDx7WffZ37oYd9KvcWKElg==}
+  /js-tiktoken@1.0.21:
+    resolution: {integrity: sha512-biOj/6M5qdgx5TKjDnFT1ymSpM5tbd3ylwDtrQvFQSu0Z7bBYko2dF+W/aUkXUPuk6IVpRxk/3Q2sHOzGlS36g==}
     dependencies:
       base64-js: 1.5.1
     dev: false
@@ -15171,7 +15166,7 @@ packages:
   /openai-chat-tokens@0.2.8:
     resolution: {integrity: sha512-nW7QdFDIZlAYe6jsCT/VPJ/Lam3/w2DX9oxf/5wHpebBT49KI3TN43PPhYlq1klq2ajzXWKNOLY6U4FNZM7AoA==}
     dependencies:
-      js-tiktoken: 1.0.16
+      js-tiktoken: 1.0.21
     dev: false
 
   /opencollective-postinstall@2.0.3:
