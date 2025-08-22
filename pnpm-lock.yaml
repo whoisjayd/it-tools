@@ -683,6 +683,9 @@ dependencies:
   regex:
     specifier: ^4.4.0
     version: 4.4.0
+  rekcod:
+    specifier: ^3.0.0
+    version: 3.0.0
   riimut:
     specifier: ^0.9.1
     version: 0.9.1
@@ -16516,6 +16519,12 @@ packages:
     dependencies:
       jsesc: 3.0.2
     dev: true
+
+  /rekcod@3.0.0:
+    resolution: {integrity: sha512-EjV3CooK3rakY5mnGxJNeKrMpUQLI5YnbP3POFkTlyK+MrPB3RrsHwCkA6JPrKIO1DAaQt7v2PvwIwDdZd+TPw==}
+    engines: {node: '>=10'}
+    hasBin: true
+    dev: false
 
   /remove-trailing-separator@1.1.0:
     resolution: {integrity: sha512-/hS+Y0u3aOfIETiaiirUFwDBDzmXPvO+jAfKTitUngIPzdKc6Z0LoFjM/CK5PL4C+eKwHohlHAb6H0VFfmmUsw==}
