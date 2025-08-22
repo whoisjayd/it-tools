@@ -3,7 +3,6 @@ import { useI18n } from 'vue-i18n';
 import JSON5 from 'json5';
 import type { TiktokenModel } from 'js-tiktoken';
 import { GPTTokens } from './gpt-tokens.service';
-import TextareaCopyable from '@/components/TextareaCopyable.vue';
 import { useValidation } from '@/composable/validation';
 import { useQueryParamOrStorage } from '@/composable/queryParams';
 
@@ -162,6 +161,12 @@ const outputTokenCosts = computed(() => {
       <n-form-item :label="t('tools.gpt-token-estimator.texts.label-completion-tokens')" label-placement="left">
         <InputCopyable :value="outputTokenCosts.completionUsedTokens" />
       </n-form-item>
+
+      <n-p mt-3>
+        <n-a href="https://platform.openai.com/docs/pricing" target="_blank">
+          See OpenAPI Pricings
+        </n-a>
+      </n-p>
     </div>
   </div>
 </template>
