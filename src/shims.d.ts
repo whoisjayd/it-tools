@@ -47,3 +47,7 @@ interface JSON {
   parseBigInt: (jsonStr: string, options?: { minDigits?: number; fallbackToString?: boolean; }) => any;
   rawJSON(value: string): any;
 }
+
+interface Navigator {
+  gpu?: any;
+}

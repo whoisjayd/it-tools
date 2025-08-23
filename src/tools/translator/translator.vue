@@ -1,13 +1,17 @@
 <script setup lang="ts">
 import type { TranslationPipeline, TranslationSingle } from '@huggingface/transformers';
-import { pipeline } from '@huggingface/transformers';
+import { env, pipeline } from '@huggingface/transformers';
+import { useQueryParamOrStorage } from '@/composable/queryParams';
+
+env.useBrowserCache = true;
+env.allowRemoteModels = true;
 
 // State
 const inputText = ref('');
 const translatedText = ref('');
 const error = ref('');
-const sourceLang = ref('en');
-const targetLang = ref('fr');
+const sourceLang = useQueryParamOrStorage({ name: 'from', storageName: 'translator:from', defaultValue: 'en' });
+const targetLang = useQueryParamOrStorage({ name: 'to', storageName: 'translator:to', defaultValue: 'fr' });
 const loadingModel = ref(false);
 const translating = ref(false);
 
@@ -130,14 +134,10 @@ async function translateText() {
       </NButton>
     </n-space>
 
-    <div mb-3 mt-3>
-      <NSpin v-if="loadingModel" size="large">
-        Loading translation model...
-      </NSpin>
-      <NSpin v-if="translating" size="large">
-        Translating...
-      </NSpin>
-    </div>
+    <n-space justify="center" mb-3 mt-3>
+      <NSpin v-if="loadingModel" size="large" description="Loading translation model..." />
+      <NSpin v-if="translating" size="large" description="Translating..." />
+    </n-space>
 
     <c-alert v-if="error" mb-2>
       {{ error }}

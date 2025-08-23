@@ -161,7 +161,7 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
-    include: ['isolated-vm', 'pdfjs-dist', 'onnxruntime-node', 'unpdf', 'unpdf/pdfjs', ...(process.env.VERCEL ? ['webcrypto-liner-shim'] : [])], // optionally specify dependency name
+    include: ['isolated-vm', 'pdfjs-dist', 'onnxruntime-node', 'onnxruntime-web', 'unpdf', 'unpdf/pdfjs', ...(process.env.VERCEL ? ['webcrypto-liner-shim'] : [])], // optionally specify dependency name
     esbuildOptions: {
       supported: {
         'top-level-await': true,
