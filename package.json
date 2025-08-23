@@ -266,6 +266,7 @@
     "randexp": "^0.5.3",
     "regex": "^4.4.0",
     "rekcod": "^3.0.0",
+    "resistor-data": "^1.1.1",
     "riimut": "^0.9.1",
     "roboto-base64": "^0.1.2",
     "rtf-stream-parser": "^3.8.0",

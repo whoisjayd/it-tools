@@ -686,6 +686,9 @@ dependencies:
   rekcod:
     specifier: ^3.0.0
     version: 3.0.0
+  resistor-data:
+    specifier: ^1.1.1
+    version: 1.1.1
   riimut:
     specifier: ^0.9.1
     version: 0.9.1
@@ -16556,6 +16559,10 @@ packages:
   /requires-port@1.0.0:
     resolution: {integrity: sha512-KigOCHcocU3XODJxsu8i/j8T9tzT4adHiecwORRQ0ZZFcp7ahwXuRU1m+yuO90C5ZUyGeGfocHDI14M3L3yDAQ==}
     dev: true
+
+  /resistor-data@1.1.1:
+    resolution: {integrity: sha512-J8cwe8A4JWYhCM1qjPEp3Ccd2SY+h/yVGeULfpWceGYniJPluv0FbhqgTuJMgl2W0QcUngskckX6mIsTQLnoiA==}
+    dev: false
 
   /resolve-dir@1.0.1:
     resolution: {integrity: sha512-R7uiTjECzvOsWSfdM0QKFNBVFcK27aHOUwdvK53BcW8zqnGdYp0Fbj82cy54+2A4P2tFM22J5kRfe1R+lM/1yg==}
