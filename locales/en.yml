@@ -16,7 +16,7 @@ about:
     IT Tools is open-source (under the GPL-3.0 license) and free, and will
     always be, but it costs me money to host and renew the domain name. If you
     want to support my work, and encourage me to add more tools, please consider
-    supporting by [sponsoring me](https://www.buymeacoffee.com/cthmsst).
+    supporting by [sponsoring me](https://www.buymeacoffee.com/sharevb).
 
     ## Technologies
 
@@ -5304,7 +5304,7 @@ tools:
         song-details: Song details
     twitter:
       text:
-        the-name-of-the-twitter-account-of-the-creator-ex-cthmsst: 'The name of the Twitter account of the creator (ex: {''@''}cthmsst)...'
+        the-name-of-the-twitter-account-of-the-creator-ex-sharevb: 'The name of the Twitter account of the creator (ex: {''@''}sharevb)...'
         creator-acc: Creator acc.
         the-name-of-the-twitter-account-of-the-site-ex-ittoolsdottech: >-
           The name of the Twitter account of the site (ex:

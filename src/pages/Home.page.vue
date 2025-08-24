@@ -163,13 +163,6 @@ onUnmounted(() => {
                 Sponsor
               </div>
             </div>
-
-            <div class="my-5px flex items-baseline gap-4 text-balance text-lg text-black dark:text-white">
-              Generate PDFs from HTML with Renderize API
-            </div>
-            <div class="text-neutral-500 dark:text-neutral-400">
-              Automate your document generation with our fast, developer-friendly API. Start with a free forever plan.
-            </div>
           </c-card>
         </a>
       </div>
