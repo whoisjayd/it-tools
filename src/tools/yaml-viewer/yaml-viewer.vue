@@ -1,12 +1,16 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
 import { formatYaml } from './yaml-models';
+import { useYamlSchemaValidation } from './useYamlSchemaValidation';
 import TextareaCopyable from '@/components/TextareaCopyable.vue';
-import { useITStorage } from '@/composable/queryParams';
+import { useITStorage, useQueryParamOrStorage } from '@/composable/queryParams';
 
 const { t } = useI18n();
 
+const jsonSchemaInputElement = ref<HTMLElement>();
+
 const rawYaml = useITStorage('yaml-prettify:raw-yaml', '');
+const schemaData = useITStorage('yaml-prettify:schema-data', '');
 const indentSize = useITStorage('yaml-prettify:indent-size', 2);
 const sortKeys = useITStorage('yaml-prettify:sort-keys', false);
 
@@ -26,6 +30,9 @@ const MONACO_EDITOR_OPTIONS = {
   formatOnType: true,
   formatOnPaste: true,
 };
+
+const schemaUrl = useQueryParamOrStorage({ name: 'schema', storageName: 'yaml-prettify:schema', defaultValue: '' });
+const { schemas, errors: validationErrors } = useYamlSchemaValidation({ yaml: rawYaml, schemaUrl, schemaData });
 </script>
 
 <template>
@@ -41,6 +48,31 @@ const MONACO_EDITOR_OPTIONS = {
       </div>
     </div>
 
+    <n-form-item label="JSON schema:" label-placement="left" label-width="130px" label-align="right">
+      <n-select
+        v-model:value="schemaUrl"
+        :options="[
+          { label: 'No validation', value: '' },
+          { label: 'Custom', value: 'custom' },
+          ...schemas.map(s => ({ label: `${s.name} / ${s.description}`, value: s.url })),
+        ]"
+        filterable mb-4
+      />
+    </n-form-item>
+    <c-input-text
+      v-if="schemaUrl === 'custom'"
+      ref="jsonSchemaInputElement"
+      v-model:value="schemaData"
+      placeholder="Paste your JSON Schema here..."
+      rows="20"
+      multiline
+      autocomplete="off"
+      autocorrect="off"
+      autocapitalize="off"
+      spellcheck="false"
+      monospace
+    />
+
     <c-label :label="t('tools.yaml-viewer.texts.label-your-raw-yaml')">
       <div relative w-full>
         <c-monaco-editor
@@ -53,12 +85,23 @@ const MONACO_EDITOR_OPTIONS = {
       </div>
     </c-label>
 
-    <div v-if="errors.length > 0">
+    <div v-if="errors.length > 0" mb-2 mt-2>
       <n-alert :title="t('tools.yaml-viewer.texts.title-the-following-errors-occured')" type="error" mt-5>
         <ul>
           <li v-for="(message, index) of errors" :key="index">
             {{ message }}
           </li>
+        </ul>
+      </n-alert>
+    </div>
+
+    <div v-if="validationErrors.length > 0" mb-2 mt-2>
+      <n-alert title="Schema Validation Errors" type="error">
+        <ul
+          v-for="error in validationErrors"
+          :key="error"
+        >
+          <li>{{ error }}</li>
         </ul>
       </n-alert>
     </div>
