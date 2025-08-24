@@ -6,7 +6,7 @@ export const tool = defineTool({
   name: t('tools.json-linter.title'),
   path: '/json-linter',
   description: t('tools.json-linter.description'),
-  keywords: ['json', 'linter', 'check'],
+  keywords: ['json', 'linter', 'check', 'validator'],
   component: () => import('./json-linter.vue'),
   icon: Braces,
   createdAt: new Date('2024-03-20'),

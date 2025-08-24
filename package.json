@@ -195,6 +195,7 @@
     "jsonlint-mod": "^1.7.6",
     "jsonpath": "^1.1.1",
     "jsonrepair": "^3.13.0",
+    "jsonschema": "^1.5.0",
     "jsonschema-protobuf": "^1.0.2",
     "jsstack.js": "^2.0.0",
     "jsvat-next": "^3.0.4",
