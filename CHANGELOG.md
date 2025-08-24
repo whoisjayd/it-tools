@@ -2,6 +2,84 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## Version 2025.08.24-34373f1a
+
+### Features
+-  fix typescript issue and translate all remaining tools (14dd110)
+- **About**: rewrite and list all tools (6682517)
+- **new tool**: DNSBL Checker (e1d05b1)
+- **Yaml Prettifier**: add a JSON Schema Validator (2ee0274)
+- **JSON Prettifier/Linter**: add a JSON Schema Validator (5f8aea2)
+- **new tool**: Which Day Calculator (454b347)
+- **new tool**: Random Numbers Generator (3240a25)
+- **new tool**: Favicon Generator (3d3850f)
+- **new tool**: Image Comparer (201e17b)
+- **new tool**: Pack files for AI (Repomix) (bd7e018)
+- **new tool**: Resistor Data Calculator (900c4c9)
+- **new tool**: Docker Inspect to Docker Run (e942fe4)
+- **new tool**: Apache Logrotate Generator (81bc965)
+- **new tool**: RAID Reliability Calculator/MTTDL (dbb56a4)
+- **new tool**: Font Comparer (6a8d1d3)
+- **new tool**: Unicode to GSM7 (and SMS info) (50bd3ed)
+- **new tool**: GPT Token Encoder/Decoder (dfe13de)
+- **GPT Token Estimator**: expose all models of tiktoken (and remove price thus) (c031d57)
+- **new tool**: Charset Detector/Decoder (2b06b5b)
+- **new tool**: Markdown to DOCX (d2e32ac)
+- **new tool**: Text Translator (01beb24)
+- **SSL Certificate Converter**: allow converting crt... with multiple certificate (cf3defe)
+- **new tool**: Env Variables Converter (083b5e1)
+- **new tool**: Wireguard Config Generator (241dd6f)
+- **JSON Escaper**: option Wrap in quotes (e2f6a82)
+- **new tools**: Zpool/OpenZFS calculator and cheatsheet (8ee06ee)
+- **new tool**: SQL Parameters Generator (71b60fc)
+- **new tool**: Social Link Sharer (9f5792d)
+- **new tool**: Middle Endian Converter (1127fbd)
+- **new tool**: zxcvbn Password Strength (40901c9)
+- **new tool**: JSON to Data (dacb5ec)
+- **CSV to Data**: add xlsx format (f5f2938)
+- **new tool**: TOML Linter (4dc9dcf)
+- **new tool**: XML Linter (03e6e20)
+- **YAML Viewer**: add lint keyword (1f314da)
+- **new tool**: Markdown Table Prettifier (ab7f046)
+-  tools default params and default language at runtime and more url parameters (63065a5)
+- **new tool**: Mailto Generator (686c9fb)
+- **new tool**: Django Secret Key generator (603140a)
+- **new tools**: Docker Compose/file/Swarm Cheatsheet (e20b284)
+- **new tool**: Sed Command Generator + Cheatsheet (a3b75a6)
+
+### Bug fixes
+-  optimize Docker build (slow on arm64) (34373f1)
+- **Text Tranlator**: enhance UI and fix for arm64 (dd87f35)
+- **Vercel**: Vercel deployment 404 (9f08fe6)
+- **JSON to TOML**: e2e tests (6cb4958)
+-  add BASE_URL to useScriptTag (1b15214)
+- **TOML tools**: replace iarna_toml-esm by smol-toml (ca3c3a6)
+- **deps**: update tiptap monorepo to v2.26.1 (#144) (d554f29)
+- **Unit Tests**: disable getITToolsSetting (d175e60)
+- **SEO**: ensure title and description in all <meta> (100563c)
+- **My IP**: resolve country by IPv4 first (c63e10a)
+- **Sed Cheatsheet**: naming and table formatting (1d737a0)
+- **Percentage Calculator**: e2e test failing (de9f44e)
+- **Docker/Pomodoro Timer**: allow Google Fonts for CSP + fix translation call (87c7609)
+- **Cron Generator**: fix disappearing UI (6706c68)
+- **Docker**: allow image upload (connect-src CSP) in nginx config (438bb09)
+-  tool loading indicator after 350ms only (ae0ef63)
+- **Data Faker**: insert method names + handle options (8ad6157)
+- **Input Number**: handle dot and comma (and other format) (72f541c)
+- **QRCode Decoder**: limit to image/* and leave empty if no qr code to decode (75670a7)
+
+### Chores
+-  cleaning sponsors and buymeacoffee (c2f5b64)
+- **Translator**: fix typescript stange error (6b1825f)
+- **Build**: fix maximumFileSizeToCacheInBytes to 25MB (0716afb)
+-  add --archive=tgz to vercel deploy (for rate limiting) (a0beb74)
+- **config**: migrate config renovate.json (#150) (58b3bd4)
+-  replace Vercel deploiement in Vercel by GitHub Action (acc5ab5)
+
+### Fixup! feat
+- **new tool**: Env Variables Converter (9f70133)
+- **new tool**: Env Variables Converter (d450f3b)
+
 ## Version 2025.08.06-0325b117
 
 ### Features
