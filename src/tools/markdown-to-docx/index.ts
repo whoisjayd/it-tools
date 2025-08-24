@@ -1,10 +1,11 @@
 import { Markdown } from '@vicons/tabler';
 import { defineTool } from '../tool';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: 'Markdown to DOCX',
+  name: t('tools.markdown-to-docx.title'),
   path: '/markdown-to-docx',
-  description: 'Convert Markdown documents to Word/DOCX document format with live preview and custom styling support.',
+  description: t('tools.markdown-to-docx.description'),
   keywords: ['markdown', 'word', 'docx'],
   component: () => import('./markdown-to-docx.vue'),
   icon: Markdown,

@@ -58,10 +58,10 @@ function transformer(value: string) {
     />
 
     <format-transformer
-      :input-label="t('tools.sensitive-data-masker.texts.input-label-your-log-textual-data')"
+      :input-:label="t('tools.sensitive-data-masker.texts.label-t-tools-sensitive-data-masker-texts-input-label-your-log-textual-data')"
       :input-default="defaultValue"
-      :input-placeholder="t('tools.sensitive-data-masker.texts.input-placeholder-paste-your-log-textual-data-here')"
-      :output-label="t('tools.sensitive-data-masker.texts.output-label-cleaned-version')"
+      :input-:placeholder="t('tools.sensitive-data-masker.texts.placeholder-t-tools-sensitive-data-masker-texts-input-placeholder-paste-your-log-textual-data-here')"
+      :output-:label="t('tools.sensitive-data-masker.texts.label-t-tools-sensitive-data-masker-texts-output-label-cleaned-version')"
       :transformer="transformer"
     />
   </div>

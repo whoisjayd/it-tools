@@ -25,9 +25,9 @@ const rules: UseValidationRule<string>[] = [
 
 <template>
   <format-transformer
-    :input-label="t('tools.json-to-object.texts.input-label-your-json')"
-    :input-placeholder="t('tools.json-to-object.texts.input-placeholder-paste-your-json-here')"
-    :output-label="t('tools.json-to-object.texts.output-label-object-from-your-json')"
+    :input-:label="t('tools.json-to-object.texts.label-t-tools-json-to-object-texts-input-label-your-json')"
+    :input-:placeholder="t('tools.json-to-object.texts.placeholder-t-tools-json-to-object-texts-input-placeholder-paste-your-json-here')"
+    :output-:label="t('tools.json-to-object.texts.label-t-tools-json-to-object-texts-output-label-object-from-your-json')"
     output-language="js"
     :input-validation-rules="rules"
     :transformer="transformer"

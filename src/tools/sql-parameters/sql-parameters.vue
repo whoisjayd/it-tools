@@ -1,6 +1,9 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n';
 import { generateSQLFromTemplate } from './sql-parameters.service';
 import { useQueryParamOrStorage } from '@/composable/queryParams';
+
+const { t } = useI18n();
 
 const sqlTemplate = useQueryParamOrStorage({ name: 'sql', storageName: 'sql-params:sql', defaultValue: '' });
 const parameters = ref([{ key: '', value: '' }]);
@@ -20,36 +23,36 @@ function generateSQL() {
 </script>
 
 <template>
-  <NCard title="SQL Generator">
+  <NCard :title="t('tools.sql-parameters.texts.title-sql-generator')">
     <NForm label-placement="top">
-      <NFormItem label="Parameterized SQL statement:">
+      <NFormItem :label="t('tools.sql-parameters.texts.label-parameterized-sql-statement')">
         <NInput
           v-model:value="sqlTemplate"
           type="textarea"
-          placeholder="e.g. SELECT * FROM users WHERE name = :name AND age > ? AND type = @type"
+          :placeholder="t('tools.sql-parameters.texts.placeholder-e-g-select-from-users-where-name-name-and-age-and-type-type')"
           :autosize="{ minRows: 3 }"
         />
       </NFormItem>
 
-      <n-card title="Parameters">
-        <n-p>For positional parameters, leave Name empty. For named parameters, enter name without '?' or '@' prefix</n-p>
+      <n-card :title="t('tools.sql-parameters.texts.title-parameters')">
+        <n-p>{{ t('tools.sql-parameters.texts.tag-for-positional-parameters-leave-name-empty-for-named-parameters-enter-name-without-or-prefix') }}</n-p>
         <NDynamicInput
           v-model:value="parameters"
           :min="1"
           preset="pair"
           show-sort-button
-          key-placeholder="Name (e.g. name or type)"
-          value-placeholder="Value (e.g. Alice or 42 or 1.3)"
+          key-:placeholder="t('tools.sql-parameters.texts.placeholder-name-e-g-name-or-type')"
+          value-:placeholder="t('tools.sql-parameters.texts.placeholder-value-e-g-alice-or-42-or-1-3')"
         />
       </n-card>
 
       <n-space justify="center">
         <NButton type="primary" @click="generateSQL">
-          Generate SQL
+          {{ t('tools.sql-parameters.texts.tag-generate-sql') }}
         </NButton>
       </n-space>
 
-      <NFormItem v-if="generatedSQL" label="Generated SQL:" mt-2>
+      <NFormItem v-if="generatedSQL" :label="t('tools.sql-parameters.texts.label-generated-sql')" mt-2>
         <textarea-copyable :value="generatedSQL" />
       </NFormItem>
 

@@ -1,6 +1,9 @@
-<script setup>
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n';
 import { computed, ref } from 'vue';
 import { NButton, NCard, NForm, NFormItem, NInput } from 'naive-ui';
+
+const { t } = useI18n();
 
 const form = ref({
   to: '',
@@ -38,33 +41,33 @@ function openMailto() {
 </script>
 
 <template>
-  <NCard title="Mailto Link Generator">
+  <NCard :title="t('tools.mailto-generator.texts.title-mailto-link-generator')">
     <NForm :model="form" label-placement="left">
-      <NFormItem label="To:">
-        <NInput v-model:value="form.to" placeholder="recipient@example.com" />
+      <NFormItem :label="t('tools.mailto-generator.texts.label-to')">
+        <NInput v-model:value="form.to" :placeholder="t('tools.mailto-generator.texts.placeholder-recipient-example-com')" />
       </NFormItem>
-      <NFormItem label="CC:">
-        <NInput v-model:value="form.cc" placeholder="cc@example.com" />
+      <NFormItem :label="t('tools.mailto-generator.texts.label-cc')">
+        <NInput v-model:value="form.cc" :placeholder="t('tools.mailto-generator.texts.placeholder-cc-example-com')" />
       </NFormItem>
-      <NFormItem label="BCC:">
-        <NInput v-model:value="form.bcc" placeholder="bcc@example.com" />
+      <NFormItem :label="t('tools.mailto-generator.texts.label-bcc')">
+        <NInput v-model:value="form.bcc" :placeholder="t('tools.mailto-generator.texts.placeholder-bcc-example-com')" />
       </NFormItem>
-      <NFormItem label="Subject:">
-        <NInput v-model:value="form.subject" placeholder="Email subject" />
+      <NFormItem :label="t('tools.mailto-generator.texts.label-subject')">
+        <NInput v-model:value="form.subject" :placeholder="t('tools.mailto-generator.texts.placeholder-email-subject')" />
       </NFormItem>
-      <NFormItem label="Body:" label-placement="top">
+      <NFormItem :label="t('tools.mailto-generator.texts.label-body')" label-placement="top">
         <NInput
           v-model:value="form.body"
           type="textarea"
-          placeholder="Email body"
+          :placeholder="t('tools.mailto-generator.texts.placeholder-email-body')"
           :autosize="{ minRows: 3, maxRows: 6 }"
         />
       </NFormItem>
-      <c-card v-if="mailtoLink" title="Generated Link">
+      <c-card v-if="mailtoLink" :title="t('tools.mailto-generator.texts.title-generated-link')">
         <textarea-copyable :value="mailtoLink" />
         <n-space justify="center">
           <NButton type="primary" @click="openMailto">
-            Open Mail Client
+            {{ t('tools.mailto-generator.texts.tag-open-mail-client') }}
           </NButton>
         </n-space>
       </c-card>

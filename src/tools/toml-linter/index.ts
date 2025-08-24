@@ -1,10 +1,11 @@
 import { defineTool } from '../tool';
+import { translate as t } from '@/plugins/i18n.plugin';
 import BracketIcon from '~icons/mdi/code-brackets';
 
 export const tool = defineTool({
-  name: 'TOML Linter',
+  name: t('tools.toml-linter.title'),
   path: '/toml-linter',
-  description: 'Lint and check TOML content',
+  description: t('tools.toml-linter.description'),
   keywords: ['toml', 'linter'],
   component: () => import('./toml-linter.vue'),
   icon: BracketIcon,

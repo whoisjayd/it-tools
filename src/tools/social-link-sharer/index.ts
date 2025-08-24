@@ -1,10 +1,11 @@
 import { Share } from '@vicons/tabler';
 import { defineTool } from '../tool';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: 'Social Link Sharer',
+  name: t('tools.social-link-sharer.title'),
   path: '/social-link-sharer',
-  description: 'Generate share link href for common Social Networks',
+  description: t('tools.social-link-sharer.description'),
   keywords: ['social', 'link', 'sharer'],
   component: () => import('./social-link-sharer.vue'),
   icon: Share,

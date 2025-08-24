@@ -1,10 +1,11 @@
 import { Mail } from '@vicons/tabler';
 import { defineTool } from '../tool';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: 'Mailto Generator',
+  name: t('tools.mailto-generator.title'),
   path: '/mailto-generator',
-  description: 'Generate a mailto: link href',
+  description: t('tools.mailto-generator.description'),
   keywords: ['mailto', 'generator', 'link'],
   component: () => import('./mailto-generator.vue'),
   icon: Mail,

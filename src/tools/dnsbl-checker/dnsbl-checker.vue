@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 const query = ref('');
 const resolvedIp = ref('');
 const loading = ref(false);
@@ -152,23 +155,23 @@ function getRowClass(row: { listed: boolean }) {
 </script>
 
 <template>
-  <NCard title="DNSBL Multi-Checker">
-    <NInput v-model:value="query" placeholder="Enter IP or domain" clearable mb-2 />
+  <NCard :title="t('tools.dnsbl-checker.texts.title-dnsbl-multi-checker')">
+    <NInput v-model:value="query" :placeholder="t('tools.dnsbl-checker.texts.placeholder-enter-ip-or-domain')" clearable mb-2 />
     <NSpace justify="center">
       <NButton type="primary" :loading="loading" @click="checkAllDnsbls">
-        Check All
+        {{ t('tools.dnsbl-checker.texts.tag-check-all') }}
       </NButton>
-      <n-form-item label="Show Listed Only" label-placement="left">
+      <n-form-item :label="t('tools.dnsbl-checker.texts.label-show-listed-only')" label-placement="left">
         <NSwitch v-model:value="showListedOnly" />
       </n-form-item>
     </NSpace>
 
     <NDivider />
 
-    <input-copyable label="Resolved IP:" label-position="left" :value="resolvedIp" mb-1 />
+    <input-copyable :label="t('tools.dnsbl-checker.texts.label-resolved-ip')" label-position="left" :value="resolvedIp" mb-1 />
     <n-p>
-      <span>Want to understand why an IP might be blacklisted? Check out </span>
-      <a href="https://letsextract.com/fr/dnsbl-checker/" target="_blank">this DNSBL explanation and removal guide</a>.
+      <span>{{ t('tools.dnsbl-checker.texts.tag-want-to-understand-why-an-ip-might-be-blacklisted-check-out') }}</span>
+      <a href="https://letsextract.com/fr/dnsbl-checker/" target="_blank">{{ t('tools.dnsbl-checker.texts.tag-this-dnsbl-explanation-and-removal-guide') }}</a>{{ t('tools.dnsbl-checker.texts.tag-') }}
     </n-p>
 
     <NDivider />

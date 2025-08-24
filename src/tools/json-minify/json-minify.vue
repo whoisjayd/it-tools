@@ -19,10 +19,10 @@ const rules: UseValidationRule<string>[] = [
 
 <template>
   <format-transformer
-    :input-label="t('tools.json-minify.texts.input-label-your-raw-json')"
+    :input-:label="t('tools.json-minify.texts.label-t-tools-json-minify-texts-input-label-your-raw-json')"
     :input-default="defaultValue"
-    :input-placeholder="t('tools.json-minify.texts.input-placeholder-paste-your-raw-json-here')"
-    :output-label="t('tools.json-minify.texts.output-label-minified-version-of-your-json')"
+    :input-:placeholder="t('tools.json-minify.texts.placeholder-t-tools-json-minify-texts-input-placeholder-paste-your-raw-json-here')"
+    :output-:label="t('tools.json-minify.texts.label-t-tools-json-minify-texts-output-label-minified-version-of-your-json')"
     output-language="json"
     :input-validation-rules="rules"
     :transformer="transformer"

@@ -1,10 +1,11 @@
 import { CalendarStats } from '@vicons/tabler';
 import { defineTool } from '../tool';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: 'Which Day?',
+  name: t('tools.which-day.title'),
   path: '/which-day',
-  description: 'Given a day and month, and years range, list all day of week a given date is',
+  description: t('tools.which-day.description'),
   keywords: ['which', 'weekday', 'date', 'year', 'day'],
   component: () => import('./which-day.vue'),
   icon: CalendarStats,

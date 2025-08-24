@@ -29,10 +29,10 @@ const rules: UseValidationRule<string>[] = [
 
 <template>
   <format-transformer
-    :input-label="t('tools.json-to-php-array.texts.input-label-your-json')"
+    :input-:label="t('tools.json-to-php-array.texts.label-t-tools-json-to-php-array-texts-input-label-your-json')"
     :input-default="defaultValue"
-    :input-placeholder="t('tools.json-to-php-array.texts.input-placeholder-paste-your-json-here')"
-    :output-label="t('tools.json-to-php-array.texts.output-label-php-array-version')"
+    :input-:placeholder="t('tools.json-to-php-array.texts.placeholder-t-tools-json-to-php-array-texts-input-placeholder-paste-your-json-here')"
+    :output-:label="t('tools.json-to-php-array.texts.label-t-tools-json-to-php-array-texts-output-label-php-array-version')"
     :input-validation-rules="rules"
     :transformer="transformer"
   />

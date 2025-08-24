@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 const form = ref({
   commandType: 'substitute', // substitute | delete | extract | number
   pattern: '',
@@ -66,73 +69,73 @@ const sedCommand = computed(() => {
   <div>
     <n-space justify="center" mb-1 mt-1>
       <n-p>
-        For more information about <code>sed</code> command, see <router-link target="_blank" to="/sed-memo">
-          Sed Command Cheatsheet
+        {{ t('tools.sed-command-generator.texts.tag-for-more-information-about') }}<code>{{ t('tools.sed-command-generator.texts.tag-sed') }}</code>{{ t('tools.sed-command-generator.texts.tag-command-see') }}<router-link target="_blank" to="/sed-memo">
+          {{ t('tools.sed-command-generator.texts.tag-sed-command-cheatsheet') }}
         </router-link>
       </n-p>
     </n-space>
 
     <n-form :model="form" label-placement="left" label-width="120px" mt-2>
       <n-space justify="center" mb-1 mt-1>
-        <n-form-item label="Command Type:">
+        <n-form-item :label="t('tools.sed-command-generator.texts.label-command-type')">
           <n-radio-group v-model:value="form.commandType" name="commandType">
             <n-radio-button value="substitute">
-              Substitute
+              {{ t('tools.sed-command-generator.texts.tag-substitute') }}
             </n-radio-button>
             <n-radio-button value="delete">
-              Delete
+              {{ t('tools.sed-command-generator.texts.tag-delete') }}
             </n-radio-button>
             <n-radio-button value="extract">
-              Extract
+              {{ t('tools.sed-command-generator.texts.tag-extract') }}
             </n-radio-button>
             <n-radio-button value="number">
-              Number Lines
+              {{ t('tools.sed-command-generator.texts.tag-number-lines') }}
             </n-radio-button>
           </n-radio-group>
         </n-form-item>
       </n-space>
 
-      <n-card v-if="form.commandType !== 'number'" title="Search Pattern:">
-        <n-input v-model:value="form.pattern" placeholder="e.g., foo" />
+      <n-card v-if="form.commandType !== 'number'" :title="t('tools.sed-command-generator.texts.title-search-pattern')">
+        <n-input v-model:value="form.pattern" :placeholder="t('tools.sed-command-generator.texts.placeholder-e-g-foo')" />
         <router-link target="_blank" to="/regex-memo">
-          See Regex Cheatsheet
+          {{ t('tools.sed-command-generator.texts.tag-see-regex-cheatsheet') }}
         </router-link>
       </n-card>
 
-      <n-form-item v-if="form.commandType === 'substitute'" label="Replacement:" mt-3>
-        <n-input v-model:value="form.replacement" placeholder="e.g., bar" />
+      <n-form-item v-if="form.commandType === 'substitute'" :label="t('tools.sed-command-generator.texts.label-replacement')" mt-3>
+        <n-input v-model:value="form.replacement" :placeholder="t('tools.sed-command-generator.texts.placeholder-e-g-bar')" />
       </n-form-item>
 
-      <n-form-item v-if="form.commandType === 'substitute'" label="Delimiter:">
-        <n-input v-model:value="form.delimiter" placeholder="e.g., / or #" />
+      <n-form-item v-if="form.commandType === 'substitute'" :label="t('tools.sed-command-generator.texts.label-delimiter')">
+        <n-input v-model:value="form.delimiter" :placeholder="t('tools.sed-command-generator.texts.placeholder-e-g-or')" />
       </n-form-item>
 
-      <n-form-item v-if="form.commandType === 'substitute'" label="Flags:">
+      <n-form-item v-if="form.commandType === 'substitute'" :label="t('tools.sed-command-generator.texts.label-flags')">
         <n-checkbox v-model:checked="form.global">
-          Global (g)
+          {{ t('tools.sed-command-generator.texts.tag-global-g') }}
         </n-checkbox>
         <n-checkbox v-model:checked="form.caseInsensitive">
-          Case Insensitive (i)
+          {{ t('tools.sed-command-generator.texts.tag-case-insensitive-i') }}
         </n-checkbox>
       </n-form-item>
 
-      <n-form-item label="Options:">
+      <n-form-item :label="t('tools.sed-command-generator.texts.label-options')">
         <n-checkbox v-model:checked="form.inPlace">
-          In-place Editing (-i)
+          {{ t('tools.sed-command-generator.texts.tag-in-place-editing-i') }}
         </n-checkbox>
         <n-checkbox v-model:checked="form.extendedRegex">
-          Extended Regex (-E)
+          {{ t('tools.sed-command-generator.texts.tag-extended-regex-e') }}
         </n-checkbox>
         <n-checkbox v-model:checked="form.suppressPrint">
-          Suppress Automatic Printing (-n)
+          {{ t('tools.sed-command-generator.texts.tag-suppress-automatic-printing-n') }}
         </n-checkbox>
       </n-form-item>
 
-      <n-form-item label="Target File">
-        <n-input v-model:value="form.targetFile" placeholder="e.g., file.txt" />
+      <n-form-item :label="t('tools.sed-command-generator.texts.label-target-file')">
+        <n-input v-model:value="form.targetFile" :placeholder="t('tools.sed-command-generator.texts.placeholder-e-g-file-txt')" />
       </n-form-item>
 
-      <c-card title="Generated Sed command:" mt-3>
+      <c-card :title="t('tools.sed-command-generator.texts.title-generated-sed-command')" mt-3>
         <textarea-copyable :value="sedCommand" />
       </c-card>
     </n-form>

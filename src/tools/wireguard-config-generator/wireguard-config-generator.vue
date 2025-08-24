@@ -1,9 +1,12 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n';
 import { parseCidr } from 'cidr-tools';
 import { stringifyIp } from 'ip-bigint';
 import QRCodeVue3 from 'qrcode-vue3';
 import { WgConfig } from './lib/WgConfig';
 import { generateConfigString } from './lib/utils/configParser';
+
+const { t } = useI18n();
 
 const inputConfig = ref('');
 const inputConfigError = ref('');
@@ -155,10 +158,10 @@ function generatePeers() {
 <template>
   <div>
     <details mb-1>
-      <summary>Input server configuration</summary>
+      <summary>{{ t('tools.wireguard-config-generator.texts.tag-input-server-configuration') }}</summary>
       <c-input-text
         v-model:value="inputConfig"
-        placeholder="Put your input configuration here..."
+        :placeholder="t('tools.wireguard-config-generator.texts.placeholder-put-your-input-configuration-here')"
         rows="5"
         multiline
         mb-2
@@ -167,81 +170,81 @@ function generatePeers() {
         {{ inputConfigError }}
       </c-alert>
     </details>
-    <c-card title="Configuration" mb-1>
+    <c-card :title="t('tools.wireguard-config-generator.texts.title-configuration')" mb-1>
       <n-space>
         <c-input-text
           v-model:value="server"
-          label="Server Name:"
-          placeholder="Server Name or FQDN"
+          :label="t('tools.wireguard-config-generator.texts.label-server-name')"
+          :placeholder="t('tools.wireguard-config-generator.texts.placeholder-server-name-or-fqdn')"
           label-position="left"
           style="min-width: 400px"
           mb-2
         />
-        <n-form-item label="Server Port:" label-placement="left">
+        <n-form-item :label="t('tools.wireguard-config-generator.texts.label-server-port')" label-placement="left">
           <n-input-number v-model:value="serverPort" min="0" max="65535" />
         </n-form-item>
       </n-space>
       <c-input-text
         v-model:value="cidr"
-        label="Server CIDR:"
-        placeholder="Server CIDR"
+        :label="t('tools.wireguard-config-generator.texts.label-server-cidr')"
+        :placeholder="t('tools.wireguard-config-generator.texts.placeholder-server-cidr')"
         label-position="left"
         mb-2
       />
       <n-space>
-        <n-form-item label="Start IP number:" label-placement="left">
+        <n-form-item :label="t('tools.wireguard-config-generator.texts.label-start-ip-number')" label-placement="left">
           <n-input-number v-model:value="startIP" min="2" />
         </n-form-item>
-        <n-form-item label="Number of clients:" label-placement="left">
+        <n-form-item :label="t('tools.wireguard-config-generator.texts.label-number-of-clients')" label-placement="left">
           <n-input-number v-model:value="numberOfClients" min="1" />
         </n-form-item>
       </n-space>
-      <n-form-item label="Use Pre Shared Keys" label-placement="left">
+      <n-form-item :label="t('tools.wireguard-config-generator.texts.label-use-pre-shared-keys')" label-placement="left">
         <n-checkbox v-model:value="usePreSharedKeys" />
       </n-form-item>
       <c-input-text
         v-model:value="clientAllowedIPs"
-        label="Client Allowed IPs:"
-        placeholder="Client Allowed IPs"
+        :label="t('tools.wireguard-config-generator.texts.label-client-allowed-ips')"
+        :placeholder="t('tools.wireguard-config-generator.texts.placeholder-client-allowed-ips')"
         label-position="left"
         mb-2
       />
       <c-input-text
         v-model:value="endpoint"
-        label="Endpoint (optional):"
-        placeholder="Endpoint"
+        :label="t('tools.wireguard-config-generator.texts.label-endpoint-optional')"
+        :placeholder="t('tools.wireguard-config-generator.texts.placeholder-endpoint')"
         label-position="left"
         mb-2
       />
       <c-input-text
         v-model:value="dns"
-        label="DNS"
-        placeholder="DNS servers:"
+        :label="t('tools.wireguard-config-generator.texts.label-dns')"
+        :placeholder="t('tools.wireguard-config-generator.texts.placeholder-dns-servers')"
         label-position="left"
         mb-2
       />
       <c-input-text
         v-model:value="postUpRule"
-        label="Post-Up rule:"
-        placeholder="Post-Up rule"
+        :label="t('tools.wireguard-config-generator.texts.label-post-up-rule')"
+        :placeholder="t('tools.wireguard-config-generator.texts.placeholder-post-up-rule')"
         mb-2
       />
       <c-input-text
         v-model:value="postDownRule"
-        label="Post-Down rule:"
-        placeholder="Post-Down rule"
+        :label="t('tools.wireguard-config-generator.texts.label-post-down-rule')"
+        :placeholder="t('tools.wireguard-config-generator.texts.placeholder-post-down-rule')"
         mb-2
       />
     </c-card>
 
     <n-space justify="center" mb-2 mt-1>
       <n-button @click="generatePeers">
-        Generate Configurations
+        {{ t('tools.wireguard-config-generator.texts.tag-generate-configurations') }}
       </n-button>
     </n-space>
 
     <div v-if="generatedConfigs">
-      <n-card title="Generated Server Config file:">
+      <n-card :title="t('tools.wireguard-config-generator.texts.title-generated-server-config-file')">
         <textarea-copyable :value="generatedConfigs.server" />
       </n-card>
 

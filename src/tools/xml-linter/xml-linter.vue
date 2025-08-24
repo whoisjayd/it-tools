@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n';
 import { XMLParser } from 'fast-xml-parser';
+
+const { t } = useI18n();
 
 const parser = new XMLParser();
 
@@ -26,7 +29,7 @@ const MONACO_EDITOR_OPTIONS = {
 
 <template>
   <div>
-    <n-card title="Your XML Content:" mb-2>
+    <n-card :title="t('tools.xml-linter.texts.title-your-xml-content')" mb-2>
       <div relative w-full>
         <c-monaco-editor
           v-model:value="xmlContent"
@@ -39,13 +42,13 @@ const MONACO_EDITOR_OPTIONS = {
     </n-card>
 
     <div v-if="lintErrors">
-      <n-alert type="error" title="Linting Error" :show-icon="true">
+      <n-alert type="error" :title="t('tools.xml-linter.texts.title-linting-error')" :show-icon="true">
         <pre>{{ lintErrors }}</pre>
       </n-alert>
     </div>
     <div v-else-if="xmlContent">
-      <n-alert type="success" title="Valid XML" :show-icon="true">
-        No errors found. Your XML is valid!
+      <n-alert type="success" :title="t('tools.xml-linter.texts.title-valid-xml')" :show-icon="true">
+        {{ t('tools.xml-linter.texts.tag-no-errors-found-your-xml-is-valid') }}
       </n-alert>
     </div>
   </div>

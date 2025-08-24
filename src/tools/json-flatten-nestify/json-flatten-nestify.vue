@@ -48,10 +48,10 @@ const rules: UseValidationRule<string>[] = [
   </NSpace>
 
   <format-transformer
-    :input-label="t('tools.json-flatten-nestify.texts.input-label-your-json-content')"
+    :input-:label="t('tools.json-flatten-nestify.texts.label-t-tools-json-flatten-nestify-texts-input-label-your-json-content')"
     :input-default="defaultValue"
-    :input-placeholder="t('tools.json-flatten-nestify.texts.input-placeholder-paste-your-json-content-here')"
-    :output-label="t('tools.json-flatten-nestify.texts.output-label-transformed-json')"
+    :input-:placeholder="t('tools.json-flatten-nestify.texts.placeholder-t-tools-json-flatten-nestify-texts-input-placeholder-paste-your-json-content-here')"
+    :output-:label="t('tools.json-flatten-nestify.texts.label-t-tools-json-flatten-nestify-texts-output-label-transformed-json')"
     output-language="json"
     :input-validation-rules="rules"
     :transformer="transformer"

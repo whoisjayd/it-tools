@@ -1,10 +1,11 @@
 import { FileText } from '@vicons/tabler';
 import { defineTool } from '../tool';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: 'GPT Token Encoder/Decoder',
+  name: t('tools.gpt-token-encoder.title'),
   path: '/gpt-token-encoder',
-  description: 'Encode text to GPT tokens and decode GPT tokens back to text',
+  description: t('tools.gpt-token-encoder.description'),
   keywords: ['gpt', 'llm', 'openai', 'token', 'encode', 'decode'],
   component: () => import('./gpt-token-encoder.vue'),
   icon: FileText,

@@ -1,6 +1,9 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n';
 import { CliPrettify } from 'markdown-table-prettify';
 import TextareaCopyable from '@/components/TextareaCopyable.vue';
+
+const { t } = useI18n();
 
 const inputMarkdown = ref('');
 const outputMarkdown = computed(() => {
@@ -13,15 +16,15 @@ const outputMarkdown = computed(() => {
     <c-input-text
       v-model:value="inputMarkdown"
       multiline raw-text
-      placeholder="Your Markdown table to prettify"
+      :placeholder="t('tools.markdown-table-prettifier.texts.placeholder-your-markdown-table-to-prettify')"
       rows="8"
       autofocus
-      label="Markdown table to prettify"
+      :label="t('tools.markdown-table-prettifier.texts.label-markdown-table-to-prettify')"
     />
 
     <n-divider />
 
-    <n-form-item label="Prettified Markdown">
+    <n-form-item :label="t('tools.markdown-table-prettifier.texts.label-prettified-markdown')">
       <TextareaCopyable :value="outputMarkdown" :word-wrap="true" language="markdown" />
     </n-form-item>
   </div>

@@ -171,9 +171,9 @@ function transformer(value: string) {
     </div>
   </div>
   <format-transformer
-    :input-label="t('tools.list-converter.texts.input-label-your-input-data')"
-    :input-placeholder="t('tools.list-converter.texts.input-placeholder-paste-your-input-data-here')"
-    :output-label="t('tools.list-converter.texts.output-label-your-transformed-data')"
+    :input-:label="t('tools.list-converter.texts.label-t-tools-list-converter-texts-input-label-your-input-data')"
+    :input-:placeholder="t('tools.list-converter.texts.placeholder-t-tools-list-converter-texts-input-placeholder-paste-your-input-data-here')"
+    :output-:label="t('tools.list-converter.texts.label-t-tools-list-converter-texts-output-label-your-transformed-data')"
     :transformer="transformer"
     download-file-name="output.txt"
   />

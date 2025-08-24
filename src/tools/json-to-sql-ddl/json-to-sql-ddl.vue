@@ -35,9 +35,9 @@ const rules: UseValidationRule<string>[] = [
     <n-divider />
 
     <format-transformer
-      :input-label="t('tools.json-to-sql-ddl.texts.input-label-your-json')"
-      :input-placeholder="t('tools.json-to-sql-ddl.texts.input-placeholder-paste-your-json-here')"
-      :output-label="t('tools.json-to-sql-ddl.texts.output-label-your-sql-ddl')"
+      :input-:label="t('tools.json-to-sql-ddl.texts.label-t-tools-json-to-sql-ddl-texts-input-label-your-json')"
+      :input-:placeholder="t('tools.json-to-sql-ddl.texts.placeholder-t-tools-json-to-sql-ddl-texts-input-placeholder-paste-your-json-here')"
+      :output-:label="t('tools.json-to-sql-ddl.texts.label-t-tools-json-to-sql-ddl-texts-output-label-your-sql-ddl')"
       output-language="sql"
       :input-validation-rules="rules"
       :transformer="transformer"

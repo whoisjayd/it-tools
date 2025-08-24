@@ -48,10 +48,10 @@ const dropdownOptions = computed(() => [
   </c-card>
   <div />
   <format-transformer
-    :input-label="t('tools.json-string-converter.texts.input-label-your-text-json-string')"
+    :input-:label="t('tools.json-string-converter.texts.label-t-tools-json-string-converter-texts-input-label-your-text-json-string')"
     :input-default="defaultValue"
-    :input-placeholder="t('tools.json-string-converter.texts.input-placeholder-paste-your-text-here')"
-    :output-label="t('tools.json-string-converter.texts.output-label-json-string-conversion-of-your-input')"
+    :input-:placeholder="t('tools.json-string-converter.texts.placeholder-t-tools-json-string-converter-texts-input-placeholder-paste-your-text-here')"
+    :output-:label="t('tools.json-string-converter.texts.label-t-tools-json-string-converter-texts-output-label-json-string-conversion-of-your-input')"
     output-language="string"
     :input-validation-rules="rules"
     :transformer="transformer"

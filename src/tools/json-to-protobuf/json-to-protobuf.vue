@@ -33,9 +33,9 @@ const rules: UseValidationRule<string>[] = [
   <c-input-text v-model:value="rootName" :label="t('tools.json-to-protobuf.texts.label-root-name')" label-placement="left" />
 
   <FormatTransformer
-    :input-label="t('tools.json-to-protobuf.texts.input-label-your-json')"
-    :input-placeholder="t('tools.json-to-protobuf.texts.input-placeholder-paste-your-json-here')"
-    :output-label="t('tools.json-to-protobuf.texts.output-label-protobuf-version-of-your-json-objects')"
+    :input-:label="t('tools.json-to-protobuf.texts.label-t-tools-json-to-protobuf-texts-input-label-your-json')"
+    :input-:placeholder="t('tools.json-to-protobuf.texts.placeholder-t-tools-json-to-protobuf-texts-input-placeholder-paste-your-json-here')"
+    :output-:label="t('tools.json-to-protobuf.texts.label-t-tools-json-to-protobuf-texts-output-label-protobuf-version-of-your-json-objects')"
     :input-validation-rules="rules"
     :transformer="transformer"
     output-language="protobuf"

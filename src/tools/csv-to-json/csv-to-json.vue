@@ -31,9 +31,9 @@ const rules: UseValidationRule<string>[] = [
     <n-checkbox v-model:checked="typedValues" />
   </n-form-item>
   <FormatTransformer
-    :input-label="t('tools.csv-to-json.texts.input-label-your-raw-csv')"
-    :input-placeholder="t('tools.csv-to-json.texts.input-placeholder-paste-your-raw-csv-here')"
-    :output-label="t('tools.csv-to-json.texts.output-label-json-version-of-your-csv')"
+    :input-:label="t('tools.csv-to-json.texts.label-t-tools-csv-to-json-texts-input-label-your-raw-csv')"
+    :input-:placeholder="t('tools.csv-to-json.texts.placeholder-t-tools-csv-to-json-texts-input-placeholder-paste-your-raw-csv-here')"
+    :output-:label="t('tools.csv-to-json.texts.label-t-tools-csv-to-json-texts-output-label-json-version-of-your-csv')"
     :input-validation-rules="rules"
     :transformer="transformer"
   />

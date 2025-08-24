@@ -1,10 +1,11 @@
 import { DeviceDesktop } from '@vicons/tabler';
 import { defineTool } from '../tool';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: 'ZPOOL RAID calculator',
+  name: t('tools.zpool-calculator.title'),
   path: '/zpool-calculator',
-  description: 'Determine the usable capacity and other metrics of a ZFS storage pool and compare layouts including stripe, mirror, RAIDZ1, RAIDZ2, RAIDZ3, and dRAID.',
+  description: t('tools.zpool-calculator.description'),
   keywords: ['zpool', 'raid', 'calculator', 'zfs', 'openzfs'],
   component: () => import('./zpool-calculator.vue'),
   icon: DeviceDesktop,

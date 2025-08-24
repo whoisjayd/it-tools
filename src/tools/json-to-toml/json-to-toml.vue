@@ -22,9 +22,9 @@ const rules: UseValidationRule<string>[] = [
 
 <template>
   <format-transformer
-    :input-label="t('tools.json-to-toml.texts.input-label-your-json')"
-    :input-placeholder="t('tools.json-to-toml.texts.input-placeholder-paste-your-json-here')"
-    :output-label="t('tools.json-to-toml.texts.output-label-toml-from-your-json')"
+    :input-:label="t('tools.json-to-toml.texts.label-t-tools-json-to-toml-texts-input-label-your-json')"
+    :input-:placeholder="t('tools.json-to-toml.texts.placeholder-t-tools-json-to-toml-texts-input-placeholder-paste-your-json-here')"
+    :output-:label="t('tools.json-to-toml.texts.label-t-tools-json-to-toml-texts-output-label-toml-from-your-json')"
     output-language="toml"
     :input-validation-rules="rules"
     :transformer="transformer"

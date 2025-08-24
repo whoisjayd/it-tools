@@ -40,10 +40,10 @@ const { copy } = useCopy({ source: numbers, text: t('tools.random-numbers-genera
           <n-form-item label-placement="left">
             <n-radio-group v-model:value="numberMode">
               <n-radio value="hexa">
-                Hexadecimal
+                {{ t('tools.random-numbers-generator.texts.tag-hexadecimal') }}
               </n-radio>
               <n-radio value="dec">
-                Decimal
+                {{ t('tools.random-numbers-generator.texts.tag-decimal') }}
               </n-radio>
             </n-radio-group>
           </n-form-item>

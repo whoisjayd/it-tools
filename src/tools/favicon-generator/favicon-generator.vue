@@ -1,7 +1,10 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n';
 import type { UploadFileInfo } from 'naive-ui';
 import JSZip from 'jszip';
 import { Transform, decodeImage, encodeIcoImages } from 'image-in-browser';
+
+const { t } = useI18n();
 
 const sizes = [16, 32, 48, 64, 180, 192, 512];
 const appleSizes = [180, 192, 512];
@@ -111,7 +114,7 @@ function downloadZip() {
 </script>
 
 <template>
-  <NCard title="Favicon Pack Generator" style="max-width: 700px; margin: auto;">
+  <NCard :title="t('tools.favicon-generator.texts.title-favicon-pack-generator')" style="max-width: 700px; margin: auto;">
     <n-space justify="center">
       <NUpload
         :show-file-list="false"
@@ -119,12 +122,12 @@ function downloadZip() {
         :custom-request="handleUpload"
       >
         <NButton type="primary">
-          Upload PNG Image
+          {{ t('tools.favicon-generator.texts.tag-upload-png-image') }}
         </NButton>
       </NUpload>
     </n-space>
 
-    <n-card v-if="previews.length" title="🖼️ Previews" mt-2>
+    <n-card v-if="previews.length" :title="t('tools.favicon-generator.texts.title-️-previews')" mt-2>
       <div style="display: flex; gap: 16px; flex-wrap: wrap;">
         <div v-for="icon in previews" :key="icon.size" style="text-align: center;">
           <img :src="icon.dataUrl" :alt="`Favicon ${icon.size}`" :width="icon.size" :height="icon.size">
@@ -133,13 +136,13 @@ function downloadZip() {
       </div>
     </n-card>
 
-    <n-card v-if="headTags" title="📄 HTML Head Tags" mt-2>
+    <n-card v-if="headTags" :title="t('tools.favicon-generator.texts.title-html-head-tags')" mt-2>
       <textarea-copyable :value="headTags" language="html" />
     </n-card>
 
     <n-space justify="center" mt-2>
       <NButton v-if="canDownload" type="success" @click="downloadZip">
-        📦 Download ZIP
+        {{ t('tools.favicon-generator.texts.tag-download-zip') }}
       </NButton>
     </n-space>
   </NCard>

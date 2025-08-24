@@ -1,10 +1,11 @@
 import { DeviceMobileMessage } from '@vicons/tabler';
 import { defineTool } from '../tool';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: 'Unicode to GSM-7',
+  name: t('tools.unicode-to-gsm7.title'),
   path: '/unicode-to-gsm7',
-  description: 'Encode unicode text to SMS GSM-7 encoding and display related SMS send info',
+  description: t('tools.unicode-to-gsm7.description'),
   keywords: ['unicode', 'segment', 'sms', 'gsm7'],
   component: () => import('./unicode-to-gsm7.vue'),
   icon: DeviceMobileMessage,

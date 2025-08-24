@@ -39,9 +39,9 @@ const rules: UseValidationRule<string>[] = [
   </div>
 
   <format-transformer
-    :input-label="t('tools.xml-formatter.texts.input-label-your-xml')"
-    :input-placeholder="t('tools.xml-formatter.texts.input-placeholder-paste-your-xml-here')"
-    :output-label="t('tools.xml-formatter.texts.output-label-formatted-xml-from-your-xml')"
+    :input-:label="t('tools.xml-formatter.texts.label-t-tools-xml-formatter-texts-input-label-your-xml')"
+    :input-:placeholder="t('tools.xml-formatter.texts.placeholder-t-tools-xml-formatter-texts-input-placeholder-paste-your-xml-here')"
+    :output-:label="t('tools.xml-formatter.texts.label-t-tools-xml-formatter-texts-output-label-formatted-xml-from-your-xml')"
     output-language="xml"
     :input-validation-rules="rules"
     :transformer="transformer"

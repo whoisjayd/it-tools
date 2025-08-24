@@ -1,6 +1,9 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n';
 import type { UploadFileInfo } from 'naive-ui';
 import { useQueryParamOrStorage } from '@/composable/queryParams';
+
+const { t } = useI18n();
 
 const files = ref<Array<UploadFileInfo>>([]);
 const treeData = ref<Array<FileDesc>>([]);
@@ -88,10 +91,7 @@ async function generateXML(fileList: Array<UploadFileInfo>) {
 This file is a merged representation of the entire codebase, combined into a single document by Repomix.
 The content has been processed where security check has been disabled.
 
-<file_summary>
-This section contains a summary of this file.
-
-<purpose>
+<file_summary>{{ t('tools.pack-files-for-ai.texts.tag-this-section-contains-a-summary-of-this-file') }}<purpose>
 This file contains a packed representation of the entire repository's contents.
 It is designed to be easily consumable by AI systems for analysis, code review,
 or other automated processes.
@@ -256,7 +256,7 @@ function processSourceCode(
 </script>
 
 <template>
-  <n-card title="Repomix like AI Pack Generator">
+  <n-card :title="t('tools.pack-files-for-ai.texts.title-repomix-like-ai-pack-generator')">
     <n-upload
       multiple
       directory-dnd
@@ -266,53 +266,53 @@ function processSourceCode(
     >
       <n-upload-dragger>
         <n-text style="font-size: 16px">
-          Click or drag code source files or folder to this area to add to package
+          {{ t('tools.pack-files-for-ai.texts.tag-click-or-drag-code-source-files-or-folder-to-this-area-to-add-to-package') }}
         </n-text>
       </n-upload-dragger>
     </n-upload>
 
     <n-space justify="center" mb-2>
       <n-checkbox v-model:checked="showFiles">
-        Show uploaded files
+        {{ t('tools.pack-files-for-ai.texts.tag-show-uploaded-files') }}
       </n-checkbox>
     </n-space>
 
-    <n-form-item label="Directory Structure:">
+    <n-form-item :label="t('tools.pack-files-for-ai.texts.label-directory-structure')">
       <n-tree :data="treeData" block-line />
     </n-form-item>
 
-    <n-form-item label="Include Files (RegExp):" label-placement="left">
-      <n-input v-model:value="includePattern" placeholder="Include pattern (RegExp)" />
+    <n-form-item :label="t('tools.pack-files-for-ai.texts.label-include-files-regexp')" label-placement="left">
+      <n-input v-model:value="includePattern" :placeholder="t('tools.pack-files-for-ai.texts.placeholder-include-pattern-regexp')" />
     </n-form-item>
-    <n-form-item label="Exclude Files (RegExp):" label-placement="left">
-      <n-input v-model:value="excludePattern" placeholder="Exclude pattern (RegExp)" style="margin-top: 8px;" />
+    <n-form-item :label="t('tools.pack-files-for-ai.texts.label-exclude-files-regexp')" label-placement="left">
+      <n-input v-model:value="excludePattern" :placeholder="t('tools.pack-files-for-ai.texts.placeholder-exclude-pattern-regexp')" style="margin-top: 8px;" />
     </n-form-item>
 
-    <n-card title="Options" mb-2>
+    <n-card :title="t('tools.pack-files-for-ai.texts.title-options')" mb-2>
       <n-space justify="space-evenly">
         <n-checkbox v-model:checked="fileSummary">
-          Include file summary
+          {{ t('tools.pack-files-for-ai.texts.tag-include-file-summary') }}
         </n-checkbox>
         <n-checkbox v-model:checked="directoryStructure">
-          Include directory structure
+          {{ t('tools.pack-files-for-ai.texts.tag-include-directory-structure') }}
         </n-checkbox>
         <n-checkbox v-model:checked="lineNumbers">
-          Show line numbers
+          {{ t('tools.pack-files-for-ai.texts.tag-show-line-numbers') }}
         </n-checkbox>
         <n-checkbox v-model:checked="removeEmptyLines">
-          Remove Empty Lines
+          {{ t('tools.pack-files-for-ai.texts.tag-remove-empty-lines') }}
         </n-checkbox>
         <n-checkbox v-model:checked="removeComments">
-          Remove comments
+          {{ t('tools.pack-files-for-ai.texts.tag-remove-comments') }}
         </n-checkbox>
       </n-space>
     </n-card>
 
     <n-space justify="center">
-      <n-form-item label="Output Format:" label-placement="left">
+      <n-form-item :label="t('tools.pack-files-for-ai.texts.label-output-format')" label-placement="left">
         <n-radio-group v-model:value="outputFormat">
-          <n-radio-button label="XML" value="xml" />
-          <n-radio-button label="Markdown" value="markdown" />
+          <n-radio-button :label="t('tools.pack-files-for-ai.texts.label-xml')" value="xml" />
+          <n-radio-button :label="t('tools.pack-files-for-ai.texts.label-markdown')" value="markdown" />
         </n-radio-group>
       </n-form-item>
     </n-space>
@@ -323,6 +323,6 @@ function processSourceCode(
       </n-button>
     </n-space>
 
-    <textarea-copyable label="Output Preview:" download :download-file-name="`output.${(outputFormat === 'xml' ? '.xml' : '.md')}`" :value="output" :language="outputFormat" />
+    <textarea-copyable :label="t('tools.pack-files-for-ai.texts.label-output-preview')" download :download-file-name="`output.${(outputFormat === 'xml' ? '.xml' : '.md')}`" :value="output" :language="outputFormat" />
   </n-card>
 </template>

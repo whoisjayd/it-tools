@@ -44,20 +44,20 @@ function toProperties(value: string) {
 <template>
   <c-card :title="t('tools.properties-converter.texts.title-properties-to-yaml')">
     <format-transformer
-      :input-label="t('tools.properties-converter.texts.input-label-your-properties-content')"
+      :input-:label="t('tools.properties-converter.texts.label-t-tools-properties-converter-texts-input-label-your-properties-content')"
       :input-default="defaultPropertiesValue"
-      :input-placeholder="t('tools.properties-converter.texts.input-placeholder-paste-your-properties-content-here')"
-      :output-label="t('tools.properties-converter.texts.output-label-yaml-version')"
+      :input-:placeholder="t('tools.properties-converter.texts.placeholder-t-tools-properties-converter-texts-input-placeholder-paste-your-properties-content-here')"
+      :output-:label="t('tools.properties-converter.texts.label-t-tools-properties-converter-texts-output-label-yaml-version')"
       output-language="yaml"
       :transformer="fromProperties"
     />
   </c-card>
   <c-card :title="t('tools.properties-converter.texts.title-yaml-to-properties')">
     <format-transformer
-      :input-label="t('tools.properties-converter.texts.input-label-your-yaml-content')"
+      :input-:label="t('tools.properties-converter.texts.label-t-tools-properties-converter-texts-input-label-your-yaml-content')"
       :input-default="defaultYamlValue"
-      :input-placeholder="t('tools.properties-converter.texts.input-placeholder-paste-your-yaml-content-here')"
-      :output-label="t('tools.properties-converter.texts.output-label-properties-version')"
+      :input-:placeholder="t('tools.properties-converter.texts.placeholder-t-tools-properties-converter-texts-input-placeholder-paste-your-yaml-content-here')"
+      :output-:label="t('tools.properties-converter.texts.label-t-tools-properties-converter-texts-output-label-properties-version')"
       output-language="ini"
       :transformer="toProperties"
     />

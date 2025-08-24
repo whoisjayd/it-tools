@@ -28,10 +28,10 @@ const rules: UseValidationRule<string>[] = [
 
 <template>
   <format-transformer
-    :input-label="t('tools.json-to-csv.texts.input-label-your-raw-json')"
+    :input-:label="t('tools.json-to-csv.texts.label-t-tools-json-to-csv-texts-input-label-your-raw-json')"
     :input-default="defaultValue"
-    :input-placeholder="t('tools.json-to-csv.texts.input-placeholder-paste-your-raw-json-here')"
-    :output-label="t('tools.json-to-csv.texts.output-label-csv-version-of-your-json')"
+    :input-:placeholder="t('tools.json-to-csv.texts.placeholder-t-tools-json-to-csv-texts-input-placeholder-paste-your-raw-json-here')"
+    :output-:label="t('tools.json-to-csv.texts.label-t-tools-json-to-csv-texts-output-label-csv-version-of-your-json')"
     :input-validation-rules="rules"
     :transformer="transformer"
     download-file-name="output.csv"

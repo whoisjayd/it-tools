@@ -1,10 +1,11 @@
 import { BrandPython } from '@vicons/tabler';
 import { defineTool } from '../tool';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: 'Django Secret Generator',
+  name: t('tools.django-secret-generator.title'),
   path: '/django-secret-generator',
-  description: 'Generate a Django secret key',
+  description: t('tools.django-secret-generator.description'),
   keywords: ['django', 'secret', 'generator'],
   component: () => import('./django-secret-generator.vue'),
   icon: BrandPython,

@@ -50,12 +50,12 @@ const { schemas, errors: validationErrors } = useJsonSchemaValidation({ json: js
       </div>
     </c-label>
 
-    <n-form-item label="JSON schema:" label-placement="left" label-width="130px" label-align="right">
+    <n-form-item :label="t('tools.json-linter.texts.label-json-schema')" label-placement="left" label-width="130px" label-align="right">
       <n-select
         v-model:value="schemaUrl"
         :options="[
-          { label: 'No validation', value: '' },
-          { label: 'Custom', value: 'custom' },
+          { label: t('tools.json-linter.texts.label-no-validation'), value: '' },
+          { label: t('tools.json-linter.texts.label-custom'), value: 'custom' },
           ...schemas.map(s => ({ label: `${s.name} / ${s.description}`, value: s.url })),
         ]"
         filterable mb-4
@@ -65,7 +65,7 @@ const { schemas, errors: validationErrors } = useJsonSchemaValidation({ json: js
       v-if="schemaUrl === 'custom'"
       ref="jsonSchemaInputElement"
       v-model:value="schemaData"
-      placeholder="Paste your JSON Schema here..."
+      :placeholder="t('tools.json-linter.texts.placeholder-paste-your-json-schema-here')"
       rows="20"
       multiline
       autocomplete="off"
@@ -76,7 +76,7 @@ const { schemas, errors: validationErrors } = useJsonSchemaValidation({ json: js
     />
 
     <div v-if="validationErrors.length > 0" mb-2 mt-2>
-      <n-alert title="Schema Validation Errors" type="error">
+      <n-alert :title="t('tools.json-linter.texts.title-schema-validation-errors')" type="error">
         <ul
           v-for="error in validationErrors"
           :key="error"

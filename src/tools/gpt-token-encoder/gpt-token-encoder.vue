@@ -1,8 +1,11 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n';
 import type { TiktokenModel } from 'js-tiktoken';
 import { GPTTokens } from '../gpt-token-estimator/gpt-tokens.service';
 import TextareaCopyable from '@/components/TextareaCopyable.vue';
 import { useQueryParamOrStorage } from '@/composable/queryParams';
+
+const { t } = useI18n();
 
 const models = GPTTokens.supportModels;
 const model = useQueryParamOrStorage({ name: 'model', storageName: 'gpt-token-encoder:model', defaultValue: 'gpt-3.5-turbo-1106' });
@@ -36,16 +39,16 @@ const decodedOutput = computed(
   <div max-w-600>
     <c-select
       v-model:value="model"
-      label="GPT IA Model"
+      :label="t('tools.gpt-token-encoder.texts.label-gpt-ia-model')"
       :options="models"
       mb-2
     />
 
-    <c-card title="Encode text to GPT Tokens">
+    <c-card :title="t('tools.gpt-token-encoder.texts.title-encode-text-to-gpt-tokens')">
       <c-input-text
         v-model:value="decodedInput"
-        placeholder="Put your text to encode here..."
-        label="Text to encode"
+        :placeholder="t('tools.gpt-token-encoder.texts.placeholder-put-your-text-to-encode-here')"
+        :label="t('tools.gpt-token-encoder.texts.label-text-to-encode')"
         raw-text
         multiline
         rows="5"
@@ -55,7 +58,7 @@ const decodedOutput = computed(
       <n-divider />
 
       <TextareaCopyable
-        label="Encoded tokens"
+        :label="t('tools.gpt-token-encoder.texts.label-encoded-tokens')"
         :value="encodedOutput"
         multiline
         readonly
@@ -64,11 +67,11 @@ const decodedOutput = computed(
       />
     </c-card>
 
-    <c-card title="Decode GPT Tokens to text" mt-5>
+    <c-card :title="t('tools.gpt-token-encoder.texts.title-decode-gpt-tokens-to-text')" mt-5>
       <c-input-text
         v-model:value="encodedInput"
-        placeholder="Put your encoded tokens here..."
-        label="Tokens to decode"
+        :placeholder="t('tools.gpt-token-encoder.texts.placeholder-put-your-encoded-tokens-here')"
+        :label="t('tools.gpt-token-encoder.texts.label-tokens-to-decode')"
         raw-text
         multiline
         rows="5"
@@ -78,7 +81,7 @@ const decodedOutput = computed(
       <n-divider />
 
       <TextareaCopyable
-        label="Decoded text"
+        :label="t('tools.gpt-token-encoder.texts.label-decoded-text')"
         :value="decodedOutput"
         multiline
         readonly

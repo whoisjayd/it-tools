@@ -20,9 +20,9 @@ const rules: UseValidationRule<string>[] = [
 
 <template>
   <format-transformer
-    :input-label="t('tools.toml-to-yaml.texts.input-label-your-toml')"
-    :input-placeholder="t('tools.toml-to-yaml.texts.input-placeholder-paste-your-toml-here')"
-    :output-label="t('tools.toml-to-yaml.texts.output-label-yaml-from-your-toml')"
+    :input-:label="t('tools.toml-to-yaml.texts.label-t-tools-toml-to-yaml-texts-input-label-your-toml')"
+    :input-:placeholder="t('tools.toml-to-yaml.texts.placeholder-t-tools-toml-to-yaml-texts-input-placeholder-paste-your-toml-here')"
+    :output-:label="t('tools.toml-to-yaml.texts.label-t-tools-toml-to-yaml-texts-output-label-yaml-from-your-toml')"
     output-language="yaml"
     :input-validation-rules="rules"
     :transformer="transformer"

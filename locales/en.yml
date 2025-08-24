@@ -201,6 +201,9 @@ tools:
       input-label-your-raw-json: Your raw JSON
       input-placeholder-paste-your-raw-json-here: Paste your raw JSON here...
       output-label-csv-version-of-your-json: CSV version of your JSON
+      label-t-tools-json-to-csv-texts-input-label-your-raw-json: t('tools.json-to-csv.texts.input-label-your-raw-json')
+      placeholder-t-tools-json-to-csv-texts-input-placeholder-paste-your-raw-json-here: t('tools.json-to-csv.texts.input-placeholder-paste-your-raw-json-here')
+      label-t-tools-json-to-csv-texts-output-label-csv-version-of-your-json: t('tools.json-to-csv.texts.output-label-csv-version-of-your-json')
   csv-to-json:
     title: CSV to JSON
     description: Convert CSV to JSON with automatic header detection.
@@ -210,6 +213,9 @@ tools:
       input-label-your-raw-csv: Your raw CSV
       input-placeholder-paste-your-raw-csv-here: Paste your raw CSV here...
       output-label-json-version-of-your-csv: JSON version of your CSV
+      label-t-tools-csv-to-json-texts-input-label-your-raw-csv: t('tools.csv-to-json.texts.input-label-your-raw-csv')
+      placeholder-t-tools-csv-to-json-texts-input-placeholder-paste-your-raw-csv-here: t('tools.csv-to-json.texts.input-placeholder-paste-your-raw-csv-here')
+      label-t-tools-csv-to-json-texts-output-label-json-version-of-your-csv: t('tools.csv-to-json.texts.output-label-json-version-of-your-csv')
   camera-recorder:
     title: Camera recorder
     description: Take a picture or record a video from your webcam or camera.
@@ -514,6 +520,10 @@ tools:
       input-label-your-input-data: Your input data
       input-placeholder-paste-your-input-data-here: Paste your input data here...
       output-label-your-transformed-data: Your transformed data
+      label-t-tools-list-converter-texts-input-label-your-input-data: t('tools.list-converter.texts.input-label-your-input-data')
+      placeholder-t-tools-list-converter-texts-input-placeholder-paste-your-input-data-here: >-
+        t('tools.list-converter.texts.input-placeholder-paste-your-input-data-here')
+      label-t-tools-list-converter-texts-output-label-your-transformed-data: t('tools.list-converter.texts.output-label-your-transformed-data')
   base64-string-converter:
     title: Base64 string encoder/decoder
     description: Simply encode and decode strings into their base64 representation.
@@ -543,6 +553,9 @@ tools:
       input-label-your-toml: Your TOML
       input-placeholder-paste-your-toml-here: Paste your TOML here...
       output-label-yaml-from-your-toml: YAML from your TOML
+      label-t-tools-toml-to-yaml-texts-input-label-your-toml: t('tools.toml-to-yaml.texts.input-label-your-toml')
+      placeholder-t-tools-toml-to-yaml-texts-input-placeholder-paste-your-toml-here: t('tools.toml-to-yaml.texts.input-placeholder-paste-your-toml-here')
+      label-t-tools-toml-to-yaml-texts-output-label-yaml-from-your-toml: t('tools.toml-to-yaml.texts.output-label-yaml-from-your-toml')
   math-evaluator:
     title: Math evaluator
     description: >-
@@ -559,6 +572,10 @@ tools:
       input-label-your-json: Your JSON
       input-placeholder-paste-your-json-here: Paste your JSON here...
       output-label-yaml-from-your-json: YAML from your JSON
+      label-t-tools-json-to-yaml-converter-texts-input-label-your-json: t('tools.json-to-yaml-converter.texts.input-label-your-json')
+      placeholder-t-tools-json-to-yaml-converter-texts-input-placeholder-paste-your-json-here: >-
+        t('tools.json-to-yaml-converter.texts.input-placeholder-paste-your-json-here')
+      label-t-tools-json-to-yaml-converter-texts-output-label-yaml-from-your-json: t('tools.json-to-yaml-converter.texts.output-label-yaml-from-your-json')
   json-to-javascript:
     title: JSON to JS converter
     description: Simply convert JSON to Javascript object with this live online converter.
@@ -568,6 +585,11 @@ tools:
       input-label-your-json: Your JSON
       input-placeholder-paste-your-json-here: Paste your JSON here...
       output-label-javascript-object-from-your-json: JavaScript Object from your JSON
+      label-t-tools-json-to-javascript-texts-input-label-your-json: t('tools.json-to-javascript.texts.input-label-your-json')
+      placeholder-t-tools-json-to-javascript-texts-input-placeholder-paste-your-json-here: >-
+        t('tools.json-to-javascript.texts.input-placeholder-paste-your-json-here')
+      label-t-tools-json-to-javascript-texts-output-label-javascript-object-from-your-json: >-
+        t('tools.json-to-javascript.texts.output-label-javascript-object-from-your-json')
   javascript-to-json:
     title: JS to JSON converter
     description: Simply convert Javascript object to JSON with this live online converter.
@@ -577,6 +599,11 @@ tools:
       input-label-your-javascript-object: Your JavaScript Object
       input-placeholder-paste-your-js-object-here: Paste your JS Object here...
       output-label-json-from-your-javascript-object: JSON from your JavaScript Object
+      label-t-tools-javascript-to-json-texts-input-label-your-javascript-object: t('tools.javascript-to-json.texts.input-label-your-javascript-object')
+      placeholder-t-tools-javascript-to-json-texts-input-placeholder-paste-your-js-object-here: >-
+        t('tools.javascript-to-json.texts.input-placeholder-paste-your-js-object-here')
+      label-t-tools-javascript-to-json-texts-output-label-json-from-your-javascript-object: >-
+        t('tools.javascript-to-json.texts.output-label-json-from-your-javascript-object')
   numeronym-generator:
     title: Numeronym generator
     description: >-
@@ -677,6 +704,9 @@ tools:
       input-label-your-toml: Your TOML
       input-placeholder-paste-your-toml-here: Paste your TOML here...
       output-label-json-from-your-toml: JSON from your TOML
+      label-t-tools-toml-to-json-texts-input-label-your-toml: t('tools.toml-to-json.texts.input-label-your-toml')
+      placeholder-t-tools-toml-to-json-texts-input-placeholder-paste-your-toml-here: t('tools.toml-to-json.texts.input-placeholder-paste-your-toml-here')
+      label-t-tools-toml-to-json-texts-output-label-json-from-your-toml: t('tools.toml-to-json.texts.output-label-json-from-your-toml')
   lorem-ipsum-generator:
     title: Lorem ipsum generator
     description: >-
@@ -720,6 +750,9 @@ tools:
       output-label-formatted-xml-from-your-xml: Formatted XML from your XML
       tag-foo: foo
       tag-bar: bar
+      label-t-tools-xml-formatter-texts-input-label-your-xml: t('tools.xml-formatter.texts.input-label-your-xml')
+      placeholder-t-tools-xml-formatter-texts-input-placeholder-paste-your-xml-here: t('tools.xml-formatter.texts.input-placeholder-paste-your-xml-here')
+      label-t-tools-xml-formatter-texts-output-label-formatted-xml-from-your-xml: t('tools.xml-formatter.texts.output-label-formatted-xml-from-your-xml')
   temperature-converter:
     title: Temperature converter
     description: >-
@@ -767,6 +800,9 @@ tools:
       input-label-your-yaml: Your YAML
       input-placeholder-paste-your-yaml-here: Paste your YAML here...
       output-label-toml-from-your-yaml: TOML from your YAML
+      label-t-tools-yaml-to-toml-texts-input-label-your-yaml: t('tools.yaml-to-toml.texts.input-label-your-yaml')
+      placeholder-t-tools-yaml-to-toml-texts-input-placeholder-paste-your-yaml-here: t('tools.yaml-to-toml.texts.input-placeholder-paste-your-yaml-here')
+      label-t-tools-yaml-to-toml-texts-output-label-toml-from-your-yaml: t('tools.yaml-to-toml.texts.output-label-toml-from-your-yaml')
   json-diff:
     title: JSON diff
     description: Compare two JSON objects and get the differences between them.
@@ -848,6 +884,9 @@ tools:
       input-label-your-json: Your JSON
       input-placeholder-paste-your-json-here: Paste your JSON here...
       output-label-toml-from-your-json: TOML from your JSON
+      label-t-tools-json-to-toml-texts-input-label-your-json: t('tools.json-to-toml.texts.input-label-your-json')
+      placeholder-t-tools-json-to-toml-texts-input-placeholder-paste-your-json-here: t('tools.json-to-toml.texts.input-placeholder-paste-your-json-here')
+      label-t-tools-json-to-toml-texts-output-label-toml-from-your-json: t('tools.json-to-toml.texts.output-label-toml-from-your-json')
   json-to-ts:
     title: JSON to TS
     description: Parse and convert JSON to TS.
@@ -856,6 +895,9 @@ tools:
       input-label-your-json: Your JSON
       input-placeholder-paste-your-json-here: Paste your JSON here...
       output-label-ts-from-your-json: TS from your JSON
+      label-t-tools-json-to-ts-texts-input-label-your-json: t('tools.json-to-ts.texts.input-label-your-json')
+      placeholder-t-tools-json-to-ts-texts-input-placeholder-paste-your-json-here: t('tools.json-to-ts.texts.input-placeholder-paste-your-json-here')
+      label-t-tools-json-to-ts-texts-output-label-ts-from-your-json: t('tools.json-to-ts.texts.output-label-ts-from-your-json')
   device-information:
     title: Device information
     description: >-
@@ -905,9 +947,14 @@ tools:
       input-label-your-raw-json: Your raw JSON
       input-placeholder-paste-your-raw-json-here: Paste your raw JSON here...
       output-label-minified-version-of-your-json: Minified version of your JSON
+      label-t-tools-json-minify-texts-input-label-your-raw-json: t('tools.json-minify.texts.input-label-your-raw-json')
+      placeholder-t-tools-json-minify-texts-input-placeholder-paste-your-raw-json-here: t('tools.json-minify.texts.input-placeholder-paste-your-raw-json-here')
+      label-t-tools-json-minify-texts-output-label-minified-version-of-your-json: t('tools.json-minify.texts.output-label-minified-version-of-your-json')
   json-string-converter:
     title: Json string converter
-    description: ''
+    description: >-
+      Convert your text or JavaScript objects to JSON string format and vice
+      versa.
     texts:
       message-provided-text-is-not-valid-make-sure-your-json-is-in-double-quotes: Provided text is not valid. (Make sure your JSON is in double quotes)
       label-json-stringify: JSON Stringify
@@ -916,6 +963,11 @@ tools:
       input-label-your-text-json-string: Your text / JSON string
       input-placeholder-paste-your-text-here: Paste your text here...
       output-label-json-string-conversion-of-your-input: JSON string conversion of your input
+      label-t-tools-json-string-converter-texts-input-label-your-text-json-string: t('tools.json-string-converter.texts.input-label-your-text-json-string')
+      placeholder-t-tools-json-string-converter-texts-input-placeholder-paste-your-text-here: >-
+        t('tools.json-string-converter.texts.input-placeholder-paste-your-text-here')
+      label-t-tools-json-string-converter-texts-output-label-json-string-conversion-of-your-input: >-
+        t('tools.json-string-converter.texts.output-label-json-string-conversion-of-your-input')
   ulid-generator:
     title: ULID generator
     description: >-
@@ -958,6 +1010,11 @@ tools:
       input-label-your-yaml: Your YAML
       input-placeholder-paste-your-yaml-here: Paste your yaml here...
       output-label-json-from-your-yaml: JSON from your YAML
+      label-nestify-a-b-c-to-nested-objects: Nestify ('a.b.c' to nested objects)
+      label-t-tools-yaml-to-json-converter-texts-input-label-your-yaml: t('tools.yaml-to-json-converter.texts.input-label-your-yaml')
+      placeholder-t-tools-yaml-to-json-converter-texts-input-placeholder-paste-your-yaml-here: >-
+        t('tools.yaml-to-json-converter.texts.input-placeholder-paste-your-yaml-here')
+      label-t-tools-yaml-to-json-converter-texts-output-label-json-from-your-yaml: t('tools.yaml-to-json-converter.texts.output-label-json-from-your-yaml')
   uuid-generator:
     title: UUIDs generator
     description: >-
@@ -1137,7 +1194,9 @@ tools:
       tag-copy: Copy
   image-resizer:
     title: Image resizer
-    description: ''
+    description: >-
+      Change the width and height of the image, preview and download it in the
+      desired format.
     texts:
       label-custom: Custom
       label-original: Original
@@ -1180,6 +1239,9 @@ tools:
       input-label-your-json: Your JSON
       input-placeholder-paste-your-json-here: Paste your JSON here...
       output-label-object-from-your-json: Object from your JSON
+      label-t-tools-json-to-object-texts-input-label-your-json: t('tools.json-to-object.texts.input-label-your-json')
+      placeholder-t-tools-json-to-object-texts-input-placeholder-paste-your-json-here: t('tools.json-to-object.texts.input-placeholder-paste-your-json-here')
+      label-t-tools-json-to-object-texts-output-label-object-from-your-json: t('tools.json-to-object.texts.output-label-object-from-your-json')
   unicode-to-java-entities:
     title: Unicode Characters to Java Entities Converter
     description: Unicode Characters to Java Entities Converter and vice-versa
@@ -2005,6 +2067,7 @@ tools:
       label-prompt-tokens: 'Prompt Tokens:'
       label-completion-tokens: 'Completion Tokens:'
       label-used-usd: 'Used USD:'
+      tag-see-openapi-pricings: See OpenAPI Pricings
   gzip-converter:
     title: GZip/Deflate converter
     description: Convert text from/to gzip/deflate
@@ -2400,6 +2463,11 @@ tools:
       label-paste-your-json-file-content: 'Paste your JSON file content:'
       title-the-following-errors-occured: The following errors occured
       tag-validation-successful: Validation successful!
+      label-no-validation: No validation
+      label-custom: Custom
+      label-json-schema: 'JSON schema:'
+      placeholder-paste-your-json-schema-here: Paste your JSON Schema here...
+      title-schema-validation-errors: Schema Validation Errors
   json-size-analyzer:
     title: Json Size Analyzer
     description: Measure JSON nodes relative weights
@@ -2468,6 +2536,10 @@ tools:
       input-label-your-json: Your JSON
       input-placeholder-paste-your-json-here: Paste your JSON here...
       output-label-php-array-version: PHP Array version
+      label-t-tools-json-to-php-array-texts-input-label-your-json: t('tools.json-to-php-array.texts.input-label-your-json')
+      placeholder-t-tools-json-to-php-array-texts-input-placeholder-paste-your-json-here: >-
+        t('tools.json-to-php-array.texts.input-placeholder-paste-your-json-here')
+      label-t-tools-json-to-php-array-texts-output-label-php-array-version: t('tools.json-to-php-array.texts.output-label-php-array-version')
   json-to-schema:
     title: Json to Schema
     description: >-
@@ -2487,6 +2559,9 @@ tools:
       input-label-your-json: Your JSON
       input-placeholder-paste-your-json-here: Paste your JSON here...
       output-label-your-schema: Your schema
+      label-t-tools-json-to-schema-texts-input-label-your-json: t('tools.json-to-schema.texts.input-label-your-json')
+      placeholder-t-tools-json-to-schema-texts-input-placeholder-paste-your-json-here: t('tools.json-to-schema.texts.input-placeholder-paste-your-json-here')
+      label-t-tools-json-to-schema-texts-output-label-your-schema: t('tools.json-to-schema.texts.output-label-your-schema')
   jsonpath-memo:
     title: JSONPath Syntax Cheatsheet
     description: JSONPath Syntax Cheatsheet
@@ -2701,6 +2776,10 @@ tools:
       input-label-your-nginx-config: Your Nginx config
       input-placeholder-paste-your-nginx-config-here: Paste your Nginx config here...
       output-label-prettified-nginx-config: Prettified Nginx config
+      label-t-tools-nginx-formatter-texts-input-label-your-nginx-config: t('tools.nginx-formatter.texts.input-label-your-nginx-config')
+      placeholder-t-tools-nginx-formatter-texts-input-placeholder-paste-your-nginx-config-here: >-
+        t('tools.nginx-formatter.texts.input-placeholder-paste-your-nginx-config-here')
+      label-t-tools-nginx-formatter-texts-output-label-prettified-nginx-config: t('tools.nginx-formatter.texts.output-label-prettified-nginx-config')
   ocr-image:
     title: OCRize image and PDF
     description: Perform OCR (Tesseract) on an image or PDF
@@ -2903,6 +2982,10 @@ tools:
       input-label-your-php-array: Your PHP Array
       input-placeholder-paste-your-php-array-here: Paste your PHP Array here...
       output-label-json-version: JSON version
+      label-t-tools-php-array-to-json-texts-input-label-your-php-array: t('tools.php-array-to-json.texts.input-label-your-php-array')
+      placeholder-t-tools-php-array-to-json-texts-input-placeholder-paste-your-php-array-here: >-
+        t('tools.php-array-to-json.texts.input-placeholder-paste-your-php-array-here')
+      label-t-tools-php-array-to-json-texts-output-label-json-version: t('tools.php-array-to-json.texts.output-label-json-version')
   pin-code-generator:
     title: Pin Code Generator
     description: Generate Unique PIN (digits) codes
@@ -3046,6 +3129,10 @@ tools:
       input-label-your-log-textual-data: 'Your log/textual data:'
       input-placeholder-paste-your-log-textual-data-here: Paste your log/textual data here...
       output-label-cleaned-version: 'Cleaned version:'
+      label-t-tools-sensitive-data-masker-texts-input-label-your-log-textual-data: t('tools.sensitive-data-masker.texts.input-label-your-log-textual-data')
+      placeholder-t-tools-sensitive-data-masker-texts-input-placeholder-paste-your-log-textual-data-here: >-
+        t('tools.sensitive-data-masker.texts.input-placeholder-paste-your-log-textual-data-here')
+      label-t-tools-sensitive-data-masker-texts-output-label-cleaned-version: t('tools.sensitive-data-masker.texts.output-label-cleaned-version')
   sla-calculator:
     title: SLA calculator
     description: Service Level Agreement Calcultator
@@ -3398,7 +3485,9 @@ tools:
       tag-xpath-expression-selected-nothing: XPath expression selected nothing
   cli-command-editor:
     title: Cli command editor
-    description: ''
+    description: >-
+      Convert CLI commands with options into an easily editable form and
+      generate the command with
     command: Command
     placeholder: Paste command here
     texts:
@@ -3989,6 +4078,10 @@ tools:
       input-label-your-json: Your JSON
       input-placeholder-paste-your-json-here: Paste your JSON here...
       output-label-protobuf-version-of-your-json-objects: 'ProtoBuf version of your JSON objects:'
+      label-t-tools-json-to-protobuf-texts-input-label-your-json: t('tools.json-to-protobuf.texts.input-label-your-json')
+      placeholder-t-tools-json-to-protobuf-texts-input-placeholder-paste-your-json-here: t('tools.json-to-protobuf.texts.input-placeholder-paste-your-json-here')
+      label-t-tools-json-to-protobuf-texts-output-label-protobuf-version-of-your-json-objects: >-
+        t('tools.json-to-protobuf.texts.output-label-protobuf-version-of-your-json-objects')
   json-to-python:
     title: Json to Python
     description: Convert JSON to Python classes
@@ -4015,6 +4108,9 @@ tools:
       input-label-your-json: Your JSON
       input-placeholder-paste-your-json-here: Paste your JSON here...
       output-label-your-sql-ddl: Your SQL DDL
+      label-t-tools-json-to-sql-ddl-texts-input-label-your-json: t('tools.json-to-sql-ddl.texts.input-label-your-json')
+      placeholder-t-tools-json-to-sql-ddl-texts-input-placeholder-paste-your-json-here: t('tools.json-to-sql-ddl.texts.input-placeholder-paste-your-json-here')
+      label-t-tools-json-to-sql-ddl-texts-output-label-your-sql-ddl: t('tools.json-to-sql-ddl.texts.output-label-your-sql-ddl')
   json-to-sql-insert:
     title: Json to SQL INSERT
     description: Convert JSON array to INSERT INTO
@@ -4171,6 +4267,15 @@ tools:
       input-label-your-yaml-content: 'Your YAML content:'
       input-placeholder-paste-your-yaml-content-here: Paste your YAML content here...
       output-label-properties-version: '.properties version:'
+      label-t-tools-properties-converter-texts-input-label-your-properties-content: >-
+        t('tools.properties-converter.texts.input-label-your-properties-content')
+      placeholder-t-tools-properties-converter-texts-input-placeholder-paste-your-properties-content-here: >-
+        t('tools.properties-converter.texts.input-placeholder-paste-your-properties-content-here')
+      label-t-tools-properties-converter-texts-output-label-yaml-version: t('tools.properties-converter.texts.output-label-yaml-version')
+      label-t-tools-properties-converter-texts-input-label-your-yaml-content: t('tools.properties-converter.texts.input-label-your-yaml-content')
+      placeholder-t-tools-properties-converter-texts-input-placeholder-paste-your-yaml-content-here: >-
+        t('tools.properties-converter.texts.input-placeholder-paste-your-yaml-content-here')
+      label-t-tools-properties-converter-texts-output-label-properties-version: t('tools.properties-converter.texts.output-label-properties-version')
   punycode-converter:
     title: Punycode Converter
     description: >-
@@ -4196,6 +4301,14 @@ tools:
       input-label-double-quoted-string: Double quoted string
       input-placeholder-paste-your-double-quoted-string-here: Paste your double quoted string here...
       output-label-single-quoted-string: Single quoted string
+      label-t-tools-quote-converter-texts-input-label-single-quoted-string: t('tools.quote-converter.texts.input-label-single-quoted-string')
+      placeholder-t-tools-quote-converter-texts-input-placeholder-paste-your-single-quoted-string-here: >-
+        t('tools.quote-converter.texts.input-placeholder-paste-your-single-quoted-string-here')
+      label-t-tools-quote-converter-texts-output-label-double-quoted-string: t('tools.quote-converter.texts.output-label-double-quoted-string')
+      label-t-tools-quote-converter-texts-input-label-double-quoted-string: t('tools.quote-converter.texts.input-label-double-quoted-string')
+      placeholder-t-tools-quote-converter-texts-input-placeholder-paste-your-double-quoted-string-here: >-
+        t('tools.quote-converter.texts.input-placeholder-paste-your-double-quoted-string-here')
+      label-t-tools-quote-converter-texts-output-label-single-quoted-string: t('tools.quote-converter.texts.output-label-single-quoted-string')
   rsync-generator:
     title: Rsync Generator
     description: Rsync command generator
@@ -4386,6 +4499,10 @@ tools:
       input-label-your-raw-html: Your raw HTML
       input-placeholder-paste-your-raw-html-here: Paste your raw HTML here...
       output-label-text-from-your-html: Text from your HTML
+      label-t-tools-extract-text-from-html-texts-input-label-your-raw-html: t('tools.extract-text-from-html.texts.input-label-your-raw-html')
+      placeholder-t-tools-extract-text-from-html-texts-input-placeholder-paste-your-raw-html-here: >-
+        t('tools.extract-text-from-html.texts.input-placeholder-paste-your-raw-html-here')
+      label-t-tools-extract-text-from-html-texts-output-label-text-from-your-html: t('tools.extract-text-from-html.texts.output-label-text-from-your-html')
     title: Extract text from HTML
     description: >-
       Paste your HTML in the input form on the left and you will get text
@@ -5679,6 +5796,11 @@ tools:
       label-your-raw-yaml: 'Your raw YAML:'
       title-the-following-errors-occured: The following errors occured
       label-prettified-version-of-your-yaml: Prettified version of your YAML
+      label-no-validation: No validation
+      label-custom: Custom
+      label-json-schema: 'JSON schema:'
+      placeholder-paste-your-json-schema-here: Paste your JSON Schema here...
+      title-schema-validation-errors: Schema Validation Errors
     text:
       see-error-messages: '#see error messages'
   business-time-calculator:
@@ -5723,6 +5845,11 @@ tools:
       label-your-raw-json: Your raw JSON
       placeholder-paste-your-raw-json-here: Paste your raw JSON here...
       label-prettified-version-of-your-json: Prettified version of your JSON
+      label-no-validation: No validation
+      label-custom: Custom
+      label-json-schema: 'JSON schema:'
+      placeholder-paste-your-json-schema-here: Paste your JSON Schema here...
+      title-schema-validation-errors: Schema Validation Errors
     text:
       provided-json-is-not-valid: Provided JSON is not valid.
       try-again-with-repairjsonlabel: Try again with "{0}"
@@ -6095,6 +6222,10 @@ tools:
       output-label-transformed-json: 'Transformed JSON:'
       tag-flatten: Flatten
       tag-unflatten-nestify: Unflatten/Nestify
+      label-t-tools-json-flatten-nestify-texts-input-label-your-json-content: t('tools.json-flatten-nestify.texts.input-label-your-json-content')
+      placeholder-t-tools-json-flatten-nestify-texts-input-placeholder-paste-your-json-content-here: >-
+        t('tools.json-flatten-nestify.texts.input-placeholder-paste-your-json-content-here')
+      label-t-tools-json-flatten-nestify-texts-output-label-transformed-json: t('tools.json-flatten-nestify.texts.output-label-transformed-json')
   json-merger:
     title: JSON Merger
     description: Merge deeply two JSON content
@@ -6136,6 +6267,10 @@ tools:
       output-label-transformed-yaml: 'Transformed YAML:'
       tag-flatten: Flatten
       tag-unflatten-nestify: Unflatten/Nestify
+      label-t-tools-yaml-flatten-nestify-texts-input-label-your-yaml-content: t('tools.yaml-flatten-nestify.texts.input-label-your-yaml-content')
+      placeholder-t-tools-yaml-flatten-nestify-texts-input-placeholder-paste-your-yaml-content-here: >-
+        t('tools.yaml-flatten-nestify.texts.input-placeholder-paste-your-yaml-content-here')
+      label-t-tools-yaml-flatten-nestify-texts-output-label-transformed-yaml: t('tools.yaml-flatten-nestify.texts.output-label-transformed-yaml')
   yaml-merger:
     title: YAML Merger
     description: Merge deeply two YAML content
@@ -6152,6 +6287,8 @@ tools:
       title-drag-and-drop-a-json-file-here-or-click-to-select-a-file: Drag and drop a JSON file here, or click to select a file
       label-paste-your-json-content: Paste your JSON content
       placeholder-your-json: Your JSON
+    title: JSON to Data
+    description: Convert JSON to CSV, SQL Insert, YAML, Markdown, XML and XLSX
   random-numbers-generator:
     button:
       refresh: Refresh
@@ -6162,4 +6299,777 @@ tools:
       placeholder-put-characters-to-deny-from-number: Put denied characters here...
       label-denied-characters: 'Denied characters:'
       label-toupper: To uppercase digits
+      tag-hexadecimal: Hexadecimal
+      tag-decimal: Decimal
     copied: Numbers copied to clipboard!
+    title: Random numbers generator
+    description: >-
+      Generate random numbers (decimal, hexadecimal). With denied characters,
+      you can generate other bases.
+  charset-detector:
+    title: Text Charset Detector/Decoder
+    description: >-
+      Detect text possible charsets and allow to decode using each detected
+      encoding
+    texts:
+      title-input: Input
+      label-file: File
+      label-content: Content
+      title-drag-and-drop-txt-file-here-or-click-to-select-a-file: Drag and drop TXT file here, or click to select a file
+      label-file-content: File Content
+      placeholder-put-your-text-content-here: Put your text content here...
+      title-possible-encodings: Possible encodings
+      title-decoded-text: Decoded text
+      tag-confidence: Confidence
+      tag-name: Name
+      tag-lang: Lang
+      tag-decode: Decode
+  django-secret-generator:
+    title: Django Secret Generator
+    description: Generate a Django secret key
+    texts:
+      text-django-secret-key-copied-to-clipboard: Django secret key copied to clipboard
+      label-django-secret-key: 'Django secret key:'
+      tag-copy: Copy
+      tag-regenerate: Regenerate
+  dnsbl-checker:
+    title: DNSBL Checker
+    description: Check if a given IP is in any of known DNS Blacklist servers (spam block)
+    texts:
+      title-dnsbl-multi-checker: DNSBL Multi-Checker
+      placeholder-enter-ip-or-domain: Enter IP or domain
+      label-show-listed-only: Show Listed Only
+      label-resolved-ip: 'Resolved IP:'
+      tag-check-all: Check All
+      tag-want-to-understand-why-an-ip-might-be-blacklisted-check-out: Want to understand why an IP might be blacklisted? Check out
+      tag-this-dnsbl-explanation-and-removal-guide: this DNSBL explanation and removal guide
+      tag-: .
+  docker-compose-memo:
+    title: Docker Compose cheatsheet
+    description: Docker Compose format cheatsheet
+  docker-inspect-to-docker-run:
+    title: Docker inspect to Docker run
+    description: Convert docker inspect command json result back to Docker run command
+    texts:
+      label-paste-your-docker-inspect-json-output: 'Paste your Docker Inspect JSON output:'
+      title-the-following-errors-occured: 'The following errors occured:'
+  docker-swarm-memo:
+    title: Docker SWARM cheatsheet
+    description: Docker Swarm mode cheatsheet
+  dockerfile-memo:
+    title: Dockerfile cheatsheet
+    description: Dockerfile syntax and build cheatsheet
+  env-variables-converter:
+    title: Env Variables Format Converter
+    description: Convert between common env vars format and yaml
+    texts:
+      label-input-type: 'Input Type:'
+      label-input: 'Input:'
+      label-output-type: 'Output Type:'
+      title-output: Output
+  favicon-generator:
+    title: Favicon Generator
+    description: Generate Favicon and corresponding header
+    texts:
+      title-favicon-pack-generator: Favicon Pack Generator
+      title-️-previews: 🖼️ Previews
+      title-html-head-tags: 📄 HTML Head Tags
+      tag-upload-png-image: Upload PNG Image
+      tag-download-zip: 📦 Download ZIP
+  font-compare:
+    title: Font Compare
+    description: Compare to fonts on a given text
+    texts:
+      label-arial: Arial
+      label-verdana: Verdana
+      label-helvetica: Helvetica
+      label-tahoma: Tahoma
+      label-trebuchet-ms: Trebuchet MS
+      label-times-new-roman: Times New Roman
+      label-georgia: Georgia
+      label-garamond: Garamond
+      label-courier-new: Courier New
+      label-lucida-console: Lucida Console
+      label-lucida-sans-unicode: Lucida Sans Unicode
+      label-palatino-linotype: Palatino Linotype
+      label-segoe-ui: Segoe UI
+      label-impact: Impact
+      label-comic-sans-ms: Comic Sans MS
+      label-century-gothic: Century Gothic
+      label-franklin-gothic-medium: Franklin Gothic Medium
+      label-candara: Candara
+      label-calibri: Calibri
+      label-cambria: Cambria
+      label-constantia: Constantia
+      label-corbel: Corbel
+      label-book-antiqua: Book Antiqua
+      label-monaco: Monaco
+      label-andale-mono: Andale Mono
+      label-optima: Optima
+      label-futura: Futura
+      label-rockwell: Rockwell
+      label-baskerville: Baskerville
+      label-didot: Didot
+      label-geneva: Geneva
+      label-symbol: Symbol
+      label-webdings: Webdings
+      label-wingdings: Wingdings
+      label-roboto: Roboto
+      label-open-sans: Open Sans
+      label-lato: Lato
+      label-montserrat: Montserrat
+      label-oswald: Oswald
+      label-raleway: Raleway
+      label-poppins: Poppins
+      label-merriweather: Merriweather
+      label-inter: Inter
+      label-noto-sans: Noto Sans
+      label-playfair-display: Playfair Display
+      label-source-sans-pro: Source Sans Pro
+      label-ubuntu: Ubuntu
+      label-nunito: Nunito
+      label-pt-sans: PT Sans
+      label-quicksand: Quicksand
+      label-work-sans: Work Sans
+      label-rubik: Rubik
+      label-dm-sans: DM Sans
+      placeholder-enter-sample-text: Enter sample text...
+      placeholder-select-font-name: Select font name
+      placeholder-enter-font-url: Enter font URL
+      placeholder-paste-font-face-css-here: Paste {'@'}font-face CSS here
+      placeholder-font-family-name-from-css: Font-family name from CSS
+      placeholder-enter-css-url-e-g-https-example-com-fonts-css: Enter CSS URL (e.g. https://example.com/fonts.css)
+      placeholder-font-family-name-from-imported-css: Font-family name from imported CSS
+      tag-upload-font-file: Upload Font File
+      label-normal: Normal
+      label-bold: Bold
+      label-lighter: Lighter
+      label-100: '100'
+      label-400: '400'
+      label-700: '700'
+      label-italic: Italic
+      label-oblique: Oblique
+      label-sans-serif: Sans-serif
+      label-serif: Serif
+      label-monospace: Monospace
+      label-cursive: Cursive
+      label-fantasy: Fantasy
+      label-weight: 'Weight:'
+      placeholder-font-weight: Font Weight
+      label-style: 'Style:'
+      placeholder-font-style: Font Style
+      label-fallback: 'Fallback:'
+      placeholder-fallback-font: Fallback Font
+      tag-defineprops: defineProps
+  gpt-token-encoder:
+    title: GPT Token Encoder/Decoder
+    description: Encode text to GPT tokens and decode GPT tokens back to text
+    texts:
+      label-gpt-ia-model: GPT IA Model
+      title-encode-text-to-gpt-tokens: Encode text to GPT Tokens
+      placeholder-put-your-text-to-encode-here: Put your text to encode here...
+      label-text-to-encode: Text to encode
+      label-encoded-tokens: Encoded tokens
+      title-decode-gpt-tokens-to-text: Decode GPT Tokens to text
+      placeholder-put-your-encoded-tokens-here: Put your encoded tokens here...
+      label-tokens-to-decode: Tokens to decode
+      label-decoded-text: Decoded text
+  image-comparer:
+    title: Image Comparer
+    description: A tool to visualy compare images
+    texts:
+      title-image-compare-viewer: Image Compare Viewer
+      label-left-image-url: 'Left Image URL:'
+      placeholder-enter-left-image-url: Enter left image URL
+      label-right-image-url: 'Right Image URL:'
+      placeholder-enter-right-image-url: Enter right image URL
+      label-upload-left-image: 'Upload Left Image:'
+      label-upload-right-image: 'Upload Right Image:'
+      tag-compare: Compare
+      tag-upload-left: Upload Left
+      tag-upload-right: Upload Right
+  logrotate-generator:
+    title: Apache LogRotate Generator
+    description: Generate Apache .log rotation configuration
+    texts:
+      label-path: 'Path:'
+      placeholder-enter-log-path-or-pattern: Enter log path or pattern...
+      label-rotate-count: 'Rotate Count:'
+      label-frequency: 'Frequency:'
+      label-min-size: 'Min Size:'
+      placeholder-enter-min-size-and-unit: Enter min size and unit...
+      label-size: 'Size:'
+      placeholder-enter-size-and-unit: Enter size and unit...
+      label-create-file: 'Create File:'
+      label-copy: 'Copy:'
+      label-copy-truncate: 'Copy Truncate:'
+      label-start-number: 'Start Number:'
+      label-extension: 'Extension:'
+      placeholder-enter-extension: Enter extension...
+      label-date-ext: 'Date Ext:'
+      label-date-format: 'Date Format:'
+      placeholder-enter-date-format: Enter date format...
+      label-missing-ok: 'Missing OK:'
+      label-compress: 'Compress:'
+      label-delay-compress: 'Delay Compress:'
+      label-compress-ext: 'Compress Ext:'
+      placeholder-enter-compression-extension: Enter compression extension...
+      label-compress-cmd: 'Compress Cmd:'
+      placeholder-enter-command: Enter command...
+      label-compress-options: 'Compress Options:'
+      placeholder-enter-compression-options: Enter compression options...
+      label-uncompress-cmd: 'Uncompress Cmd:'
+      label-old-dir: 'Old Dir:'
+      placeholder-enter-old-directory: Enter old directory...
+      label-mail: 'Mail:'
+      placeholder-enter-email: Enter email...
+      label-mail-first: 'Mail First:'
+      label-mail-last: 'Mail Last:'
+      label-shred: 'Shred:'
+      label-shred-cycles: 'Shred Cycles:'
+      label-first-action: 'First Action:'
+      label-pre-rotate: 'Pre Rotate:'
+      label-post-rotate: 'Post Rotate:'
+      label-last-action: 'Last Action:'
+      title-generated-config: Generated Config
+      path: Glob pattern for log files to rotate.
+      rotateCount: Number of rotated log files to keep.
+      frequency: How often to rotate logs.
+      minSize: Minimum size before rotation is triggered.
+      size: Maximum size before rotation is triggered.
+      createFile: Create a new log file after rotation.
+      copy: Copy the log file instead of moving.
+      copyTruncate: Copy and truncate the original log file.
+      startNumber: Starting number for rotated files.
+      extension: File extension for rotated logs.
+      dateExt: Append date to rotated log filenames.
+      dateFormat: Format for the date extension.
+      missingOk: Ignore missing log files.
+      compress: Compress rotated logs.
+      delayCompress: Delay compression until next rotation.
+      compressExt: Extension for compressed files.
+      compressCmd: Command used to compress files.
+      compressOptions: Options passed to the compression command.
+      uncompressCmd: Command used to uncompress files.
+      oldDir: Directory to move old log files to.
+      mail: Email address to send rotated logs to.
+      mailFirst: Mail the first rotated file.
+      mailLast: Mail the last rotated file.
+      shred: Securely shred log files after rotation.
+      shredCycles: Number of shred cycles.
+      firstAction: Script to run before rotation begins.
+      preRotate: Script to run before rotating each file.
+      postRotate: Script to run after rotating each file.
+      lastAction: Script to run after rotation ends.
+  mailto-generator:
+    title: Mailto Generator
+    description: 'Generate a mailto: link href'
+    texts:
+      title-mailto-link-generator: Mailto Link Generator
+      label-to: 'To:'
+      placeholder-recipient-example-com: recipient{'@'}example.com
+      label-cc: 'CC:'
+      placeholder-cc-example-com: cc{'@'}example.com
+      label-bcc: 'BCC:'
+      placeholder-bcc-example-com: bcc{'@'}example.com
+      label-subject: 'Subject:'
+      placeholder-email-subject: Email subject
+      label-body: 'Body:'
+      placeholder-email-body: Email body
+      title-generated-link: Generated Link
+      tag-open-mail-client: Open Mail Client
+  markdown-table-prettifier:
+    title: Markdown Table Prettifier
+    description: Prettify markdown tables
+    texts:
+      placeholder-your-markdown-table-to-prettify: Your Markdown table to prettify
+      label-markdown-table-to-prettify: Markdown table to prettify
+      label-prettified-markdown: Prettified Markdown
+  markdown-to-docx:
+    title: Markdown to DOCX
+    description: >-
+      Convert Markdown documents to Word/DOCX document format with live preview
+      and custom styling support.
+    texts:
+      label-your-markdown-to-convert: 'Your markdown to convert:'
+      placeholder-put-your-markdown-content-here: Put your markdown content here...
+      tag-convert-to-docx-word: Convert to DOCX/Word
+  middle-endian-converter:
+    title: Middle-Endian Converter
+    description: >-
+      Convert bytes from Middle-Endian to Little/Big Endian for given bits
+      precision and type of Middle Endian
+    texts:
+      label-16-bit: 16-bit
+      label-32-bit: 32-bit
+      label-64-bit: 64-bit
+      label-byte-swapped: Byte-Swapped
+      label-word-swapped: Word-Swapped
+      title-endian-converter: Endian Converter
+      placeholder-enter-hex-e-g-3412abcd: Enter hex (e.g., 3412ABCD)
+      label-bit-length: Bit Length
+      placeholder-select-bit-length: Select bit length
+      label-middle-endian-type: Middle Endian Type
+      placeholder-select-middle-endian-format: Select middle-endian format
+      title-conversion-result: Conversion result
+      label-big-endian: 'Big Endian:'
+      label-little-endian: 'Little Endian:'
+      label-decimal: 'Decimal:'
+      label-octal: 'Octal:'
+      label-hexadecimal: 'Hexadecimal:'
+  mttdl-calculator:
+    title: RAID Reliability Calculator
+    description: Computes storage system reliability using well-known MTTDL methodology
+    texts:
+      label-raid-0: RAID 0
+      label-raid-1: RAID 1
+      label-raid-5: RAID 5
+      label-raid-6: RAID 6
+      label-raid-10: RAID 10
+      label-raid-z1: RAID-Z1
+      label-raid-z2: RAID-Z2
+      label-raid-z3: RAID-Z3
+      label-raid-50: RAID 50
+      title-mttdl-failure-probability-calculator: MTTDL & Failure Probability Calculator
+      label-raid-level: 'RAID Level:'
+      placeholder-select-raid-level: Select RAID level
+      label-number-of-drives: 'Number of Drives:'
+      label-drive-mtbf-hours: 'Drive MTBF (hours):'
+      label-rebuild-time-hours: 'Rebuild Time (hours):'
+      label-bit-error-rate-ber-in-1ex: 'Bit Error Rate (BER in 1eX):'
+      label-drive-capacity-tb: 'Drive Capacity (TB):'
+      label-years-for-failure-probability: 'Years for Failure probability:'
+      label-mttdl-hours: 'MTTDL (hours):'
+      label-mttdl-years: 'MTTDL (years):'
+      label-failure-probability: 'Failure Probability:'
+      tag-key-terms-explained: 🧠 Key Terms Explained
+      tag-raid-level: RAID Level
+      tag-raid-redundant-array-of-independent-disks-is-a-method-of-combining-multiple-physical-drives-into-one-logical-unit-to-improve-performance-redundancy-or-both: >-
+        RAID (Redundant Array of Independent Disks) is a method of combining
+        multiple physical drives into one logical unit to improve performance,
+        redundancy, or both.
+      tag-description: Description
+      tag-raid-0: RAID 0
+      tag-striping-only-no-redundancy-fast-but-risky-if-one-drive-fails-all-data-is-lost: >-
+        Striping only. No redundancy. Fast but risky—if one drive fails, all
+        data is lost.
+      tag-raid-1: RAID 1
+      tag-mirroring-data-is-duplicated-across-drives-high-redundancy-low-capacity-efficiency: >-
+        Mirroring. Data is duplicated across drives. High redundancy, low
+        capacity efficiency.
+      tag-raid-5: RAID 5
+      tag-striping-with-parity-can-tolerate-one-drive-failure-balanced-speed-and-redundancy: >-
+        Striping with parity. Can tolerate one drive failure. Balanced speed and
+        redundancy.
+      tag-raid-6: RAID 6
+      tag-double-parity-can-survive-two-drive-failures: Double parity. Can survive two drive failures.
+      tag-raid-10: RAID 10
+      tag-mirrored-pairs-striped-together-high-performance-and-redundancy: Mirrored pairs striped together. High performance and redundancy.
+      tag-raid-z1-z2-z3: RAID-Z1/Z2/Z3
+      tag-zfs-based-raid-levels-with-single-double-or-triple-parity-designed-for-data-integrity: >-
+        ZFS-based RAID levels with single, double, or triple parity. Designed
+        for data integrity.
+      tag-raid-50: RAID 50
+      tag-stripe-of-raid-5-arrays-combines-performance-of-raid-0-with-redundancy-of-raid-5: >-
+        Stripe of RAID 5 arrays. Combines performance of RAID 0 with redundancy
+        of RAID 5.
+      tag-️-mtbf-mean-time-between-failures: ⏱️ MTBF (Mean Time Between Failures)
+      tag-the-average-time-in-hours-a-drive-is-expected-to-operate-before-failing-higher-mtbf-means-more-reliable-hardware: >-
+        The average time (in hours) a drive is expected to operate before
+        failing. Higher MTBF means more reliable hardware.
+      tag-rebuild-time: 🔁 Rebuild Time
+      tag-the-time-required-to-reconstruct-data-on-a-replacement-drive-after-a-failure-longer-rebuild-times-increase-the-risk-of-a-second-failure-during-recovery: >-
+        The time required to reconstruct data on a replacement drive after a
+        failure. Longer rebuild times increase the risk of a second failure
+        during recovery.
+      tag-mttdl-mean-time-to-data-loss: 📉 MTTDL (Mean Time To Data Loss)
+      tag-a-statistical-estimate-of-how-long-a-raid-system-can-operate-before-data-loss-occurs-it-considers-drive-failures-rebuild-time-and-raid-redundancy-higher-mttdl-means-a-safer-system: >-
+        A statistical estimate of how long a RAID system can operate before data
+        loss occurs. It considers drive failures, rebuild time, and RAID
+        redundancy. Higher MTTDL means a safer system.
+      tag-bit-error-rate-ber: 🧮 Bit Error Rate (BER)
+      tag-the-probability-that-a-bit-read-from-a-disk-will-be-incorrect-due-to-hardware-limitations-even-tiny-bers-like-1-in-a-trillion-can-cause-issues-during-rebuilds-especially-with-large-drives: >-
+        The probability that a bit read from a disk will be incorrect due to
+        hardware limitations. Even tiny BERs (like 1 in a trillion) can cause
+        issues during rebuilds, especially with large drives.
+      tag-unrecoverable-read-error-ure: 🧠 Unrecoverable Read Error (URE)
+      tag-occurs-when-a-drive-fails-to-read-a-sector-during-rebuild-ber-contributes-to-ure-risk-which-can-compromise-raid-recovery: >-
+        Occurs when a drive fails to read a sector during rebuild. BER
+        contributes to URE risk, which can compromise RAID recovery.
+      tag-drive-capacity-tb: 📦 Drive Capacity (TB)
+      tag-total-storage-per-drive-larger-drives-take-longer-to-rebuild-and-are-more-susceptible-to-ber-related-errors: >-
+        Total storage per drive. Larger drives take longer to rebuild and are
+        more susceptible to BER-related errors.
+      tag-failure-probability: 📈 Failure Probability
+      tag-the-chance-that-the-raid-system-will-experience-data-loss-over-a-given-time-period-e-g-5-years-calculated-using-mttdl-and-exponential-failure-models: >-
+        The chance that the RAID system will experience data loss over a given
+        time period (e.g., 5 years). Calculated using MTTDL and exponential
+        failure models.
+  pack-files-for-ai:
+    title: Pack files for AI
+    description: >-
+      Pack a directory of code source files to a single AI parsable form (like
+      repomix)
+    texts:
+      title-repomix-like-ai-pack-generator: Repomix like AI Pack Generator
+      label-directory-structure: 'Directory Structure:'
+      label-include-files-regexp: 'Include Files (RegExp):'
+      placeholder-include-pattern-regexp: Include pattern (RegExp)
+      label-exclude-files-regexp: 'Exclude Files (RegExp):'
+      placeholder-exclude-pattern-regexp: Exclude pattern (RegExp)
+      title-options: Options
+      label-output-format: 'Output Format:'
+      label-xml: XML
+      label-markdown: Markdown
+      label-output-preview: 'Output Preview:'
+      tag-this-section-contains-a-summary-of-this-file: This section contains a summary of this file.
+      tag-click-or-drag-code-source-files-or-folder-to-this-area-to-add-to-package: Click or drag code source files or folder to this area to add to package
+      tag-show-uploaded-files: Show uploaded files
+      tag-include-file-summary: Include file summary
+      tag-include-directory-structure: Include directory structure
+      tag-show-line-numbers: Show line numbers
+      tag-remove-empty-lines: Remove Empty Lines
+      tag-remove-comments: Remove comments
+  resistor-calculator:
+    title: Resistor Calculator
+    description: Compute Resistor values from/to band colors
+    texts:
+      label-4-band: 4-band
+      label-5-band: 5-band
+      label-6-band: 6-band
+      label-1: ±1%
+      label-2: ±2%
+      label-5: ±5%
+      label-10: ±10%
+      title-resistor-converter: Resistor Converter
+      label-band-count: Band Count
+      placeholder-e-g-red-violet-brown-gold: e.g. red, violet, brown, gold
+      title-standard-notation: Standard Notation
+      placeholder-e-g-2k7ω-5-or-2k7-5: e.g. 2k7Ω ±5% or 2k7 5%
+      title-resistor-bands: Resistor Bands
+      placeholder-e-g-2700: e.g. 2700
+      label-tolerance: Tolerance
+      title-numeric-value: Numeric Value
+      tag-convert: Convert
+      tag-axial: Axial
+      tag-radial: Radial
+  sed-command-generator:
+    title: Sed Command generator
+    description: Generate unix sed commands
+    texts:
+      label-command-type: 'Command Type:'
+      title-search-pattern: 'Search Pattern:'
+      placeholder-e-g-foo: e.g., foo
+      label-replacement: 'Replacement:'
+      placeholder-e-g-bar: e.g., bar
+      label-delimiter: 'Delimiter:'
+      placeholder-e-g-or: 'e.g., / or #'
+      label-flags: 'Flags:'
+      label-options: 'Options:'
+      label-target-file: Target File
+      placeholder-e-g-file-txt: e.g., file.txt
+      title-generated-sed-command: 'Generated Sed command:'
+      tag-for-more-information-about: For more information about
+      tag-sed: sed
+      tag-command-see: command, see
+      tag-sed-command-cheatsheet: Sed Command Cheatsheet
+      tag-substitute: Substitute
+      tag-delete: Delete
+      tag-extract: Extract
+      tag-number-lines: Number Lines
+      tag-see-regex-cheatsheet: See Regex Cheatsheet
+      tag-global-g: Global (g)
+      tag-case-insensitive-i: Case Insensitive (i)
+      tag-in-place-editing-i: In-place Editing (-i)
+      tag-extended-regex-e: Extended Regex (-E)
+      tag-suppress-automatic-printing-n: Suppress Automatic Printing (-n)
+  sed-memo:
+    title: Sed cheatsheet
+    description: sed unix command cheatsheet
+  social-link-sharer:
+    title: Social Link Sharer
+    description: Generate share link href for common Social Networks
+    texts:
+      label-facebook: Facebook
+      label-twitter: Twitter
+      label-linkedin: LinkedIn
+      label-reddit: Reddit
+      label-whatsapp: WhatsApp
+      label-telegram: Telegram
+      label-email: Email
+      title-share-link-generator: 🔗 Share Link Generator
+      label-page-url: Page URL
+      placeholder-https-example-com: https://example.com
+      label-page-title: Page Title
+      placeholder-amazing-page-title: Amazing Page Title
+      label-page-description: Page Description
+      placeholder-brief-description-of-the-page: Brief description of the page
+      label-platform: Platform
+      placeholder-choose-a-platform: Choose a platform
+      label-generated-share-link: Generated Share Link
+      tag-copy-all-links: 📋 Copy All Links
+      tag-all-platforms: 🔗 All Platforms
+  sql-parameters:
+    title: SQL Parameters Generator
+    description: Prepare SQL statement from a given parametrized SQL query and parameters
+    texts:
+      title-sql-generator: SQL Generator
+      label-parameterized-sql-statement: 'Parameterized SQL statement:'
+      placeholder-e-g-select-from-users-where-name-name-and-age-and-type-type: >-
+        e.g. SELECT * FROM users WHERE name = :name AND age > ? AND type =
+        {'@'}type
+      title-parameters: Parameters
+      placeholder-name-e-g-name-or-type: Name (e.g. name or type)
+      placeholder-value-e-g-alice-or-42-or-1-3: Value (e.g. Alice or 42 or 1.3)
+      label-generated-sql: 'Generated SQL:'
+      tag-for-positional-parameters-leave-name-empty-for-named-parameters-enter-name-without-or-prefix: >-
+        For positional parameters, leave Name empty. For named parameters, enter
+        name without '?' or '{'@'}' prefix
+      tag-generate-sql: Generate SQL
+  toml-linter:
+    title: TOML Linter
+    description: Lint and check TOML content
+    texts:
+      title-your-toml-content: 'Your TOML Content:'
+      title-linting-error: Linting Error
+      title-valid-toml: Valid TOML
+      tag-no-errors-found-your-toml-is-valid: No errors found. Your TOML is valid!
+  translator:
+    title: Text Translator
+    description: Translate text from one language to another (using opus-mt)
+    texts:
+      label-afrikaans: Afrikaans
+      label-amharic: Amharic
+      label-arabic: Arabic
+      label-azerbaijani: Azerbaijani
+      label-basque: Basque
+      label-belarusian: Belarusian
+      label-bengali: Bengali
+      label-bulgarian: Bulgarian
+      label-catalan: Catalan
+      label-chinese: Chinese
+      label-croatian: Croatian
+      label-czech: Czech
+      label-danish: Danish
+      label-dutch: Dutch
+      label-english: English
+      label-estonian: Estonian
+      label-finnish: Finnish
+      label-french: French
+      label-galician: Galician
+      label-georgian: Georgian
+      label-german: German
+      label-greek: Greek
+      label-hebrew: Hebrew
+      label-hindi: Hindi
+      label-hungarian: Hungarian
+      label-icelandic: Icelandic
+      label-indonesian: Indonesian
+      label-irish: Irish
+      label-italian: Italian
+      label-japanese: Japanese
+      label-kazakh: Kazakh
+      label-korean: Korean
+      label-latvian: Latvian
+      label-lithuanian: Lithuanian
+      label-macedonian: Macedonian
+      label-malay: Malay
+      label-norwegian: Norwegian
+      label-persian: Persian
+      label-polish: Polish
+      label-portuguese: Portuguese
+      label-romanian: Romanian
+      label-russian: Russian
+      label-serbian: Serbian
+      label-slovak: Slovak
+      label-slovenian: Slovenian
+      label-spanish: Spanish
+      label-swahili: Swahili
+      label-swedish: Swedish
+      label-tamil: Tamil
+      label-telugu: Telugu
+      label-thai: Thai
+      label-turkish: Turkish
+      label-ukrainian: Ukrainian
+      label-urdu: Urdu
+      label-vietnamese: Vietnamese
+      label-welsh: Welsh
+      title-text-translator: Text Translator
+      placeholder-enter-text-to-translate: Enter text to translate...
+      label-from: 'From:'
+      placeholder-from: From
+      label-to: 'To:'
+      placeholder-to: To
+      placeholder-translation-will-appear-here: Translation will appear here...
+      tag-translate: Translate
+  unicode-to-gsm7:
+    title: Unicode to GSM-7
+    description: >-
+      Encode unicode text to SMS GSM-7 encoding and display related SMS send
+      info
+    texts:
+      input-label-your-text-to-encode-to-gsm-7: Your text to encode to GSM-7
+      input-placeholder-put-your-text-here: Put your text here...
+      output-label-gsm-7-encoded-version: 'GSM-7 encoded version:'
+      title-sms-info: SMS Info
+      label-encoding: 'Encoding:'
+      label-message-size: 'Message size:'
+      label-total-size: 'Total size:'
+      label-segments-count: 'Segments count:'
+      label-non-gsm-7-characters: 'Non GSM-7 characters:'
+  which-day:
+    title: Which Day?
+    description: >-
+      Given a day and month, and years range, list all day of week a given date
+      is
+    texts:
+      label-day-in-month: 'Day in month:'
+      label-month: 'Month:'
+      label-start-year: Start Year
+      label-end-year: End Year
+    text:
+      sunday: Sunday
+      monday: Monday
+      tuesday: Tuesday
+      wednesday: Wednesday
+      thursday: Thursday
+      friday: Friday
+      saturday: Saturday
+      year: Year
+      weekday: Weekday
+  wireguard-config-generator:
+    title: Wireguard Config Generator
+    description: Generate Wireguard Server and Clients configuration files
+    texts:
+      placeholder-put-your-input-configuration-here: Put your input configuration here...
+      title-configuration: Configuration
+      label-server-name: 'Server Name:'
+      placeholder-server-name-or-fqdn: Server Name or FQDN
+      label-server-port: 'Server Port:'
+      label-server-cidr: 'Server CIDR:'
+      placeholder-server-cidr: Server CIDR
+      label-start-ip-number: 'Start IP number:'
+      label-number-of-clients: 'Number of clients:'
+      label-use-pre-shared-keys: Use Pre Shared Keys
+      label-client-allowed-ips: 'Client Allowed IPs:'
+      placeholder-client-allowed-ips: Client Allowed IPs
+      label-endpoint-optional: 'Endpoint (optional):'
+      placeholder-endpoint: Endpoint
+      label-dns: DNS
+      placeholder-dns-servers: 'DNS servers:'
+      label-post-up-rule: 'Post-Up rule:'
+      placeholder-post-up-rule: Post-Up rule
+      label-post-down-rule: 'Post-Down rule:'
+      placeholder-post-down-rule: Post-Down rule
+      title-generated-server-config-file: 'Generated Server Config file:'
+      tag-input-server-configuration: Input server configuration
+      tag-generate-configurations: Generate Configurations
+  xml-linter:
+    title: XML Linter
+    description: Lint XML content for syntax error
+    texts:
+      title-your-xml-content: 'Your XML Content:'
+      title-linting-error: Linting Error
+      title-valid-xml: Valid XML
+      tag-no-errors-found-your-xml-is-valid: No errors found. Your XML is valid!
+  zpool-calculator:
+    title: ZPOOL RAID calculator
+    description: >-
+      Determine the usable capacity and other metrics of a ZFS storage pool and
+      compare layouts including stripe, mirror, RAIDZ1, RAIDZ2, RAIDZ3, and
+      dRAID.
+    texts:
+      tag-: '?'
+      tag-total-disks-in-pool: 'Total Disks in Pool:'
+      tag-add-disk-tb: 'Add Disk (TB):'
+      tag-1: '1'
+      tag-10: '10'
+      tag-100: '100'
+      tag-12: '12'
+      tag-24: '24'
+      tag-60: '60'
+      tag-102: '102'
+      tag-add-disk: Add Disk
+      tag-tb-gb: TB/GB
+      tag-minimum-spares: 'Minimum Spares:'
+      tag-new-vdev-type: 'New vdev Type:'
+      tag-mirror: Mirror
+      tag-raidz1: RAIDZ1
+      tag-raidz2: RAIDZ2
+      tag-raidz3: RAIDZ3
+      tag-draid: dRAID
+      tag-openzfs-2-0-7-slop: 'OpenZFS 2.0.7 Slop:'
+      tag-new-vdev-width: 'New Vdev Width:'
+      tag-zfs-recordsize-value: 'ZFS recordsize value:'
+      tag-4-kib: 4 KiB
+      tag-8-kib: 8 KiB
+      tag-16-kib: 16 KiB
+      tag-32-kib: 32 KiB
+      tag-64-kib: 64 KiB
+      tag-128-kib: 128 KiB
+      tag-256-kib: 256 KiB
+      tag-512-kib: 512 KiB
+      tag-1-mib: 1 MiB
+      tag-2-mib: 2 MiB
+      tag-4-mib: 4 MiB
+      tag-8-mib: 8 MiB
+      tag-16-mib: 16 MiB
+      tag-add-vdev-layout: Add vdev Layout
+      tag-zfs-ashift-value: 'ZFS ashift value:'
+      tag-9: '9'
+      tag-13: '13'
+      tag-14: '14'
+      tag-disk-swap-size: 'Disk Swap Size:'
+      tag-0-gib: 0 GiB
+      tag-2-gib: 2 GiB
+      tag-4-gib: 4 GiB
+      tag-8-gib: 8 GiB
+      tag-table-data: 'Table Data:'
+      tag-usable-capacity-tib: Usable Capacity (TiB)
+      tag-decimal-places: 'Decimal Places:'
+      tag-0: '0'
+      tag-2: '2'
+      tag-3: '3'
+      tag-4: '4'
+      tag-5: '5'
+      tag-6: '6'
+      tag-7: '7'
+      tag-8: '8'
+      tag-bytes: bytes
+      tag-usable-capacity-tb: Usable Capacity (TB)
+      tag-show-deflate-ratio: 'Show Deflate Ratio:'
+      tag-capacity-efficiency: Capacity Efficiency
+      tag-show-pool-afr: 'Show Pool AFR:'
+      tag-zfs-overhead: ZFS Overhead
+      tag-disk-afr: 'Disk AFR (%):'
+      tag-cap-w-reservation: Cap. w/ Reservation
+      tag-fast-draid-calculation: 'Fast dRAID Calculation:'
+      tag-reservation: 'Reservation (%):'
+      tag-show-only: 'Show Only:'
+      tag-all: All
+      tag-mirrors-stripes: Mirrors/Stripes
+      tag-reset: Reset
+      tag-see-zpool-openzfs-cheatsheet: See Zpool/OpenZFS Cheatsheet
+      tag-click-on-the-section-titles-to-expand-collapse-and-view-calculated-data-hovering-over-a-table-cell-loads-the-relevant-data-into-the-calculation-values-section-below-you-can-click-table-cells-to-freeze-or-unfreeze-those-values: >-
+        Click on the section titles to expand/collapse and view calculated data.
+        Hovering over a table cell loads the relevant data into the Calculation
+        Values section below. You can click table cells to freeze or unfreeze
+        those values.
+      tag-common-layouts: Common Layouts
+      tag-raw-stripes-mirrors: Raw, Stripes, & Mirrors
+      tag-calculation-values: Calculation Values
+      tag-click-table-cells-above-to-freeze-unfreeze: (Click table cells above to freeze/unfreeze)
+  zpool-memo:
+    title: ZPool Cheatsheet
+    description: OpenZFS/ZPool usage commands and info
+  zxcvbn-password-strength:
+    title: Zxcvbn Password Strength
+    description: Compute a given password strength using zxcvbn
+    texts:
+      placeholder-enter-your-password: Enter your password
+      title-warning: Warning
+      title-suggestions: Suggestions
+      tag-estimated-fast-offline-crack-time-1e10-s: 'Estimated fast offline crack time (1e10/s):'
+      tag-estimated-slow-offline-crack-time-1e4-s: 'Estimated slow offline crack time (1e4/s):'
+      tag-estimated-online-throttling-crack-time-10-s: 'Estimated online throttling crack time (10/s):'
+      tag-estimated-online-no-throttling-crack-time-10-s: 'Estimated online no throttling crack time (10/s):'

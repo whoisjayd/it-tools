@@ -6,6 +6,14 @@ export enum Formats {
   KUBERNETES = 'Kubernetes Environment Variables',
 }
 
+export const FormatsDesc: Record<string, string> = {
+  YAML: 'Spring Boot YAML',
+  PROPERTIES: 'Spring Boot Properties',
+  SIMPLE: 'Simple Environment Variables',
+  TERMINAL: 'Terminal Environment Variables',
+  KUBERNETES: 'Kubernetes Environment Variables',
+};
+
 export enum ModelType {
   ENV,
   FLAT,

@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n';
 import { useThemeVars } from 'naive-ui';
+
+const { t } = useI18n();
 
 const themeVars = useThemeVars();
 
@@ -17,57 +20,57 @@ await loadCapacity();
     <table class="inputs">
       <tbody>
         <tr>
-          <td><label id="disks" class="tooltip">?</label><label for="disks">Total Disks in Pool:</label></td>
+          <td><label id="disks" class="tooltip">{{ t('tools.zpool-calculator.texts.tag-') }}</label><label for="disks">{{ t('tools.zpool-calculator.texts.tag-total-disks-in-pool') }}</label></td>
           <td><input id="disks" class="monitor" type="text" name="disks" value="24"></td>
 
-          <td><label id="add_disk" for="add_disk">Add Disk (TB):</label></td>
+          <td><label id="add_disk" for="add_disk">{{ t('tools.zpool-calculator.texts.tag-add-disk-tb') }}</label></td>
           <td><input id="add_disk" type="text" name="add_disk"></td>
         </tr>
 
         <tr>
           <td id="add_disk_buttons" colspan="2">
             <div class="rocker-button">
-              <div id="plus_1" class="half up">
+              <div id="plus_1" class="up half">
                 <div class="arrow">
-                  +
+                  {{ t('tools.zpool-calculator.texts.tag-') }}
                 </div>
               </div>
               <div class="center-text">
-                1
+                {{ t('tools.zpool-calculator.texts.tag-1') }}
               </div>
               <div id="minus_1" class="half down">
                 <div class="arrow">
-                  -
+                  {{ t('tools.zpool-calculator.texts.tag-') }}
                 </div>
               </div>
             </div>
             <div class="rocker-button">
               <div id="plus_10" class="half up">
                 <div class="arrow">
-                  +
+                  {{ t('tools.zpool-calculator.texts.tag-') }}
                 </div>
               </div>
               <div class="center-text">
-                10
+                {{ t('tools.zpool-calculator.texts.tag-10') }}
               </div>
               <div id="minus_10" class="half down">
                 <div class="arrow">
-                  -
+                  {{ t('tools.zpool-calculator.texts.tag-') }}
                 </div>
               </div>
             </div>
             <div class="rocker-button">
               <div id="plus_100" class="half up">
                 <div class="arrow">
-                  +
+                  {{ t('tools.zpool-calculator.texts.tag-') }}
                 </div>
               </div>
               <div class="center-text">
-                100
+                {{ t('tools.zpool-calculator.texts.tag-100') }}
               </div>
               <div id="minus_100" class="half down">
                 <div class="arrow">
-                  -
+                  {{ t('tools.zpool-calculator.texts.tag-') }}
                 </div>
               </div>
             </div>
@@ -75,60 +78,60 @@ await loadCapacity();
             <div class="rocker-button">
               <div id="plus_12" class="half up">
                 <div class="arrow">
-                  +
+                  {{ t('tools.zpool-calculator.texts.tag-') }}
                 </div>
               </div>
               <div class="center-text">
-                12
+                {{ t('tools.zpool-calculator.texts.tag-12') }}
               </div>
               <div id="minus_12" class="half down">
                 <div class="arrow">
-                  -
+                  {{ t('tools.zpool-calculator.texts.tag-') }}
                 </div>
               </div>
             </div>
             <div class="rocker-button">
               <div id="plus_24" class="half up">
                 <div class="arrow">
-                  +
+                  {{ t('tools.zpool-calculator.texts.tag-') }}
                 </div>
               </div>
               <div class="center-text">
-                24
+                {{ t('tools.zpool-calculator.texts.tag-24') }}
               </div>
               <div id="minus_24" class="half down">
                 <div class="arrow">
-                  -
+                  {{ t('tools.zpool-calculator.texts.tag-') }}
                 </div>
               </div>
             </div>
             <div class="rocker-button">
               <div id="plus_60" class="half up">
                 <div class="arrow">
-                  +
+                  {{ t('tools.zpool-calculator.texts.tag-') }}
                 </div>
               </div>
               <div class="center-text">
-                60
+                {{ t('tools.zpool-calculator.texts.tag-60') }}
               </div>
               <div id="minus_60" class="half down">
                 <div class="arrow">
-                  -
+                  {{ t('tools.zpool-calculator.texts.tag-') }}
                 </div>
               </div>
             </div>
             <div class="rocker-button">
               <div id="plus_102" class="half up">
                 <div class="arrow">
-                  +
+                  {{ t('tools.zpool-calculator.texts.tag-') }}
                 </div>
               </div>
               <div class="center-text">
-                102
+                {{ t('tools.zpool-calculator.texts.tag-102') }}
               </div>
               <div id="minus_102" class="half down">
                 <div class="arrow">
-                  -
+                  {{ t('tools.zpool-calculator.texts.tag-') }}
                 </div>
               </div>
             </div>
@@ -136,118 +139,118 @@ await loadCapacity();
 
           <td id="add_disk_button">
             <button id="add_disk" type="button">
-              Add Disk
+              {{ t('tools.zpool-calculator.texts.tag-add-disk') }}
             </button>
           </td>
           <td id="tb_gb_button">
             <button id="tb_gb" type="button">
-              TB/GB
+              {{ t('tools.zpool-calculator.texts.tag-tb-gb') }}
             </button>
           </td>
         </tr>
 
         <tr>
-          <td><label id="min_spares" class="tooltip">?</label><label for="min_spares">Minimum Spares:</label></td>
+          <td><label id="min_spares" class="tooltip">{{ t('tools.zpool-calculator.texts.tag-') }}</label><label for="min_spares">{{ t('tools.zpool-calculator.texts.tag-minimum-spares') }}</label></td>
           <td><input id="min_spares" class="monitor" type="text" name="min_spares" value="0"></td>
 
-          <td><label id="add_vdev_type" for="add_vdev_type">New vdev Type:</label></td>
+          <td><label id="add_vdev_type" for="add_vdev_type">{{ t('tools.zpool-calculator.texts.tag-new-vdev-type') }}</label></td>
           <td>
             <select id="add_vdev_type" name="add_vdev_type">
               <option value="mirror">
-                Mirror
+                {{ t('tools.zpool-calculator.texts.tag-mirror') }}
               </option>
               <option value="z1">
-                RAIDZ1
+                {{ t('tools.zpool-calculator.texts.tag-raidz1') }}
               </option>
               <option value="z2">
-                RAIDZ2
+                {{ t('tools.zpool-calculator.texts.tag-raidz2') }}
               </option>
               <option value="z3">
-                RAIDZ3
+                {{ t('tools.zpool-calculator.texts.tag-raidz3') }}
               </option>
               <option value="draid">
-                dRAID
+                {{ t('tools.zpool-calculator.texts.tag-draid') }}
               </option>
             </select>
           </td>
         </tr>
 
         <tr id="new_vdev">
-          <td><label id="use_new_slop" class="tooltip">?</label><label for="use_new_slop">OpenZFS 2.0.7 Slop:</label></td>
+          <td><label id="use_new_slop" class="tooltip">{{ t('tools.zpool-calculator.texts.tag-') }}</label><label for="use_new_slop">{{ t('tools.zpool-calculator.texts.tag-openzfs-2-0-7-slop') }}</label></td>
           <td><input id="use_new_slop" class="monitor" type="checkbox" name="use_new_slop" checked></td>
 
-          <td><label id="add_vdev" for="add_vdev">New Vdev Width:</label></td>
+          <td><label id="add_vdev" for="add_vdev">{{ t('tools.zpool-calculator.texts.tag-new-vdev-width') }}</label></td>
           <td><input id="add_vdev" type="text" name="add_vdev"></td>
         </tr>
 
         <tr>
-          <td><label id="recordsize" class="tooltip">?</label><label for="recordsize">ZFS recordsize value:</label></td>
+          <td><label id="recordsize" class="tooltip">{{ t('tools.zpool-calculator.texts.tag-') }}</label><label for="recordsize">{{ t('tools.zpool-calculator.texts.tag-zfs-recordsize-value') }}</label></td>
           <td>
             <select id="recordsize" class="monitor" name="recordsize">
               <option value="4">
-                4 KiB
+                {{ t('tools.zpool-calculator.texts.tag-4-kib') }}
               </option>
               <option value="8">
-                8 KiB
+                {{ t('tools.zpool-calculator.texts.tag-8-kib') }}
               </option>
               <option value="16">
-                16 KiB
+                {{ t('tools.zpool-calculator.texts.tag-16-kib') }}
               </option>
               <option value="32">
-                32 KiB
+                {{ t('tools.zpool-calculator.texts.tag-32-kib') }}
               </option>
               <option value="64">
-                64 KiB
+                {{ t('tools.zpool-calculator.texts.tag-64-kib') }}
               </option>
               <option value="128" selected>
-                128 KiB
+                {{ t('tools.zpool-calculator.texts.tag-128-kib') }}
               </option>
               <option value="256">
-                256 KiB
+                {{ t('tools.zpool-calculator.texts.tag-256-kib') }}
               </option>
               <option value="512">
-                512 KiB
+                {{ t('tools.zpool-calculator.texts.tag-512-kib') }}
               </option>
               <option value="1024">
-                1 MiB
+                {{ t('tools.zpool-calculator.texts.tag-1-mib') }}
               </option>
               <option value="2048">
-                2 MiB
+                {{ t('tools.zpool-calculator.texts.tag-2-mib') }}
               </option>
               <option value="4096">
-                4 MiB
+                {{ t('tools.zpool-calculator.texts.tag-4-mib') }}
               </option>
               <option value="8192">
-                8 MiB
+                {{ t('tools.zpool-calculator.texts.tag-8-mib') }}
               </option>
               <option value="16384">
-                16 MiB
+                {{ t('tools.zpool-calculator.texts.tag-16-mib') }}
               </option>
             </select>
           </td>
 
           <td id="vdev_button" colspan="2">
             <button id="add_vdev" type="button">
-              Add vdev Layout
+              {{ t('tools.zpool-calculator.texts.tag-add-vdev-layout') }}
             </button>
           </td>
         </tr>
 
         <tr>
-          <td><label id="ashift" class="tooltip">?</label><label for="ashift">ZFS ashift value:</label></td>
+          <td><label id="ashift" class="tooltip">{{ t('tools.zpool-calculator.texts.tag-') }}</label><label for="ashift">{{ t('tools.zpool-calculator.texts.tag-zfs-ashift-value') }}</label></td>
           <td>
             <select id="ashift" class="monitor" name="ashift">
               <option value="9">
-                9
+                {{ t('tools.zpool-calculator.texts.tag-9') }}
               </option>
               <option value="12" selected>
-                12
+                {{ t('tools.zpool-calculator.texts.tag-12') }}
               </option>
               <option value="13">
-                13
+                {{ t('tools.zpool-calculator.texts.tag-13') }}
               </option>
               <option value="14">
-                14
+                {{ t('tools.zpool-calculator.texts.tag-14') }}
               </option>
             </select>
           </td>
@@ -256,70 +259,70 @@ await loadCapacity();
         </tr>
 
         <tr>
-          <td><label id="swap_size" class="tooltip">?</label><label for="swap_size">Disk Swap Size:</label></td>
+          <td><label id="swap_size" class="tooltip">{{ t('tools.zpool-calculator.texts.tag-') }}</label><label for="swap_size">{{ t('tools.zpool-calculator.texts.tag-disk-swap-size') }}</label></td>
           <td>
             <select id="swap_size" class="monitor" name="swap_size">
               <option value="0" selected>
-                0 GiB
+                {{ t('tools.zpool-calculator.texts.tag-0-gib') }}
               </option>
               <option value="2">
-                2 GiB
+                {{ t('tools.zpool-calculator.texts.tag-2-gib') }}
               </option>
               <option value="4">
-                4 GiB
+                {{ t('tools.zpool-calculator.texts.tag-4-gib') }}
               </option>
               <option value="8">
-                8 GiB
+                {{ t('tools.zpool-calculator.texts.tag-8-gib') }}
               </option>
             </select>
           </td>
 
-          <td><label>Table Data:</label></td>
+          <td><label>{{ t('tools.zpool-calculator.texts.tag-table-data') }}</label></td>
           <td>
             <input id="usable_cap_tib" class="monitor" type="radio" name="table_data" value="usable_cap_tib" checked>
-            <label for="usable_cap_tib">Usable Capacity (TiB)</label><label id="usable_cap_tib" class="tooltip">?</label>
+            <label for="usable_cap_tib">{{ t('tools.zpool-calculator.texts.tag-usable-capacity-tib') }}</label><label id="usable_cap_tib" class="tooltip">{{ t('tools.zpool-calculator.texts.tag-') }}</label>
           </td>
         </tr>
 
         <tr>
-          <td><label for="decimal_places">Decimal Places:</label></td>
+          <td><label for="decimal_places">{{ t('tools.zpool-calculator.texts.tag-decimal-places') }}</label></td>
           <td>
             <select id="decimal_places" class="monitor" name="decimal_places">
               <option value="0">
-                0
+                {{ t('tools.zpool-calculator.texts.tag-0') }}
               </option>
               <option value="1">
-                1
+                {{ t('tools.zpool-calculator.texts.tag-1') }}
               </option>
               <option value="2">
-                2
+                {{ t('tools.zpool-calculator.texts.tag-2') }}
               </option>
               <option value="3" selected>
-                3
+                {{ t('tools.zpool-calculator.texts.tag-3') }}
               </option>
               <option value="4">
-                4
+                {{ t('tools.zpool-calculator.texts.tag-4') }}
               </option>
               <option value="5">
-                5
+                {{ t('tools.zpool-calculator.texts.tag-5') }}
               </option>
               <option value="6">
-                6
+                {{ t('tools.zpool-calculator.texts.tag-6') }}
               </option>
               <option value="7">
-                7
+                {{ t('tools.zpool-calculator.texts.tag-7') }}
               </option>
               <option value="8">
-                8
+                {{ t('tools.zpool-calculator.texts.tag-8') }}
               </option>
               <option value="9">
-                9
+                {{ t('tools.zpool-calculator.texts.tag-9') }}
               </option>
               <option value="10">
-                10
+                {{ t('tools.zpool-calculator.texts.tag-10') }}
               </option>
               <option value="bytes">
-                bytes
+                {{ t('tools.zpool-calculator.texts.tag-bytes') }}
               </option>
             </select>
           </td>
@@ -327,49 +330,49 @@ await loadCapacity();
           <td />
           <td>
             <input id="usable_cap_tb" class="monitor" type="radio" name="table_data" value="usable_cap_tb">
-            <label for="usable_cap_tb">Usable Capacity (TB)</label><label id="usable_cap_tb" class="tooltip">?</label>
+            <label for="usable_cap_tb">{{ t('tools.zpool-calculator.texts.tag-usable-capacity-tb') }}</label><label id="usable_cap_tb" class="tooltip">{{ t('tools.zpool-calculator.texts.tag-') }}</label>
           </td>
         </tr>
 
         <tr>
-          <td><label id="show_deflate" class="tooltip">?</label><label for="show_deflate">Show Deflate Ratio:</label></td>
+          <td><label id="show_deflate" class="tooltip">{{ t('tools.zpool-calculator.texts.tag-') }}</label><label for="show_deflate">{{ t('tools.zpool-calculator.texts.tag-show-deflate-ratio') }}</label></td>
           <td><input id="show_deflate" class="monitor" type="checkbox" name="show_deflate"></td>
 
           <td />
           <td>
             <input id="efficiency" class="monitor" type="radio" name="table_data" value="efficiency">
-            <label for="efficiency">Capacity Efficiency</label><label id="efficiency" class="tooltip">?</label>
+            <label for="efficiency">{{ t('tools.zpool-calculator.texts.tag-capacity-efficiency') }}</label><label id="efficiency" class="tooltip">{{ t('tools.zpool-calculator.texts.tag-') }}</label>
           </td>
         </tr>
 
         <tr>
-          <td><label id="show_afr" class="tooltip">?</label><label for="show_afr">Show Pool AFR:</label></td>
+          <td><label id="show_afr" class="tooltip">{{ t('tools.zpool-calculator.texts.tag-') }}</label><label for="show_afr">{{ t('tools.zpool-calculator.texts.tag-show-pool-afr') }}</label></td>
           <td><input id="show_afr" class="monitor" type="checkbox" name="show_afr"></td>
 
           <td />
           <td>
             <input id="overhead" class="monitor" type="radio" name="table_data" value="overhead">
-            <label for="overhead">ZFS Overhead</label><label id="overhead" class="tooltip">?</label>
+            <label for="overhead">{{ t('tools.zpool-calculator.texts.tag-zfs-overhead') }}</label><label id="overhead" class="tooltip">{{ t('tools.zpool-calculator.texts.tag-') }}</label>
           </td>
         </tr>
 
         <tr>
-          <td><label id="disk_afr_label" for="disk_afr" style="color: grey;">Disk AFR (%):</label></td>
+          <td><label id="disk_afr_label" for="disk_afr" style="color: grey;">{{ t('tools.zpool-calculator.texts.tag-disk-afr') }}</label></td>
           <td><input id="disk_afr" class="monitor" type="text" name="disk_afr" value="5" disabled></td>
 
           <td />
           <td>
             <input id="cap_w_reserve" class="monitor" type="radio" name="table_data" value="cap_w_reserve">
-            <label for="cap_w_reserve">Cap. w/ Reservation</label><label id="cap_w_reserve" class="tooltip">?</label>
+            <label for="cap_w_reserve">{{ t('tools.zpool-calculator.texts.tag-cap-w-reservation') }}</label><label id="cap_w_reserve" class="tooltip">{{ t('tools.zpool-calculator.texts.tag-') }}</label>
           </td>
         </tr>
 
         <tr>
-          <td><label id="fast_draid" class="tooltip">?</label><label for="fast_draid">Fast dRAID Calculation:</label></td>
+          <td><label id="fast_draid" class="tooltip">{{ t('tools.zpool-calculator.texts.tag-') }}</label><label for="fast_draid">{{ t('tools.zpool-calculator.texts.tag-fast-draid-calculation') }}</label></td>
           <td><input id="fast_draid" class="monitor" type="checkbox" name="fast_draid" checked></td>
 
           <td id="res_label">
-            <label id="reservation" for="reservation" style="color: grey;">Reservation (%):</label>
+            <label id="reservation" for="reservation" style="color: grey;">{{ t('tools.zpool-calculator.texts.tag-reservation') }}</label>
           </td>
           <td id="res_input">
             <input id="reservation" class="monitor" type="text" name="reservation" value="20" disabled>
@@ -377,33 +380,33 @@ await loadCapacity();
         </tr>
 
         <tr>
-          <td><label id="show" class="tooltip">?</label><label for="show">Show Only:</label></td>
+          <td><label id="show" class="tooltip">{{ t('tools.zpool-calculator.texts.tag-') }}</label><label for="show">{{ t('tools.zpool-calculator.texts.tag-show-only') }}</label></td>
           <td>
             <select id="show" class="monitor" name="show">
               <option value="all" selected>
-                All
+                {{ t('tools.zpool-calculator.texts.tag-all') }}
               </option>
               <option value="stripes">
-                Mirrors/Stripes
+                {{ t('tools.zpool-calculator.texts.tag-mirrors-stripes') }}
               </option>
               <option value="raidz1">
-                RAIDZ1
+                {{ t('tools.zpool-calculator.texts.tag-raidz1') }}
               </option>
               <option value="raidz2">
-                RAIDZ2
+                {{ t('tools.zpool-calculator.texts.tag-raidz2') }}
               </option>
               <option value="raidz3">
-                RAIDZ3
+                {{ t('tools.zpool-calculator.texts.tag-raidz3') }}
               </option>
               <option value="draid">
-                dRAID
+                {{ t('tools.zpool-calculator.texts.tag-draid') }}
               </option>
             </select>
           </td>
 
           <td id="reset_button" colspan="2">
             <button id="reset_button" type="button">
-              Reset
+              {{ t('tools.zpool-calculator.texts.tag-reset') }}
             </button>
           </td>
         </tr>
@@ -416,62 +419,62 @@ await loadCapacity();
 
     <n-space justify="center">
       <router-link target="_blank" to="/zpool-memo" mb-1 mt-2>
-        See Zpool/OpenZFS Cheatsheet
+        {{ t('tools.zpool-calculator.texts.tag-see-zpool-openzfs-cheatsheet') }}
       </router-link>
     </n-space>
 
     <p class="subsect_label">
-      Click on the section titles to expand/collapse and view calculated data. Hovering over a table cell loads the relevant data into the Calculation Values section below. You can click table cells to freeze or unfreeze those values.
+      {{ t('tools.zpool-calculator.texts.tag-click-on-the-section-titles-to-expand-collapse-and-view-calculated-data-hovering-over-a-table-cell-loads-the-relevant-data-into-the-calculation-values-section-below-you-can-click-table-cells-to-freeze-or-unfreeze-those-values') }}
     </p>
 
     <details id="common" class="raid_results">
-      <summary>Common Layouts</summary>
+      <summary>{{ t('tools.zpool-calculator.texts.tag-common-layouts') }}</summary>
       <div id="common" class="results-container">
         <table id="common" class="results" />
       </div>
     </details>
 
     <details id="stripes" class="raid_results">
-      <summary>Raw, Stripes, & Mirrors</summary>
+      <summary>{{ t('tools.zpool-calculator.texts.tag-raw-stripes-mirrors') }}</summary>
       <div id="stripes" class="results-container">
         <table id="stripes" class="results" />
       </div>
     </details>
 
     <details id="raidz1" class="raid_results">
-      <summary>RAIDZ1</summary>
+      <summary>{{ t('tools.zpool-calculator.texts.tag-raidz1') }}</summary>
       <div id="raidz1" class="results-container">
         <table id="raidz1" class="results" />
       </div>
     </details>
 
     <details id="raidz2" class="raid_results">
-      <summary>RAIDZ2</summary>
+      <summary>{{ t('tools.zpool-calculator.texts.tag-raidz2') }}</summary>
       <div id="raidz2" class="results-container">
         <table id="raidz2" class="results" />
       </div>
     </details>
 
     <details id="raidz3" class="raid_results">
-      <summary>RAIDZ3</summary>
+      <summary>{{ t('tools.zpool-calculator.texts.tag-raidz3') }}</summary>
       <div id="raidz3" class="results-container">
         <table id="raidz3" class="results" />
       </div>
     </details>
 
     <details id="draid" class="raid_results">
-      <summary>dRAID</summary>
+      <summary>{{ t('tools.zpool-calculator.texts.tag-draid') }}</summary>
       <div id="draid" class="results-container">
         <table id="draid" class="results" />
       </div>
     </details>
 
     <h2 id="debug_vals" class="sect_labels">
-      Calculation Values
+      {{ t('tools.zpool-calculator.texts.tag-calculation-values') }}
     </h2>
     <div id="debug_vals">
       <p class="subsect_label">
-        (Click table cells above to freeze/unfreeze)
+        {{ t('tools.zpool-calculator.texts.tag-click-table-cells-above-to-freeze-unfreeze') }}
       </p>
       <table id="debug_vals" class="debug" />
     </div>

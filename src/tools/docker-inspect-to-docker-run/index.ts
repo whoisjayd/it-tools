@@ -1,10 +1,11 @@
 import { BrandDocker } from '@vicons/tabler';
 import { defineTool } from '../tool';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: 'Docker inspect to Docker run',
+  name: t('tools.docker-inspect-to-docker-run.title'),
   path: '/docker-inspect-to-docker-run',
-  description: 'Convert docker inspect command json result back to Docker run command',
+  description: t('tools.docker-inspect-to-docker-run.description'),
   keywords: ['docker', 'inspect', 'run'],
   component: () => import('./docker-inspect-to-docker-run.vue'),
   icon: BrandDocker,

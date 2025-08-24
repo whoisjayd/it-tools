@@ -1,10 +1,11 @@
 import { IconFavicon } from '@tabler/icons-vue';
 import { defineTool } from '../tool';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: 'Favicon Generator',
+  name: t('tools.favicon-generator.title'),
   path: '/favicon-generator',
-  description: 'Generate Favicon and corresponding header',
+  description: t('tools.favicon-generator.description'),
   keywords: ['favicon', 'generator'],
   component: () => import('./favicon-generator.vue'),
   icon: IconFavicon,

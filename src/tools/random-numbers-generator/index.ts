@@ -1,10 +1,11 @@
 import { ArrowsShuffle } from '@vicons/tabler';
 import { defineTool } from '../tool';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: 'Random numbers generator',
+  name: t('tools.random-numbers-generator.title'),
   path: '/random-numbers-generator',
-  description: 'Generate random numbers (decimal, hexadecimal). With denied characters, you can generate other bases.',
+  description: t('tools.random-numbers-generator.description'),
   keywords: ['random', 'numbers', 'decimal', 'hexadecimal', 'generator'],
   component: () => import('./random-numbers-generator.vue'),
   icon: ArrowsShuffle,

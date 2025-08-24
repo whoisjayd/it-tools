@@ -1,10 +1,11 @@
 import { Code } from '@vicons/tabler';
 import { defineTool } from '../tool';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: 'XML Linter',
+  name: t('tools.xml-linter.title'),
   path: '/xml-linter',
-  description: 'Lint XML content for syntax error',
+  description: t('tools.xml-linter.description'),
   keywords: ['xml', 'linter'],
   component: () => import('./xml-linter.vue'),
   icon: Code,

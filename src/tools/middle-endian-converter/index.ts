@@ -1,10 +1,11 @@
 import { Binary } from '@vicons/tabler';
 import { defineTool } from '../tool';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: 'Middle-Endian Converter',
+  name: t('tools.middle-endian-converter.title'),
   path: '/middle-endian-converter',
-  description: 'Convert bytes from Middle-Endian to Little/Big Endian for given bits precision and type of Middle Endian',
+  description: t('tools.middle-endian-converter.description'),
   keywords: ['middle', 'endian', 'converter'],
   component: () => import('./middle-endian-converter.vue'),
   icon: Binary,

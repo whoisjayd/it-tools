@@ -1,68 +1,82 @@
-<script setup>
-import { NButton, NGi, NGrid, NInput, NSelect, NTabPane, NTabs, NUpload } from 'naive-ui';
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n';
+import { NButton, NGi, NGrid, NInput, NSelect, NTabPane, NTabs, NUpload, type UploadFileInfo } from 'naive-ui';
 
 import FontControls from './font-controls.vue'; // Separate component for weight/style/fallback
 import { useITStorage } from '@/composable/queryParams';
+
+const { t } = useI18n();
 
 const defaultText = 'The quick brown fox jumps over the lazy dog.';
 const sampleText = useITStorage('font-comparer:txt', defaultText);
 const activeTab = useITStorage('font-comparer:tab', 'fontname');
 
 const fontOptions = [
-  { label: 'Arial', value: 'Arial' },
-  { label: 'Verdana', value: 'Verdana' },
-  { label: 'Helvetica', value: 'Helvetica' },
-  { label: 'Tahoma', value: 'Tahoma' },
-  { label: 'Trebuchet MS', value: 'Trebuchet MS' },
-  { label: 'Times New Roman', value: 'Times New Roman' },
-  { label: 'Georgia', value: 'Georgia' },
-  { label: 'Garamond', value: 'Garamond' },
-  { label: 'Courier New', value: 'Courier New' },
-  { label: 'Lucida Console', value: 'Lucida Console' },
-  { label: 'Lucida Sans Unicode', value: 'Lucida Sans Unicode' },
-  { label: 'Palatino Linotype', value: 'Palatino Linotype' },
-  { label: 'Segoe UI', value: 'Segoe UI' },
-  { label: 'Impact', value: 'Impact' },
-  { label: 'Comic Sans MS', value: 'Comic Sans MS' },
-  { label: 'Century Gothic', value: 'Century Gothic' },
-  { label: 'Franklin Gothic Medium', value: 'Franklin Gothic Medium' },
-  { label: 'Candara', value: 'Candara' },
-  { label: 'Calibri', value: 'Calibri' },
-  { label: 'Cambria', value: 'Cambria' },
-  { label: 'Constantia', value: 'Constantia' },
-  { label: 'Corbel', value: 'Corbel' },
-  { label: 'Book Antiqua', value: 'Book Antiqua' },
-  { label: 'Monaco', value: 'Monaco' },
-  { label: 'Andale Mono', value: 'Andale Mono' },
-  { label: 'Optima', value: 'Optima' },
-  { label: 'Futura', value: 'Futura' },
-  { label: 'Rockwell', value: 'Rockwell' },
-  { label: 'Baskerville', value: 'Baskerville' },
-  { label: 'Didot', value: 'Didot' },
-  { label: 'Geneva', value: 'Geneva' },
-  { label: 'Symbol', value: 'Symbol' },
-  { label: 'Webdings', value: 'Webdings' },
-  { label: 'Wingdings', value: 'Wingdings' },
-  { label: 'Roboto', value: 'Roboto' },
-  { label: 'Open Sans', value: 'Open Sans' },
-  { label: 'Lato', value: 'Lato' },
-  { label: 'Montserrat', value: 'Montserrat' },
-  { label: 'Oswald', value: 'Oswald' },
-  { label: 'Raleway', value: 'Raleway' },
-  { label: 'Poppins', value: 'Poppins' },
-  { label: 'Merriweather', value: 'Merriweather' },
-  { label: 'Inter', value: 'Inter' },
-  { label: 'Noto Sans', value: 'Noto Sans' },
-  { label: 'Playfair Display', value: 'Playfair Display' },
-  { label: 'Source Sans Pro', value: 'Source Sans Pro' },
-  { label: 'Ubuntu', value: 'Ubuntu' },
-  { label: 'Nunito', value: 'Nunito' },
-  { label: 'PT Sans', value: 'PT Sans' },
-  { label: 'Quicksand', value: 'Quicksand' },
-  { label: 'Work Sans', value: 'Work Sans' },
-  { label: 'Rubik', value: 'Rubik' },
-  { label: 'DM Sans', value: 'DM Sans' },
+  { label: t('tools.font-compare.texts.label-arial'), value: 'Arial' },
+  { label: t('tools.font-compare.texts.label-verdana'), value: 'Verdana' },
+  { label: t('tools.font-compare.texts.label-helvetica'), value: 'Helvetica' },
+  { label: t('tools.font-compare.texts.label-tahoma'), value: 'Tahoma' },
+  { label: t('tools.font-compare.texts.label-trebuchet-ms'), value: 'Trebuchet MS' },
+  { label: t('tools.font-compare.texts.label-times-new-roman'), value: 'Times New Roman' },
+  { label: t('tools.font-compare.texts.label-georgia'), value: 'Georgia' },
+  { label: t('tools.font-compare.texts.label-garamond'), value: 'Garamond' },
+  { label: t('tools.font-compare.texts.label-courier-new'), value: 'Courier New' },
+  { label: t('tools.font-compare.texts.label-lucida-console'), value: 'Lucida Console' },
+  { label: t('tools.font-compare.texts.label-lucida-sans-unicode'), value: 'Lucida Sans Unicode' },
+  { label: t('tools.font-compare.texts.label-palatino-linotype'), value: 'Palatino Linotype' },
+  { label: t('tools.font-compare.texts.label-segoe-ui'), value: 'Segoe UI' },
+  { label: t('tools.font-compare.texts.label-impact'), value: 'Impact' },
+  { label: t('tools.font-compare.texts.label-comic-sans-ms'), value: 'Comic Sans MS' },
+  { label: t('tools.font-compare.texts.label-century-gothic'), value: 'Century Gothic' },
+  { label: t('tools.font-compare.texts.label-franklin-gothic-medium'), value: 'Franklin Gothic Medium' },
+  { label: t('tools.font-compare.texts.label-candara'), value: 'Candara' },
+  { label: t('tools.font-compare.texts.label-calibri'), value: 'Calibri' },
+  { label: t('tools.font-compare.texts.label-cambria'), value: 'Cambria' },
+  { label: t('tools.font-compare.texts.label-constantia'), value: 'Constantia' },
+  { label: t('tools.font-compare.texts.label-corbel'), value: 'Corbel' },
+  { label: t('tools.font-compare.texts.label-book-antiqua'), value: 'Book Antiqua' },
+  { label: t('tools.font-compare.texts.label-monaco'), value: 'Monaco' },
+  { label: t('tools.font-compare.texts.label-andale-mono'), value: 'Andale Mono' },
+  { label: t('tools.font-compare.texts.label-optima'), value: 'Optima' },
+  { label: t('tools.font-compare.texts.label-futura'), value: 'Futura' },
+  { label: t('tools.font-compare.texts.label-rockwell'), value: 'Rockwell' },
+  { label: t('tools.font-compare.texts.label-baskerville'), value: 'Baskerville' },
+  { label: t('tools.font-compare.texts.label-didot'), value: 'Didot' },
+  { label: t('tools.font-compare.texts.label-geneva'), value: 'Geneva' },
+  { label: t('tools.font-compare.texts.label-symbol'), value: 'Symbol' },
+  { label: t('tools.font-compare.texts.label-webdings'), value: 'Webdings' },
+  { label: t('tools.font-compare.texts.label-wingdings'), value: 'Wingdings' },
+  { label: t('tools.font-compare.texts.label-roboto'), value: 'Roboto' },
+  { label: t('tools.font-compare.texts.label-open-sans'), value: 'Open Sans' },
+  { label: t('tools.font-compare.texts.label-lato'), value: 'Lato' },
+  { label: t('tools.font-compare.texts.label-montserrat'), value: 'Montserrat' },
+  { label: t('tools.font-compare.texts.label-oswald'), value: 'Oswald' },
+  { label: t('tools.font-compare.texts.label-raleway'), value: 'Raleway' },
+  { label: t('tools.font-compare.texts.label-poppins'), value: 'Poppins' },
+  { label: t('tools.font-compare.texts.label-merriweather'), value: 'Merriweather' },
+  { label: t('tools.font-compare.texts.label-inter'), value: 'Inter' },
+  { label: t('tools.font-compare.texts.label-noto-sans'), value: 'Noto Sans' },
+  { label: t('tools.font-compare.texts.label-playfair-display'), value: 'Playfair Display' },
+  { label: t('tools.font-compare.texts.label-source-sans-pro'), value: 'Source Sans Pro' },
+  { label: t('tools.font-compare.texts.label-ubuntu'), value: 'Ubuntu' },
+  { label: t('tools.font-compare.texts.label-nunito'), value: 'Nunito' },
+  { label: t('tools.font-compare.texts.label-pt-sans'), value: 'PT Sans' },
+  { label: t('tools.font-compare.texts.label-quicksand'), value: 'Quicksand' },
+  { label: t('tools.font-compare.texts.label-work-sans'), value: 'Work Sans' },
+  { label: t('tools.font-compare.texts.label-rubik'), value: 'Rubik' },
+  { label: t('tools.font-compare.texts.label-dm-sans'), value: 'DM Sans' },
 ];
+
+interface FontData {
+  value: string
+  url: string
+  css: string
+  cssUrl: string
+  dynamicName: string
+  weight: string
+  style: string
+  fallback: string
+}
 
 const fontA = useITStorage('font-comparer:a', {
   value: 'Arial',
@@ -86,7 +100,7 @@ const fontB = useITStorage('font-comparer:b', {
   fallback: 'serif',
 });
 
-function fontStyle(font) {
+function fontStyle(font: FontData) {
   return {
     fontFamily: `${font.dynamicName || font.value}, ${font.fallback}`,
     fontWeight: font.weight,
@@ -100,14 +114,14 @@ function fontStyle(font) {
   };
 }
 
-function injectFontCSS(cssText) {
+function injectFontCSS(cssText: string) {
   const styleTag = document.createElement('style');
   styleTag.type = 'text/css';
   styleTag.textContent = cssText;
   document.head.appendChild(styleTag);
 }
 
-async function loadCSSFromURL(url) {
+async function loadCSSFromURL(url: string) {
   try {
     const response = await fetch(url);
     const cssText = await response.text();
@@ -120,7 +134,7 @@ async function loadCSSFromURL(url) {
   }
 }
 
-function loadFontFromURL(url, index) {
+function loadFontFromURL(url: string, index: number) {
   const fontName = `CustomFont${index}`;
   const font = new FontFace(fontName, `url(${url})`);
   font.load().then((loadedFont) => {
@@ -132,11 +146,11 @@ function loadFontFromURL(url, index) {
   }).catch(console.error);
 }
 
-function handleFontUpload(file, index) {
+function handleFontUpload(file: UploadFileInfo, index: number) {
   const reader = new FileReader();
   reader.onload = () => {
     const fontName = `UploadedFont${index}`;
-    const font = new FontFace(fontName, reader.result);
+    const font = new FontFace(fontName, reader.result as ArrayBuffer);
     font.load().then((loadedFont) => {
       document.fonts.add(loadedFont);
       if (index === 0) {
@@ -145,7 +159,11 @@ function handleFontUpload(file, index) {
       else { fontB.value.dynamicName = fontName; }
     }).catch(console.error);
   };
-  reader.readAsArrayBuffer(file);
+  reader.readAsArrayBuffer(file!.file!);
+}
+
+interface UploadEvents {
+  file: UploadFileInfo
 }
 </script>
 
@@ -153,7 +171,7 @@ function handleFontUpload(file, index) {
   <div>
     <details>
       <summary />
-      <c-input-text v-model:value="sampleText" multiline rows="3" placeholder="Enter sample text..." mb-2 />
+      <c-input-text v-model:value="sampleText" multiline rows="3" :placeholder="t('tools.font-compare.texts.placeholder-enter-sample-text')" mb-2 />
     </details>
 
     <NTabs v-model:value="activeTab" type="segment">
@@ -163,7 +181,7 @@ function handleFontUpload(file, index) {
             <NSelect
               v-model:value="font.value"
               :options="fontOptions"
-              placeholder="Select font name"
+              :placeholder="t('tools.font-compare.texts.placeholder-select-font-name')"
               mb-2
             />
             <FontControls :font="font" />
@@ -179,7 +197,7 @@ function handleFontUpload(file, index) {
           <NGi v-for="(font, index) in [fontA, fontB]" :key="index">
             <NInput
               v-model:value="font.url"
-              placeholder="Enter font URL"
+              :placeholder="t('tools.font-compare.texts.placeholder-enter-font-url')"
               mb-2
               @blur="loadFontFromURL(font.url, index)"
             />
@@ -197,10 +215,10 @@ function handleFontUpload(file, index) {
             <NUpload
               :show-file-list="false"
               accept=".ttf,.otf,.woff,.woff2"
-              :custom-request="(options) => handleFontUpload(options.file, index)"
+              :change="(e: UploadEvents) => handleFontUpload(e.file, index)"
               mb-2
             >
-              <NButton>Upload Font File</NButton>
+              <NButton>{{ t('tools.font-compare.texts.tag-upload-font-file') }}</NButton>
             </NUpload>
             <FontControls :font="font" />
             <div :style="fontStyle(font)" class="font-preview">
@@ -215,14 +233,14 @@ function handleFontUpload(file, index) {
             <NInput
               v-model:value="font.css"
               type="textarea"
-              placeholder="Paste @font-face CSS here"
+              :placeholder="t('tools.font-compare.texts.placeholder-paste-font-face-css-here')"
               :autosize="{ minRows: 4, maxRows: 10 }"
               mb-1
               @blur="injectFontCSS(font.css)"
             />
             <NInput
               v-model:value="font.dynamicName"
-              placeholder="Font-family name from CSS"
+              :placeholder="t('tools.font-compare.texts.placeholder-font-family-name-from-css')"
               mb-2
             />
             <FontControls :font="font" />
@@ -237,13 +255,13 @@ function handleFontUpload(file, index) {
           <NGi v-for="(font, index) in [fontA, fontB]" :key="index">
             <NInput
               v-model:value="font.cssUrl"
-              placeholder="Enter CSS URL (e.g. https://example.com/fonts.css)"
+              :placeholder="t('tools.font-compare.texts.placeholder-enter-css-url-e-g-https-example-com-fonts-css')"
               mb-1
               @blur="loadCSSFromURL(font.cssUrl)"
             />
             <NInput
               v-model:value="font.dynamicName"
-              placeholder="Font-family name from imported CSS"
+              :placeholder="t('tools.font-compare.texts.placeholder-font-family-name-from-imported-css')"
               mb-2
             />
             <FontControls :font="font" />

@@ -1,10 +1,11 @@
 import { Database } from '@vicons/tabler';
 import { defineTool } from '../tool';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: 'SQL Parameters Generator',
+  name: t('tools.sql-parameters.title'),
   path: '/sql-parameters',
-  description: 'Prepare SQL statement from a given parametrized SQL query and parameters',
+  description: t('tools.sql-parameters.description'),
   keywords: ['sql', 'select', 'insert', 'parameters'],
   component: () => import('./sql-parameters.vue'),
   icon: Database,

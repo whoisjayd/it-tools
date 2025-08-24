@@ -1,10 +1,11 @@
 import { MailForward } from '@vicons/tabler';
 import { defineTool } from '../tool';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: 'DNSBL Checker',
+  name: t('tools.dnsbl-checker.title'),
   path: '/dnsbl-checker',
-  description: 'Check if a given IP is in any of known DNS Blacklist servers (spam block)',
+  description: t('tools.dnsbl-checker.description'),
   keywords: ['dnsbl', 'block', 'dns', 'checker'],
   component: () => import('./dnsbl-checker.vue'),
   icon: MailForward,

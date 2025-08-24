@@ -1,10 +1,11 @@
 import { Link } from '@vicons/tabler';
 import { defineTool } from '../tool';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: 'Wireguard Config Generator',
+  name: t('tools.wireguard-config-generator.title'),
   path: '/wireguard-config-generator',
-  description: 'Generate Wireguard Server and Clients configuration files',
+  description: t('tools.wireguard-config-generator.description'),
   keywords: ['wireguard', 'config', 'generator'],
   component: () => import('./wireguard-config-generator.vue'),
   icon: Link,

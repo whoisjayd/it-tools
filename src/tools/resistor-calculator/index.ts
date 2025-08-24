@@ -1,10 +1,11 @@
 import { Hammer } from '@vicons/tabler';
 import { defineTool } from '../tool';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: 'Resistor Calculator',
+  name: t('tools.resistor-calculator.title'),
   path: '/resistor-calculator',
-  description: 'Compute Resistor values from/to band colors',
+  description: t('tools.resistor-calculator.description'),
   keywords: ['resistor', 'ohm', 'calculator'],
   component: () => import('./resistor-calculator.vue'),
   icon: Hammer,

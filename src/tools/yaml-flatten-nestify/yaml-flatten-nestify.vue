@@ -49,10 +49,10 @@ const rules: UseValidationRule<string>[] = [
   </NSpace>
 
   <format-transformer
-    :input-label="t('tools.yaml-flatten-nestify.texts.input-label-your-yaml-content')"
+    :input-:label="t('tools.yaml-flatten-nestify.texts.label-t-tools-yaml-flatten-nestify-texts-input-label-your-yaml-content')"
     :input-default="defaultValue"
-    :input-placeholder="t('tools.yaml-flatten-nestify.texts.input-placeholder-paste-your-yaml-content-here')"
-    :output-label="t('tools.yaml-flatten-nestify.texts.output-label-transformed-yaml')"
+    :input-:placeholder="t('tools.yaml-flatten-nestify.texts.placeholder-t-tools-yaml-flatten-nestify-texts-input-placeholder-paste-your-yaml-content-here')"
+    :output-:label="t('tools.yaml-flatten-nestify.texts.label-t-tools-yaml-flatten-nestify-texts-output-label-transformed-yaml')"
     output-language="yaml"
     :input-validation-rules="rules"
     :transformer="transformer"

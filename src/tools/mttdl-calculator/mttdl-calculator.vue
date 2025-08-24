@@ -1,4 +1,7 @@
-<script setup>
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 const form = ref({
   raidLevel: 'RAID 5',
   numDrives: 6,
@@ -10,18 +13,18 @@ const form = ref({
 });
 
 const raidOptions = [
-  { label: 'RAID 0', value: 'RAID 0' },
-  { label: 'RAID 1', value: 'RAID 1' },
-  { label: 'RAID 5', value: 'RAID 5' },
-  { label: 'RAID 6', value: 'RAID 6' },
-  { label: 'RAID 10', value: 'RAID 10' },
-  { label: 'RAID-Z1', value: 'RAID-Z1' },
-  { label: 'RAID-Z2', value: 'RAID-Z2' },
-  { label: 'RAID-Z3', value: 'RAID-Z3' },
-  { label: 'RAID 50', value: 'RAID 50' },
+  { label: t('tools.mttdl-calculator.texts.label-raid-0'), value: 'RAID 0' },
+  { label: t('tools.mttdl-calculator.texts.label-raid-1'), value: 'RAID 1' },
+  { label: t('tools.mttdl-calculator.texts.label-raid-5'), value: 'RAID 5' },
+  { label: t('tools.mttdl-calculator.texts.label-raid-6'), value: 'RAID 6' },
+  { label: t('tools.mttdl-calculator.texts.label-raid-10'), value: 'RAID 10' },
+  { label: t('tools.mttdl-calculator.texts.label-raid-z1'), value: 'RAID-Z1' },
+  { label: t('tools.mttdl-calculator.texts.label-raid-z2'), value: 'RAID-Z2' },
+  { label: t('tools.mttdl-calculator.texts.label-raid-z3'), value: 'RAID-Z3' },
+  { label: t('tools.mttdl-calculator.texts.label-raid-50'), value: 'RAID 50' },
 ];
 
-function basicMTTDL(raidLevel, numDrives, mtbf, rebuildTime) {
+function basicMTTDL(raidLevel: string, numDrives: number, mtbf: number, rebuildTime: number) {
   const λ = 1 / mtbf;
   switch (raidLevel) {
     case 'RAID 0':
@@ -39,7 +42,10 @@ function basicMTTDL(raidLevel, numDrives, mtbf, rebuildTime) {
   }
 }
 
-function getMTTDL({ raidLevel, numDrives, mtbf, rebuildTime, ber, driveCapacityTB }) {
+function getMTTDL(
+  { raidLevel, numDrives, mtbf, rebuildTime, ber, driveCapacityTB }:
+  { raidLevel: string; numDrives: number; mtbf: number; rebuildTime: number; ber: number; driveCapacityTB: number },
+) {
   const λ = 1 / mtbf;
   const bitsPerDrive = driveCapacityTB * 1e12 * 8;
   const unrecoverableReadProb = 1 - (1 - 10 ** ber) ** bitsPerDrive;
@@ -68,7 +74,7 @@ const computedMTTDL = computed(() => {
   };
 });
 
-function simulateFailureProbability(mttdl, years) {
+function simulateFailureProbability(mttdl: number, years: number) {
   const hours = years * 365.25 * 24;
   return 1 - Math.exp(-hours / mttdl);
 }
@@ -79,108 +85,108 @@ const failureProbability = computed(() =>
 </script>
 
 <template>
-  <NCard title="MTTDL & Failure Probability Calculator" style="max-width: 600px; margin: auto;">
+  <NCard :title="t('tools.mttdl-calculator.texts.title-mttdl-failure-probability-calculator')" style="max-width: 600px; margin: auto;">
     <NForm :model="form" label-width="190px" label-placement="left">
-      <NFormItem label="RAID Level:">
-        <NSelect v-model:value="form.raidLevel" :options="raidOptions" placeholder="Select RAID level" />
+      <NFormItem :label="t('tools.mttdl-calculator.texts.label-raid-level')">
+        <NSelect v-model:value="form.raidLevel" :options="raidOptions" :placeholder="t('tools.mttdl-calculator.texts.placeholder-select-raid-level')" />
       </NFormItem>
-      <NFormItem label="Number of Drives:">
+      <NFormItem :label="t('tools.mttdl-calculator.texts.label-number-of-drives')">
         <NInputNumber v-model:value="form.numDrives" :min="1" />
       </NFormItem>
-      <NFormItem label="Drive MTBF (hours):">
+      <NFormItem :label="t('tools.mttdl-calculator.texts.label-drive-mtbf-hours')">
         <NInputNumber v-model:value="form.mtbf" :min="1" />
       </NFormItem>
-      <NFormItem label="Rebuild Time (hours):">
+      <NFormItem :label="t('tools.mttdl-calculator.texts.label-rebuild-time-hours')">
         <NInputNumber v-model:value="form.rebuildTime" :min="1" />
       </NFormItem>
-      <NFormItem label="Bit Error Rate (BER in 1eX):">
+      <NFormItem :label="t('tools.mttdl-calculator.texts.label-bit-error-rate-ber-in-1ex')">
         <NInputNumber v-model:value="form.ber" :min="-18" :max="-6" />
       </NFormItem>
-      <NFormItem label="Drive Capacity (TB):">
+      <NFormItem :label="t('tools.mttdl-calculator.texts.label-drive-capacity-tb')">
         <NInputNumber v-model:value="form.driveCapacityTB" :min="1" />
       </NFormItem>
-      <NFormItem label="Years for Failure probability:">
+      <NFormItem :label="t('tools.mttdl-calculator.texts.label-years-for-failure-probability')">
         <NInputNumber v-model:value="form.yearsToSimulate" :min="1" />
       </NFormItem>
 
       <NDivider />
 
-      <NFormItem label="MTTDL (hours):">
+      <NFormItem :label="t('tools.mttdl-calculator.texts.label-mttdl-hours')">
         <input-copyable :value="computedMTTDL.hours.toFixed(2)" />
       </NFormItem>
-      <NFormItem label="MTTDL (years):">
+      <NFormItem :label="t('tools.mttdl-calculator.texts.label-mttdl-years')">
         <input-copyable :value="computedMTTDL.years.toFixed(2)" />
       </NFormItem>
-      <NFormItem label="Failure Probability:">
+      <NFormItem :label="t('tools.mttdl-calculator.texts.label-failure-probability')">
         <input-copyable :value="`${(failureProbability * 100).toFixed(4)}%`" />
       </NFormItem>
 
       <NDivider />
 
       <details>
-        <summary>🧠 Key Terms Explained</summary>
+        <summary>{{ t('tools.mttdl-calculator.texts.tag-key-terms-explained') }}</summary>
 
-        <h3>💾 RAID Level</h3>
-        <p>RAID (Redundant Array of Independent Disks) is a method of combining multiple physical drives into one logical unit to improve performance, redundancy, or both.</p>
+        <h3>{{ t('tools.mttdl-calculator.texts.tag-raid-level') }}</h3>
+        <p>{{ t('tools.mttdl-calculator.texts.tag-raid-redundant-array-of-independent-disks-is-a-method-of-combining-multiple-physical-drives-into-one-logical-unit-to-improve-performance-redundancy-or-both') }}</p>
         <table border="1" cellpadding="8" cellspacing="0">
           <thead>
             <tr>
-              <th>RAID Level</th>
-              <th>Description</th>
+              <th>{{ t('tools.mttdl-calculator.texts.tag-raid-level') }}</th>
+              <th>{{ t('tools.mttdl-calculator.texts.tag-description') }}</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>RAID 0</td>
-              <td>Striping only. No redundancy. Fast but risky—if one drive fails, all data is lost.</td>
+              <td>{{ t('tools.mttdl-calculator.texts.tag-raid-0') }}</td>
+              <td>{{ t('tools.mttdl-calculator.texts.tag-striping-only-no-redundancy-fast-but-risky-if-one-drive-fails-all-data-is-lost') }}</td>
             </tr>
             <tr>
-              <td>RAID 1</td>
-              <td>Mirroring. Data is duplicated across drives. High redundancy, low capacity efficiency.</td>
+              <td>{{ t('tools.mttdl-calculator.texts.tag-raid-1') }}</td>
+              <td>{{ t('tools.mttdl-calculator.texts.tag-mirroring-data-is-duplicated-across-drives-high-redundancy-low-capacity-efficiency') }}</td>
             </tr>
             <tr>
-              <td>RAID 5</td>
-              <td>Striping with parity. Can tolerate one drive failure. Balanced speed and redundancy.</td>
+              <td>{{ t('tools.mttdl-calculator.texts.tag-raid-5') }}</td>
+              <td>{{ t('tools.mttdl-calculator.texts.tag-striping-with-parity-can-tolerate-one-drive-failure-balanced-speed-and-redundancy') }}</td>
             </tr>
             <tr>
-              <td>RAID 6</td>
-              <td>Double parity. Can survive two drive failures.</td>
+              <td>{{ t('tools.mttdl-calculator.texts.tag-raid-6') }}</td>
+              <td>{{ t('tools.mttdl-calculator.texts.tag-double-parity-can-survive-two-drive-failures') }}</td>
             </tr>
             <tr>
-              <td>RAID 10</td>
-              <td>Mirrored pairs striped together. High performance and redundancy.</td>
+              <td>{{ t('tools.mttdl-calculator.texts.tag-raid-10') }}</td>
+              <td>{{ t('tools.mttdl-calculator.texts.tag-mirrored-pairs-striped-together-high-performance-and-redundancy') }}</td>
             </tr>
             <tr>
-              <td>RAID-Z1/Z2/Z3</td>
-              <td>ZFS-based RAID levels with single, double, or triple parity. Designed for data integrity.</td>
+              <td>{{ t('tools.mttdl-calculator.texts.tag-raid-z1-z2-z3') }}</td>
+              <td>{{ t('tools.mttdl-calculator.texts.tag-zfs-based-raid-levels-with-single-double-or-triple-parity-designed-for-data-integrity') }}</td>
             </tr>
             <tr>
-              <td>RAID 50</td>
-              <td>Stripe of RAID 5 arrays. Combines performance of RAID 0 with redundancy of RAID 5.</td>
+              <td>{{ t('tools.mttdl-calculator.texts.tag-raid-50') }}</td>
+              <td>{{ t('tools.mttdl-calculator.texts.tag-stripe-of-raid-5-arrays-combines-performance-of-raid-0-with-redundancy-of-raid-5') }}</td>
             </tr>
           </tbody>
         </table>
 
-        <h3>⏱️ MTBF (Mean Time Between Failures)</h3>
-        <p>The average time (in hours) a drive is expected to operate before failing. Higher MTBF means more reliable hardware.</p>
+        <h3>{{ t('tools.mttdl-calculator.texts.tag-️-mtbf-mean-time-between-failures') }}</h3>
+        <p>{{ t('tools.mttdl-calculator.texts.tag-the-average-time-in-hours-a-drive-is-expected-to-operate-before-failing-higher-mtbf-means-more-reliable-hardware') }}</p>
 
-        <h3>🔁 Rebuild Time</h3>
-        <p>The time required to reconstruct data on a replacement drive after a failure. Longer rebuild times increase the risk of a second failure during recovery.</p>
+        <h3>{{ t('tools.mttdl-calculator.texts.tag-rebuild-time') }}</h3>
+        <p>{{ t('tools.mttdl-calculator.texts.tag-the-time-required-to-reconstruct-data-on-a-replacement-drive-after-a-failure-longer-rebuild-times-increase-the-risk-of-a-second-failure-during-recovery') }}</p>
 
-        <h3>📉 MTTDL (Mean Time To Data Loss)</h3>
-        <p>A statistical estimate of how long a RAID system can operate before data loss occurs. It considers drive failures, rebuild time, and RAID redundancy. Higher MTTDL means a safer system.</p>
+        <h3>{{ t('tools.mttdl-calculator.texts.tag-mttdl-mean-time-to-data-loss') }}</h3>
+        <p>{{ t('tools.mttdl-calculator.texts.tag-a-statistical-estimate-of-how-long-a-raid-system-can-operate-before-data-loss-occurs-it-considers-drive-failures-rebuild-time-and-raid-redundancy-higher-mttdl-means-a-safer-system') }}</p>
 
-        <h3>🧮 Bit Error Rate (BER)</h3>
-        <p>The probability that a bit read from a disk will be incorrect due to hardware limitations. Even tiny BERs (like 1 in a trillion) can cause issues during rebuilds, especially with large drives.</p>
+        <h3>{{ t('tools.mttdl-calculator.texts.tag-bit-error-rate-ber') }}</h3>
+        <p>{{ t('tools.mttdl-calculator.texts.tag-the-probability-that-a-bit-read-from-a-disk-will-be-incorrect-due-to-hardware-limitations-even-tiny-bers-like-1-in-a-trillion-can-cause-issues-during-rebuilds-especially-with-large-drives') }}</p>
 
-        <h3>🧠 Unrecoverable Read Error (URE)</h3>
-        <p>Occurs when a drive fails to read a sector during rebuild. BER contributes to URE risk, which can compromise RAID recovery.</p>
+        <h3>{{ t('tools.mttdl-calculator.texts.tag-unrecoverable-read-error-ure') }}</h3>
+        <p>{{ t('tools.mttdl-calculator.texts.tag-occurs-when-a-drive-fails-to-read-a-sector-during-rebuild-ber-contributes-to-ure-risk-which-can-compromise-raid-recovery') }}</p>
 
-        <h3>📦 Drive Capacity (TB)</h3>
-        <p>Total storage per drive. Larger drives take longer to rebuild and are more susceptible to BER-related errors.</p>
+        <h3>{{ t('tools.mttdl-calculator.texts.tag-drive-capacity-tb') }}</h3>
+        <p>{{ t('tools.mttdl-calculator.texts.tag-total-storage-per-drive-larger-drives-take-longer-to-rebuild-and-are-more-susceptible-to-ber-related-errors') }}</p>
 
-        <h3>📈 Failure Probability</h3>
-        <p>The chance that the RAID system will experience data loss over a given time period (e.g., 5 years). Calculated using MTTDL and exponential failure models.</p>
+        <h3>{{ t('tools.mttdl-calculator.texts.tag-failure-probability') }}</h3>
+        <p>{{ t('tools.mttdl-calculator.texts.tag-the-chance-that-the-raid-system-will-experience-data-loss-over-a-given-time-period-e-g-5-years-calculated-using-mttdl-and-exponential-failure-models') }}</p>
       </details>
     </NForm>
   </NCard>

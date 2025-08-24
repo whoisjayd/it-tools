@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n';
 import { parse as parseToml } from 'smol-toml';
+
+const { t } = useI18n();
 
 const tomlContent = ref('');
 const lintErrors = computed(() => {
@@ -21,7 +24,7 @@ const MONACO_EDITOR_OPTIONS = {
 
 <template>
   <div>
-    <n-card title="Your TOML Content:" mb-2>
+    <n-card :title="t('tools.toml-linter.texts.title-your-toml-content')" mb-2>
       <div relative w-full>
         <c-monaco-editor
           v-model:value="tomlContent"
@@ -33,13 +36,13 @@ const MONACO_EDITOR_OPTIONS = {
     </n-card>
 
     <div v-if="lintErrors">
-      <n-alert type="error" title="Linting Error" :show-icon="true">
+      <n-alert type="error" :title="t('tools.toml-linter.texts.title-linting-error')" :show-icon="true">
         <pre>{{ lintErrors }}</pre>
       </n-alert>
     </div>
     <div v-else-if="tomlContent">
-      <n-alert type="success" title="Valid TOML" :show-icon="true">
-        No errors found. Your TOML is valid!
+      <n-alert type="success" :title="t('tools.toml-linter.texts.title-valid-toml')" :show-icon="true">
+        {{ t('tools.toml-linter.texts.tag-no-errors-found-your-toml-is-valid') }}
       </n-alert>
     </div>
   </div>

@@ -1,10 +1,11 @@
 import { ArrowsShuffle } from '@vicons/tabler';
 import { defineTool } from '../tool';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: 'Text Translator',
+  name: t('tools.translator.title'),
   path: '/translator',
-  description: 'Translate text from one language to another (using opus-mt)',
+  description: t('tools.translator.description'),
   keywords: ['translate', 'language'],
   component: () => import('./translator.vue'),
   icon: ArrowsShuffle,

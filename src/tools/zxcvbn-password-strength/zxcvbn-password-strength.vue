@@ -1,8 +1,11 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n';
 import { NAlert, NInput, NProgress, NTag } from 'naive-ui';
 import { zxcvbn, zxcvbnOptions } from '@zxcvbn-ts/core';
 import * as zxcvbnCommonPackage from '@zxcvbn-ts/language-common';
 import * as zxcvbnEnPackage from '@zxcvbn-ts/language-en';
+
+const { t } = useI18n();
 
 const options = {
   dictionary: {
@@ -51,7 +54,7 @@ const suggestions = computed(() => result.value.feedback.suggestions);
     <NInput
       v-model:value="password"
       type="password"
-      placeholder="Enter your password"
+      :placeholder="t('tools.zxcvbn-password-strength.texts.placeholder-enter-your-password')"
       show-password-on="click"
       clearable
     />
@@ -70,26 +73,26 @@ const suggestions = computed(() => result.value.feedback.suggestions);
         </NTag>
       </n-space>
       <div mt-1>
-        <span>Estimated fast offline crack time (1e10/s):</span> {{ result.crackTimesDisplay.offlineFastHashing1e10PerSecond }}
+        <span>{{ t('tools.zxcvbn-password-strength.texts.tag-estimated-fast-offline-crack-time-1e10-s') }}</span> {{ result.crackTimesDisplay.offlineFastHashing1e10PerSecond }}
       </div>
       <div mt-1>
-        <span>Estimated slow offline crack time (1e4/s):</span> {{ result.crackTimesDisplay.offlineSlowHashing1e4PerSecond }}
+        <span>{{ t('tools.zxcvbn-password-strength.texts.tag-estimated-slow-offline-crack-time-1e4-s') }}</span> {{ result.crackTimesDisplay.offlineSlowHashing1e4PerSecond }}
       </div>
       <div mt-1>
-        <span>Estimated online throttling crack time (10/s):</span> {{ result.crackTimesDisplay.onlineNoThrottling10PerSecond }}
+        <span>{{ t('tools.zxcvbn-password-strength.texts.tag-estimated-online-throttling-crack-time-10-s') }}</span> {{ result.crackTimesDisplay.onlineNoThrottling10PerSecond }}
       </div>
       <div mt-1>
-        <span>Estimated online no throttling crack time (10/s):</span> {{ result.crackTimesDisplay.onlineNoThrottling10PerSecond }}
+        <span>{{ t('tools.zxcvbn-password-strength.texts.tag-estimated-online-no-throttling-crack-time-10-s') }}</span> {{ result.crackTimesDisplay.onlineNoThrottling10PerSecond }}
       </div>
 
       <div mt-2>
-        <NAlert v-if="warning" type="warning" title="Warning">
+        <NAlert v-if="warning" type="warning" :title="t('tools.zxcvbn-password-strength.texts.title-warning')">
           {{ warning }}
         </NAlert>
         <NAlert
           v-if="suggestions.length"
           type="info"
-          title="Suggestions"
+          :title="t('tools.zxcvbn-password-strength.texts.title-suggestions')"
           mt-2
         >
           <ul>

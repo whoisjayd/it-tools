@@ -164,7 +164,7 @@ const outputTokenCosts = computed(() => {
 
       <n-p mt-3>
         <n-a href="https://platform.openai.com/docs/pricing" target="_blank">
-          See OpenAPI Pricings
+          {{ t('tools.gpt-token-estimator.texts.tag-see-openapi-pricings') }}
         </n-a>
       </n-p>
     </div>

@@ -1,10 +1,11 @@
 import { defineTool } from '../tool';
+import { translate as t } from '@/plugins/i18n.plugin';
 import PasswordIcon from '~icons/mdi/form-textbox-password';
 
 export const tool = defineTool({
-  name: 'Zxcvbn Password Strength',
+  name: t('tools.zxcvbn-password-strength.title'),
   path: '/zxcvbn-password-strength',
-  description: 'Compute a given password strength using zxcvbn',
+  description: t('tools.zxcvbn-password-strength.description'),
   keywords: ['zxcvbn', 'password', 'strength'],
   component: () => import('./zxcvbn-password-strength.vue'),
   icon: PasswordIcon,

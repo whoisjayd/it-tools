@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import { Buffer } from 'node:buffer';
+import { useI18n } from 'vue-i18n';
 import chardet from 'chardet';
 import iconv from 'iconv-lite';
+
+const { t } = useI18n();
 
 const inputType = ref<'file' | 'content'>('file');
 const fileContent = ref('');
@@ -66,32 +69,32 @@ function onUpload(file: File) {
 
 <template>
   <div style="max-width: 600px;">
-    <c-card title="Input" mb-2>
+    <c-card :title="t('tools.charset-detector.texts.title-input')" mb-2>
       <n-radio-group v-model:value="inputType" name="radiogroup" mb-2 flex justify-center>
         <n-space>
           <n-radio
             value="file"
-            label="File"
+            :label="t('tools.charset-detector.texts.label-file')"
           />
           <n-radio
             value="content"
-            label="Content"
+            :label="t('tools.charset-detector.texts.label-content')"
           />
         </n-space>
       </n-radio-group>
 
       <c-file-upload
         v-if="inputType === 'file'"
-        title="Drag and drop TXT file here, or click to select a file"
+        :title="t('tools.charset-detector.texts.title-drag-and-drop-txt-file-here-or-click-to-select-a-file')"
         @file-upload="onUpload"
       />
 
       <c-input-text
         v-if="inputType === 'content'"
         v-model:value="fileContent"
-        label="File Content"
+        :label="t('tools.charset-detector.texts.label-file-content')"
         multiline
-        placeholder="Put your text content here..."
+        :placeholder="t('tools.charset-detector.texts.placeholder-put-your-text-content-here')"
         rows="15"
         mb-2
       />
@@ -101,18 +104,18 @@ function onUpload(file: File) {
       {{ error }}
     </c-alert>
 
-    <c-card v-if="!error && encodings" title="Possible encodings">
+    <c-card v-if="!error && encodings" :title="t('tools.charset-detector.texts.title-possible-encodings')">
       <n-table>
         <thead>
           <tr>
             <th scope="col">
-              Confidence
+              {{ t('tools.charset-detector.texts.tag-confidence') }}
             </th>
             <th scope="col">
-              Name
+              {{ t('tools.charset-detector.texts.tag-name') }}
             </th>
             <th scope="col">
-              Lang
+              {{ t('tools.charset-detector.texts.tag-lang') }}
             </th>
             <th />
           </tr>
@@ -133,14 +136,14 @@ function onUpload(file: File) {
             </td>
             <td>
               <n-button @click="generateEncodedOutput(enc.name.toLocaleLowerCase())">
-                Decode
+                {{ t('tools.charset-detector.texts.tag-decode') }}
               </n-button>
             </td>
           </tr>
         </tbody>
       </n-table>
 
-      <n-card v-if="contentDecoded" title="Decoded text" mb-1>
+      <n-card v-if="contentDecoded" :title="t('tools.charset-detector.texts.title-decoded-text')" mb-1>
         <textarea-copyable :value="contentDecoded" />
       </n-card>
     </c-card>

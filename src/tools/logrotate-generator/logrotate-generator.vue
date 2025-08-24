@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n';
 import { useITStorage } from '@/composable/queryParams';
+
+const { t } = useI18n();
 
 const config = useITStorage('logrotate:config', {
   path: '/var/log/apache2/*.log',
@@ -36,35 +39,35 @@ const config = useITStorage('logrotate:config', {
 const frequencyOptions = ['daily', 'weekly', 'monthly', 'yearly'];
 
 const tooltips = {
-  path: 'Glob pattern for log files to rotate.',
-  rotateCount: 'Number of rotated log files to keep.',
-  frequency: 'How often to rotate logs.',
-  minSize: 'Minimum size before rotation is triggered.',
-  size: 'Maximum size before rotation is triggered.',
-  createFile: 'Create a new log file after rotation.',
-  copy: 'Copy the log file instead of moving.',
-  copyTruncate: 'Copy and truncate the original log file.',
-  startNumber: 'Starting number for rotated files.',
-  extension: 'File extension for rotated logs.',
-  dateExt: 'Append date to rotated log filenames.',
-  dateFormat: 'Format for the date extension.',
-  missingOk: 'Ignore missing log files.',
-  compress: 'Compress rotated logs.',
-  delayCompress: 'Delay compression until next rotation.',
-  compressExt: 'Extension for compressed files.',
-  compressCmd: 'Command used to compress files.',
-  compressOptions: 'Options passed to the compression command.',
-  uncompressCmd: 'Command used to uncompress files.',
-  oldDir: 'Directory to move old log files to.',
-  mail: 'Email address to send rotated logs to.',
-  mailFirst: 'Mail the first rotated file.',
-  mailLast: 'Mail the last rotated file.',
-  shred: 'Securely shred log files after rotation.',
-  shredCycles: 'Number of shred cycles.',
-  firstAction: 'Script to run before rotation begins.',
-  preRotate: 'Script to run before rotating each file.',
-  postRotate: 'Script to run after rotating each file.',
-  lastAction: 'Script to run after rotation ends.',
+  path: t('tools.logrotate-generator.texts.path'),
+  rotateCount: t('tools.logrotate-generator.texts.rotateCount'),
+  frequency: t('tools.logrotate-generator.texts.frequency'),
+  minSize: t('tools.logrotate-generator.texts.minSize'),
+  size: t('tools.logrotate-generator.texts.size'),
+  createFile: t('tools.logrotate-generator.texts.createFile'),
+  copy: t('tools.logrotate-generator.texts.copy'),
+  copyTruncate: t('tools.logrotate-generator.texts.copyTruncate'),
+  startNumber: t('tools.logrotate-generator.texts.startNumber'),
+  extension: t('tools.logrotate-generator.texts.extension'),
+  dateExt: t('tools.logrotate-generator.texts.dateExt'),
+  dateFormat: t('tools.logrotate-generator.texts.dateFormat'),
+  missingOk: t('tools.logrotate-generator.texts.missingOk'),
+  compress: t('tools.logrotate-generator.texts.compress'),
+  delayCompress: t('tools.logrotate-generator.texts.delayCompress'),
+  compressExt: t('tools.logrotate-generator.texts.compressExt'),
+  compressCmd: t('tools.logrotate-generator.texts.compressCmd'),
+  compressOptions: t('tools.logrotate-generator.texts.compressOptions'),
+  uncompressCmd: t('tools.logrotate-generator.texts.uncompressCmd'),
+  oldDir: t('tools.logrotate-generator.texts.oldDir'),
+  mail: t('tools.logrotate-generator.texts.mail'),
+  mailFirst: t('tools.logrotate-generator.texts.mailFirst'),
+  mailLast: t('tools.logrotate-generator.texts.mailLast'),
+  shred: t('tools.logrotate-generator.texts.shred'),
+  shredCycles: t('tools.logrotate-generator.texts.shredCycles'),
+  firstAction: t('tools.logrotate-generator.texts.firstAction'),
+  preRotate: t('tools.logrotate-generator.texts.preRotate'),
+  postRotate: t('tools.logrotate-generator.texts.postRotate'),
+  lastAction: t('tools.logrotate-generator.texts.lastAction'),
 };
 
 const generatedConfig = computed(() => {
@@ -105,16 +108,16 @@ ${config.value.path} {
 
 <template>
   <NForm label-placement="left" label-width="180px">
-    <n-form-item label="Path:">
+    <n-form-item :label="t('tools.logrotate-generator.texts.label-path')">
       <n-tooltip trigger="hover">
         <template #trigger>
-          <n-input v-model:value="config.path" placeholder="Enter log path or pattern..." />
+          <n-input v-model:value="config.path" :placeholder="t('tools.logrotate-generator.texts.placeholder-enter-log-path-or-pattern')" />
         </template>
         {{ tooltips.path }}
       </n-tooltip>
     </n-form-item>
 
-    <n-form-item label="Rotate Count:">
+    <n-form-item :label="t('tools.logrotate-generator.texts.label-rotate-count')">
       <n-tooltip trigger="hover">
         <template #trigger>
           <n-input-number-i18n v-model:value="config.rotateCount" />
@@ -123,7 +126,7 @@ ${config.value.path} {
       </n-tooltip>
     </n-form-item>
 
-    <n-form-item label="Frequency:">
+    <n-form-item :label="t('tools.logrotate-generator.texts.label-frequency')">
       <n-tooltip trigger="hover">
         <template #trigger>
           <n-select v-model:value="config.frequency" :options="frequencyOptions.map(f => ({ label: f, value: f }))" />
@@ -132,25 +135,25 @@ ${config.value.path} {
       </n-tooltip>
     </n-form-item>
 
-    <n-form-item label="Min Size:">
+    <n-form-item :label="t('tools.logrotate-generator.texts.label-min-size')">
       <n-tooltip trigger="hover">
         <template #trigger>
-          <n-input v-model:value="config.minSize" placeholder="Enter min size and unit..." />
+          <n-input v-model:value="config.minSize" :placeholder="t('tools.logrotate-generator.texts.placeholder-enter-min-size-and-unit')" />
         </template>
         {{ tooltips.minSize }}
       </n-tooltip>
     </n-form-item>
 
-    <n-form-item label="Size:">
+    <n-form-item :label="t('tools.logrotate-generator.texts.label-size')">
       <n-tooltip trigger="hover">
         <template #trigger>
-          <n-input v-model:value="config.size" placeholder="Enter size and unit..." />
+          <n-input v-model:value="config.size" :placeholder="t('tools.logrotate-generator.texts.placeholder-enter-size-and-unit')" />
         </template>
         {{ tooltips.size }}
       </n-tooltip>
     </n-form-item>
 
-    <n-form-item label="Create File:">
+    <n-form-item :label="t('tools.logrotate-generator.texts.label-create-file')">
       <n-tooltip trigger="hover">
         <template #trigger>
           <n-switch v-model:value="config.createFile" />
@@ -159,7 +162,7 @@ ${config.value.path} {
       </n-tooltip>
     </n-form-item>
 
-    <n-form-item label="Copy:">
+    <n-form-item :label="t('tools.logrotate-generator.texts.label-copy')">
       <n-tooltip trigger="hover">
         <template #trigger>
           <n-switch v-model:value="config.copy" />
@@ -168,7 +171,7 @@ ${config.value.path} {
       </n-tooltip>
     </n-form-item>
 
-    <n-form-item label="Copy Truncate:">
+    <n-form-item :label="t('tools.logrotate-generator.texts.label-copy-truncate')">
       <n-tooltip trigger="hover">
         <template #trigger>
           <n-switch v-model:value="config.copyTruncate" />
@@ -177,7 +180,7 @@ ${config.value.path} {
       </n-tooltip>
     </n-form-item>
 
-    <n-form-item label="Start Number:">
+    <n-form-item :label="t('tools.logrotate-generator.texts.label-start-number')">
       <n-tooltip trigger="hover">
         <template #trigger>
           <n-input-number-i18n v-model:value="config.startNumber" />
@@ -186,16 +189,16 @@ ${config.value.path} {
       </n-tooltip>
     </n-form-item>
 
-    <n-form-item label="Extension:">
+    <n-form-item :label="t('tools.logrotate-generator.texts.label-extension')">
       <n-tooltip trigger="hover">
         <template #trigger>
-          <n-input v-model:value="config.extension" placeholder="Enter extension..." />
+          <n-input v-model:value="config.extension" :placeholder="t('tools.logrotate-generator.texts.placeholder-enter-extension')" />
         </template>
         {{ tooltips.extension }}
       </n-tooltip>
     </n-form-item>
 
-    <n-form-item label="Date Ext:">
+    <n-form-item :label="t('tools.logrotate-generator.texts.label-date-ext')">
       <n-tooltip trigger="hover">
         <template #trigger>
           <n-switch v-model:value="config.dateExt" />
@@ -204,16 +207,16 @@ ${config.value.path} {
       </n-tooltip>
     </n-form-item>
 
-    <n-form-item label="Date Format:">
+    <n-form-item :label="t('tools.logrotate-generator.texts.label-date-format')">
       <n-tooltip trigger="hover">
         <template #trigger>
-          <n-input v-model:value="config.dateFormat" placeholder="Enter date format..." />
+          <n-input v-model:value="config.dateFormat" :placeholder="t('tools.logrotate-generator.texts.placeholder-enter-date-format')" />
         </template>
         {{ tooltips.dateFormat }}
       </n-tooltip>
     </n-form-item>
 
-    <n-form-item label="Missing OK:">
+    <n-form-item :label="t('tools.logrotate-generator.texts.label-missing-ok')">
       <n-tooltip trigger="hover">
         <template #trigger>
           <n-switch v-model:value="config.missingOk" />
@@ -222,7 +225,7 @@ ${config.value.path} {
       </n-tooltip>
     </n-form-item>
 
-    <n-form-item label="Compress:">
+    <n-form-item :label="t('tools.logrotate-generator.texts.label-compress')">
       <n-tooltip trigger="hover">
         <template #trigger>
           <n-switch v-model:value="config.compress" />
@@ -231,7 +234,7 @@ ${config.value.path} {
       </n-tooltip>
     </n-form-item>
 
-    <n-form-item label="Delay Compress:">
+    <n-form-item :label="t('tools.logrotate-generator.texts.label-delay-compress')">
       <n-tooltip trigger="hover">
         <template #trigger>
           <n-switch v-model:value="config.delayCompress" />
@@ -240,61 +243,61 @@ ${config.value.path} {
       </n-tooltip>
     </n-form-item>
 
-    <n-form-item label="Compress Ext:">
+    <n-form-item :label="t('tools.logrotate-generator.texts.label-compress-ext')">
       <n-tooltip trigger="hover">
         <template #trigger>
-          <n-input v-model:value="config.compressExt" placeholder="Enter compression extension..." />
+          <n-input v-model:value="config.compressExt" :placeholder="t('tools.logrotate-generator.texts.placeholder-enter-compression-extension')" />
         </template>
         {{ tooltips.compressExt }}
       </n-tooltip>
     </n-form-item>
 
-    <n-form-item label="Compress Cmd:">
+    <n-form-item :label="t('tools.logrotate-generator.texts.label-compress-cmd')">
       <n-tooltip trigger="hover">
         <template #trigger>
-          <n-input v-model:value="config.compressCmd" placeholder="Enter command..." />
+          <n-input v-model:value="config.compressCmd" :placeholder="t('tools.logrotate-generator.texts.placeholder-enter-command')" />
         </template>
         {{ tooltips.compressCmd }}
       </n-tooltip>
     </n-form-item>
 
-    <n-form-item label="Compress Options:">
+    <n-form-item :label="t('tools.logrotate-generator.texts.label-compress-options')">
       <n-tooltip trigger="hover">
         <template #trigger>
-          <n-input v-model:value="config.compressOptions" placeholder="Enter compression options..." />
+          <n-input v-model:value="config.compressOptions" :placeholder="t('tools.logrotate-generator.texts.placeholder-enter-compression-options')" />
         </template>
         {{ tooltips.compressOptions }}
       </n-tooltip>
     </n-form-item>
 
-    <n-form-item label="Uncompress Cmd:">
+    <n-form-item :label="t('tools.logrotate-generator.texts.label-uncompress-cmd')">
       <n-tooltip trigger="hover">
         <template #trigger>
-          <n-input v-model:value="config.uncompressCmd" placeholder="Enter command..." />
+          <n-input v-model:value="config.uncompressCmd" :placeholder="t('tools.logrotate-generator.texts.placeholder-enter-command')" />
         </template>
         {{ tooltips.uncompressCmd }}
       </n-tooltip>
     </n-form-item>
 
-    <n-form-item label="Old Dir:">
+    <n-form-item :label="t('tools.logrotate-generator.texts.label-old-dir')">
       <n-tooltip trigger="hover">
         <template #trigger>
-          <n-input v-model:value="config.oldDir" placeholder="Enter old directory..." />
+          <n-input v-model:value="config.oldDir" :placeholder="t('tools.logrotate-generator.texts.placeholder-enter-old-directory')" />
         </template>
         {{ tooltips.oldDir }}
       </n-tooltip>
     </n-form-item>
 
-    <n-form-item label="Mail:">
+    <n-form-item :label="t('tools.logrotate-generator.texts.label-mail')">
       <n-tooltip trigger="hover">
         <template #trigger>
-          <n-input v-model:value="config.mail" placeholder="Enter email..." />
+          <n-input v-model:value="config.mail" :placeholder="t('tools.logrotate-generator.texts.placeholder-enter-email')" />
         </template>
         {{ tooltips.mail }}
       </n-tooltip>
     </n-form-item>
 
-    <n-form-item label="Mail First:">
+    <n-form-item :label="t('tools.logrotate-generator.texts.label-mail-first')">
       <n-tooltip trigger="hover">
         <template #trigger>
           <n-switch v-model:value="config.mailFirst" />
@@ -303,7 +306,7 @@ ${config.value.path} {
       </n-tooltip>
     </n-form-item>
 
-    <n-form-item label="Mail Last:">
+    <n-form-item :label="t('tools.logrotate-generator.texts.label-mail-last')">
       <n-tooltip trigger="hover">
         <template #trigger>
           <n-switch v-model:value="config.mailLast" />
@@ -312,7 +315,7 @@ ${config.value.path} {
       </n-tooltip>
     </n-form-item>
 
-    <n-form-item label="Shred:">
+    <n-form-item :label="t('tools.logrotate-generator.texts.label-shred')">
       <n-tooltip trigger="hover">
         <template #trigger>
           <n-switch v-model:value="config.shred" />
@@ -321,7 +324,7 @@ ${config.value.path} {
       </n-tooltip>
     </n-form-item>
 
-    <n-form-item label="Shred Cycles:">
+    <n-form-item :label="t('tools.logrotate-generator.texts.label-shred-cycles')">
       <n-tooltip trigger="hover">
         <template #trigger>
           <n-input-number-i18n v-model:value="config.shredCycles" />
@@ -330,37 +333,37 @@ ${config.value.path} {
       </n-tooltip>
     </n-form-item>
 
-    <n-form-item label="First Action:">
+    <n-form-item :label="t('tools.logrotate-generator.texts.label-first-action')">
       <n-tooltip trigger="hover">
         <template #trigger>
-          <n-input v-model:value="config.firstAction" placeholder="Enter command..." />
+          <n-input v-model:value="config.firstAction" :placeholder="t('tools.logrotate-generator.texts.placeholder-enter-command')" />
         </template>
         {{ tooltips.firstAction }}
       </n-tooltip>
     </n-form-item>
 
-    <n-form-item label="Pre Rotate:">
+    <n-form-item :label="t('tools.logrotate-generator.texts.label-pre-rotate')">
       <n-tooltip trigger="hover">
         <template #trigger>
-          <n-input v-model:value="config.preRotate" placeholder="Enter command..." />
+          <n-input v-model:value="config.preRotate" :placeholder="t('tools.logrotate-generator.texts.placeholder-enter-command')" />
         </template>
         {{ tooltips.preRotate }}
       </n-tooltip>
     </n-form-item>
 
-    <n-form-item label="Post Rotate:">
+    <n-form-item :label="t('tools.logrotate-generator.texts.label-post-rotate')">
       <n-tooltip trigger="hover">
         <template #trigger>
-          <n-input v-model:value="config.postRotate" placeholder="Enter command..." />
+          <n-input v-model:value="config.postRotate" :placeholder="t('tools.logrotate-generator.texts.placeholder-enter-command')" />
         </template>
         {{ tooltips.postRotate }}
       </n-tooltip>
     </n-form-item>
 
-    <n-form-item label="Last Action:">
+    <n-form-item :label="t('tools.logrotate-generator.texts.label-last-action')">
       <n-tooltip trigger="hover">
         <template #trigger>
-          <n-input v-model:value="config.lastAction" placeholder="Enter command..." />
+          <n-input v-model:value="config.lastAction" :placeholder="t('tools.logrotate-generator.texts.placeholder-enter-command')" />
         </template>
         {{ tooltips.lastAction }}
       </n-tooltip>
@@ -368,7 +371,7 @@ ${config.value.path} {
 
     <NDivider />
 
-    <NCard title="Generated Config">
+    <NCard :title="t('tools.logrotate-generator.texts.title-generated-config')">
       <textarea-copyable :value="generatedConfig" />
     </NCard>
   </NForm>

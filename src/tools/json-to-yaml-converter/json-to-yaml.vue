@@ -20,9 +20,9 @@ const rules: UseValidationRule<string>[] = [
 
 <template>
   <format-transformer
-    :input-label="t('tools.json-to-yaml-converter.texts.input-label-your-json')"
-    :input-placeholder="t('tools.json-to-yaml-converter.texts.input-placeholder-paste-your-json-here')"
-    :output-label="t('tools.json-to-yaml-converter.texts.output-label-yaml-from-your-json')"
+    :input-:label="t('tools.json-to-yaml-converter.texts.label-t-tools-json-to-yaml-converter-texts-input-label-your-json')"
+    :input-:placeholder="t('tools.json-to-yaml-converter.texts.placeholder-t-tools-json-to-yaml-converter-texts-input-placeholder-paste-your-json-here')"
+    :output-:label="t('tools.json-to-yaml-converter.texts.label-t-tools-json-to-yaml-converter-texts-output-label-yaml-from-your-json')"
     output-language="yaml"
     :input-validation-rules="rules"
     :transformer="transformer"

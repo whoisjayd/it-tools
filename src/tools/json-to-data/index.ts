@@ -1,10 +1,11 @@
 import { Braces } from '@vicons/tabler';
 import { defineTool } from '../tool';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: 'JSON to Data',
+  name: t('tools.json-to-data.title'),
   path: '/json-to-data',
-  description: 'Convert JSON to CSV, SQL Insert, YAML, Markdown, XML and XLSX',
+  description: t('tools.json-to-data.description'),
   keywords: ['json', 'excel', 'csv', 'xlsx', 'sql', 'yaml', 'insert', 'markdown', 'md', 'tsv', 'xml'],
   component: () => import('./json-to-data.vue'),
   icon: Braces,

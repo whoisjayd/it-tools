@@ -1,10 +1,11 @@
 import { GitCompare } from '@vicons/tabler';
 import { defineTool } from '../tool';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: 'Font Compare',
+  name: t('tools.font-compare.title'),
   path: '/font-compare',
-  description: 'Compare to fonts on a given text',
+  description: t('tools.font-compare.description'),
   keywords: ['font', 'ttf', 'otf', 'compare'],
   component: () => import('./font-compare.vue'),
   icon: GitCompare,

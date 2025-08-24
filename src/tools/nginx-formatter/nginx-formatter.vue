@@ -44,10 +44,10 @@ const rules: UseValidationRule<string>[] = [
 
 <template>
   <format-transformer
-    :input-label="t('tools.nginx-formatter.texts.input-label-your-nginx-config')"
+    :input-:label="t('tools.nginx-formatter.texts.label-t-tools-nginx-formatter-texts-input-label-your-nginx-config')"
     :input-default="defaultValue"
-    :input-placeholder="t('tools.nginx-formatter.texts.input-placeholder-paste-your-nginx-config-here')"
-    :output-label="t('tools.nginx-formatter.texts.output-label-prettified-nginx-config')"
+    :input-:placeholder="t('tools.nginx-formatter.texts.placeholder-t-tools-nginx-formatter-texts-input-placeholder-paste-your-nginx-config-here')"
+    :output-:label="t('tools.nginx-formatter.texts.label-t-tools-nginx-formatter-texts-output-label-prettified-nginx-config')"
     :input-validation-rules="rules"
     :transformer="transformer"
   />

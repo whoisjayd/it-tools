@@ -21,9 +21,9 @@ const rules: UseValidationRule<string>[] = [
 
 <template>
   <format-transformer
-    :input-label="t('tools.yaml-to-toml.texts.input-label-your-yaml')"
-    :input-placeholder="t('tools.yaml-to-toml.texts.input-placeholder-paste-your-yaml-here')"
-    :output-label="t('tools.yaml-to-toml.texts.output-label-toml-from-your-yaml')"
+    :input-:label="t('tools.yaml-to-toml.texts.label-t-tools-yaml-to-toml-texts-input-label-your-yaml')"
+    :input-:placeholder="t('tools.yaml-to-toml.texts.placeholder-t-tools-yaml-to-toml-texts-input-placeholder-paste-your-yaml-here')"
+    :output-:label="t('tools.yaml-to-toml.texts.label-t-tools-yaml-to-toml-texts-output-label-toml-from-your-yaml')"
     output-language="toml"
     :input-validation-rules="rules"
     :transformer="transformer"

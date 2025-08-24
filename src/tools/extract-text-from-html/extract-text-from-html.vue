@@ -25,9 +25,9 @@ const rules: UseValidationRule<string>[] = [
 
 <template>
   <format-transformer
-    :input-label="t('tools.extract-text-from-html.texts.input-label-your-raw-html')"
-    :input-placeholder="t('tools.extract-text-from-html.texts.input-placeholder-paste-your-raw-html-here')"
-    :output-label="t('tools.extract-text-from-html.texts.output-label-text-from-your-html')"
+    :input-:label="t('tools.extract-text-from-html.texts.label-t-tools-extract-text-from-html-texts-input-label-your-raw-html')"
+    :input-:placeholder="t('tools.extract-text-from-html.texts.placeholder-t-tools-extract-text-from-html-texts-input-placeholder-paste-your-raw-html-here')"
+    :output-:label="t('tools.extract-text-from-html.texts.label-t-tools-extract-text-from-html-texts-output-label-text-from-your-html')"
     :input-validation-rules="rules"
     :transformer="transformer"
   />

@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n';
 import markdownDocx, { Packer } from 'markdown-docx';
+
+const { t } = useI18n();
 
 const inputMarkdown = ref('');
 const dataUrl = ref('');
@@ -34,15 +37,15 @@ async function convertMarkdownToDocx() {
   <div>
     <c-input-text
       v-model:value="inputMarkdown"
-      label="Your markdown to convert:"
+      :label="t('tools.markdown-to-docx.texts.label-your-markdown-to-convert')"
       multiline
-      placeholder="Put your markdown content here..."
+      :placeholder="t('tools.markdown-to-docx.texts.placeholder-put-your-markdown-content-here')"
       rows="10"
       mb-2
     />
     <n-space justify="center" mb-2>
       <c-button @click="convertMarkdownToDocx">
-        Convert to DOCX/Word
+        {{ t('tools.markdown-to-docx.texts.tag-convert-to-docx-word') }}
       </c-button>
     </n-space>
     <c-alert v-if="error">

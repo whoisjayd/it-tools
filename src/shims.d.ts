@@ -51,3 +51,7 @@ interface JSON {
 interface Navigator {
   gpu?: any;
 }
+
+interface FontFaceSet {
+  add(fontFace: FontFace)
+}

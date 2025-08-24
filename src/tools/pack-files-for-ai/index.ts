@@ -1,10 +1,11 @@
 import { BatteryCharging } from '@vicons/tabler';
 import { defineTool } from '../tool';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: 'Pack files for AI',
+  name: t('tools.pack-files-for-ai.title'),
   path: '/pack-files-for-ai',
-  description: 'Pack a directory of code source files to a single AI parsable form (like repomix)',
+  description: t('tools.pack-files-for-ai.description'),
   keywords: ['pack', 'files', 'source', 'code', 'gpt', 'claude', 'repomix', 'ai'],
   component: () => import('./pack-files-for-ai.vue'),
   icon: BatteryCharging,

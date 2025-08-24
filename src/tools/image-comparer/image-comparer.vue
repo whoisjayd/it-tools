@@ -1,7 +1,10 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n';
 import type { UploadFileInfo } from 'naive-ui';
 import ImageCompare from 'image-compare-viewer';
 import 'image-compare-viewer/dist/image-compare-viewer.min.css';
+
+const { t } = useI18n();
 
 const leftUrl = ref('');
 const rightUrl = ref('');
@@ -50,19 +53,19 @@ function renderViewer() {
 </script>
 
 <template>
-  <NCard title="Image Compare Viewer" style="max-width: 800px; margin: auto;">
+  <NCard :title="t('tools.image-comparer.texts.title-image-compare-viewer')" style="max-width: 800px; margin: auto;">
     <NTabs type="segment">
       <NTabPane name="url" tab="Compare by URL">
         <NForm label-placement="left" label-width="150px">
-          <NFormItem label="Left Image URL:">
-            <NInput v-model:value="leftUrl" placeholder="Enter left image URL" />
+          <NFormItem :label="t('tools.image-comparer.texts.label-left-image-url')">
+            <NInput v-model:value="leftUrl" :placeholder="t('tools.image-comparer.texts.placeholder-enter-left-image-url')" />
           </NFormItem>
-          <NFormItem label="Right Image URL:">
-            <NInput v-model:value="rightUrl" placeholder="Enter right image URL" />
+          <NFormItem :label="t('tools.image-comparer.texts.label-right-image-url')">
+            <NInput v-model:value="rightUrl" :placeholder="t('tools.image-comparer.texts.placeholder-enter-right-image-url')" />
           </NFormItem>
           <n-space justify="center">
             <NButton type="primary" @click="loadFromUrl">
-              Compare
+              {{ t('tools.image-comparer.texts.tag-compare') }}
             </NButton>
           </n-space>
         </NForm>
@@ -71,14 +74,14 @@ function renderViewer() {
       <NTabPane name="upload" tab="Compare by Upload">
         <NForm label-placement="left">
           <n-space justify="space-evenly">
-            <NFormItem label="Upload Left Image:">
+            <NFormItem :label="t('tools.image-comparer.texts.label-upload-left-image')">
               <NUpload :default-upload="false" accept="image/*" @change="handleLeftUpload">
-                <NButton>Upload Left</NButton>
+                <NButton>{{ t('tools.image-comparer.texts.tag-upload-left') }}</NButton>
               </NUpload>
             </NFormItem>
-            <NFormItem label="Upload Right Image:">
+            <NFormItem :label="t('tools.image-comparer.texts.label-upload-right-image')">
               <NUpload :default-upload="false" accept="image/*" @change="handleRightUpload">
-                <NButton>Upload Right</NButton>
+                <NButton>{{ t('tools.image-comparer.texts.tag-upload-right') }}</NButton>
               </NUpload>
             </NFormItem>
           </n-space>

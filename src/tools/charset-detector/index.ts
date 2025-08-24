@@ -1,10 +1,11 @@
 import { FileText } from '@vicons/tabler';
 import { defineTool } from '../tool';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: 'Text Charset Detector/Decoder',
+  name: t('tools.charset-detector.title'),
   path: '/charset-detector',
-  description: 'Detect text possible charsets and allow to decode using each detected encoding',
+  description: t('tools.charset-detector.description'),
   keywords: ['charset', 'ascii', 'iso', 'utf8', 'unicode', 'encoding', 'decode', 'text', 'detector'],
   component: () => import('./charset-detector.vue'),
   icon: FileText,

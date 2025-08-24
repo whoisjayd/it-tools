@@ -35,15 +35,15 @@ const rules: UseValidationRule<string>[] = [
 
 <template>
   <n-space justify="center">
-    <n-form-item label="Nestify ('a.b.c' to nested objects)" label-placement="left">
+    <n-form-item :label="t('tools.yaml-to-json-converter.texts.label-nestify-a-b-c-to-nested-objects')" label-placement="left">
       <n-checkbox v-model:checked="nestify" />
     </n-form-item>
   </n-space>
 
   <format-transformer
-    :input-label="t('tools.yaml-to-json-converter.texts.input-label-your-yaml')"
-    :input-placeholder="t('tools.yaml-to-json-converter.texts.input-placeholder-paste-your-yaml-here')"
-    :output-label="t('tools.yaml-to-json-converter.texts.output-label-json-from-your-yaml')"
+    :input-:label="t('tools.yaml-to-json-converter.texts.label-t-tools-yaml-to-json-converter-texts-input-label-your-yaml')"
+    :input-:placeholder="t('tools.yaml-to-json-converter.texts.placeholder-t-tools-yaml-to-json-converter-texts-input-placeholder-paste-your-yaml-here')"
+    :output-:label="t('tools.yaml-to-json-converter.texts.label-t-tools-yaml-to-json-converter-texts-output-label-json-from-your-yaml')"
     output-language="json"
     :input-validation-rules="rules"
     :transformer="transformer"

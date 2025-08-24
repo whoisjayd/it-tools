@@ -1,10 +1,11 @@
 import { CursorText } from '@vicons/tabler';
 import { defineTool } from '../tool';
+import { translate as t } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: 'Sed Command generator',
+  name: t('tools.sed-command-generator.title'),
   path: '/sed-command-generator',
-  description: 'Generate unix sed commands',
+  description: t('tools.sed-command-generator.description'),
   keywords: ['sed', 'command', 'generator'],
   component: () => import('./sed-command-generator.vue'),
   icon: CursorText,
