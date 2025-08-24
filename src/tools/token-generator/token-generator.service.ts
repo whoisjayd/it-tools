@@ -4,6 +4,7 @@ export function createToken({
   withUppercase = true,
   withLowercase = true,
   withNumbers = true,
+  withHexaNumbers = false,
   withSymbols = false,
   deniedChars = '',
   length = 64,
@@ -12,6 +13,7 @@ export function createToken({
   withUppercase?: boolean
   withLowercase?: boolean
   withNumbers?: boolean
+  withHexaNumbers?: boolean
   withSymbols?: boolean
   deniedChars?: string
   length?: number
@@ -21,6 +23,7 @@ export function createToken({
     (withUppercase ? 'ABCDEFGHIJKLMOPQRSTUVWXYZ' : '')
     + (withLowercase ? 'abcdefghijklmopqrstuvwxyz' : '')
     + (withNumbers ? '0123456789' : '')
+    + (withHexaNumbers ? '0123456789abcdef' : '')
     + (withSymbols ? '.,;:!?./-"\'#{([-|\\@)]=}*+' : '')
   )).split('').filter(c => !(deniedChars?.includes(c))).join('');
 

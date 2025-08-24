@@ -6115,3 +6115,14 @@ tools:
       title-drag-and-drop-a-json-file-here-or-click-to-select-a-file: Drag and drop a JSON file here, or click to select a file
       label-paste-your-json-content: Paste your JSON content
       placeholder-your-json: Your JSON
+  random-numbers-generator:
+    button:
+      refresh: Refresh
+      copy: Copy
+    numberPlaceholder: Generated random numbers...
+    texts:
+      label-number-of-number-to-generate: 'Number of number to generate:'
+      placeholder-put-characters-to-deny-from-number: Put denied characters here...
+      label-denied-characters: 'Denied characters:'
+      label-toupper: To uppercase digits
+    copied: Numbers copied to clipboard!
