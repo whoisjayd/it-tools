@@ -1,5 +1,8 @@
 name: Docker nightly release
 
+env:
+  VITE_VERCEL_ENV: production
+
 on:
   workflow_dispatch:
   schedule:

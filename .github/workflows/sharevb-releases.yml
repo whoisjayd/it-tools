@@ -1,5 +1,8 @@
 name: Release new versions
 
+env:
+  VITE_VERCEL_ENV: production
+
 on:
   push:
     tags:

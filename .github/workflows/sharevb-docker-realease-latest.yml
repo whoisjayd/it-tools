@@ -1,5 +1,8 @@
 name: Build and Push Docker Image (latest)
 
+env:
+  VITE_VERCEL_ENV: production
+
 on:
   push:
     branches:

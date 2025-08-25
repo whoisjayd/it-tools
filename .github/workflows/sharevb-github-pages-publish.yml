@@ -1,5 +1,8 @@
 name: Deploy static content to Pages
 
+env:
+  VITE_VERCEL_ENV: production
+
 on:
   # Runs on pushes targeting the default branch
   push:

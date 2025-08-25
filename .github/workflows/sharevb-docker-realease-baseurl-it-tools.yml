@@ -1,5 +1,8 @@
 name: Build and Push Docker Image (baseurl-it-tools)
 
+env:
+  VITE_VERCEL_ENV: production
+
 on:
   push:
     branches:
